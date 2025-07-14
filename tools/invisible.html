@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Invisible Character Generator - Create Undetectable Spaces & Text</title>
+    <meta name="description" content="Generate invisible characters like Zero Width Space for various uses: usernames, social media, stealth text, and more. Copy and paste undetectable characters easily.">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Invisible Character Generator - Create Undetectable Spaces & Text">
+    <meta property="og:description" content="Generate invisible characters like Zero Width Space for various uses: usernames, social media, stealth text, and more. Copy and paste undetectable characters easily.">
+    <meta property="og:image" content="../img/Font-Generator.png"> <meta property="og:url" content="https://fancytext.in/tools/invisible.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Invisible Character Generator - Create Undetectable Spaces & Text">
+    <meta name="twitter:description" content="Generate invisible characters like Zero Width Space for various uses: usernames, social media, stealth text, and more. Copy and paste undetectable characters easily.">
+    <meta name="twitter:url" content="https://fancytext.in/tools/invisible.html">
+    <meta name="twitter:image" content="../img/Font-Generator.png"> 
+     <link rel="canonical" href="https://fancytext.in/tools/invisible.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../homepage.css">
+    <style>
+        /* Basic styling for the tool, adjust as needed with your main CSS */
+        .tool-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tool-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .tool-container textarea {
+            width: calc(100% - 20px);
+            min-height: 120px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        .tool-container .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tool-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tool-container button.copy-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .tool-container button.copy-button:hover {
+            background-color: #0056b3;
+        }
+        .tool-container button.clear-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .tool-container button.clear-button:hover {
+            background-color: #c82333;
+        }
+        .seo-content {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .seo-content h2, .seo-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .seo-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .seo-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .seo-content ul li {
+            margin-bottom: 5px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <span class="icon-hamburger">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/>
+                    <line x1="4" y1="12" x2="20" y2="12"/>
+                    <line x1="4" y1="18" x2="20" y2="18"/>
+                </svg>
+            </span>
+            <span class="icon-close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </span>
+        </button>
+        <a href="/" class="logo">
+            <img src="../img/logo_header.png" alt="Font Generator Logo">
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li>
+                    <a href="../">Home</a>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Font Styles
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../tools/">All</a>
+                        <a href="../tools/strikethrough.html">Strikethrough</a>
+                        <a href="../tools/invisible.html">Invisible</a>
+                        <a href="../tools/cursive.html">Cursive Text</a>
+                        <a href="../tools/cool.html">Cool</a>
+                        <a href="../tools/fancy.html">Fancy</a>
+                        <a href="../tools/glitch.html">Glitch</a>
+                        <a href="../tools/bold.html">Bold</a>
+                        <a href="../tools/text-art.html">Text Art</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        About
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../about-us.html">About Us</a>
+                        <a href="../contact-us.html">Contact Us</a>
+                        <a href="../privacy-policy.html">Privacy</a>
+                        <a href="../faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Language
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://fancytext.in" data-lang="en">English</a>
+                        <a href="../es.html" data-lang="es">Español</a>
+                        <a href="../ar.html" data-lang="ar">العربية</a>
+                        <a href="../fr.html" data-lang="fr">Français</a>
+                        <a href="../de.html" data-lang="de">Deutsch</a>
+                        <a href="../pt.html" data-lang="pt">Português</a>
+                        <a href="../id.html" data-lang="id">Indonesian</a>
+                        <a href="../hi.html" data-lang="hi">हिन्दी </a>
+                        <a href="../it.html" data-lang="it">Italiano</a>
+                        <a href="../ja.html" data-lang="ja">日本語</a>
+                        <a href="../ru.html" data-lang="ru">Россия</a>
+                        <a href="../th.html" data-lang="th">ประเทศไทย</a>
+                        <a href="../tr.html" data-lang="tr">Türkiye</a>
+                        <a href="../vi.html" data-lang="vi">Việt Nam</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="tool-container">
+            <h1>Invisible Character Generator</h1>
+            <p>Paste or type your text below to generate invisible characters, primarily Zero Width Space (&#8203;).</p>
+            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+            <div class="buttons">
+                <button class="copy-button" id="copyBtn">Copy Invisible Text</button>
+                <button class="clear-button" id="clearBtn">Clear</button>
+            </div>
+            <p>Your invisible character(s) will appear here:</p>
+            <textarea id="outputText" readonly placeholder="Your invisible text will appear here..."></textarea>
+
+            <div class="seo-content">
+                <h2>What is an Invisible Character Tool?</h2>
+                <p>An Invisible Character Generator is a handy online utility that creates text containing unprintable Unicode characters, such as the Zero Width Space (ZWS). These characters are not visible to the human eye but occupy space or behave like regular characters in digital text. They are incredibly useful for various purposes where a visible character is undesirable but a space or separator is needed.</p>
+
+                <h2>Uses for Invisible Characters:</h2>
+                <ul>
+                    <li><strong>Social Media:</strong> Create unique usernames, format posts with hidden line breaks, or add spacing where platforms typically remove it.</li>
+                    <li><strong>Gaming:</strong> Achieve unique in-game names or clan tags that appear blank or oddly formatted.</li>
+                    <li><strong>Forms and Databases:</strong> Fill required fields with "empty" data when a visible input isn't necessary.</li>
+                    <li><strong>Text Formatting:</strong> Prevent line breaks, create subtle indentations, or add imperceptible separators in text.</li>
+                    <li><strong>Security/Obscurity:</strong> While not a true security measure, it can be used to slightly obscure text or make it harder to select/copy.</li>
+                </ul>
+
+                <h2>How to Use This Tool:</h2>
+                <ol>
+                    <li><strong>Input Text:</strong> Type or paste any text into the "Type or paste your text here..." box.</li>
+                    <li><strong>Generate:</strong> Our tool automatically processes the input to generate the invisible characters.
+                    <li><strong>Copy:</strong> Click the "Copy Invisible Text" button to copy the generated invisible characters to your clipboard.</li>
+                    <li><strong>Paste:</strong> Paste the copied invisible characters wherever you need them – on social media, in documents, or online forms.</li>
+                </ol>
+
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions (FAQ)</h2>
+                    <div class="faq-item">
+                        <h3>Q: What exactly is a Zero Width Space (ZWS)?</h3>
+                        <p>A: A Zero Width Space (U+200B) is a non-printing character used in computerized typesetting to indicate a potential line break point in long words, or to add "invisible" spacing. It's essentially a space that takes up no visible width.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Are invisible characters safe to use?</h3>
+                        <p>A: Yes, they are standard Unicode characters and are generally safe to use. Their main "danger" is that they can make text appear differently or break standard formatting if not used intentionally.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Can I use this tool to make my entire text invisible?</h3>
+                        <p>A: No, this tool generates invisible *characters*, usually Zero Width Space. It won't make your entire visible text disappear. Instead, it generates characters that are themselves not visible but can be used for spacing or placeholder purposes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Why would I want to use invisible characters?</h3>
+                        <p>A: Common reasons include creating unique social media usernames with "blank" spaces, adding extra spacing in platforms that restrict it, or for simple text formatting tricks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                &copy; 2025 Font Generator. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <a href="../privacy-policy.html">Privacy Policy</a> |
+                <a href="../about-us.html">About Us</a> |
+                <a href="../contact-us.html">Contact</a> |
+                <a href="../changelog.html">Latest Updates</a> |
+                <a href="../feedback.html">Feedback</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputText = document.getElementById('inputText');
+            const outputText = document.getElementById('outputText');
+            const copyBtn = document.getElementById('copyBtn');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Function to generate invisible characters
+            // For simplicity, we'll generate Zero Width Space for each character typed,
+            // or if the input is empty, just a few ZWS characters.
+            function generateInvisibleText() {
+                const text = inputText.value;
+                let invisibleChars = '';
+                if (text.length > 0) {
+                    // Replace each character with a Zero Width Space, or insert ZWS between characters
+                    // For a more practical tool, often users just want a single invisible character or a string of them.
+                    // Let's make it generate ZWS based on input length, so it's somewhat "representative"
+                    // of the original length, but the content is invisible.
+                    // Or, simplify to just generate a set amount of ZWS
+                    invisibleChars = text.split('').map(() => '\u200B').join(''); // One ZWS per input character
+                } else {
+                    invisibleChars = '\u200B\u200B\u200B\u200B\u200B'; // Generate a few ZWS if input is empty
+                }
+                outputText.value = invisibleChars;
+            }
+
+            // Event listener for input
+            inputText.addEventListener('input', generateInvisibleText);
+
+            // Copy button functionality
+            copyBtn.addEventListener('click', () => {
+                outputText.select();
+                outputText.setSelectionRange(0, 99999); // For mobile devices
+                try {
+                    document.execCommand('copy');
+                    alert('Invisible characters copied to clipboard!');
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                    alert('Failed to copy. Please copy manually.');
+                }
+            });
+
+            // Clear button functionality
+            clearBtn.addEventListener('click', () => {
+                inputText.value = '';
+                outputText.value = '';
+            });
+
+            // Initial generation on load if there's any pre-filled text (though there won't be)
+            generateInvisibleText();
+        });
+    </script>
+</body>
+</html>
