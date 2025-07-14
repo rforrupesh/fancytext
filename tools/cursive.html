@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cursive Text Generator - Convert Regular Text to Stylish Cursive Fonts</title>
+    <meta name="description" content="Generate beautiful cursive text for social media, nicknames, and creative projects. Instantly convert your regular text into various stylish cursive fonts.">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cursive Text Generator - Convert Regular Text to Stylish Cursive Fonts">
+    <meta property="og:description" content="Generate beautiful cursive text for social media, nicknames, and creative projects. Instantly convert your regular text into various stylish cursive fonts.">
+    <meta property="og:image" content="../img/Font-Generator.png">
+    <meta property="og:url" content="https://fancytext.in/tools/cursive.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cursive Text Generator - Convert Regular Text to Stylish Cursive Fonts">
+    <meta name="twitter:description" content="Generate beautiful cursive text for social media, nicknames, and creative projects. Instantly convert your regular text into various stylish cursive fonts.">
+    <meta name="twitter:url" content="https://fancytext.in/tools/cursive.html">
+    <meta name="twitter:image" content="../img/Font-Generator.png">
+    <link rel="canonical" href="https://fancytext.in/tools/cursive.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../homepage.css">
+    <style>
+        /* Basic styling for the tool, adjust as needed with your main CSS */
+        .tool-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tool-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .tool-container textarea {
+            width: calc(100% - 20px);
+            min-height: 100px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        .tool-container .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tool-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tool-container button.copy-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .tool-container button.copy-button:hover {
+            background-color: #0056b3;
+        }
+        .tool-container button.clear-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .tool-container button.clear-button:hover {
+            background-color: #c82333;
+        }
+        .output-section {
+            margin-top: 30px;
+        }
+        .output-box {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .output-box h3 {
+            margin-top: 0;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .output-box textarea {
+            width: calc(100% - 20px);
+            min-height: 60px;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', serif; /* Default for cursive look */
+            font-size: 1.2rem;
+            color: #333;
+        }
+        /* Specific font styles for different cursive types if desired */
+        #outputCursive1 { font-family: 'Brush Script MT', ' cursive', sans-serif; }
+        #outputCursive2 { font-family: 'Dancing Script', cursive; } /* Google Font example, would need import */
+        #outputCursive3 { font-family: 'Pacifico', cursive; } /* Google Font example, would need import */
+
+
+        .seo-content {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .seo-content h2, .seo-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .seo-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .seo-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .seo-content ul li {
+            margin-bottom: 5px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <span class="icon-hamburger">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/>
+                    <line x1="4" y1="12" x2="20" y2="12"/>
+                    <line x1="4" y1="18" x2="20" y2="18"/>
+                </svg>
+            </span>
+            <span class="icon-close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </span>
+        </button>
+        <a href="/" class="logo">
+            <img src="../img/logo_header.png" alt="Font Generator Logo">
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li>
+                    <a href="../">Home</a>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Font Styles
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../tools/">All</a>
+                        <a href="../tools/strikethrough.html">Strikethrough</a>
+                        <a href="../tools/invisible.html">Invisible</a>
+                        <a href="../tools/cursive.html">Cursive Text</a>
+                        <a href="../tools/cool.html">Cool</a>
+                        <a href="../tools/fancy.html">Fancy</a>
+                        <a href="../tools/glitch.html">Glitch</a>
+                        <a href="../tools/bold.html">Bold</a>
+                        <a href="../tools/text-art.html">Text Art</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        About
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../about-us.html">About Us</a>
+                        <a href="../contact-us.html">Contact Us</a>
+                        <a href="../privacy-policy.html">Privacy</a>
+                        <a href="../faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Language
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://fancytext.in" data-lang="en">English</a>
+                        <a href="../es.html" data-lang="es">Español</a>
+                        <a href="../ar.html" data-lang="ar">العربية</a>
+                        <a href="../fr.html" data-lang="fr">Français</a>
+                        <a href="../de.html" data-lang="de">Deutsch</a>
+                        <a href="../pt.html" data-lang="pt">Português</a>
+                        <a href="../id.html" data-lang="id">Indonesian</a>
+                        <a href="../hi.html" data-lang="hi">हिन्दी </a>
+                        <a href="../it.html" data-lang="it">Italiano</a>
+                        <a href="../ja.html" data-lang="ja">日本語</a>
+                        <a href="../ru.html" data-lang="ru">Россия</a>
+                        <a href="../th.html" data-lang="th">ประเทศไทย</a>
+                        <a href="../tr.html" data-lang="tr">Türkiye</a>
+                        <a href="../vi.html" data-lang="vi">Việt Nam</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="tool-container">
+            <h1>Cursive Text Generator</h1>
+            <p>Type or paste your text below to instantly convert it into various stylish cursive fonts. Copy and paste these unique fonts to social media, messaging apps, and more!</p>
+            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+            <div class="buttons">
+                <button class="clear-button" id="clearBtn">Clear All</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-box">
+                    <h3>Cursive Script</h3>
+                    <textarea id="outputCursive1" readonly></textarea>
+                    <button class="copy-button" data-target="outputCursive1">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Bold Cursive</h3>
+                    <textarea id="outputCursive2" readonly></textarea>
+                    <button class="copy-button" data-target="outputCursive2">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Looping Cursive</h3>
+                    <textarea id="outputCursive3" readonly></textarea>
+                    <button class="copy-button" data-target="outputCursive3">Copy</button>
+                </div>
+                </div>
+
+            <div class="seo-content">
+                <h2>What is a Cursive Text Generator?</h2>
+                <p>A Cursive Text Generator is an online tool that transforms standard Latin alphabet characters into their Unicode cursive equivalents. These special characters, while looking like traditional script or handwritten fonts, are actually just different representations of text, making them widely compatible across various platforms and devices.</p>
+
+                <h2>Why Use Cursive Fonts?</h2>
+                <ul>
+                    <li><strong>Social Media Standout:</strong> Make your posts, bios, and comments more eye-catching on Instagram, Facebook, Twitter, and TikTok.</li>
+                    <li><strong>Personalized Messages:</strong> Add a touch of elegance or flair to your WhatsApp, Discord, or other chat messages.</li>
+                    <li><strong>Creative Projects:</strong> Design unique graphics, banners, or aesthetic elements for your digital content.</li>
+                    <li><strong>Nicknames & Usernames:</strong> Create distinctive usernames in games or online communities.</li>
+                </ul>
+
+                <h2>How to Use This Tool:</h2>
+                <ol>
+                    <li><strong>Type or Paste:</strong> Enter your desired text into the input box.</li>
+                    <li><strong>Automatic Conversion:</strong> The tool will instantly convert your text into multiple cursive styles below.</li>
+                    <li><strong>Choose & Copy:</strong> Select your favorite cursive style and click the "Copy" button next to it.</li>
+                    <li><strong>Paste Anywhere:</strong> Paste the copied cursive text into your social media, documents, or wherever you wish!</li>
+                </ol>
+
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions (FAQ) about Cursive Text</h2>
+                    <div class="faq-item">
+                        <h3>Q: Are these "fonts" real fonts?</h3>
+                        <p>A: No, not in the traditional sense. These are Unicode characters that visually resemble cursive fonts. This means they are supported natively by most devices and platforms without needing to install specific fonts.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Will cursive text work on all social media platforms?</h3>
+                        <p>A: Most modern social media platforms and operating systems support these Unicode characters. However, very old devices or niche platforms might have limited support, showing a default square or question mark for unsupported characters.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Can I use numbers and symbols in cursive?</h3>
+                        <p>A: Our generator focuses on converting alphabetical characters. While some Unicode blocks include cursive-like numbers or symbols, comprehensive conversion for all characters is not always available in these stylistic fonts.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Is there any difference between different cursive styles?</h3>
+                        <p>A: Yes! Each style uses a different set of Unicode characters to achieve a distinct look. Some might be more flowing, others bolder, and some may have decorative loops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                &copy; 2025 Font Generator. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <a href="../privacy-policy.html">Privacy Policy</a> |
+                <a href="../about-us.html">About Us</a> |
+                <a href="../contact-us.html">Contact</a> |
+                <a href="../changelog.html">Latest Updates</a> |
+                <a href="../feedback.html">Feedback</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputText = document.getElementById('inputText');
+            const copyButtons = document.querySelectorAll('.output-box .copy-button');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Unicode mappings for various cursive styles
+            // These are simplified mappings; full mappings would be very long.
+            // For a production-level tool, you might use a library or more extensive maps.
+            const cursiveMap1 = { // Script Normal (Mathematical Script)
+                'a': '𝒶', 'b': '𝒷', 'c': '𝒸', 'd': '𝒹', 'e': '𝑒', 'f': '𝒻', 'g': '𝑔', 'h': '𝒽', 'i': '𝒾', 'j': '𝒿', 'k': '𝓀', 'l': '𝓁', 'm': '𝓂', 'n': '𝓃', 'o': '𝑜', 'p': '𝓅', 'q': '𝓆', 'r': '𝓇', 's': '𝓈', 't': '𝓉', 'u': '𝓊', 'v': '𝓋', 'w': '𝓌', 'x': '𝓍', 'y': '𝓎', 'z': '𝓏',
+                'A': '𝒜', 'B': '𝐵', 'C': '𝒞', 'D': '𝒟', 'E': '𝐸', 'F': '𝐹', 'G': '𝒢', 'H': '𝐻', 'I': '𝐼', 'J': '𝒥', 'K': '𝒦', 'L': '𝐿', 'M': '𝑀', 'N': '𝒩', 'O': '𝒪', 'P': '𝒫', 'Q': '𝒬', 'R': '𝑅', 'S': '𝒮', 'T': '𝒯', 'U': '𝒰', 'V': '𝒱', 'W': '𝒲', 'X': '𝒳', 'Y': '𝒴', 'Z': '𝒵'
+            };
+
+            const cursiveMap2 = { // Script Bold (Mathematical Bold Script)
+                'a': '𝓪', 'b': '𝒷', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝒻', 'g': '𝓰', 'h': '𝓱', 'i': '𝓲', 'j': '𝓳', 'k': '𝓴', 'l': '𝓵', 'm': '𝓶', 'n': '𝓷', 'o': '𝓸', 'p': '𝓹', 'q': '𝓺', 'r': '𝓻', 's': '𝓼', 't': '𝓽', 'u': '𝓾', 'v': '𝓿', 'w': '𝔀', 'x': '𝔁', 'y': '𝔂', 'z': '𝔃',
+                'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝓓', 'E': '𝓔', 'F': '𝓕', 'G': '𝓖', 'H': '𝓗', 'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟', 'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓤', 'V': '𝓥', 'W': '𝓦', 'X': '𝓧', 'Y': '𝓨', 'Z': '𝓩'
+            };
+
+            const cursiveMap3 = { // A less common or "fancy" script style (can be a mix or another block)
+                // Note: True "looping" cursive often requires a specialized font or rendering,
+                // these are still just character substitutions.
+                'a': '𝒶', 'b': '𝒷', 'c': '𝒸', 'd': '𝒹', 'e': '𝑒', 'f': '𝒻', 'g': '𝑔', 'h': '𝒽', 'i': '𝒾', 'j': '𝒿', 'k': '𝓀', 'l': '𝓁', 'm': '𝓂', 'n': '𝓃', 'o': '𝑜', 'p': '𝓅', 'q': '𝓆', 'r': '𝓇', 's': '𝓈', 't': '𝓉', 'u': '𝓊', 'v': '𝓋', 'w': '𝓌', 'x': '𝓍', 'y': '𝓎', 'z': '𝓏',
+                'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝒟', 'E': '𝓔', 'F': '𝓕', 'G': '𝓒', 'H': '𝓒', 'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟', 'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓒', 'V': '𝓒', 'W': '𝓒', 'X': '𝓧', 'Y': '𝓨', 'Z': '𝓩'
+            };
+
+            function transformToCursive(text, mapping) {
+                return Array.from(text).map(char => {
+                    const lowerChar = char.toLowerCase();
+                    if (mapping[char]) {
+                        return mapping[char];
+                    } else if (mapping[lowerChar] && char === char.toUpperCase()) {
+                        // Handle uppercase if only lowercase is mapped in some simple maps,
+                        // but generally, the full map should include both.
+                        return mapping[lowerChar].toUpperCase(); // This won't work for Unicode cursive
+                    }
+                    return char; // Return original character if no mapping exists
+                }).join('');
+            }
+
+            function updateCursiveOutputs() {
+                const text = inputText.value;
+                document.getElementById('outputCursive1').value = transformToCursive(text, cursiveMap1);
+                document.getElementById('outputCursive2').value = transformToCursive(text, cursiveMap2);
+                document.getElementById('outputCursive3').value = transformToCursive(text, cursiveMap3);
+                // Add more as needed
+            }
+
+            // Event listener for input
+            inputText.addEventListener('input', updateCursiveOutputs);
+
+            // Copy button functionality for each output box
+            copyButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const targetId = event.target.dataset.target;
+                    const targetTextarea = document.getElementById(targetId);
+                    targetTextarea.select();
+                    targetTextarea.setSelectionRange(0, 99999); // For mobile devices
+                    try {
+                        document.execCommand('copy');
+                        alert('Cursive text copied to clipboard!');
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                        alert('Failed to copy. Please copy manually.');
+                    }
+                });
+            });
+
+            // Clear button functionality
+            clearBtn.addEventListener('click', () => {
+                inputText.value = '';
+                document.getElementById('outputCursive1').value = '';
+                document.getElementById('outputCursive2').value = '';
+                document.getElementById('outputCursive3').value = '';
+                // Clear more as needed
+            });
+
+            // Initial generation on load
+            updateCursiveOutputs();
+        });
+    </script>
+</body>
+</html>
