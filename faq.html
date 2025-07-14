@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FAQ - Font Generator | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to frequently asked questions about Font Generator, how our text tools work, Unicode compatibility, usage tips, and more.">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FAQ - Font Generator | Frequently Asked Questions">
+    <meta property="og:description" content="Find answers to frequently asked questions about Font Generator, how our text tools work, Unicode compatibility, usage tips, and more.">
+    <meta property="og:image" content="./img/Font-Generator.png">
+    <meta property="og:url" content="https://fancytext.in/faq.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ - Font Generator | Frequently Asked Questions">
+    <meta name="twitter:description" content="Find answers to frequently asked questions about Font Generator, how our text tools work, Unicode compatibility, usage tips, and more.">
+    <meta name="twitter:url" content="https://fancytext.in/faq.html">
+    <meta name="twitter:image" content="./img/Font-Generator.png">
+    <link rel="canonical" href="https://fancytext.in/faq.html">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./homepage.css">
+    <style>
+        /* Specific styling for the FAQ page content */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.7;
+            color: #333;
+        }
+        .faq-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden; /* For smooth transition */
+        }
+        .faq-question {
+            background-color: #f0f0f0;
+            padding: 15px 20px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #444;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #e0e0e0;
+        }
+        .faq-question .arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active .arrow {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            padding: 0 20px;
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-answer p {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 0; /* Remove default paragraph margin */
+            font-size: 1.05rem;
+        }
+        .faq-answer.open {
+            max-height: 500px; /* Adjust based on expected content height */
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+        }
+        .seo-content {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .seo-content h2, .seo-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .seo-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .seo-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .seo-content ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <!-- Hamburger SVG -->
+            <span class="icon-hamburger">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/>
+                    <line x1="4" y1="12" x2="20" y2="12"/>
+                    <line x1="4" y1="18" x2="20" y2="18"/>
+                </svg>
+            </span>
+            <!-- Close SVG -->
+            <span class="icon-close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </span>
+        </button>
+        <a href="/" class="logo">
+            <img src="./img/logo_header.png" alt="Font Generator Logo">
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li>
+                    <a href="./">Home</a>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Font Styles
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./tools/all.html">All</a>
+                        <a href="./tools/strikethrough.html">Strikethrough</a>
+                        <a href="./tools/invisible.html">Invisible</a>
+                        <a href="./tools/cursive.html">Cursive Text</a>
+                        <a href="./tools/cool.html">Cool</a>
+                        <a href="./tools/fancy.html">Fancy</a>
+                        <a href="./tools/glitch.html">Glitch</a>
+                        <a href="./tools/bold.html">Bold</a>
+                        <a href="./tools/text-art.html">Text Art</a>
+                        <a href="./tools/fancy-numbers.html">Fancy Numbers</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        About
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./about-us.html">About Us</a>
+                        <a href="./contact-us.html">Contact Us</a>
+                        <a href="./privacy-policy.html">Privacy</a>
+                        <a href="./faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Language
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://fancytext.in" data-lang="en">English</a>
+                        <a href="./es.html" data-lang="es">Español</a>
+                        <a href="./ar.html" data-lang="ar">العربية</a>
+                        <a href="./fr.html" data-lang="fr">Français</a>
+                        <a href="./de.html" data-lang="de">Deutsch</a>
+                        <a href="./pt.html" data-lang="pt">Português</a>
+                        <a href="./id.html" data-lang="id">Indonesian</a>
+                        <a href="./hi.html" data-lang="hi">हिन्दी </a>
+                        <a href="./it.html" data-lang="it">Italiano</a>
+                        <a href="./ja.html" data-lang="ja">日本語</a>
+                        <a href="./ru.html" data-lang="ru">Россия</a>
+                        <a href="./th.html" data-lang="th">ประเทศไทย</a>
+                        <a href="./tr.html" data-lang="tr">Türkiye</a>
+                        <a href="./vi.html" data-lang="vi">Việt Nam</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="faq-container">
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <p>Here are some common questions about Font Generator and how our tools work. If you don't find the answer you're looking for, please feel free to <a href="./contact-us.html">contact us</a>!</p>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: What is Font Generator?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: Font Generator is an online platform that provides various tools to convert your regular text into stylish and decorative Unicode character sets. These aren't traditional fonts that require installation; instead, they are special characters that can be copied and pasted across most digital platforms.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: How do your text generators work?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: Our tools leverage the Unicode standard. When you type text, our JavaScript code maps each standard character to its corresponding Unicode "fancy" character. For example, 'a' might become 'ⓐ' (circled a) or '𝒶' (script a). This transformation happens instantly in your browser.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Are these "fonts" real fonts?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: No, they are not traditional font files (.ttf, .otf) that you install. They are Unicode characters that visually resemble different font styles. This is why they work by simply copying and pasting, and why they are compatible across various platforms without needing specific font installations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Will the generated text work on all social media platforms?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: Most modern social media platforms (like Instagram, Facebook, Twitter, TikTok, WhatsApp, Discord) and operating systems support these Unicode characters. However, very old devices or less common platforms might have limited support, potentially displaying some characters as squares or question marks.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Is it safe to use these characters?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: Yes, these are standard Unicode characters and are perfectly safe to use. They are not harmful or malicious. However, excessive use of highly decorative or glitched text might sometimes reduce readability or be interpreted differently by screen readers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Do you store my input text?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: No, absolutely not. The text you type or paste into our generators is processed entirely within your web browser. We do not store, log, or transmit your input text to our servers. Your privacy regarding your input is paramount.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: Can I use numbers and symbols with your tools?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: Many of our tools, especially "Cool Text" and "Fancy Numbers," include mappings for numerical digits and some common symbols. However, comprehensive support for all symbols across all stylistic variations may vary depending on the specific Unicode block used for that style.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Q: I have a suggestion for a new text style. How can I share it?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A: We love hearing your ideas! Please visit our <a href="./contact-us.html">Contact Us</a> page and send us a message with your suggestions. We are always looking to expand our collection of tools.</p>
+                </div>
+            </div>
+
+            <div class="seo-content">
+                <h2>Understanding Text Generation and Unicode</h2>
+                <p>Our text generators are built upon the Unicode standard, which is a universal character encoding system. This standard assigns a unique number to every character, no matter what platform, device, application, or language. This allows text created on our site to be displayed correctly across a wide range of digital environments.</p>
+                <p>When we talk about "fancy fonts," we're actually referring to different Unicode characters that happen to look like various font styles. For instance, the letter 'A' has many Unicode representations, including '𝐀' (Mathematical Bold A), '𝔸' (Mathematical Double-Struck A), and '𝓐' (Mathematical Script A). Our tools simply provide an easy way to convert your regular text into these alternative Unicode characters.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                &copy; 2025 Font Generator. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <a href="./privacy-policy.html">Privacy Policy</a> |
+                <a href="./about-us.html">About Us</a> |
+                <a href="./contact-us.html">Contact</a> |
+                <a href="./changelog.html">Latest Updates</a> |
+                <a href="./feedback.html">Feedback</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    question.classList.toggle('active');
+                    answer.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
