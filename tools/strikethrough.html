@@ -25,63 +25,102 @@
   <link rel="canonical" href="./tools/strikethrough.html">
  <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../homepage.css">
-  <style>
-    .container {
-      width: 100%;
-      max-width: 800px;
-    }
+<style>
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
 
-    .label {
-      font-weight: bold;
-      margin-top: 20px;
-    }
+  .label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 
-    .editable {
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      padding: 15px;
-      min-height: 100px;
-      background: #fff;
-      outline: none;
-      margin-bottom: 20px;
-    }
+  .editable {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 18px;
+    min-height: 120px;
+    background: #f9f9f9;
+    outline: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
+  }
 
+  .editable:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+  }
+
+  .output-block {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  .output-text {
+    flex: 1 1 auto;
+    word-break: break-word;
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  .monospace {
+    font-family: monospace;
+  }
+
+  .sans {
+    font-family: sans-serif;
+  }
+
+  .unstyled {
+    font-family: inherit;
+  }
+
+  .strike {
+    text-decoration: line-through;
+  }
+
+  @media (max-width: 600px) {
     .output-block {
-      background: #fff;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
-      white-space: pre-wrap;
-    }
-
-    .output-text {
-      flex: 1;
+      flex-direction: column;
+      align-items: stretch;
     }
 
     .btn {
-      padding: 8px 12px;
-      font-size: 14px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background: #4CAF50;
-      color: white;
+      align-self: flex-end;
+      width: fit-content;
     }
+  }
+</style>
 
-    .monospace { font-family: monospace; }
-    .sans { font-family: sans-serif; }
-    .unstyled { font-family: inherit; }
-
-    .strike { text-decoration: line-through; }
-    .slash::before, .slash::after {
-      content: "/";
-    }
-  </style>
 
 </head>
 <body>
@@ -180,7 +219,7 @@
 
   <div class="nav-overlay" id="navOverlay"></div>
 
-
+<div class="output-list">
   <div class="container">
     <div class="label">Enter Text Below:</div>
     <div class="editable" contenteditable="true" id="inputBox"></div>
@@ -190,7 +229,7 @@
     <!-- Outputs dynamically inserted here -->
     <div id="outputs"></div>
   </div>
-
+</div>
   
 
 <footer class="site-footer">
@@ -264,7 +303,7 @@
     // Initialize with empty input
     updateOutputs('');
   </script>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 
 </body>
 </html>
