@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bold Text Generator - Create Bold & Strong Fonts Online</title>
+    <meta name="description" content="Generate bold text styles like Sans-serif Bold, Serif Bold, and Bold Italic for social media, headlines, and emphasis. Easily copy and paste strong fonts.">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bold Text Generator - Create Bold & Strong Fonts Online">
+    <meta property="og:description" content="Generate bold text styles like Sans-serif Bold, Serif Bold, and Bold Italic for social media, headlines, and emphasis. Easily copy and paste strong fonts.">
+    <meta property="og:image" content="../img/Font-Generator.png">
+    <meta property="og:url" content="https://fancytext.in/tools/bold.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bold Text Generator - Create Bold & Strong Fonts Online">
+    <meta name="twitter:description" content="Generate bold text styles like Sans-serif Bold, Serif Bold, and Bold Italic for social media, headlines, and emphasis. Easily copy and paste strong fonts.">
+    <meta name="twitter:url" content="https://fancytext.in/tools/bold.html">
+    <meta name="twitter:image" content="../img/Font-Generator.png">
+    <link rel="canonical" href="https://fancytext.in/tools/bold.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../homepage.css">
+    <style>
+        /* Basic styling for the tool, adjust as needed with your main CSS */
+        .tool-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tool-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .tool-container textarea {
+            width: calc(100% - 20px);
+            min-height: 100px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        .tool-container .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tool-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tool-container button.copy-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .tool-container button.copy-button:hover {
+            background-color: #0056b3;
+        }
+        .tool-container button.clear-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .tool-container button.clear-button:hover {
+            background-color: #c82333;
+        }
+        .output-section {
+            margin-top: 30px;
+        }
+        .output-box {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .output-box h3 {
+            margin-top: 0;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .output-box textarea {
+            width: calc(100% - 20px);
+            min-height: 60px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold; /* For visual representation in the textarea */
+        }
+        /* Specific font styles for different bold types if desired */
+        #outputSansSerifBold { font-family: 'Arial', sans-serif; }
+        #outputSerifBold { font-family: 'Times New Roman', serif; }
+        #outputBoldItalic { font-family: 'Arial', sans-serif; font-style: italic; } /* For visual representation */
+
+        .seo-content {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .seo-content h2, .seo-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .seo-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .seo-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .seo-content ul li {
+            margin-bottom: 5px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <!-- Hamburger SVG -->
+            <span class="icon-hamburger">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/>
+                    <line x1="4" y1="12" x2="20" y2="12"/>
+                    <line x1="4" y1="18" x2="20" y2="18"/>
+                </svg>
+            </span>
+            <!-- Close SVG -->
+            <span class="icon-close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </span>
+        </button>
+        <a href="/" class="logo">
+            <img src="../img/logo_header.png" alt="Font Generator Logo">
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li>
+                    <a href="../">Home</a>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Font Styles
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../tools/">All</a>
+                        <a href="../tools/strikethrough.html">Strikethrough</a>
+                        <a href="../tools/invisible.html">Invisible</a>
+                        <a href="../tools/cursive.html">Cursive Text</a>
+                        <a href="../tools/cool.html">Cool</a>
+                        <a href="../tools/fancy.html">Fancy</a>
+                        <a href="../tools/glitch.html">Glitch</a>
+                        <a href="../tools/bold.html">Bold</a>
+                        <a href="../tools/text-art.html">Text Art</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        About
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../about-us.html">About Us</a>
+                        <a href="../contact-us.html">Contact Us</a>
+                        <a href="../privacy-policy.html">Privacy</a>
+                        <a href="../faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Language
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://fancytext.in" data-lang="en">English</a>
+                        <a href="../es.html" data-lang="es">Español</a>
+                        <a href="../ar.html" data-lang="ar">العربية</a>
+                        <a href="../fr.html" data-lang="fr">Français</a>
+                        <a href="../de.html" data-lang="de">Deutsch</a>
+                        <a href="../pt.html" data-lang="pt">Português</a>
+                        <a href="../id.html" data-lang="id">Indonesian</a>
+                        <a href="../hi.html" data-lang="hi">हिन्दी </a>
+                        <a href="../it.html" data-lang="it">Italiano</a>
+                        <a href="../ja.html" data-lang="ja">日本語</a>
+                        <a href="../ru.html" data-lang="ru">Россия</a>
+                        <a href="../th.html" data-lang="th">ประเทศไทย</a>
+                        <a href="../tr.html" data-lang="tr">Türkiye</a>
+                        <a href="../vi.html" data-lang="vi">Việt Nam</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="tool-container">
+            <h1>Bold Text Generator</h1>
+            <p>Make your text stand out! Type or paste your text below to instantly convert it into various bold and strong font styles for social media, headlines, and emphasis.</p>
+            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+            <div class="buttons">
+                <button class="clear-button" id="clearBtn">Clear All</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-box">
+                    <h3>Sans-serif Bold</h3>
+                    <textarea id="outputSansSerifBold" readonly></textarea>
+                    <button class="copy-button" data-target="outputSansSerifBold">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Serif Bold</h3>
+                    <textarea id="outputSerifBold" readonly></textarea>
+                    <button class="copy-button" data-target="outputSerifBold">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Bold Italic</h3>
+                    <textarea id="outputBoldItalic" readonly></textarea>
+                    <button class="copy-button" data-target="outputBoldItalic">Copy</button>
+                </div>
+                <!-- Add more bold styles if available or desired -->
+            </div>
+
+            <div class="seo-content">
+                <h2>What is a Bold Text Generator?</h2>
+                <p>A Bold Text Generator is an online tool that converts regular text into bold, strong-looking characters using Unicode. These aren't traditional fonts that need to be installed; instead, they are special Unicode symbols that visually resemble bold typography, making them compatible across most digital platforms and applications.</p>
+
+                <h2>Uses for Bold Text:</h2>
+                <ul>
+                    <li><strong>Social Media:</strong> Emphasize words in your Instagram captions, Facebook posts, Twitter tweets, or TikTok bios to grab attention.</li>
+                    <li><strong>Headlines & Titles:</strong> Make headings and titles more prominent in documents, presentations, or web content.</li>
+                    <li><strong>Messaging Apps:</strong> Highlight important points in WhatsApp, Discord, or Telegram chats.</li>
+                    <li><strong>Gaming Usernames:</strong> Create impactful and noticeable usernames in online games.</li>
+                    <li><strong>Creative Writing:</strong> Use bold text for emphasis in short stories, poetry, or digital art.</li>
+                </ul>
+
+                <h2>How to Use This Tool:</h2>
+                <ol>
+                    <li><strong>Enter Your Text:</strong> Type or paste your desired text into the input box.</li>
+                    <li><strong>Automatic Conversion:</strong> The tool will instantly display your text in various bold styles below.</li>
+                    <li><strong>Copy & Paste:</strong> Choose the bold style you prefer and click the "Copy" button next to it.</li>
+                    <li><strong>Use Anywhere:</strong> Paste the copied bold text into your social media, documents, or any other platform.</li>
+                </ol>
+
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions (FAQ) about Bold Text</h2>
+                    <div class="faq-item">
+                        <h3>Q: How does this tool create bold text?</h3>
+                        <p>A: It utilizes specific Unicode character blocks that are designed to appear bold. For example, Mathematical Alphanumeric Symbols include bold versions of Latin letters and numbers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Will bold text work on all platforms?</h3>
+                        <p>A: Most modern web browsers, operating systems, and social media platforms support these Unicode bold characters. Compatibility is generally high, but very old systems might not render them correctly.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Can I use numbers and symbols in bold?</h3>
+                        <p>A: Yes, many Unicode bold character sets include bold versions of numbers. Support for symbols varies, but common symbols often have bold equivalents.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Is this different from using the 'B' button in text editors?</h3>
+                        <p>A: Yes. When you use a 'B' (bold) button in a rich text editor (like Word or a website's editor), it applies formatting (CSS `font-weight: bold;`). This tool generates new Unicode characters that are inherently bold, so they retain their bold appearance even when pasted into plain text fields or platforms that don't support rich text formatting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                &copy; 2025 Font Generator. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <a href="../privacy-policy.html">Privacy Policy</a> |
+                <a href="../about-us.html">About Us</a> |
+                <a href="../contact-us.html">Contact</a> |
+                <a href="../changelog.html">Latest Updates</a> |
+                <a href="../feedback.html">Feedback</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputText = document.getElementById('inputText');
+            const copyButtons = document.querySelectorAll('.output-box .copy-button');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Unicode mappings for various bold text styles
+            const boldTextMaps = {
+                sansSerifBold: {
+                    'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵', 'i': '𝗶', 'j': '𝗷', 'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽', 'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁', 'u': '𝘂', 'v': '𝘃', 'w': '𝘄', 'x': '𝗫', 'y': '𝘆', 'z': '𝘇',
+                    'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫', 'Y': '𝗬', 'Z': '𝗭',
+                    '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'
+                },
+                serifBold: {
+                    'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢', 'j': '𝐣', 'k': '𝐤', 'l': '𝐥', 'm': '𝐦', 'n': '𝐧', 'o': '𝐨', 'p': '𝐩', 'q': '𝐪', 'r': '𝐫', 's': '𝐬', 't': '𝐭', 'u': '𝐮', 'v': '𝐯', 'w': '𝐰', 'x': '𝐱', 'y': '𝐲', 'z': '𝐳',
+                    'A': '𝐀', 'B': '𝐁', 'C': '𝐂', 'D': '𝐃', 'E': '𝐄', 'F': '𝐅', 'G': '𝐆', 'H': '𝐇', 'I': '𝐈', 'J': '𝐉', 'K': '𝐊', 'L': '𝐋', 'M': '𝐌', 'N': '𝐍', 'O': '𝐎', 'P': '𝐏', 'Q': '𝐐', 'R': '𝐑', 'S': '𝐒', 'T': '𝐓', 'U': '𝐔', 'V': '𝐕', 'W': '𝐖', 'X': '𝐗', 'Y': '𝐘', 'Z': '𝐙',
+                    '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗'
+                },
+                boldItalic: { // Reusing from 'cool.html' if it's the same Unicode block
+                    'a': '𝙖', 'b': '𝙗', 'c': '𝙘', 'd': '�', 'e': '𝙚', 'f': '𝙛', 'g': '𝙜', 'h': '𝙝', 'i': '𝙞', 'j': '𝙟', 'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': '𝙤', 'p': '𝙥', 'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩', 'u': '𝙪', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭', 'y': '𝙮', 'z': '𝙯',
+                    'A': '𝘼', 'B': '𝘽', 'C': '𝘾', 'D': '𝘿', 'E': '𝙀', 'F': '𝙁', 'G': '𝙂', 'H': '𝙃', 'I': '𝙄', 'J': '𝙅', 'K': '𝙆', 'L': '𝙇', 'M': '𝙈', 'N': '𝙉', 'O': '𝙊', 'P': '𝙋', 'Q': '𝙌', 'R': '𝙍', 'S': '𝙎', 'T': '𝙏', 'U': '𝙐', 'V': '𝙑', 'W': '𝙒', 'X': '𝙓', 'Y': '𝙔', 'Z': '𝙕',
+                    '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗'
+                }
+            };
+
+            function transformText(text, mapping) {
+                let transformedText = '';
+                for (let i = 0; i < text.length; i++) {
+                    const char = text[i];
+                    if (mapping[char]) {
+                        transformedText += mapping[char];
+                    } else {
+                        transformedText += char; // Keep original character if no mapping exists
+                    }
+                }
+                return transformedText;
+            }
+
+            function updateBoldOutputs() {
+                const text = inputText.value;
+                document.getElementById('outputSansSerifBold').value = transformText(text, boldTextMaps.sansSerifBold);
+                document.getElementById('outputSerifBold').value = transformText(text, boldTextMaps.serifBold);
+                document.getElementById('outputBoldItalic').value = transformText(text, boldTextMaps.boldItalic);
+            }
+
+            // Event listener for input
+            inputText.addEventListener('input', updateBoldOutputs);
+
+            // Copy button functionality for each output box
+            copyButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const targetId = event.target.dataset.target;
+                    const targetTextarea = document.getElementById(targetId);
+                    targetTextarea.select();
+                    targetTextarea.setSelectionRange(0, 99999); // For mobile devices
+                    try {
+                        document.execCommand('copy');
+                        alert('Bold text copied to clipboard!');
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                        alert('Failed to copy. Please copy manually.');
+                    }
+                });
+            });
+
+            // Clear button functionality
+            clearBtn.addEventListener('click', () => {
+                inputText.value = '';
+                document.getElementById('outputSansSerifBold').value = '';
+                document.getElementById('outputSerifBold').value = '';
+                document.getElementById('outputBoldItalic').value = '';
+            });
+
+            // Initial generation on load
+            updateBoldOutputs();
+        });
+    </script>
+</body>
+</html>
+�
