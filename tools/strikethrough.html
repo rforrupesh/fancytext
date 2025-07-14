@@ -121,7 +121,56 @@
   }
 </style>
 
-
+<style>
+   
+    .article {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      margin-top: 0;
+      color: #444;
+    }
+    .section p {
+      line-height: 1.6;
+    }
+    .code {
+      background: #eee;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      display: inline-block;
+    }
+    .example {
+      background: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #007acc;
+      font-family: monospace;
+    }
+    .table {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      background: #fafafa;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
 </head>
 <body>
  <nav class="navbar">
@@ -230,7 +279,51 @@
     <div id="outputs"></div>
   </div>
 </div>
-  
+
+
+  <div class="article">
+  <div class="section">
+    <h2>🔠 Strikethrough Text Generator</h2>
+    <p>Paste your text below, pick a style, and copy it—no installations or downloads needed.</p>
+  </div>
+
+  <div class="section">
+    <h2>🎨 Available Text Styles</h2>
+    <div class="table">
+      <div class="row"><div>Strikethrough</div><div class="code">\u0336</div></div>
+      <div class="row"><div>Slash</div><div class="code">\u0337</div></div>
+      <div class="row"><div>Underline</div><div class="code">\u0332</div></div>
+      <div class="row"><div>Double Underline</div><div class="code">\u0333</div></div>
+      <div class="row"><div>Dotted Underline</div><div class="code">\u0323</div></div>
+      <div class="row"><div>Wavy Line</div><div class="code">\u0330</div></div>
+    </div>
+
+    <div class="example">S̶t̶r̶i̶k̶e̶ ̶T̶h̶i̶s̶</div>
+    <div class="example">s̷l̷a̷s̷h̷ ̷s̷t̷y̷l̷e̷</div>
+    <div class="example">U͟n͟d͟e͟r͟l͟i͟n͟e͟</div>
+    <div class="example">d͇o͇u͇b͇l͇e͇ ͇l͇i͇n͇e͇</div>
+    <div class="example">d̤o̤t̤t̤e̤d̤ ̤e̤f̤f̤e̤c̤t̤</div>
+    <div class="example">w̰a̰v̰y̰ ̰t̰ḛx̰t̰</div>
+  </div>
+
+  <div class="section">
+    <h2>📱 How It Works on Social Platforms</h2>
+    <p><strong>Twitter, Instagram, Facebook:</strong> Works well for posts and bios.</p>
+    <p><strong>Discord:</strong> Use native formatting like <span class="code">~~your text~~</span>.</p>
+    <p><strong>Slack:</strong> You can use <span class="code">~strike this~</span> or the generator.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔐 Privacy Friendly</h2>
+    <p>This tool works 100% in your browser. We don’t store or transmit your text. Your content stays private.</p>
+  </div>
+
+  <div class="section">
+    <h2>🙌 Like the Tool?</h2>
+    <p>If you find it useful, share it with your friends or link to it from your website. Help others discover cool formatting!</p>
+  </div>
+</div>
+
 
 <footer class="site-footer">
   <div class="footer-container">
