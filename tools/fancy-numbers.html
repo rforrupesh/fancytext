@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fancy Numbers Generator - Stylish Number Fonts Online</title>
+    <meta name="description" content="Generate fancy and decorative number styles like circled, double-struck, monospace, and more. Easily copy and paste stylish numbers for social media, gaming, and unique content.">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fancy Numbers Generator - Stylish Number Fonts Online">
+    <meta property="og:description" content="Generate fancy and decorative number styles like circled, double-struck, monospace, and more. Easily copy and paste stylish numbers for social media, gaming, and unique content.">
+    <meta property="og:image" content="../img/Font-Generator.png">
+    <meta property="og:url" content="https://fancytext.in/tools/fancy-numbers.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fancy Numbers Generator - Stylish Number Fonts Online">
+    <meta name="twitter:description" content="Generate fancy and decorative number styles like circled, double-struck, monospace, and more. Easily copy and paste stylish numbers for social media, gaming, and unique content.">
+    <meta name="twitter:url" content="https://fancytext.in/tools/fancy-numbers.html">
+    <meta name="twitter:image" content="../img/Font-Generator.png">
+    <link rel="canonical" href="https://fancytext.in/tools/fancy-numbers.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../homepage.css">
+    <style>
+        /* Basic styling for the tool, adjust as needed with your main CSS */
+        .tool-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tool-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .tool-container textarea {
+            width: calc(100% - 20px);
+            min-height: 100px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        .tool-container .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tool-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tool-container button.copy-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .tool-container button.copy-button:hover {
+            background-color: #0056b3;
+        }
+        .tool-container button.clear-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .tool-container button.clear-button:hover {
+            background-color: #c82333;
+        }
+        .output-section {
+            margin-top: 30px;
+        }
+        .output-box {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .output-box h3 {
+            margin-top: 0;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .output-box textarea {
+            width: calc(100% - 20px);
+            min-height: 60px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+            /* Ensure a font that supports these Unicode characters */
+            font-family: 'Arial', sans-serif;
+        }
+        .seo-content {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .seo-content h2, .seo-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .seo-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .seo-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .seo-content ul li {
+            margin-bottom: 5px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <!-- Hamburger SVG -->
+            <span class="icon-hamburger">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"/>
+                    <line x1="4" y1="12" x2="20" y2="12"/>
+                    <line x1="4" y1="18" x2="20" y2="18"/>
+                </svg>
+            </span>
+            <!-- Close SVG -->
+            <span class="icon-close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </span>
+        </button>
+        <a href="/" class="logo">
+            <img src="../img/logo_header.png" alt="Font Generator Logo">
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li>
+                    <a href="../">Home</a>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Font Styles
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../tools/">All</a>
+                        <a href="../tools/strikethrough.html">Strikethrough</a>
+                        <a href="../tools/invisible.html">Invisible</a>
+                        <a href="../tools/cursive.html">Cursive Text</a>
+                        <a href="../tools/cool.html">Cool</a>
+                        <a href="../tools/fancy.html">Fancy</a>
+                        <a href="../tools/glitch.html">Glitch</a>
+                        <a href="../tools/bold.html">Bold</a>
+                        <a href="../tools/text-art.html">Text Art</a>
+                        <a href="../tools/fancy-numbers.html">Fancy Numbers</a> <!-- Added this link -->
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        About
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../about-us.html">About Us</a>
+                        <a href="../contact-us.html">Contact Us</a>
+                        <a href="../privacy-policy.html">Privacy</a>
+                        <a href="../faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle">
+                        Language
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+                            <polyline points="6 8 10 12 14 8"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://fancytext.in" data-lang="en">English</a>
+                        <a href="../es.html" data-lang="es">Español</a>
+                        <a href="../ar.html" data-lang="ar">العربية</a>
+                        <a href="../fr.html" data-lang="fr">Français</a>
+                        <a href="../de.html" data-lang="de">Deutsch</a>
+                        <a href="../pt.html" data-lang="pt">Português</a>
+                        <a href="../id.html" data-lang="id">Indonesian</a>
+                        <a href="../hi.html" data-lang="hi">हिन्दी </a>
+                        <a href="../it.html" data-lang="it">Italiano</a>
+                        <a href="../ja.html" data-lang="ja">日本語</a>
+                        <a href="../ru.html" data-lang="ru">Россия</a>
+                        <a href="../th.html" data-lang="th">ประเทศไทย</a>
+                        <a href="../tr.html" data-lang="tr">Türkiye</a>
+                        <a href="../vi.html" data-lang="vi">Việt Nam</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="tool-container">
+            <h1>Fancy Numbers Generator</h1>
+            <p>Transform your regular numbers into stylish and decorative fonts! Type or paste your numbers below to generate various Unicode-based fancy number styles.</p>
+            <textarea id="inputText" placeholder="Type or paste your numbers here..."></textarea>
+            <div class="buttons">
+                <button class="clear-button" id="clearBtn">Clear All</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-box">
+                    <h3>Circled Numbers</h3>
+                    <textarea id="outputCircled" readonly></textarea>
+                    <button class="copy-button" data-target="outputCircled">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Double-Struck Numbers</h3>
+                    <textarea id="outputDoubleStruck" readonly></textarea>
+                    <button class="copy-button" data-target="outputDoubleStruck">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Monospace Numbers</h3>
+                    <textarea id="outputMonospace" readonly></textarea>
+                    <button class="copy-button" data-target="outputMonospace">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Fullwidth Numbers</h3>
+                    <textarea id="outputFullwidth" readonly></textarea>
+                    <button class="copy-button" data-target="outputFullwidth">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Bold Sans-serif Numbers</h3>
+                    <textarea id="outputBoldSansSerif" readonly></textarea>
+                    <button class="copy-button" data-target="outputBoldSansSerif">Copy</button>
+                </div>
+                <div class="output-box">
+                    <h3>Bold Serif Numbers</h3>
+                    <textarea id="outputBoldSerif" readonly></textarea>
+                    <button class="copy-button" data-target="outputBoldSerif">Copy</button>
+                </div>
+                <!-- Add more fancy number styles as needed -->
+            </div>
+
+            <div class="seo-content">
+                <h2>What is a Fancy Numbers Generator?</h2>
+                <p>A Fancy Numbers Generator is an online tool designed to convert standard numerical digits (0-9) into a variety of visually distinct and decorative Unicode characters. These aren't traditional fonts that require installation; instead, they are unique symbols that look like different number styles, making them easily copyable and pastable across most digital platforms and applications.</p>
+
+                <h2>Uses for Fancy Numbers:</h2>
+                <ul>
+                    <li><strong>Social Media:</strong> Add flair to your follower counts, dates, or other numerical information in bios, posts, and comments on platforms like Instagram, Facebook, and Twitter.</li>
+                    <li><strong>Gaming:</strong> Create unique scores, ranks, or player IDs in games.</li>
+                    <li><strong>Creative Content:</strong> Enhance digital designs, presentations, or artistic projects with stylized numbers.</li>
+                    <li><strong>Messaging Apps:</strong> Send eye-catching numerical messages on WhatsApp, Discord, Telegram, and more.</li>
+                    <li><strong>Data Presentation:</strong> Make specific numerical data stand out in informal contexts.</li>
+                </ul>
+
+                <h2>How to Use This Tool:</h2>
+                <ol>
+                    <li><strong>Enter Numbers:</strong> Type or paste any numerical digits into the input box.</li>
+                    <li><strong>Instant Conversion:</strong> The tool will automatically generate your numbers in various fancy styles below as you type.</li>
+                    <li><strong>Choose & Copy:</strong> Select the fancy number style you prefer and click the "Copy" button next to it.</li>
+                    <li><strong>Paste Anywhere:</strong> Paste the copied fancy numbers into your social media, documents, or any other platform.</li>
+                </ol>
+
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions (FAQ) about Fancy Numbers</h2>
+                    <div class="faq-item">
+                        <h3>Q: How does this tool generate fancy numbers?</h3>
+                        <p>A: It works by mapping standard digits (0-9) to corresponding Unicode characters that have a decorative appearance. Unicode includes various blocks of mathematical alphanumeric symbols and other character sets that contain stylized numbers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Will fancy numbers work on all platforms?</h3>
+                        <p>A: Most modern devices, web browsers, and social media platforms support these Unicode characters. However, very old systems or niche applications might display squares or question marks if they lack support for specific Unicode blocks.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Are these numbers readable?</h3>
+                        <p>A: Generally, yes. Most fancy number styles maintain good readability. However, some highly decorative styles might be less clear at very small sizes or for users with visual impairments.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Can I use symbols or letters with this tool?</h3>
+                        <p>A: This tool is specifically designed for numerical digits. While some Unicode blocks might include letters in similar styles, this generator focuses solely on transforming numbers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                &copy; 2025 Font Generator. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <a href="../privacy-policy.html">Privacy Policy</a> |
+                <a href="../about-us.html">About Us</a> |
+                <a href="../contact-us.html">Contact</a> |
+                <a href="../changelog.html">Latest Updates</a> |
+                <a href="../feedback.html">Feedback</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputText = document.getElementById('inputText');
+            const copyButtons = document.querySelectorAll('.output-box .copy-button');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Unicode mappings for various fancy number styles
+            const fancyNumberMaps = {
+                circled: {
+                    '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'
+                },
+                doubleStruck: {
+                    '0': '𝟘', '1': '𝟙', '2': '𝟚', '3': '𝟛', '4': '𝟜', '5': '𝟝', '6': '𝟞', '7': '𝟟', '8': '𝟠', '9': '𝟡'
+                },
+                monospace: {
+                    '0': '𝟶', '1': '𝟷', '2': '𝟸', '3': '𝟹', '4': '𝟺', '5': '𝟻', '6': '𝟼', '7': '𝟽', '8': '𝟾', '9': '𝟿'
+                },
+                fullwidth: {
+                    '0': '０', '1': '１', '2': '２', '3': '３', '4': '４', '5': '５', '6': '６', '7': '７', '8': '８', '9': '９'
+                },
+                boldSansSerif: {
+                    '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'
+                },
+                boldSerif: {
+                    '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒', '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗'
+                }
+            };
+
+            function transformNumbers(text, mapping) {
+                let transformedText = '';
+                for (let i = 0; i < text.length; i++) {
+                    const char = text[i];
+                    if (mapping[char]) {
+                        transformedText += mapping[char];
+                    } else {
+                        transformedText += char; // Keep original character if no mapping exists
+                    }
+                }
+                return transformedText;
+            }
+
+            function updateFancyNumberOutputs() {
+                const text = inputText.value;
+                document.getElementById('outputCircled').value = transformNumbers(text, fancyNumberMaps.circled);
+                document.getElementById('outputDoubleStruck').value = transformNumbers(text, fancyNumberMaps.doubleStruck);
+                document.getElementById('outputMonospace').value = transformNumbers(text, fancyNumberMaps.monospace);
+                document.getElementById('outputFullwidth').value = transformNumbers(text, fancyNumberMaps.fullwidth);
+                document.getElementById('outputBoldSansSerif').value = transformNumbers(text, fancyNumberMaps.boldSansSerif);
+                document.getElementById('outputBoldSerif').value = transformNumbers(text, fancyNumberMaps.boldSerif);
+            }
+
+            // Event listener for input
+            inputText.addEventListener('input', updateFancyNumberOutputs);
+
+            // Copy button functionality for each output box
+            copyButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const targetId = event.target.dataset.target;
+                    const targetTextarea = document.getElementById(targetId);
+                    targetTextarea.select();
+                    targetTextarea.setSelectionRange(0, 99999); // For mobile devices
+                    try {
+                        document.execCommand('copy');
+                        alert('Fancy numbers copied to clipboard!');
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                        alert('Failed to copy. Please copy manually.');
+                    }
+                });
+            });
+
+            // Clear button functionality
+            clearBtn.addEventListener('click', () => {
+                inputText.value = '';
+                document.getElementById('outputCircled').value = '';
+                document.getElementById('outputDoubleStruck').value = '';
+                document.getElementById('outputMonospace').value = '';
+                document.getElementById('outputFullwidth').value = '';
+                document.getElementById('outputBoldSansSerif').value = '';
+                document.getElementById('outputBoldSerif').value = '';
+            });
+
+            // Initial generation on load
+            updateFancyNumberOutputs();
+        });
+    </script>
+</body>
+</html>
