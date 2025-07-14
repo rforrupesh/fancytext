@@ -1,654 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Strikethrough Text Generator - S̶t̶r̶i̶k̶e̶ ̶O̶u̶t̶ Your Text Easily</title>
-    <meta name="description" content="Generate strikethrough text instantly! Our free online tool uses Unicode to create cross-out text you can copy and paste anywhere – social media, messages, and more.">
-    <meta name="robots" content="index, follow">
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
-    <link rel="icon" href="../img/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Strikethrough Text Generator</title>
+  <meta name="description" content="A Strikethrough Text Generator is an online tool that converts regular text into a stylized format where a horizontal line is drawn through the center of the text characters">
+  <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+  <link rel="icon" href="../img/favicon.png" type="image/png">
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Strikethrough Text Generator - S̶t̶r̶i̶k̶e̶ ̶O̶u̶t̶ Your Text Easily">
-    <meta property="og:description" content="Generate strikethrough text instantly! Our free online tool uses Unicode to create cross-out text you can copy and paste anywhere – social media, messages, and more.">
-    <meta property="og:image" content="../img/Font-Generator.png">
-    <meta property="og:url" content="../tools/strikethrough.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Strikethrough Text Generator - S̶t̶r̶i̶k̶e̶ ̶O̶u̶t̶ Your Text Easily">
-    <meta name="twitter:description" content="Generate strikethrough text instantly! Our free online tool uses Unicode to create cross-out text you can copy and paste anywhere – social media, messages, and more.">
-    <meta name="twitter:url" content="../tools/strikethrough.html">
-    <meta name="twitter:image" content="../img/Font-Generator.png">
-    <link rel="canonical" href="../tools/strikethrough.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Strikethrough Text Generator">
+  <meta property="og:description" content="A Strikethrough Text Generator is an online tool that converts regular text into a stylized format where a horizontal line is drawn through the center of the text characters">
+  <meta property="og:image" content="../img/Font-Generator.png">
+  <meta property="og:url" content="../">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strikethrough Text Generator">
+  <meta name="twitter:description" content="A Strikethrough Text Generator is an online tool that converts regular text into a stylized format where a horizontal line is drawn through the center of the text characters">
+  <meta name="twitter:url" content="../">
+  <meta name="twitter:image" content="../img/Font-Generator.png">
+  <link rel="canonical" href="./tools/strikethrough.html">
+ <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../homepage.css">
+  <style>
+    .container {
+      width: 100%;
+      max-width: 800px;
+    }
 
-    <link rel="alternate" href="../tools/strikethrough.html" hreflang="en">
-    <link rel="alternate" href="../es/tools/strikethrough.html" hreflang="es">
-    <link rel="alternate" href="../fr/tools/strikethrough.html" hreflang="fr">
+    .label {
+      font-weight: bold;
+      margin-top: 20px;
+    }
 
+    .editable {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      min-height: 100px;
+      background: #fff;
+      outline: none;
+      margin-bottom: 20px;
+    }
 
-    <style>
-        /* General Body and HTML Reset */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7fa;
-            color: #333;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    .output-block {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      white-space: pre-wrap;
+    }
 
-        /* Navigation Bar */
-        .navbar {
-            background-color: #ffffff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    .output-text {
+      flex: 1;
+    }
 
-        .navbar .logo img {
-            height: 40px; /* Adjust as needed */
-            vertical-align: middle;
-        }
+    .btn {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+    }
 
-        .menu-toggle {
-            display: none; /* Hidden on desktop */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-        }
+    .monospace { font-family: monospace; }
+    .sans { font-family: sans-serif; }
+    .unstyled { font-family: inherit; }
 
-        .menu-toggle .icon-close {
-            display: none; /* Initially hidden */
-        }
+    .strike { text-decoration: line-through; }
+    .slash::before, .slash::after {
+      content: "/";
+    }
+  </style>
 
-        .menu-toggle.active .icon-hamburger {
-            display: none;
-        }
-
-        .menu-toggle.active .icon-close {
-            display: block;
-        }
-
-        .nav-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-menu li {
-            margin-left: 25px;
-            position: relative; /* For dropdown positioning */
-        }
-
-        .nav-menu a, .dropdown-toggle {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            padding: 8px 0;
-            transition: color 0.3s ease;
-            white-space: nowrap; /* Prevent text wrapping */
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .nav-menu a:hover, .dropdown-toggle:hover {
-            color: #007bff;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffffff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 5px;
-            top: 100%; /* Position below the toggle */
-            left: 0;
-            padding: 10px 0;
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f2f2f2;
-            color: #007bff;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block; /* Show dropdown on hover */
-        }
-
-        /* Mobile Styles for Navbar */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block; /* Show hamburger on mobile */
-            }
-
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: fixed;
-                top: 65px; /* Adjust based on navbar height */
-                left: 0;
-                width: 100%;
-                background-color: #ffffff;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-                z-index: 999;
-                padding: 20px 0;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .nav-menu.active {
-                display: flex;
-                transform: translateX(0);
-            }
-
-            .nav-menu ul {
-                flex-direction: column;
-                width: 100%;
-                align-items: flex-start;
-            }
-
-            .nav-menu li {
-                margin: 10px 0;
-                width: 100%;
-                text-align: left;
-                padding-left: 20px; /* Indent mobile menu items */
-            }
-
-            .nav-menu a, .dropdown-toggle {
-                width: 100%;
-                display: block;
-                padding: 10px 0;
-            }
-
-            .dropdown-content {
-                position: static; /* Stack dropdown content below on mobile */
-                box-shadow: none;
-                width: 100%;
-                padding-left: 20px; /* Indent dropdown items */
-                background-color: #f8f8f8; /* Slightly different background for sub-items */
-            }
-
-            .dropdown-content a {
-                padding: 8px 0;
-            }
-
-            .nav-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 990;
-            }
-
-            .nav-overlay.active {
-                display: block;
-            }
-        }
-
-        /* General container for the main content */
-        .container {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container h1,
-        .container h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .container p {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Generator Section Styling */
-        .generator-section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .generator-section textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1.1em;
-            font-family: 'Arial', sans-serif; /* Keep a readable font */
-            resize: vertical; /* Allow vertical resizing */
-            box-sizing: border-box; /* Include padding in width */
-        }
-
-        .generator-section textarea:focus {
-            outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-        }
-
-        .output-section {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .output-section button {
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            align-self: flex-end; /* Align button to the right */
-        }
-
-        .output-section button:hover {
-            background-color: #0056b3;
-        }
-
-        .copy-message {
-            position: absolute;
-            bottom: 10px; /* Adjust as needed */
-            right: 15px; /* Adjust as needed */
-            background-color: #28a745;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            visibility: hidden; /* Hidden by default */
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .copy-message.visible {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /* Content Sections Styling (How It Works, What Is, Why Use) */
-        .how-it-works,
-        .what-is-strikethrough,
-        .why-use-strikethrough {
-            background-color: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #eee;
-        }
-
-        .how-it-works h2,
-        .what-is-strikethrough h2,
-        .why-use-strikethrough h2 {
-            color: #333;
-            text-align: left;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-        }
-
-        .how-it-works ol,
-        .why-use-strikethrough ul {
-            list-style-type: decimal;
-            padding-left: 25px;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .why-use-strikethrough ul {
-            list-style-type: disc;
-        }
-
-        .how-it-works li strong {
-            color: #007bff;
-        }
-
-        /* Site Footer */
-        .site-footer {
-            background-color: #333;
-            color: #fff;
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
-
-        .footer-container {
-            max-width: 960px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-left,
-        .footer-right {
-            flex: 1;
-            min-width: 280px; /* Ensure they don't get too small */
-            margin: 5px 0;
-        }
-
-        .footer-right a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-right a:hover {
-            color: #007bff;
-        }
-
-        /* Responsive adjustments for footer */
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-            }
-
-            .footer-left,
-            .footer-right {
-                text-align: center;
-                margin-bottom: 10px;
-            }
-
-            .footer-right {
-                margin-top: 10px;
-            }
-
-            .footer-right a {
-                display: block; /* Stack links vertically */
-                margin: 5px 0;
-            }
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-            <span class="icon-hamburger">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="6" x2="20" y2="6"/>
-                    <line x1="4" y1="12" x2="20" y2="12"/>
-                    <line x1="4" y1="18" x2="20" y2="18"/>
-                </svg>
-            </span>
-            <span class="icon-close">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </span>
-        </button>
-        <a href="../" class="logo">
-            <img src="../img/logo_header.png" alt="Font Generator Logo">
-        </a>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                <li>
-                    <a href="../">Home</a>
-                </li>
-                <li class="dropdown">
-                    <button type="button" class="dropdown-toggle">
-                        Font Styles
-                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-                            <polyline points="6 8 10 12 14 8"/>
-                        </svg>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="../tools/">All</a>
-                        <a href="../tools/strikethrough.html">Strikethrough</a>
-                        <a href="../tools/invisible.html">Invisible</a>
-                        <a href="../tools/cursive.html">Cursive Text</a>
-                        <a href="../tools/cool.html">Cool</a>
-                        <a href="../tools/fancy.html">Fancy</a>
-                        <a href="../tools/glitch.html">Glitch</a>
-                        <a href="../tools/bold.html">Bold</a>
-                        <a href="../tools/text-art.html">Text Art</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <button type="button" class="dropdown-toggle">
-                        About
-                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-                            <polyline points="6 8 10 12 14 8"/>
-                        </svg>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="../about-us.html">About Us</a>
-                        <a href="../contact-us.html">Contact Us</a>
-                        <a href="../privacy-policy.html">Privacy</a>
-                        <a href="../faq.html">FAQ</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+ <nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
+      <span class="icon-hamburger">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+      </span>
+      <!-- Close SVG -->
+      <span class="icon-close">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </span>
+    </button>
+    <a href="/" class="logo">
+      <img src="../img/logo_header.png" alt="Logo">
+    </a>
+    <div class="nav-menu" id="navMenu">
+      <ul>
+        <li>
+          <a href="../">Home</a>
+        </li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-toggle">
+            Font Styles
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+              <polyline points="6 8 10 12 14 8"/>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+            <a href="../tools/">All</a>
+            <a href="../tools/strikethrough.html">Strikethrough</a>
+            <a href="../tools/invisible.html">Invisible</a>
+            <a href="../tools/cursive.html">Cursive Text</a>
+            <a href="../tools/cool.html">Cool</a>
+            <a href="../tools/fancy.html">Fancy</a>
+            <a href="../tools/glitch.html">Glitch</a>
+            <a href="../tools/bold.html">Bold</a>
+            <a href="../tools/text-art.html">Text Art</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-toggle">
+            About
+            <!-- Caret Down SVG only -->
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+              <polyline points="6 8 10 12 14 8"/>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+            <a href="../about-us.html">About Us</a>
+            <a href="../contact-us.html">Contact Us</a>
+             <a href="../privacy-policy.html">Privacy</a>
+            <a href="../faq.html">FAQ</a>
+          </div>
+        </li>
+     
+ 
+          <li class="dropdown">
+          <button type="button" class="dropdown-toggle">
+            Language
+            <!-- Caret Down SVG only -->
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
+              <polyline points="6 8 10 12 14 8"/>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+                           <a  href="https://fancytext.in" data-lang="en">English</a>
+                            <a  href="../es.html" data-lang="es">Español</a>
+                            <a  href="../ar.html" data-lang="ar">العربية</a>
+                            <a  href="../fr.html" data-lang="fr">Français</a>
+                            <a  href="../de.html" data-lang="de">Deutsch</a>
+                            <a  href="../pt.html" data-lang="pt">Português</a>
+                            <a  href="../id.html" data-lang="id">Indonesian</a>
+                            <a  href="../hi.html" data-lang="hi">हिन्दी </a>
+                            <a  href="../it.html" data-lang="it">Italiano</a>
+                            <a  href="../ja.html" data-lang="ja">日本語</a>
+                            <a  href="../ru.html" data-lang="ru">Россия</a>
+                            <a  href="../th.html" data-lang="th">ประเทศไทย</a>
+                            <a  href="../tr.html" data-lang="tr">Türkiye</a>
+                            <a  href="../vi.html" data-lang="vi">Việt Nam</a>
+          </div>
+        </li>
+       
+      </ul>
 
-    <div class="nav-overlay" id="navOverlay"></div>
+    </div>
+  </nav>
 
-    <main class="container">
-        <h1>S̶t̶r̶i̶k̶e̶ O̶u̶t̶ Your Text: The Ultimate Strikethrough Text Generator</h1>
-        <p>In today's digital world, expressing yourself uniquely across various platforms is key. While standard text gets the job done, sometimes you need a little extra flair. That's where **strikethrough text** comes in! This handy formatting style, where a line crosses through your words, isn't just for showing edits—it's a versatile tool for humor, emphasis, and creative expression.</p>
-        <p>Our free online **Strikethrough Text Generator** makes it incredibly easy to transform any plain text into a stylish, crossed-out format that you can copy and paste anywhere.</p>
-
-        <div class="generator-section">
-            <textarea id="inputText" placeholder="Type or paste your text here..." rows="6" aria-label="Input text to generate strikethrough"></textarea>
-            <div class="output-section">
-                <textarea id="outputText" readonly rows="6" aria-label="Generated strikethrough text"></textarea>
-                <button id="copyButton">Copy Text</button>
-                <span id="copyMessage" class="copy-message">Copied!</span>
-            </div>
-        </div>
-
-        ---
-
-        <h2>What Exactly is Strikethrough Text?</h2>
-        <p>At its core, strikethrough text is text with a horizontal line running through its center. You might have seen it in word processors when tracking changes, indicating deleted content, or simply emphasizing a point.</p>
-        <p>What makes our tool special is that it generates strikethrough using **Unicode combining characters** (specifically, U+0336, the combining long stroke overlay). Unlike HTML tags (`<del>` or `<s>`) which only work on web pages, Unicode strikethrough is part of the character itself. This means your crossed-out text remains formatted when copied and pasted into almost any plain text field, from social media posts to chat apps.</p>
-
-        ---
-
-        <h2>Why Should You Use Strikethrough Text?</h2>
-        <p>The uses for strikethrough text go beyond simple corrections. It's a fantastic way to add personality and specific meaning to your digital communications.</p>
-
-        <h3>Highlighting Edits and Corrections</h3>
-        <p>This is perhaps the most traditional use. If you're sharing notes, making revisions, or simply want to show a change of thought, striking through old text while keeping it visible provides context. It’s perfect for:</p>
-        <ul>
-            <li>**Collaborative documents:** Showing what's been removed but needs to remain visible for discussion.</li>
-            <li>**Correction notes:** Indicating an error in previous communication without completely erasing it.</li>
-        </ul>
-
-        <h3>Adding Humor and Sarcasm</h3>
-        <p>Strikethrough text is a goldmine for comedic effect. You can use it to subtly convey a different meaning than what's explicitly written, often leading to a chuckle. For example:</p>
-        <ul>
-            <li>"I love my job. S̶a̶i̶d̶ ̶n̶o̶ ̶o̶n̶e̶ ̶e̶v̶e̶r̶."</li>
-            <li>"I'm feeling great t̶e̶r̶r̶i̶b̶l̶e̶ today!"</li>
-        </ul>
-
-        <h3>Creating Engaging Social Media Posts</h3>
-        <p>Want your Instagram captions, Facebook updates, or Twitter tweets to stand out? Strikethrough text offers a unique visual appeal that can grab attention and encourage engagement. Use it in bios, post descriptions, or even comment replies to add a fresh look.</p>
-
-        <h3>Marking Completed Tasks</h3>
-        <p>For quick, informal "to-do" lists in plain text notes or messages, striking through items as you complete them provides a satisfying visual cue of progress. No fancy app needed!</p>
-
-        <h3>Enhancing Casual Communication</h3>
-        <p>Whether it's a WhatsApp message, a Discord chat, or an email, strikethrough can add a subtle layer of meaning. It can show indecision, a playful cancellation, or just a quirky way of expressing yourself.</p>
-
-        ---
-
-        <h2>How Our Strikethrough Text Generator Works</h2>
-        <p>Using our tool couldn't be simpler. It's designed for instant results and maximum convenience.</p>
-        <ol>
-            <li><strong>Input Your Text:</strong> Just type or paste the text you want to strike through into the "Type or paste your text here..." box.</li>
-            <li><strong>Watch the Magic Happen:</strong> As you type, the generator instantly converts your input into its strikethrough equivalent in the "Strikethrough Text" output box.</li>
-            <li><strong>Copy with a Click:</strong> Hit the "Copy Text" button, and the generated strikethrough text is immediately saved to your clipboard.</li>
-            <li><strong>Paste Anywhere:</strong> Now, paste your unique, crossed-out text wherever you desire—social media, messaging apps, documents, and more!</li>
-        </ol>
-
-        ---
-
-        <h2>Compatibility and Limitations</h2>
-        <p>Our Strikethrough Text Generator uses widely supported Unicode characters, meaning it generally works across most modern platforms, browsers, and operating systems. This includes:</p>
-        <ul>
-            <li>**Social Media:** Facebook, Instagram, Twitter, LinkedIn, etc.</li>
-            <li>**Messaging Apps:** WhatsApp, Telegram, Discord, Slack, etc.</li>
-            <li>**Documents:** Google Docs (can recognize Unicode formatting), some text editors.</li>
-        </ul>
-        <p>However, be aware that while Unicode is broadly compatible, very old or niche systems might not render combining characters perfectly. In such rare cases, the strikethrough might appear as a separate character after each letter, or not at all. But for the vast majority of modern usage, it works flawlessly.</p>
-
-        ---
-
-        <h2>Get Started Today!</h2>
-        <p>Stop writing plain text and start exploring the creative possibilities with strikethrough. Our **Strikethrough Text Generator** is fast, free, and incredibly easy to use. Give your words that extra touch of personality and make your messages s̶t̶a̶n̶d̶ ̶o̶u̶t̶ **shine**!</p>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                &copy; 2025 Font Generator . All rights reserved.
-            </div>
-            <div class="footer-right">
-                <a href="../privacy-policy.html">Privacy Policy</a> |
-                <a href="../about-us.html">About Us</a> |
-                <a href="../contact-us.html">Contact</a> |
-                <a href="../changelog.html">Latest Updates</a> |
-                <a href="../feedback.html">Feedback</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Navbar toggle functionality (from your original script.js)
-            const menuToggle = document.getElementById('menuToggle');
-            const navMenu = document.getElementById('navMenu');
-            const navOverlay = document.getElementById('navOverlay');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-            if (menuToggle && navMenu && navOverlay) {
-                menuToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    menuToggle.classList.toggle('active');
-                    navOverlay.classList.toggle('active');
-                });
-
-                navOverlay.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                    navOverlay.classList.remove('active');
-                });
-            }
-
-            // Dropdown menu functionality
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const dropdownContent = toggle.nextElementSibling;
-                    if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
-                        // Close other open dropdowns if any
-                        document.querySelectorAll('.dropdown-content').forEach(content => {
-                            if (content !== dropdownContent && content.style.display === 'block') {
-                                content.style.display = 'none';
-                            }
-                        });
-                        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-                    }
-                });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', (event) => {
-                if (!event.target.closest('.dropdown')) {
-                    document.querySelectorAll('.dropdown-content').forEach(content => {
-                        content.style.display = 'none';
-                    });
-                }
-            });
+  <div class="nav-overlay" id="navOverlay"></div>
 
 
-            // Strikethrough Generator Logic
-            const inputText = document.getElementById('inputText');
-            const outputText = document.getElementById('outputText');
-            const copyButton = document.getElementById('copyButton');
-            const copyMessage = document.getElementById('copyMessage');
+  <div class="container">
+    <div class="label">Enter Text Below:</div>
+    <div class="editable" contenteditable="true" id="inputBox"></div>
 
-            // Unicode combining character for strikethrough (U+0336)
-            const STRIKETHROUGH_CHAR = '\u0336';
+    <div class="label">Formatted Outputs:</div>
 
-            function generateStrikethrough(text) {
-                // Handle surrogate pairs for emojis and complex characters correctly
-                return [...text] // Spreads string into an array of characters, correctly handling Unicode
-                    .map(char => char + STRIKETHROUGH_CHAR) // Add strikethrough char to each character
-                    .join(''); // Join characters back into a string
-            }
+    <!-- Outputs dynamically inserted here -->
+    <div id="outputs"></div>
+  </div>
 
-            inputText.addEventListener('input', () => {
-                const originalText = inputText.value;
-                outputText.value = generateStrikethrough(originalText);
-                copyMessage.classList.remove('visible'); // Hide message when text changes
-            });
+  
 
-            copyButton.addEventListener('click', () => {
-                outputText.select(); // Select the text in the output area
-                outputText.setSelectionRange(0, 99999); // For mobile devices
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      &copy; 2025 Font Generator . All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="../privacy-policy.html">Privacy Policy</a> |
+      <a href="../about-us.html">About Us</a> |
+      <a href="../contact-us.html">Contact</a> |
+      <a href="../changelog.html">Latest Updates</a> |
+      <a href="../feedback.html">Feedback</a>
+    </div>
+  </div>
+</footer>
 
-                try {
-                    document.execCommand('copy'); // Copy the selected text
-                    copyMessage.classList.add('visible');
-                    setTimeout(() => {
-                        copyMessage.classList.remove('visible');
-                    }, 2000); // Hide "Copied!" message after 2 seconds
-                } catch (err) {
-                    console.error('Failed to copy text: ', err);
-                    alert('Could not copy text. Please select and copy manually.');
-                }
-            });
+  <script>
+    const inputBox = document.getElementById('inputBox');
+    const outputsContainer = document.getElementById('outputs');
 
-            // Initial generation in case there's pre-filled text (though unlikely for a generator)
-            if (inputText.value) {
-                outputText.value = generateStrikethrough(inputText.value);
-            }
-        });
-    </script>
+    const styles = [
+      { name: "Monospace + Strikethrough", class: "monospace strike", type: "strikethrough" },
+      { name: "Monospace + Slashes", class: "monospace", type: "slashes" },
+      { name: "Sans-serif + Strikethrough", class: "sans strike", type: "strikethrough" },
+      { name: "Sans-serif + Slashes", class: "sans", type: "slashes" },
+      { name: "Unstyled + Strikethrough", class: "unstyled strike", type: "strikethrough" },
+      { name: "Unstyled + Slashes", class: "unstyled", type: "slashes" }
+    ];
+
+    function generateStrikethrough(text) {
+      return text.split('').map(char => char + '\u0336').join('');
+    }
+
+    function generateSlashes(text) {
+      return '/' + text.split('').join('/') + '/';
+    }
+
+    function updateOutputs(text) {
+      outputsContainer.innerHTML = '';
+      styles.forEach((style, i) => {
+        const transformed = style.type === "strikethrough" ? generateStrikethrough(text) : generateSlashes(text);
+        const block = document.createElement('div');
+        block.className = 'output-block';
+
+        const content = document.createElement('div');
+        content.className = `output-text ${style.class}`;
+        content.textContent = transformed;
+
+        const button = document.createElement('div');
+        button.className = 'btn';
+        button.textContent = 'Copy';
+        button.onclick = () => {
+          navigator.clipboard.writeText(transformed).then(() => {
+            button.textContent = 'Copied!';
+            setTimeout(() => button.textContent = 'Copy', 1000);
+          });
+        };
+
+        block.appendChild(content);
+        block.appendChild(button);
+        outputsContainer.appendChild(block);
+      });
+    }
+
+    inputBox.addEventListener('input', () => {
+      const text = inputBox.innerText;
+      updateOutputs(text);
+    });
+
+    // Initialize with empty input
+    updateOutputs('');
+  </script>
+  <script src="script.js"></script>
+
 </body>
 </html>
