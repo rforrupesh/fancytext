@@ -16,13 +16,13 @@
     <meta property="og:title" content="Fancy Text Generator - Create Stylish & Decorative Text Fonts">
     <meta property="og:description" content="Generate fancy and decorative text styles like Fraktur, Old English, and various adorned fonts. Perfect for social media, unique messages, and creative designs.">
     <meta property="og:image" content="../img/Font-Generator.png">
-    <meta property="og:url" content="https://fancytext.in/tools/fancy.html">
+    <meta property="og:url" content="https://fontgen.in/tools/fancy.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fancy Text Generator - Create Stylish & Decorative Text Fonts">
     <meta name="twitter:description" content="Generate fancy and decorative text styles like Fraktur, Old English, and various adorned fonts. Perfect for social media, unique messages, and creative designs.">
-    <meta name="twitter:url" content="https://fancytext.in/tools/fancy.html">
+    <meta name="twitter:url" content="https://fontgen.in/tools/fancy.html">
     <meta name="twitter:image" content="../img/Font-Generator.png">
-    <link rel="canonical" href="https://fancytext.in/tools/fancy.html">
+    <link rel="canonical" href="https://fontgen.in/tools/fancy.html">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../homepage.css">
     <style>
@@ -199,7 +199,7 @@
                         </svg>
                     </button>
                     <div class="dropdown-content">
-                        <a href="https://fancytext.in" data-lang="en">English</a>
+                        <a href="https://fontgen.in" data-lang="en">English</a>
                         <a href="../es.html" data-lang="es">Español</a>
                         <a href="../ar.html" data-lang="ar">العربية</a>
                         <a href="../fr.html" data-lang="fr">Français</a>
@@ -326,7 +326,7 @@
             const clearBtn = document.getElementById('clearBtn');
 
             // Unicode mappings for various fancy text styles
-            const fancyTextMaps = {
+            const fontgenMaps = {
                 fraktur: {
                     'a': '𝔞', 'b': '𝔟', 'c': '𝔠', 'd': '𝔡', 'e': '𝔢', 'f': '𝔣', 'g': '𝔤', 'h': '𝔥', 'i': '𝔦', 'j': '𝔧', 'k': '𝔨', 'l': '𝔩', 'm': '𝔪', 'n': '𝔫', 'o': '𝔬', 'p': '𝔭', 'q': '𝔮', 'r': '𝔯', 's': '𝔰', 't': '𝔱', 'u': '𝔲', 'v': '𝔳', 'w': '𝔴', 'x': '𝔵', 'y': '𝔶', 'z': '𝔷',
                     'A': '𝔄', 'B': '𝔅', 'C': 'ℭ', 'D': '𝔇', 'E': '𝔈', 'F': '𝔉', 'G': '𝔊', 'H': 'ℌ', 'I': 'ℑ', 'J': '𝔍', 'K': '𝔎', 'L': '𝔏', 'M': '𝔐', 'N': '𝔑', 'O': '𝔒', 'P': '𝔓', 'Q': '𝔔', 'R': 'ℜ', 'S': '𝔖', 'T': '𝔗', 'U': '𝔘', 'V': '𝔙', 'W': '𝔚', 'X': '𝔛', 'Y': '𝔜', 'Z': 'ℨ',
@@ -368,17 +368,17 @@
                 return transformedText;
             }
 
-            function updateFancyTextOutputs() {
+            function updatefontgenOutputs() {
                 const text = inputText.value;
-                document.getElementById('outputFraktur').value = transformText(text, fancyTextMaps.fraktur);
-                document.getElementById('outputBoldFraktur').value = transformText(text, fancyTextMaps.boldFraktur);
-                document.getElementById('outputOldEnglish').value = transformText(text, fancyTextMaps.oldEnglish);
-                document.getElementById('outputSquared').value = transformText(text, fancyTextMaps.squared);
-                document.getElementById('outputInvertedSquared').value = transformText(text, fancyTextMaps.invertedSquared);
+                document.getElementById('outputFraktur').value = transformText(text, fontgenMaps.fraktur);
+                document.getElementById('outputBoldFraktur').value = transformText(text, fontgenMaps.boldFraktur);
+                document.getElementById('outputOldEnglish').value = transformText(text, fontgenMaps.oldEnglish);
+                document.getElementById('outputSquared').value = transformText(text, fontgenMaps.squared);
+                document.getElementById('outputInvertedSquared').value = transformText(text, fontgenMaps.invertedSquared);
             }
 
             // Event listener for input
-            inputText.addEventListener('input', updateFancyTextOutputs);
+            inputText.addEventListener('input', updatefontgenOutputs);
 
             // Copy button functionality for each output box
             copyButtons.forEach(button => {
@@ -408,7 +408,7 @@
             });
 
             // Initial generation on load
-            updateFancyTextOutputs();
+            updatefontgenOutputs();
         });
     </script>
 </body>
