@@ -24,114 +24,139 @@
     <meta name="twitter:image" content="../img/Font-Generator.png">
     <link rel="canonical" href="https://fontgen.in/tools/text-art.html">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../homepage.css">
     <style>
-        /* Basic styling for the tool, adjust as needed with your main CSS */
-        .tool-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .tool-container h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 25px;
-        }
-        .tool-container textarea {
-            width: calc(100% - 20px);
-            min-height: 100px;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            resize: vertical;
-        }
-        .tool-container .buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .tool-container button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .tool-container button.copy-button {
-            background-color: #007bff;
-            color: white;
-        }
-        .tool-container button.copy-button:hover {
-            background-color: #0056b3;
-        }
-        .tool-container button.clear-button {
-            background-color: #dc3545;
-            color: white;
-        }
-        .tool-container button.clear-button:hover {
-            background-color: #c82333;
-        }
-        .output-section {
-            margin-top: 30px;
-        }
-        .output-box {
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .output-box h3 {
-            margin-top: 0;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .output-box textarea {
-            width: calc(100% - 20px);
-            min-height: 60px;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            color: #333;
-            /* Ensure monospace or a wide font for better text art rendering */
-            font-family: 'monospace', 'Courier New', Courier, monospace;
-            white-space: pre-wrap; /* Preserve whitespace and wrap */
-            word-wrap: break-word; /* Break long words */
-        }
-        .seo-content {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-        }
-        .seo-content h2, .seo-content h3 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        .seo-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .seo-content ul {
-            list-style: disc;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        .seo-content ul li {
-            margin-bottom: 5px;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h3 {
-            margin-bottom: 5px;
-        }
-    </style>
+    /* ✅ Responsive Container */
+    .textartgen-container {
+        width: 100%;             /* Take full width on small screens */
+        max-width: 800px;        /* Limit width on desktops */
+        margin: 0 auto;          /* Center it */
+        padding: 0 15px;         /* Add side padding for mobile */
+        box-sizing: border-box;  /* Include padding inside width */
+    }
+
+    .textartgen-title {
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #202124;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .textartgen-intro-text {
+        font-size: 1rem;
+        color: #5f6368;
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.7;
+    }
+
+    .textartgen-card {
+        background: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .textartgen-card:hover {
+        background-color: #f7f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+    }
+
+    .textartgen-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f1f3f4;
+    }
+
+    .textartgen-card-title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #202124;
+    }
+
+    /* ✅ ASCII Content */
+    .textartgen-content {
+        font-family: 'Courier New', monospace;
+        white-space: pre;         /* Keep ASCII formatting */
+        overflow-x: auto;         /* Allow horizontal scroll */
+        word-break: normal;       /* Prevent breaking ASCII art */
+        max-width: 100%;          /* Don’t exceed container */
+        line-height: 1.2;
+        font-size: 12px;
+        color: #333;
+        background: #fafafa;
+        border: 1px solid #dadce0;
+        border-radius: 4px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .textartgen-content::-webkit-scrollbar {
+        height: 8px;
+    }
+    .textartgen-content::-webkit-scrollbar-thumb {
+        background: #dadce0;
+        border-radius: 4px;
+    }
+
+    .textartgen-copy-btn {
+        cursor: pointer;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .textartgen-copy-btn:hover {
+        background: #026cde;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    }
+
+    /* ✅ Notification */
+    #textartgenCopyNotification {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 15px;
+        display: none;
+        z-index: 999;
+    }
+
+    /* ✅ Responsive Adjustments */
+    @media (max-width: 768px) {
+        .textartgen-title { font-size: 2rem; }
+        .textartgen-card { padding: 15px; }
+        .textartgen-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+        .textartgen-content { font-size: 10px; padding: 12px; }
+    }
+
+    @media (max-width: 480px) {
+        .textartgen-title { font-size: 1.75rem; }
+        .textartgen-content { font-size: 9px; padding: 10px; }
+        .textartgen-card { padding: 12px; }
+    }
+  </style>
+
 </head>
 <body>
     <nav class="navbar">
@@ -223,82 +248,266 @@
 
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <main>
-        <div class="tool-container">
-            <h1>Text Art Generator</h1>
-            <p>Transform your ordinary text into captivating text art! Type or paste your text below to generate various Unicode-based text art styles like bubble text, mirrored text, and upside-down text.</p>
-            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
-            <div class="buttons">
-                <button class="clear-button" id="clearBtn">Clear All</button>
-            </div>
+    <div class="output-list">
+<h1 class="textartgen-title">Text Art</h1>
+  <p class="textartgen-intro-text">Discover and copy beautiful ASCII and Unicode text art. Paste, Funny, Face, Hand, Cool Dot Art</p>
+<!-- ✅ Search + Tabs together -->
+<div class="search-section" id="searchSection">
 
-            <div class="output-section">
-                <div class="output-box">
-                    <h3>Bubble Text</h3>
-                    <textarea id="outputBubbleText" readonly></textarea>
-                    <button class="copy-button" data-target="outputBubbleText">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Mirrored Text</h3>
-                    <textarea id="outputMirroredText" readonly></textarea>
-                    <button class="copy-button" data-target="outputMirroredText">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Upside-Down Text</h3>
-                    <textarea id="outputUpsideDownText" readonly></textarea>
-                    <button class="copy-button" data-target="outputUpsideDownText">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Squared Text (Dark)</h3>
-                    <textarea id="outputSquaredDark" readonly></textarea>
-                    <button class="copy-button" data-target="outputSquaredDark">Copy</button>
-                </div>
-                <!-- Add more text art styles as needed -->
-            </div>
+  <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/" class="tab-link">All Fonts</a>
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+      <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Text art</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Invisible</a>
+      
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
+</div>
 
-            <div class="seo-content">
-                <h2>What is a Text Art Generator?</h2>
-                <p>A Text Art Generator is an online tool that converts regular text into visually creative and decorative forms using a variety of Unicode characters. Unlike traditional fonts, these are composed of individual characters that look like artistic styles, allowing them to be copied and pasted across most digital platforms without requiring font installation.</p>
+    <div class="textartgen-container">
 
-                <h2>Uses for Text Art:</h2>
-                <ul>
-                    <li><strong>Social Media:</strong> Make your profiles, posts, and comments stand out on Instagram, Facebook, Twitter, TikTok, and more.</li>
-                    <li><strong>Gaming:</strong> Create unique and memorable usernames or clan tags in online games.</li>
-                    <li><strong>Messaging Apps:</strong> Send expressive and fun messages on WhatsApp, Discord, Telegram, etc.</li>
-                    <li><strong>Creative Expression:</strong> Use text art for digital signatures, forum posts, or any place you want to add a distinctive visual flair.</li>
-                    <li><strong>Personal Branding:</strong> Develop a unique online identity or brand aesthetic.</li>
-                </ul>
-
-                <h2>How to Use This Tool:</h2>
-                <ol>
-                    <li><strong>Enter Your Text:</strong> Type or paste the text you wish to transform into the input box.</li>
-                    <li><strong>Instant Conversion:</strong> As you type, the tool will automatically generate your text in various text art styles below.</li>
-                    <li><strong>Choose & Copy:</strong> Select your favorite text art style and click the "Copy" button next to it.</li>
-                    <li><strong>Paste Anywhere:</strong> Paste the copied text art into your social media, documents, or any other application.</li>
-                </ol>
-
-                <div class="faq-section">
-                    <h2>Frequently Asked Questions (FAQ) about Text Art</h2>
-                    <div class="faq-item">
-                        <h3>Q: How does this tool create text art?</h3>
-                        <p>A: It uses Unicode characters that are specifically designed to have a unique visual appearance, such as circled letters, fullwidth characters, or characters that can be flipped or mirrored. It's a character-by-character substitution.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Will text art work on all platforms?</h3>
-                        <p>A: Most modern devices, browsers, and social media platforms support these Unicode characters. However, very old systems or niche platforms might have limited support, displaying a default square or question mark for unsupported characters.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Can I use numbers and symbols in text art?</h3>
-                        <p>A: Yes, many text art styles include mappings for numbers and some common symbols. The availability depends on the specific Unicode block being used for that style.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Is text art accessible to screen readers?</h3>
-                        <p>A: Text art, while visually appealing, can sometimes be challenging for screen readers or other assistive technologies to interpret correctly. It's best used for decorative purposes rather than for conveying critical information.</p>
-                    </div>
+        <!-- Text Art 1 -->
+        <div class="textartgen">
+            <div class="textartgen-card">
+                <div class="textartgen-header">
+                    <div class="textartgen-card-title">Among Us Character</div>
                 </div>
+                <div class="textartgen-content">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀
+⠀⠀⣀⣤⣴⣶⣶⣿⡟⠀⠀⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀
+⠀⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⣿⠀
+⠀⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀
+⠀⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀
+⠀⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀
+⠀⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀
+⠀⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀
+⠀⠀⠛⢿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⣰⣿⣿⣷⣶⣶⣶⣶⠶⠀⢠⣿⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀⢸⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣸⣿⠇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</div>
             </div>
         </div>
-    </main>
+
+        <!-- Text Art 2 -->
+        <div class="textartgen">
+            <div class="textartgen-card">
+                <div class="textartgen-header">
+                    <div class="textartgen-card-title">Cute Cat</div>
+                </div>
+                <div class="textartgen-content">  /\_/\  
+ ( o.o ) 
+  > ^ <</div>
+            </div>
+        </div>
+
+        <!-- Text Art 3 -->
+        <div class="textartgen">
+            <div class="textartgen-card">
+                <div class="textartgen-header">
+                    <div class="textartgen-card-title">Diamond Star</div>
+                </div>
+                <div class="textartgen-content">    *    
+   ***   
+  *****  
+ ******* 
+*********
+ ******* 
+  *****  
+   ***   
+    *</div>
+            </div>
+        </div>
+
+        <!-- Text Art 4 -->
+        <div class="textartgen">
+            <div class="textartgen-card">
+                <div class="textartgen-header">
+                    <div class="textartgen-card-title">Message Box</div>
+                </div>
+                <div class="textartgen-content">┌─────────────────┐
+│   HELLO WORLD   │
+└─────────────────┘</div>
+            </div>
+        </div>
+
+        <!-- Text Art 5 -->
+        <div class="textartgen">
+            <div class="textartgen-card">
+                <div class="textartgen-header">
+                    <div class="textartgen-card-title">Simple Bird</div>
+                </div>
+                <div class="textartgen-content">       /|
+      / |__
+     /    o\
+    /      |
+   /   \___/
+  /         
+ /           
+(__________</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="textartgenCopyNotification">Copied to clipboard!</div>
+
+  
+
+  <script>
+        // Automatically add copy buttons to all .textartgen divs
+        document.addEventListener('DOMContentLoaded', function() {
+            const textArtDivs = document.querySelectorAll('.textartgen');
+            
+            textArtDivs.forEach(function(div) {
+                // Create copy button
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'textartgen-copy-btn';
+                copyBtn.innerHTML = `
+                    <svg class="textartgen-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                `;
+                copyBtn.onclick = function() {
+                    textartgenCopyTextArt(this);
+                };
+                
+                // Add button to the header
+                const header = div.querySelector('.textartgen-header');
+                header.appendChild(copyBtn);
+            });
+        });
+
+        function textartgenCopyTextArt(button) {
+            // Get the text content from the textartgen-content div
+            const textArtDiv = button.closest('.textartgen');
+            const contentDiv = textArtDiv.querySelector('.textartgen-content');
+            const textToCopy = contentDiv.textContent;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                // Visual feedback
+                const originalHTML = button.innerHTML;
+                button.innerHTML = `
+                    <svg class="textartgen-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <polyline points="20,6 9,17 4,12"></polyline>
+                    </svg>
+                    Copied!
+                `;
+                button.classList.add('textartgen-copied');
+                
+                // Show notification
+                textartgenShowNotification('Copied to clipboard!');
+                
+                // Reset button after 2 seconds
+                setTimeout(function() {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('textartgen-copied');
+                }, 2000);
+            }).catch(function(err) {
+                textartgenShowNotification('Failed to copy text art');
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        function textartgenShowNotification(message) {
+            const notification = document.getElementById('textartgenCopyNotification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 2500);
+        }
+    </script>
+
+
+
+
+  <div id="copyNotification"></div>
+  </div>
+
+  <article>
+    <!-- Article Content: Text Art Generator (Simplified) -->
+    
+    <h2>What is a Text Art Generator?</h2>
+    <p>
+        A Text Art Generator is a simple online tool that turns your regular text into cool, decorated styles. 
+        It uses special symbols instead of normal letters, so you can copy and paste the art anywhere online without needing to install new fonts.
+    </p>
+
+    <h2>Why Use Text Art?</h2>
+    <ul>
+        <li>
+            <strong>Social Media:</strong> Get attention for your posts and bios on platforms like Instagram, Facebook, and TikTok.
+        </li>
+        <li>
+            <strong>Gaming:</strong> Create unique usernames or clan tags for online games.
+        </li>
+        <li>
+            <strong>Messaging Apps:</strong> Send fun and expressive messages on chats like WhatsApp and Discord.
+        </li>
+        <li>
+            <strong>Creative Fun:</strong> Add a unique, artistic look to your digital signatures or projects.
+        </li>
+        <li>
+            <strong>Personal Look:</strong> Develop a distinctive style for your online identity.
+        </li>
+    </ul>
+
+    <h2>How to Use This Tool:</h2>
+    <ol>
+        <li>Type Your Text: Put the words you want to change into the input box.</li>
+        <li>Instant Styles: The tool quickly shows you your text in different art styles below.</li>
+        <li>Copy & Paste: Select the style you like and click the "Copy" button.</li>
+        <li>Use Anywhere: Paste the text art into your favorite app or platform.</li>
+    </ol>
+
+    <h2>Questions About Text Art (FAQ)</h2>
+    
+    <!-- FAQ 1 -->
+    <p><strong>Q: How does this tool create text art?</strong></p>
+    <p>
+        A: It swaps your regular letters for special symbols (Unicode) that look artistic, like letters in circles or mirrored symbols. It's a simple character replacement.
+    </p>
+
+    <!-- FAQ 2 -->
+    <p><strong>Q: Will text art work everywhere?</strong></p>
+    <p>
+        A: It works on most modern phones, computers, and platforms because the characters are standard. Very old systems might not display the symbols correctly.
+    </p>
+    
+    <!-- FAQ 3 -->
+    <p><strong>Q: Can I use numbers and symbols?</strong></p>
+    <p>
+        A: Yes, many art styles include versions of numbers and some common symbols, depending on the style you pick.
+    </p>
+
+    <!-- FAQ 4 -->
+    <p><strong>Q: Is text art easy for screen readers to read?</strong></p>
+    <p>
+        A: Sometimes, screen readers (tools for people with visual impairment) have trouble reading text art correctly. Use it mainly for looks, not for important information.
+    </p>
+</article>
+
+
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -314,92 +523,9 @@
             </div>
         </div>
     </footer>
+  <button id="backToTopBtn" onclick="scrollToTop()">⬆</button>
 
     <script src="../script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputText = document.getElementById('inputText');
-            const copyButtons = document.querySelectorAll('.output-box .copy-button');
-            const clearBtn = document.getElementById('clearBtn');
-
-            // Unicode mappings for various text art styles
-            const textArtMaps = {
-                bubble: { // Circled text
-                    'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ', 'i': 'ⓘ', 'j': 'ⓙ', 'k': 'ⓚ', 'l': 'ⓛ', 'm': 'ⓜ', 'n': 'ⓝ', 'o': 'ⓞ', 'p': 'ⓟ', 'q': 'ⓠ', 'r': 'ⓡ', 's': 'ⓢ', 't': 'ⓣ', 'u': 'ⓤ', 'v': 'ⓥ', 'w': 'ⓦ', 'x': 'ⓧ', 'y': 'ⓨ', 'z': 'ⓩ',
-                    'A': 'Ⓐ', 'B': 'Ⓑ', 'C': 'Ⓒ', 'D': 'Ⓓ', 'E': 'Ⓔ', 'F': 'Ⓕ', 'G': 'Ⓖ', 'H': 'Ⓗ', 'I': 'Ⓘ', 'J': 'Ⓙ', 'K': 'Ⓚ', 'L': 'Ⓛ', 'M': 'Ⓜ', 'N': 'Ⓝ', 'O': 'Ⓞ', 'P': 'Ⓟ', 'Q': 'Ⓠ', 'R': 'Ⓡ', 'S': 'Ⓢ', 'T': 'Ⓣ', 'U': 'Ⓤ', 'V': 'Ⓥ', 'W': 'Ⓦ', 'X': 'Ⓧ', 'Y': 'Ⓨ', 'Z': 'Ⓩ',
-                    '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'
-                },
-                mirrored: {
-                    'a': 'ɒ', 'b': 'd', 'c': 'ɔ', 'd': 'b', 'e': 'ɘ', 'f': 'Ꮈ', 'g': 'ǫ', 'h': 'ʜ', 'i': 'i', 'j': 'ꞁ', 'k': 'ʞ', 'l': 'l', 'm': 'm', 'n': 'n', 'o': 'o', 'p': 'q', 'q': 'p', 'r': 'ɿ', 's': 'ƨ', 't': 'ƚ', 'u': 'u', 'v': 'v', 'w': 'w', 'x': 'x', 'y': 'y', 'z': 'ƹ',
-                    'A': 'A', 'B': 'B', 'C': 'Ɔ', 'D': 'D', 'E': 'Ǝ', 'F': 'F', 'G': 'G', 'H': 'H', 'I': 'I', 'J': 'J', 'K': 'K', 'L': 'L', 'M': 'M', 'N': 'N', 'O': 'O', 'P': 'P', 'Q': 'Q', 'R': 'R', 'S': 'S', 'T': 'T', 'U': 'U', 'V': 'V', 'W': 'W', 'X': 'X', 'Y': 'Y', 'Z': 'Z',
-                    '0': '0', '1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9'
-                },
-                upsideDown: {
-                    'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ƃ', 'h': 'ɥ', 'i': 'ᴉ', 'j': 'ɾ', 'k': 'ʞ', 'l': 'l', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd', 'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x', 'y': 'ʎ', 'z': 'z',
-                    'A': '∀', 'B': '𐐒', 'C': 'Ɔ', 'D': '◖', 'E': 'Ǝ', 'F': 'Ⅎ', 'G': '⅁', 'H': 'H', 'I': 'I', 'J': 'ſ', 'K': 'ʞ', 'L': '˥', 'M': 'W', 'N': 'N', 'O': 'O', 'P': 'Ԁ', 'Q': 'Q', 'R': 'ᴚ', 'S': 'S', 'T': '⊥', 'U': '∩', 'V': 'Ʌ', 'W': 'M', 'X': 'X', 'Y': '⅄', 'Z': 'Z',
-                    '0': '0', '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ', '4': 'ㄣ', '5': 'ϛ', '6': '9', '7': 'ㄥ', '8': '8', '9': '6'
-                },
-                squaredDark: { // Inverted Squared Text (from fancy.html, good for text art)
-                    'a': '🅰', 'b': '🅱', 'c': '🅲', 'd': '🅳', 'e': '🅴', 'f': '🅵', 'g': '🅶', 'h': '🅷', 'i': '🅸', 'j': '🅹', 'k': '🅺', 'l': '🅻', 'm': '🅼', 'n': '🅽', 'o': '🅾', 'p': '🅿', 'q': '🆀', 'r': '🆁', 's': '🆂', 't': '🆃', 'u': '🆄', 'v': '🆅', 'w': '🆆', 'x': '🆇', 'y': '🆈', 'z': '🆉',
-                    'A': '🅰', 'B': '🅱', 'C': '🅲', 'D': '🅳', 'E': '🅴', 'F': '🅵', 'G': '🅶', 'H': '�', 'I': '🅸', 'J': '🅹', 'K': '🅺', 'L': '🅻', 'M': '🅼', 'N': '🅽', 'O': '🅾', 'P': '🅿', 'Q': '🆀', 'R': '🆁', 'S': '🆂', 'T': '🆃', 'U': '🆄', 'V': '🆅', 'W': '🆆', 'X': '🆇', 'Y': '🆈', 'Z': '🆉',
-                    '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'
-                }
-            };
-
-            function transformText(text, mapping) {
-                let transformedText = '';
-                for (let i = 0; i < text.length; i++) {
-                    const char = text[i];
-                    if (mapping[char]) {
-                        transformedText += mapping[char];
-                    } else {
-                        transformedText += char; // Keep original character if no mapping exists
-                    }
-                }
-                return transformedText;
-            }
-
-            function updateTextArtOutputs() {
-                const text = inputText.value;
-                document.getElementById('outputBubbleText').value = transformText(text, textArtMaps.bubble);
-                document.getElementById('outputMirroredText').value = transformText(text, textArtMaps.mirrored);
-                document.getElementById('outputUpsideDownText').value = transformText(text, textArtMaps.upsideDown);
-                document.getElementById('outputSquaredDark').value = transformText(text, textArtMaps.squaredDark);
-            }
-
-            // Event listener for input
-            inputText.addEventListener('input', updateTextArtOutputs);
-
-            // Copy button functionality for each output box
-            copyButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    const targetId = event.target.dataset.target;
-                    const targetTextarea = document.getElementById(targetId);
-                    targetTextarea.select();
-                    targetTextarea.setSelectionRange(0, 99999); // For mobile devices
-                    try {
-                        document.execCommand('copy');
-                        alert('Text art copied to clipboard!');
-                    } catch (err) {
-                        console.error('Failed to copy text: ', err);
-                        alert('Failed to copy. Please copy manually.');
-                    }
-                });
-            });
-
-            // Clear button functionality
-            clearBtn.addEventListener('click', () => {
-                inputText.value = '';
-                document.getElementById('outputBubbleText').value = '';
-                document.getElementById('outputMirroredText').value = '';
-                document.getElementById('outputUpsideDownText').value = '';
-                document.getElementById('outputSquaredDark').value = '';
-            });
-
-            // Initial generation on load
-            updateTextArtOutputs();
-        });
-    </script>
+    
 </body>
 </html>
-�
