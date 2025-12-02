@@ -24,117 +24,7 @@
     <meta name="twitter:image" content="../img/Font-Generator.png">
     <link rel="canonical" href="https://fontgen.in/tools/cursive.html">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../homepage.css">
-    <style>
-        /* Basic styling for the tool, adjust as needed with your main CSS */
-        .tool-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .tool-container h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 25px;
-        }
-        .tool-container textarea {
-            width: calc(100% - 20px);
-            min-height: 100px;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            resize: vertical;
-        }
-        .tool-container .buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .tool-container button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .tool-container button.copy-button {
-            background-color: #007bff;
-            color: white;
-        }
-        .tool-container button.copy-button:hover {
-            background-color: #0056b3;
-        }
-        .tool-container button.clear-button {
-            background-color: #dc3545;
-            color: white;
-        }
-        .tool-container button.clear-button:hover {
-            background-color: #c82333;
-        }
-        .output-section {
-            margin-top: 30px;
-        }
-        .output-box {
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .output-box h3 {
-            margin-top: 0;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .output-box textarea {
-            width: calc(100% - 20px);
-            min-height: 60px;
-            margin-bottom: 10px;
-            font-family: 'Times New Roman', serif; /* Default for cursive look */
-            font-size: 1.2rem;
-            color: #333;
-        }
-        /* Specific font styles for different cursive types if desired */
-        #outputCursive1 { font-family: 'Brush Script MT', ' cursive', sans-serif; }
-        #outputCursive2 { font-family: 'Dancing Script', cursive; } /* Google Font example, would need import */
-        #outputCursive3 { font-family: 'Pacifico', cursive; } /* Google Font example, would need import */
-
-
-        .seo-content {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-        }
-        .seo-content h2, .seo-content h3 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        .seo-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .seo-content ul {
-            list-style: disc;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        .seo-content ul li {
-            margin-bottom: 5px;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h3 {
-            margin-bottom: 5px;
-        }
-    </style>
+  
 </head>
 <body>
     <nav class="navbar">
@@ -224,75 +114,121 @@
 
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <main>
-        <div class="tool-container">
-            <h1>Cursive Text Generator</h1>
-            <p>Type or paste your text below to instantly convert it into various stylish cursive fonts. Copy and paste these unique fonts to social media, messaging apps, and more!</p>
-            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
-            <div class="buttons">
-                <button class="clear-button" id="clearBtn">Clear All</button>
-            </div>
+<div class="output-list">
+<h1>Cursive Text Generator</h1>
+  <p>Type or paste your text below to instantly convert it into various stylish cursive fonts. Copy and paste these unique fonts to social media, messaging apps, and more!
 
-            <div class="output-section">
-                <div class="output-box">
-                    <h3>Cursive Script</h3>
-                    <textarea id="outputCursive1" readonly></textarea>
-                    <button class="copy-button" data-target="outputCursive1">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Bold Cursive</h3>
-                    <textarea id="outputCursive2" readonly></textarea>
-                    <button class="copy-button" data-target="outputCursive2">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Looping Cursive</h3>
-                    <textarea id="outputCursive3" readonly></textarea>
-                    <button class="copy-button" data-target="outputCursive3">Copy</button>
-                </div>
-                </div>
+</p>
+<!-- ✅ Search + Tabs together -->
+<div class="search-section" id="searchSection">
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Type something..." onfocus="this.value=''" oninput="handleInputChange()" />
+    <span class="clear-btn" onclick="clearInput()">×</span>
+  </div>
 
-            <div class="seo-content">
-                <h2>What is a Cursive Text Generator?</h2>
-                <p>A Cursive Text Generator is an online tool that transforms standard Latin alphabet characters into their Unicode cursive equivalents. These special characters, while looking like traditional script or handwritten fonts, are actually just different representations of text, making them widely compatible across various platforms and devices.</p>
+  <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="./" class="tab-link">All Fonts</a>
+      <a href="./tools/cool.html" class="tab-link">Cool</a>
+      <a href="./tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="./tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="./tools/small.html" class="tab-link">Small</a>
+      <a href="./tools/bold.html" class="tab-link">Bold</a>
+      <a href="./tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="./tools/symbols.html" class="tab-link">Symbol text</a>
+      <a href="./tools/text-art.html" class="tab-link">Text art</a>
+      <a href="./tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="./tools/invisible.html" class="tab-link">Invisible</a>
+      
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
+</div>
 
-                <h2>Why Use Cursive Fonts?</h2>
-                <ul>
-                    <li><strong>Social Media Standout:</strong> Make your posts, bios, and comments more eye-catching on Instagram, Facebook, Twitter, and TikTok.</li>
-                    <li><strong>Personalized Messages:</strong> Add a touch of elegance or flair to your WhatsApp, Discord, or other chat messages.</li>
-                    <li><strong>Creative Projects:</strong> Design unique graphics, banners, or aesthetic elements for your digital content.</li>
-                    <li><strong>Nicknames & Usernames:</strong> Create distinctive usernames in games or online communities.</li>
-                </ul>
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="ScriptCursiveOutput" data-default="Script / Cursive / Handwriting">Script / Cursive / Handwriting</span>
+    <span class="style-name">Script / Cursive / Handwriting</span>
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('ScriptCursiveOutput')"></button>
+</div>
 
-                <h2>How to Use This Tool:</h2>
-                <ol>
-                    <li><strong>Type or Paste:</strong> Enter your desired text into the input box.</li>
-                    <li><strong>Automatic Conversion:</strong> The tool will instantly convert your text into multiple cursive styles below.</li>
-                    <li><strong>Choose & Copy:</strong> Select your favorite cursive style and click the "Copy" button next to it.</li>
-                    <li><strong>Paste Anywhere:</strong> Paste the copied cursive text into your social media, documents, or wherever you wish!</li>
-                </ol>
+<!-- Bold Script / Cursive / Handwriting -->
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="BoldScriptCursiveOutput" data-default="Bold Script / Cursive / Handwriting">Bold Script / Cursive / Handwriting</span>
+    <span class="style-name">Bold Script / Cursive / Handwriting</span>
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('BoldScriptCursiveOutput')"></button>
+</div>
 
-                <div class="faq-section">
-                    <h2>Frequently Asked Questions (FAQ) about Cursive Text</h2>
-                    <div class="faq-item">
-                        <h3>Q: Are these "fonts" real fonts?</h3>
-                        <p>A: No, not in the traditional sense. These are Unicode characters that visually resemble cursive fonts. This means they are supported natively by most devices and platforms without needing to install specific fonts.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Will cursive text work on all social media platforms?</h3>
-                        <p>A: Most modern social media platforms and operating systems support these Unicode characters. However, very old devices or niche platforms might have limited support, showing a default square or question mark for unsupported characters.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Can I use numbers and symbols in cursive?</h3>
-                        <p>A: Our generator focuses on converting alphabetical characters. While some Unicode blocks include cursive-like numbers or symbols, comprehensive conversion for all characters is not always available in these stylistic fonts.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Is there any difference between different cursive styles?</h3>
-                        <p>A: Yes! Each style uses a different set of Unicode characters to achieve a distinct look. Some might be more flowing, others bolder, and some may have decorative loops.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<!-- Gothic / Blackletter / Fraktur -->
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="GothicFrakturOutput" data-default="Gothic / Blackletter / Fraktur">Gothic / Blackletter / Fraktur</span>
+    <span class="style-name">Gothic / Blackletter / Fraktur</span>
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('GothicFrakturOutput')"></button>
+</div>
+
+<!-- Bold Gothic / Blackletter / Fraktur -->
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="BoldGothicFrakturOutput" data-default="Bold Gothic / Blackletter / Fraktur">Bold Gothic / Blackletter / Fraktur</span>
+    <span class="style-name">Bold Gothic / Blackletter / Fraktur</span>
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('BoldGothicFrakturOutput')"></button>
+</div>
+
+
+  <div id="copyNotification"></div>
+  </div>
+
+<article>
+    <h2>The Definition</h2>
+<p>A Cursive Text Generator is an online tool that transforms standard Latin alphabet characters into their Unicode cursive equivalents. These special characters, while looking like traditional script or handwritten fonts, are actually just different representations of text, making them widely compatible across various platforms and devices.</p>
+
+<h2>Why Use Cursive Fonts?</h2>
+<ul>
+    <li><strong>Social Media Standout:</strong> Make your posts, bios, and comments more eye-catching on Instagram, Facebook, Twitter, and TikTok.</li>
+    <li><strong>Personalized Messages:</strong> Add a touch of elegance or flair to your WhatsApp, Discord, or other chat messages.</li>
+    <li><strong>Creative Projects:</strong> Design unique graphics, banners, or aesthetic elements for your digital content.</li>
+    <li><strong>Nicknames & Usernames:</strong> Create distinctive usernames in games or online communities.</li>
+</ul>
+
+<h2>How to Use This Tool:</h2>
+<p>The process is straightforward, designed for quick and easy adoption across all your platforms.</p>
+<ol>
+    <li><strong>Type or Paste:</strong> Enter your desired text into the input box.</li>
+    <li><strong>Automatic Conversion:</strong> The tool will instantly convert your text into multiple cursive styles below.</li>
+    <li><strong>Choose & Copy:</strong> Select your favorite cursive style and click the "Copy" button next to it.</li>
+    <li><strong>Paste Anywhere:</strong> Paste the copied cursive text into your social media, documents, or wherever you wish!</li>
+</ol>
+
+<h2>Frequently Asked Questions (FAQ) about Cursive Text</h2>
+
+<p><strong>Q: Are these "fonts" real fonts?</strong></p>
+<p>
+A: No, not in the traditional sense. These are Unicode characters that visually resemble cursive fonts. This means they are supported natively by most devices and platforms without needing to install specific fonts.
+</p>
+
+<p><strong>Q: Will cursive text work on all social media platforms?</strong></p>
+<p>
+A: Most modern social media platforms and operating systems support these Unicode characters. However, very old devices or niche platforms might have limited support, showing a default square or question mark for unsupported characters.
+</p>
+
+<p><strong>Q: Can I use numbers and symbols in cursive?</strong></p>
+<p>
+A: Our generator focuses on converting alphabetical characters. While some Unicode blocks include cursive-like numbers or symbols, comprehensive conversion for all characters is not always available in these stylistic fonts.
+</p>
+
+<p><strong>Q: Is there any difference between different cursive styles?</strong></p>
+<p>
+A: Yes! Each style uses a different set of Unicode characters to achieve a distinct look. Some might be more flowing, others bolder, and some may have decorative loops.
+</p>
+
+</article>
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -310,86 +246,7 @@
     </footer>
 
     <script src="../script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputText = document.getElementById('inputText');
-            const copyButtons = document.querySelectorAll('.output-box .copy-button');
-            const clearBtn = document.getElementById('clearBtn');
+     <button id="backToTopBtn" onclick="scrollToTop()">⬆</button>
 
-            // Unicode mappings for various cursive styles
-            // These are simplified mappings; full mappings would be very long.
-            // For a production-level tool, you might use a library or more extensive maps.
-            const cursiveMap1 = { // Script Normal (Mathematical Script)
-                'a': '𝒶', 'b': '𝒷', 'c': '𝒸', 'd': '𝒹', 'e': '𝑒', 'f': '𝒻', 'g': '𝑔', 'h': '𝒽', 'i': '𝒾', 'j': '𝒿', 'k': '𝓀', 'l': '𝓁', 'm': '𝓂', 'n': '𝓃', 'o': '𝑜', 'p': '𝓅', 'q': '𝓆', 'r': '𝓇', 's': '𝓈', 't': '𝓉', 'u': '𝓊', 'v': '𝓋', 'w': '𝓌', 'x': '𝓍', 'y': '𝓎', 'z': '𝓏',
-                'A': '𝒜', 'B': '𝐵', 'C': '𝒞', 'D': '𝒟', 'E': '𝐸', 'F': '𝐹', 'G': '𝒢', 'H': '𝐻', 'I': '𝐼', 'J': '𝒥', 'K': '𝒦', 'L': '𝐿', 'M': '𝑀', 'N': '𝒩', 'O': '𝒪', 'P': '𝒫', 'Q': '𝒬', 'R': '𝑅', 'S': '𝒮', 'T': '𝒯', 'U': '𝒰', 'V': '𝒱', 'W': '𝒲', 'X': '𝒳', 'Y': '𝒴', 'Z': '𝒵'
-            };
-
-            const cursiveMap2 = { // Script Bold (Mathematical Bold Script)
-                'a': '𝓪', 'b': '𝒷', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝒻', 'g': '𝓰', 'h': '𝓱', 'i': '𝓲', 'j': '𝓳', 'k': '𝓴', 'l': '𝓵', 'm': '𝓶', 'n': '𝓷', 'o': '𝓸', 'p': '𝓹', 'q': '𝓺', 'r': '𝓻', 's': '𝓼', 't': '𝓽', 'u': '𝓾', 'v': '𝓿', 'w': '𝔀', 'x': '𝔁', 'y': '𝔂', 'z': '𝔃',
-                'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝓓', 'E': '𝓔', 'F': '𝓕', 'G': '𝓖', 'H': '𝓗', 'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟', 'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓤', 'V': '𝓥', 'W': '𝓦', 'X': '𝓧', 'Y': '𝓨', 'Z': '𝓩'
-            };
-
-            const cursiveMap3 = { // A less common or "fancy" script style (can be a mix or another block)
-                // Note: True "looping" cursive often requires a specialized font or rendering,
-                // these are still just character substitutions.
-                'a': '𝒶', 'b': '𝒷', 'c': '𝒸', 'd': '𝒹', 'e': '𝑒', 'f': '𝒻', 'g': '𝑔', 'h': '𝒽', 'i': '𝒾', 'j': '𝒿', 'k': '𝓀', 'l': '𝓁', 'm': '𝓂', 'n': '𝓃', 'o': '𝑜', 'p': '𝓅', 'q': '𝓆', 'r': '𝓇', 's': '𝓈', 't': '𝓉', 'u': '𝓊', 'v': '𝓋', 'w': '𝓌', 'x': '𝓍', 'y': '𝓎', 'z': '𝓏',
-                'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝒟', 'E': '𝓔', 'F': '𝓕', 'G': '𝓒', 'H': '𝓒', 'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟', 'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓒', 'V': '𝓒', 'W': '𝓒', 'X': '𝓧', 'Y': '𝓨', 'Z': '𝓩'
-            };
-
-            function transformToCursive(text, mapping) {
-                return Array.from(text).map(char => {
-                    const lowerChar = char.toLowerCase();
-                    if (mapping[char]) {
-                        return mapping[char];
-                    } else if (mapping[lowerChar] && char === char.toUpperCase()) {
-                        // Handle uppercase if only lowercase is mapped in some simple maps,
-                        // but generally, the full map should include both.
-                        return mapping[lowerChar].toUpperCase(); // This won't work for Unicode cursive
-                    }
-                    return char; // Return original character if no mapping exists
-                }).join('');
-            }
-
-            function updateCursiveOutputs() {
-                const text = inputText.value;
-                document.getElementById('outputCursive1').value = transformToCursive(text, cursiveMap1);
-                document.getElementById('outputCursive2').value = transformToCursive(text, cursiveMap2);
-                document.getElementById('outputCursive3').value = transformToCursive(text, cursiveMap3);
-                // Add more as needed
-            }
-
-            // Event listener for input
-            inputText.addEventListener('input', updateCursiveOutputs);
-
-            // Copy button functionality for each output box
-            copyButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    const targetId = event.target.dataset.target;
-                    const targetTextarea = document.getElementById(targetId);
-                    targetTextarea.select();
-                    targetTextarea.setSelectionRange(0, 99999); // For mobile devices
-                    try {
-                        document.execCommand('copy');
-                        alert('Cursive text copied to clipboard!');
-                    } catch (err) {
-                        console.error('Failed to copy text: ', err);
-                        alert('Failed to copy. Please copy manually.');
-                    }
-                });
-            });
-
-            // Clear button functionality
-            clearBtn.addEventListener('click', () => {
-                inputText.value = '';
-                document.getElementById('outputCursive1').value = '';
-                document.getElementById('outputCursive2').value = '';
-                document.getElementById('outputCursive3').value = '';
-                // Clear more as needed
-            });
-
-            // Initial generation on load
-            updateCursiveOutputs();
-        });
-    </script>
 </body>
 </html>
