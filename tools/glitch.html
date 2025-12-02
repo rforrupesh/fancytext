@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Glitch Text Generator - Create Distorted & Corrupted Text Effects</title>
+    <title>Glitch Text Generator -  Distorted & Corrupted Text Effects</title>
     <meta name="description" content="Generate unique glitch text effects by adding various Unicode combining characters to your text. Perfect for edgy social media, gaming, and artistic designs.">
     <meta name="robots" content="index, follow">
     <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon.png">
@@ -24,113 +24,7 @@
     <meta name="twitter:image" content="../img/Font-Generator.png">
     <link rel="canonical" href="https://fontgen.in/tools/glitch.html">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../homepage.css">
-    <style>
-        /* Basic styling for the tool, adjust as needed with your main CSS */
-        .tool-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .tool-container h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 25px;
-        }
-        .tool-container textarea {
-            width: calc(100% - 20px);
-            min-height: 100px;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            resize: vertical;
-        }
-        .tool-container .buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .tool-container button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .tool-container button.copy-button {
-            background-color: #007bff;
-            color: white;
-        }
-        .tool-container button.copy-button:hover {
-            background-color: #0056b3;
-        }
-        .tool-container button.clear-button {
-            background-color: #dc3545;
-            color: white;
-        }
-        .tool-container button.clear-button:hover {
-            background-color: #c82333;
-        }
-        .output-section {
-            margin-top: 30px;
-        }
-        .output-box {
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .output-box h3 {
-            margin-top: 0;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .output-box textarea {
-            width: calc(100% - 20px);
-            min-height: 60px;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            color: #333;
-            /* Glitch text often looks better with a monospace or sans-serif font */
-            font-family: 'monospace', 'Arial', sans-serif;
-            line-height: 1.2; /* Adjust line height for stacked diacritics */
-        }
-        .seo-content {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-        }
-        .seo-content h2, .seo-content h3 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        .seo-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .seo-content ul {
-            list-style: disc;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        .seo-content ul li {
-            margin-bottom: 5px;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h3 {
-            margin-bottom: 5px;
-        }
-    </style>
+  
 </head>
 <body>
     <nav class="navbar">
@@ -222,76 +116,224 @@
 
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <main>
-        <div class="tool-container">
-            <h1>Glitch Text Generator</h1>
-            <p>Create unique and eye-catching glitch text effects! Type or paste your text below to generate distorted and corrupted text styles using Unicode combining characters.</p>
-            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
-            <div class="buttons">
-                <button class="clear-button" id="clearBtn">Clear All</button>
-            </div>
+  <div class="output-list">
+<h1>Glitch Text Generator</h1>
+  <p>Generate Glitch Text by typing and copy it in Distorted font styles. Font Generator</p>
+<!-- ✅ Search + Tabs together -->
+<div class="search-section" id="searchSection">
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Type something..." onfocus="this.value=''" oninput="handleInputChange()" />
+    <span class="clear-btn" onclick="clearInput()">×</span>
+  </div>
 
-            <div class="output-section">
-                <div class="output-box">
-                    <h3>Subtle Glitch</h3>
-                    <textarea id="outputGlitch1" readonly></textarea>
-                    <button class="copy-button" data-target="outputGlitch1">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Medium Glitch</h3>
-                    <textarea id="outputGlitch2" readonly></textarea>
-                    <button class="copy-button" data-target="outputGlitch2">Copy</button>
-                </div>
-                <div class="output-box">
-                    <h3>Heavy Glitch</h3>
-                    <textarea id="outputGlitch3" readonly></textarea>
-                    <button class="copy-button" data-target="outputGlitch3">Copy</button>
-                </div>
-                <!-- Add more glitch styles as needed -->
-            </div>
+  <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/" class="tab-link">All Fonts</a>
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+      <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Text art</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Invisible</a>
+      
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
+</div>
 
-            <div class="seo-content">
-                <h2>What is a Glitch Text Generator?</h2>
-                <p>A Glitch Text Generator is an online tool that creates text with a distorted, corrupted, or "glitched" appearance. It achieves this by adding various Unicode combining diacritics (marks that attach to a base character) above, below, or through the original characters. These diacritics stack on top of each other, creating the visual effect of digital interference or a broken font.</p>
 
-                <h2>Uses for Glitch Text:</h2>
-                <ul>
-                    <li><strong>Social Media:</strong> Make your posts, bios, and comments stand out with an edgy, alternative look on platforms like Instagram, TikTok, and Twitter.</li>
-                    <li><strong>Gaming:</strong> Create unique and memorable usernames, clan tags, or in-game messages with a hacker-like or futuristic vibe.</li>
-                    <li><strong>Artistic & Design Projects:</strong> Add a digital art touch to posters, banners, album covers, or digital collages.</li>
-                    <li><strong>Creative Writing:</strong> Use glitch text to convey a sense of chaos, malfunction, or a dystopian theme in short stories or poetry.</li>
-                    <li><strong>Personal Branding:</strong> Develop a distinctive online persona or brand identity with a unique text style.</li>
-                </ul>
 
-                <h2>How to Use This Tool:</h2>
-                <ol>
-                    <li><strong>Enter Your Text:</strong> Type or paste the text you want to glitch into the input box.</li>
-                    <li><strong>Automatic Generation:</strong> The tool will instantly display your text in various glitch styles below.</li>
-                    <li><strong>Copy & Paste:</strong> Choose the glitch style you like best and click the "Copy" button next to it. Then, paste it wherever you want!</li>
-                </ol>
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="DistortedGlitchOutput" data-default="ᏗᏰፈᎴᏋᎦ">ᏗᏰፈᎴᏋᎦ</span>
+    <span class="style-name">Distorted Glitch</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('DistortedGlitchOutput')"></button>
+</div>
 
-                <div class="faq-section">
-                    <h2>Frequently Asked Questions (FAQ) about Glitch Text</h2>
-                    <div class="faq-item">
-                        <h3>Q: How does glitch text work?</h3>
-                        <p>A: Glitch text uses Unicode combining characters (diacritics). These are special characters that are designed to be rendered on top of or below other characters. By stacking multiple such characters, the visual distortion is created.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Will glitch text work on all platforms?</h3>
-                        <p>A: Most modern browsers, operating systems, and social media platforms support Unicode combining characters. However, rendering can vary slightly between platforms, and some older systems might not display them correctly or might limit the number of stacked diacritics, causing the text to look less "glitched" or even broken.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Is glitch text readable?</h3>
-                        <p>A: Depending on the intensity of the glitch effect, readability can be significantly reduced. Subtle glitches are often still readable, while heavy glitches are more for aesthetic impact than clear communication.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Can I use numbers and symbols with glitch text?</h3>
-                        <p>A: Yes, combining characters can be applied to numbers and many symbols as well, creating glitched versions of those characters.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="FairytaleOutput" data-default="ǟɮƈɖɛʄɢɦɨʝӄʟʍռօք">ǟɮƈɖɛʄɢɦɨʝӄʟʍռօք</span>
+    <span class="style-name">Fairytale</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('FairytaleOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="WizardOutput" data-default="a̷̷b̷̷c̷̷d̷̷e̷̷f̷̷g̷̷">a̷̷b̷̷c̷̷d̷̷e̷̷f̷̷g̷̷</span>
+    <span class="style-name">Wizard</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('WizardOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="DiagonalStrikesOutput" data-default="ꍏꌃꉓꀸꍟꎇ">ꍏꌃꉓꀸꍟꎇ</span>
+    <span class="style-name">Diagonal Strikes</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('DiagonalStrikesOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="AncientStyle1Output" data-default="𝐚๒Ć𝓭𝑒ⓕ𝕘𝓱ƗＪⓀᒪм𝐍Ø">𝐚๒Ć𝓭𝑒ⓕ𝕘𝓱ƗＪⓀᒪм𝐍Ø</span>
+    <span class="style-name">Ancient Style 1</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('AncientStyle1Output')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="MixedStyle1Output" data-default="ábćdéƒǵhíjḱĺḿńőṕqŕśtúvẃxӳź">ábćdéƒǵhíjḱĺḿńőṕqŕśtúvẃxӳź</span>
+    <span class="style-name">Mixed Style 1</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('MixedStyle1Output')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="AcuteAccentsOutput" data-default="a̠b̠c̠d̠e̠f̠g̠h̠i̠j̠k̠l̠m̠n̠o̠p̠q̠r̠s̠t̠u̠v̠w̠x̠y̠z̠">a̠b̠c̠d̠e̠f̠g̠h̠i̠j̠k̠l̠m̠n̠o̠p̠q̠r̠s̠t̠u̠v̠w̠x̠y̠z̠</span>
+    <span class="style-name">Acute Accents</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('AcuteAccentsOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="UnderlinedByDashesOutput" data-default="𝐚ᵇ¢ᗪｅғgⓗ𝕀ｊҜᒪмภ𝑜ρ𝓺яᔕ丅𝓊𝐯Ŵⓧⓨℤ">𝐚ᵇ¢ᗪｅғgⓗ𝕀ｊҜᒪмภ𝑜ρ𝓺яᔕ丅𝓊𝐯Ŵⓧⓨℤ</span>
+    <span class="style-name">Underlined by Dashes</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('UnderlinedByDashesOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="MixedStyle2Output" data-default="äḅċḋëḟġḧïjḳḷṁṅöṗqṛṡẗüṿẅẍÿż">äḅċḋëḟġḧïjḳḷṁṅöṗqṛṡẗüṿẅẍÿż</span>
+    <span class="style-name">Mixed Style 2</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('MixedStyle2Output')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="MetalUmlautsOutput" data-default="α𝕓匚Đⓔ𝐟Ꮆｈ𝒾ʲкⓛΜℕㄖᑭᵠℝ丂𝐭ᵘ𝓋ώχ𝕐𝔃">α𝕓匚Đⓔ𝐟Ꮆｈ𝒾ʲкⓛΜℕㄖᑭᵠℝ丂𝐭ᵘ𝓋ώχ𝕐𝔃</span>
+    <span class="style-name">Metal Ümlauts</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('MetalUmlautsOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="MixedStyle3Output" data-default="a͓͓̽̽b͓͓̽̽c͓͓̽̽d͓͓̽̽e͓͓̽̽f͓͓̽̽g͓͓̽̽">a͓͓̽̽b͓͓̽̽c͓͓̽̽d͓͓̽̽e͓͓̽̽f͓͓̽̽g͓͓̽̽</span>
+    <span class="style-name">Mixed Style 3</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('MixedStyle3Output')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="BandaidOutput" data-default="ΔβĆĐ€₣ǤĦƗĴҜŁΜŇØƤΩŖŞŦỮVŴЖ¥Ž">ΔβĆĐ€₣ǤĦƗĴҜŁΜŇØƤΩŖŞŦỮVŴЖ¥Ž</span>
+    <span class="style-name">Bandaid</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('BandaidOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="DeltaOutput" data-default="̶a̶b̶c̶d̶e̶f̶g̶h̶i̶j̶k̶l̶m̶n̶o̶p̶q̶r̶s̶t̶u̶v̶w̶x̶y̶z̶">̶a̶b̶c̶d̶e̶f̶g̶h̶i̶j̶k̶l̶m̶n̶o̶p̶q̶r̶s̶t̶u̶v̶w̶x̶y̶z̶</span>
+    <span class="style-name">Delta</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('DeltaOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="CorruptStrikethroughOutput" data-default="ͯaͯbͯcͯdͯeͯfͯ">ͯaͯbͯcͯdͯeͯfͯ</span>
+    <span class="style-name">Corrupt Strikethrough</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('CorruptStrikethroughOutput')"></button>
+</div>
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="X-crossOutput" data-default="Ⱥƀȼđɇ">Ⱥƀȼđɇ</span>
+    <span class="style-name">X-cross</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('X-crossOutput')"></button>
+</div>
+
+
+
+  <div id="copyNotification"></div>
+  </div>
+<article>
+
+    <!-- Article Content: Glitch Text Generator -->
+    
+    <h2>What is a Glitch Text Generator?</h2>
+    <p>
+        A Glitch Text Generator is an online tool that creates text with a distorted, corrupted, or "glitched" appearance. 
+        It achieves this by adding various Unicode combining diacritics (marks that attach to a base character) above, below, 
+        or through the original characters. These diacritics stack on top of each other, creating the visual effect of digital interference or a broken font.
+    </p>
+
+    <h2>Uses for Glitch Text:</h2>
+    <ul>
+        <li>
+            <strong>Social Media:</strong> Make your posts, bios, and comments stand out with an edgy, alternative look on platforms like Instagram, TikTok, and Twitter.
+        </li>
+        <li>
+            <strong>Gaming:</strong> Create unique and memorable usernames, clan tags, or in-game messages with a hacker-like or futuristic vibe.
+        </li>
+        <li>
+            <strong>Artistic & Design Projects:</strong> Add a digital art touch to posters, banners, album covers, or digital collages.
+        </li>
+        <li>
+            <strong>Creative Writing:</strong> Use glitch text to convey a sense of chaos, malfunction, or a dystopian theme in short stories or poetry.
+        </li>
+        <li>
+            <strong>Personal Branding:</strong> Develop a distinctive online persona or brand identity with a unique text style.
+        </li>
+    </ul>
+
+    <h2>How to Use This Tool:</h2>
+    <ol>
+        <li>Enter Your Text: Type or paste the text you want to glitch into the input box.</li>
+        <li>Automatic Generation: The tool will instantly display your text in various glitch styles below.</li>
+        <li>Copy & Paste: Choose the glitch style you like best and click the "Copy" button next to it. Then, paste it wherever you want!</li>
+    </ol>
+
+    <h2>Frequently Asked Questions (FAQ) about Glitch Text</h2>
+    
+    <!-- FAQ 1 -->
+    <p><strong>Q: How does glitch text work?</strong></p>
+    <p>
+        A: Glitch text uses Unicode combining characters (diacritics). These are special characters that are designed to be rendered on top of or below other characters. By stacking multiple such characters, the visual distortion is created.
+    </p>
+
+    <!-- FAQ 2 -->
+    <p><strong>Q: Will glitch text work on all platforms?</strong></p>
+    <p>
+        A: Most modern browsers, operating systems, and social media platforms support Unicode combining characters. However, rendering can vary slightly between platforms, and some older systems might not display them correctly or might limit the number of stacked diacritics, causing the text to look less "glitched" or even broken.
+    </p>
+    
+    <!-- FAQ 3 -->
+    <p><strong>Q: Is glitch text readable?</strong></p>
+    <p>
+        A: Depending on the intensity of the glitch effect, readability can be significantly reduced. Subtle glitches are often still readable, while heavy glitches are more for aesthetic impact than clear communication.
+    </p>
+
+    <!-- FAQ 4 -->
+    <p><strong>Q: Can I use numbers and symbols with glitch text?</strong></p>
+    <p>
+        A: Yes, combining characters can be applied to numbers and many symbols as well, creating glitched versions of those characters.
+    </p>
+</article>
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -307,91 +349,9 @@
             </div>
         </div>
     </footer>
+  <button id="backToTopBtn" onclick="scrollToTop()">⬆</button>
 
     <script src="../script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputText = document.getElementById('inputText');
-            const copyButtons = document.querySelectorAll('.output-box .copy-button');
-            const clearBtn = document.getElementById('clearBtn');
-
-            // Unicode combining diacritics for glitch effects
-            // These are just a selection; many more exist.
-            const diacriticsTop = [
-                '\u0300', '\u0301', '\u0302', '\u0303', '\u0304', '\u0305', '\u0306', '\u0307', '\u0308', '\u0309', '\u030A', '\u030B', '\u030C', '\u030D', '\u030E', '\u030F', '\u0310', '\u0311', '\u0312', '\u0313', '\u0314', '\u0315', '\u0316', '\u0317', '\u0318', '\u0319', '\u031A', '\u031B', '\u031C', '\u031D', '\u031E', '\u031F', '\u0320', '\u0321', '\u0322', '\u0323', '\u0324', '\u0325', '\u0326', '\u0327', '\u0328', '\u0329', '\u032A', '\u032B', '\u032C', '\u032D', '\u032E', '\u032F', '\u0330', '\u0331', '\u0332', '\u0333', '\u0334', '\u0335', '\u0336', '\u0337', '\u0338', '\u0339', '\u033A', '\u033B', '\u033C', '\u033D', '\u033E', '\u033F', '\u0340', '\u0341', '\u0342', '\u0343', '\u0344', '\u0345', '\u0346', '\u0347', '\u0348', '\u0349', '\u034A', '\u034B', '\u034C', '\u034D', '\u034E', '\u034F', '\u0350', '\u0351', '\u0352', '\u0353', '\u0354', '\u0355', '\u0356', '\u0357', '\u0358', '\u0359', '\u035A', '\u035B', '\u035C', '\u035D', '\u035E', '\u035F', '\u0360', '\u0361', '\u0362', '\u0363', '\u0364', '\u0365', '\u0366', '\u0367', '\u0368', '\u0369', '\u036A', '\u036B', '\u036C', '\u036D', '\u036E', '\u036F'
-            ];
-            const diacriticsMiddle = [
-                '\u0334', '\u0335', '\u0336', '\u0337', '\u0338', '\u0339'
-            ]; // Strikethrough-like
-            const diacriticsBottom = [
-                '\u0327', '\u0328', '\u0329', '\u032A', '\u032B', '\u032C', '\u032D', '\u032E', '\u032F', '\u0330', '\u0331', '\u0332', '\u0333'
-            ];
-
-            // Function to get a random diacritic from an array
-            function getRandomDiacritic(arr) {
-                return arr[Math.floor(Math.random() * arr.length)];
-            }
-
-            // Function to apply glitch effect
-            function applyGlitch(text, topCount, middleCount, bottomCount) {
-                let glitchedText = '';
-                for (let i = 0; i < text.length; i++) {
-                    let char = text[i];
-                    // Add top diacritics
-                    for (let j = 0; j < topCount; j++) {
-                        char += getRandomDiacritic(diacriticsTop);
-                    }
-                    // Add middle diacritics
-                    for (let j = 0; j < middleCount; j++) {
-                        char += getRandomDiacritic(diacriticsMiddle);
-                    }
-                    // Add bottom diacritics
-                    for (let j = 0; j < bottomCount; j++) {
-                        char += getRandomDiacritic(diacriticsBottom);
-                    }
-                    glitchedText += char;
-                }
-                return glitchedText;
-            }
-
-            function updateGlitchOutputs() {
-                const text = inputText.value;
-                document.getElementById('outputGlitch1').value = applyGlitch(text, 1, 0, 1); // Subtle
-                document.getElementById('outputGlitch2').value = applyGlitch(text, 2, 1, 2); // Medium
-                document.getElementById('outputGlitch3').value = applyGlitch(text, 3, 2, 3); // Heavy
-            }
-
-            // Event listener for input
-            inputText.addEventListener('input', updateGlitchOutputs);
-
-            // Copy button functionality for each output box
-            copyButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    const targetId = event.target.dataset.target;
-                    const targetTextarea = document.getElementById(targetId);
-                    targetTextarea.select();
-                    targetTextarea.setSelectionRange(0, 99999); // For mobile devices
-                    try {
-                        document.execCommand('copy');
-                        alert('Glitch text copied to clipboard!');
-                    } catch (err) {
-                        console.error('Failed to copy text: ', err);
-                        alert('Failed to copy. Please copy manually.');
-                    }
-                });
-            });
-
-            // Clear button functionality
-            clearBtn.addEventListener('click', () => {
-                inputText.value = '';
-                document.getElementById('outputGlitch1').value = '';
-                document.getElementById('outputGlitch2').value = '';
-                document.getElementById('outputGlitch3').value = '';
-            });
-
-            // Initial generation on load
-            updateGlitchOutputs();
-        });
-    </script>
+  
 </body>
 </html>
