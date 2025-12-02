@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,153 +25,7 @@
   <meta name="twitter:image" content="../img/Font-Generator.png">
   <link rel="canonical" href="https://fontgen.in/tools/strikethrough.html">
  <link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../homepage.css">
-<style>
-  .container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-  }
 
-  .label {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
-
-  .editable {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 18px;
-    min-height: 120px;
-    background: #f9f9f9;
-    outline: none;
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: border-color 0.3s ease;
-  }
-
-  .editable:focus {
-    border-color: #4CAF50;
-    background-color: #fff;
-  }
-
-  .output-block {
-    background: #fff;
-    padding: 16px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    flex-wrap: wrap;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  }
-
-  .output-text {
-    flex: 1 1 auto;
-    word-break: break-word;
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #4CAF50;
-    color: white;
-    transition: background 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: #45a049;
-  }
-
-  .monospace {
-    font-family: monospace;
-  }
-
-  .sans {
-    font-family: sans-serif;
-  }
-
-  .unstyled {
-    font-family: inherit;
-  }
-
-  .strike {
-    text-decoration: line-through;
-  }
-
-  @media (max-width: 600px) {
-    .output-block {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .btn {
-      align-self: flex-end;
-      width: fit-content;
-    }
-  }
-</style>
-
-<style>
-   
-    .article {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .section h2 {
-      margin-top: 0;
-      color: #444;
-    }
-    .section p {
-      line-height: 1.6;
-    }
-    .code {
-      background: #eee;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-family: monospace;
-      display: inline-block;
-    }
-    .example {
-      background: #f0f0f0;
-      padding: 10px;
-      margin: 10px 0;
-      border-left: 4px solid #007acc;
-      font-family: monospace;
-    }
-    .table {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 10px;
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      background: #fafafa;
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-  </style>
 </head>
 <body>
  <nav class="navbar">
@@ -268,134 +123,142 @@
 
   <div class="nav-overlay" id="navOverlay"></div>
 
-<div class="output-list">
-  <div class="container">
-    <div class="label">Enter Text Below:</div>
-    <div class="editable" contenteditable="true" id="inputBox"></div>
+  <div class="output-list">
+<h1>Strikethrough Text Generator (Cross Out Text)</h1>
+  <p>Generate Cross Out Text by typing and copy it in Strikethrough font styles.</p>
+<!-- ✅ Search + Tabs together -->
+<div class="search-section" id="searchSection">
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Type something..." onfocus="this.value=''" oninput="handleInputChange()" />
+    <span class="clear-btn" onclick="clearInput()">×</span>
+  </div>
 
-    <div class="label">Formatted Outputs:</div>
-
-    <!-- Outputs dynamically inserted here -->
-    <div id="outputs"></div>
+  <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/" class="tab-link">All Fonts</a>
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+      <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Text art</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Invisible</a>
+      
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
   </div>
 </div>
 
-
-  <div class="article">
-  <div class="section">
-    <h2>🔠 Strikethrough Text Generator</h2>
-    <p>Paste your text below, pick a style, and copy it—no installations or downloads needed.</p>
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="StrikethroughcrossOutput" data-default="S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶">S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶</span>
+    <span class="style-name">Strikethrough</span>
   </div>
-
-  <div class="section">
-    <h2>🎨 Available Text Styles</h2>
-    <div class="table">
-      <div class="row"><div>Strikethrough</div><div class="code">\u0336</div></div>
-      <div class="row"><div>Slash</div><div class="code">\u0337</div></div>
-      <div class="row"><div>Underline</div><div class="code">\u0332</div></div>
-      <div class="row"><div>Double Underline</div><div class="code">\u0333</div></div>
-      <div class="row"><div>Dotted Underline</div><div class="code">\u0323</div></div>
-      <div class="row"><div>Wavy Line</div><div class="code">\u0330</div></div>
-    </div>
-
-    <div class="example">S̶t̶r̶i̶k̶e̶ ̶T̶h̶i̶s̶</div>
-    <div class="example">s̷l̷a̷s̷h̷ ̷s̷t̷y̷l̷e̷</div>
-    <div class="example">U͟n͟d͟e͟r͟l͟i͟n͟e͟</div>
-    <div class="example">d͇o͇u͇b͇l͇e͇ ͇l͇i͇n͇e͇</div>
-    <div class="example">d̤o̤t̤t̤e̤d̤ ̤e̤f̤f̤e̤c̤t̤</div>
-    <div class="example">w̰a̰v̰y̰ ̰t̰ḛx̰t̰</div>
-  </div>
-
-  <div class="section">
-    <h2>📱 How It Works on Social Platforms</h2>
-    <p><strong>Twitter, Instagram, Facebook:</strong> Works well for posts and bios.</p>
-    <p><strong>Discord:</strong> Use native formatting like <span class="code">~~your text~~</span>.</p>
-    <p><strong>Slack:</strong> You can use <span class="code">~strike this~</span> or the generator.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔐 Privacy Friendly</h2>
-    <p>This tool works 100% in your browser. We don’t store or transmit your text. Your content stays private.</p>
-  </div>
-
-  <div class="section">
-    <h2>🙌 Like the Tool?</h2>
-    <p>If you find it useful, share it with your friends or link to it from your website. Help others discover cool formatting!</p>
-  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('StrikethroughcrossOutput')"></button>
 </div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="SlashOutput" data-default="S̷l̷a̷s̷h̷ ̷S̷y̷m̷b̷o̷l̷">S̷l̷a̷s̷h̷ ̷S̷y̷m̷b̷o̷l̷</span>
+    <span class="style-name">Slash Symbol</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('SlashOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="UnderlineOutput" data-default="U͟n͟d͟e͟r͟l͟i͟n͟e͟">U͟n͟d͟e͟r͟l͟i͟n͟e͟</span>
+    <span class="style-name">Underline</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('UnderlineOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="DoubleUnderlineOutput" data-default="D͇o͇u͇b͇l͇e͇ ͇U͇n͇d͇e͇r͇l͇i͇n͇e͇">D͇o͇u͇b͇l͇e͇ ͇U͇n͇d͇e͇r͇l͇i͇n͇e͇</span>
+    <span class="style-name">Double Underline</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('DoubleUnderlineOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="DottedOutput" data-default="D̤o̤t̤t̤e̤d̤ ̤L̤i̤n̤e̤">D̤o̤t̤t̤e̤d̤ ̤L̤i̤n̤e̤</span>
+    <span class="style-name">Dotted Line</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('DottedOutput')"></button>
+</div>
+
+<div class="output-box">
+  <div class="text-content">
+    <span class="output-text" id="WaveOutput" data-default="W̰a̰v̰ḛ ̰L̰ḭn̰ḛ">W̰a̰v̰ḛ ̰L̰ḭn̰ḛ</span>
+    <span class="style-name">Wave Line</span>
+  </div>
+  <button class="copy-btn" aria-label="Copy text" onclick="copyToClipboard('WaveOutput')"></button>
+</div>
+
+
+
+  <div id="copyNotification"></div>
+  </div>
+
+  <article> 
+ <h2>🔠 Strikethrough Text Generator</h2>
+<p>Paste your text below, pick a style, and copy it—no installations or downloads needed.</p>
+
+<h2>🎨 Available Text Styles</h2>
+<p>Strikethrough<br>\u0336</p>
+<p>Slash<br>\u0337</p>
+<p>Underline<br>\u0332</p>
+<p>Double Underline<br>\u0333</p>
+<p>Dotted Underline<br>\u0323</p>
+<p>Wavy Line<br>\u0330</p>
+
+<p>S̶t̶r̶i̶k̶e̶ ̶T̶h̶i̶s̶</p>
+<p>s̷l̷a̷s̷h̷ ̷s̷t̷y̷l̷e̷</p>
+<p>U͟n͟d͟e͟r͟l͟i͟n͟e͟</p>
+<p>d͇o͇u͇b͇l͇e͇ ͇l͇i͇n͇e͇</p>
+<p>d̤o̤t̤t̤e̤d̤ ̤e̤f̤f̤e̤c̤t̤</p>
+<p>w̰a̰v̰y̰ ̰t̰ḛx̰t̰</p>
+
+<h2>📱 How It Works on Social Platforms</h2>
+<p>Twitter, Instagram, Facebook: Works well for posts and bios.</p>
+<p>Discord: Use native formatting like ~~your text~~.</p>
+<p>Slack: You can use ~strike this~ or the generator.</p>
+
+<h2>🔐 Privacy Friendly</h2>
+<p>This tool works 100% in your browser. We don’t store or transmit your text. Your content stays private.</p>
+
+<h2>🙌 Like the Tool?</h2>
+<p>If you find it useful, share it with your friends or link to it from your website. Help others discover cool formatting!</p>
+
+</article>
 
 
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-left">
-      &copy; 2025 Font Generator . All rights reserved.
+      &copy; 2025 FontGen . All rights reserved.
     </div>
     <div class="footer-right">
-      <a href="../privacy-policy.html">Privacy Policy</a> |
-      <a href="../about-us.html">About Us</a> |
-      <a href="../contact-us.html">Contact</a> |
-      <a href="../changelog.html">Latest Updates</a> |
-      <a href="../feedback.html">Feedback</a>
+      <a href="https://fontgen.in/privacy-policy.html">Privacy Policy</a> |
+      <a href="https://fontgen.in/about-us.html">About Us</a> |
+      <a href="https://fontgen.in/contact-us.html">Contact</a> |
+      <a href="https://fontgen.in/changelog.html">Latest Updates</a> |
+      <a href="https://fontgen.in/feedback.html">Feedback</a>
     </div>
   </div>
 </footer>
 
-  <script>
-    const inputBox = document.getElementById('inputBox');
-    const outputsContainer = document.getElementById('outputs');
 
-    const styles = [
-      { name: "Monospace + Strikethrough", class: "monospace strike", type: "strikethrough" },
-      { name: "Monospace + Slashes", class: "monospace", type: "slashes" },
-      { name: "Sans-serif + Strikethrough", class: "sans strike", type: "strikethrough" },
-      { name: "Sans-serif + Slashes", class: "sans", type: "slashes" },
-      { name: "Unstyled + Strikethrough", class: "unstyled strike", type: "strikethrough" },
-      { name: "Unstyled + Slashes", class: "unstyled", type: "slashes" }
-    ];
+  <button id="backToTopBtn" onclick="scrollToTop()">⬆</button>
 
-    function generateStrikethrough(text) {
-      return text.split('').map(char => char + '\u0336').join('');
-    }
 
-    function generateSlashes(text) {
-      return '/' + text.split('').join('/') + '/';
-    }
-
-    function updateOutputs(text) {
-      outputsContainer.innerHTML = '';
-      styles.forEach((style, i) => {
-        const transformed = style.type === "strikethrough" ? generateStrikethrough(text) : generateSlashes(text);
-        const block = document.createElement('div');
-        block.className = 'output-block';
-
-        const content = document.createElement('div');
-        content.className = `output-text ${style.class}`;
-        content.textContent = transformed;
-
-        const button = document.createElement('div');
-        button.className = 'btn';
-        button.textContent = 'Copy';
-        button.onclick = () => {
-          navigator.clipboard.writeText(transformed).then(() => {
-            button.textContent = 'Copied!';
-            setTimeout(() => button.textContent = 'Copy', 1000);
-          });
-        };
-
-        block.appendChild(content);
-        block.appendChild(button);
-        outputsContainer.appendChild(block);
-      });
-    }
-
-    inputBox.addEventListener('input', () => {
-      const text = inputBox.innerText;
-      updateOutputs(text);
-    });
-
-    // Initialize with empty input
-    updateOutputs('');
-  </script>
+  
   <script src="../script.js"></script>
 
 </body>
