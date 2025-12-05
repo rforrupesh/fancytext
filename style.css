@@ -748,470 +748,492 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", en
         }
 
 
-        article {
-            max-width: 800px;
-           color: #000;            margin: 10px auto; /* Margin above/below */
-            padding: 20px; /* Standard internal padding */
-            background: #f4f1f1; /* White background for the card effect */
-            border: 1px solid #e0e0e0; /* Light border */
-            border-radius: 8px; /* Subtle rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for lift */
-        }
-
-        /* ----- ARTICLE TYPOGRAPHY (Dark text on white background - NO CHANGES NEEDED) ----- */
-
-        article h1 {
-            font-weight: 500;
-            color: #0f172a; /* Darkest blue for strong titles */
-            line-height: 1.2;
-        }
-
-        article h2 {
-           
-            font-weight: 700;
-            color: #1e293b;
-            position: 20px;
-            padding-bottom: 0.5rem;
-        }
-        /* Underline effect for H2 */
-      
-        article h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin: 2rem 0 0.8rem 0;
-        }
-  article p, article ul , article ol {
-            font-size: 1.05rem;
-            color: #080808; /* Slightly lighter body text */
-            line-height: 1.75;
-            padding: 10px;
-        }
-
-        /* 1. Fluid Images */
-        article img {
-            max-width: 100%;
-            height: auto;
-            margin: 0.5rem auto;
-            display: block;
-            border-radius: 12px;
-        }
-
-      
-
-        /* 2. Responsive Tables (Allows horizontal scroll on small screens) */
-        article .table-container {
-            margin: 1.5rem 0;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-        }
-
-        article table {
-            width: 100%;
-            min-width: 600px; /* Ensure table needs scroll on mobile if wide */
-            border-collapse: collapse;
-            margin: 0;
-        }
-
-        article th, article td {
-            padding: 14px 18px;
-            text-align: left;
-            border-bottom: 1px solid #f1f5f9; /* Light separator */
-            border-right: none;
-            color: #334155;
-            white-space: normal;
-        }
-
-        article thead th {
-            background-color: #f8fafc;
-            color: #0f172a;
-            font-weight: 700;
-            border-bottom: 2px solid #cbd5e1;
-        }
-
-        article tbody tr:hover {
-            background-color: #eff6ff; /* Subtle blue row hover */
-        }
-
-
-        /* 3. Responsive Videos/Iframes (Intrinsic 16:9 Aspect Ratio) */
-        article .embed-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin: 2.5rem auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        article .embed-container iframe,
-        article .embed-container video,
-        article .embed-container object,
-        article .embed-container embed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* 4. Responsive Code Blocks */
-        article pre {
-            background: #1e293b; /* Dark background for code */
-            color: #e2e8f0;
-            padding: 1.5rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 2rem 0;
-            font-family: monospace;
-            line-height: 1.4;
-        }
-        article pre code {
-            color: #e2e8f0;
-        }
-        article code {
-            background-color: #f1f5f9;
-            color: #1e293b;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-size: 0.95em;
-        }
-
-        /* ----- IMPROVED COMPONENT STYLES (Dark text on white background - NO CHANGES NEEDED) ----- */
-
-        article .features-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        article .feature-box {
-            padding: 2rem;
-            border: 1px solid #f1f5f9;
-            border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        article .feature-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        article .feature-box svg {
-            width: 28px;
-            height: 28px;
-            fill: #007bff; /* Accent color for icons */
-            margin-bottom: 1.2rem;
-        }
-
-        article .feature-text strong {
-            display: block;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        article .feature-text p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #64748b;
-        }
-
-        article .steps-container {
-            margin: 4rem 0;
-        }
-
-        article .steps {
-            margin: 2.5rem 0;
-            border-left: 3px solid #e2e8f0; /* Timeline effect */
-            padding-left: 20px;
-        }
-
-        article .step {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 1.5rem;
-            align-items: start;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            position: relative;
-            border-bottom: none;
-        }
-
-        article .step:last-child {
-            padding-bottom: 0;
-        }
-
-        article .step-number {
-            width: 38px;
-            height: 38px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            font-weight: 700;
-            flex-shrink: 0;
-            position: absolute;
-            left: -40px; /* Position next to the timeline line */
-            top: 0;
-            box-shadow: 0 0 0 5px #ffffff; /* White ring to separate from line */
-        }
-
-        article .step-content h3 {
-            margin-top: 0;
-            color: #1e293b;
-        }
-
-        article .step img {
-            max-width: 100%;
-            max-height: 200px;
-            margin: 1rem 0 0 0;
-            border: 1px solid #f1f5f9;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-        }
-
-        article .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        /* New CSS for cards */
-        article .card {
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 2rem;
-            background: #ffffff;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        article .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-            border-color: #007bff44;
-        }
-
-        article .card img {
-            width: 100%;
-            max-width: 120px;
-            height: auto;
-            margin: 0 auto 1.5rem auto;
-            border: none;
-            object-fit: contain;
-        }
-
-        article .card h3 {
-            margin: 0.5rem 0;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #1e293b;
-        }
-
-        article .card p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #334155;
-        }
-
-      
-
-
-        article .about {
-            margin: 4rem 0;
-            padding: 2rem;
-            background-color: #f1f5f9; /* Light, distinct background */
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
-            color: #334155;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            article {
-                padding: 20px 15px;
-                margin: 20px 10px; /* Added margin for mobile to lift off edges */
-            }
-            /* Step-number box-shadow update to match new body background */
-            article .step-number {
-                box-shadow: 0 0 0 5px #ffffff;
-            }
-
-
-            article h1 {
-                font-size: 2.2rem;
-            }
-
-            article h2 {
-                font-size: 1.75rem;
-                text-align: left;
-            }
-            article h2::after {
-                left: 0;
-            }
-
-       
-
-            article .features-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            /* Step layout adjustment for smaller screens */
-            article .steps {
-                border-left: none;
-                padding-left: 0;
-            }
-            article .step {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding-bottom: 1.5rem;
-                border-bottom: 1px solid #e2e8f0;
-            }
-
-            article .step-number {
-                position: static;
-                margin: 0 0 10px 0;
-                box-shadow: none;
-            }
-
-            article .cards {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            article .card img {
-                max-width: 80px;
-            }
-
-            article .about {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            article {
-                padding: 15px; /* Made padding uniform */
-                margin: 15px 5px; /* Reduced margin slightly more for very small screens */
-            }
-
-            article h1 {
-                font-size: 1.8rem;
-            }
-
-            article h2 {
-                font-size: 1.5rem;
-            }
-
-            article .feature-box, article .card {
-                padding: 1.25rem;
-            }
-            article table {
-                min-width: 100%; /* Allows horizontal scroll in container */
-            }
-            
-            /* Responsive adjustments for output box on small screens */
-            .output-box {
-                padding: 12px;
-            }
-            .output-text {
-                font-size: 1rem;
-            }
-            .style-name {
-                font-size: 0.8rem;
-            }
-            .copy-btn {
-                width: 40px;
-                height: 40px;
-            }
-            .copy-btn svg {
-                width: 18px;
-                height: 18px;
-            }
-        }
-
-
-.breadcrumb-nav {
-    padding: 1rem 0;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem; /* Slightly smaller font size for navigation */
-    color: #666; /* Default text color */
+     
+ /* ----- ARTICLE CONTAINER ----- */
+article {
+    max-width: 800px;
+    color: #2c3e50;
+    margin: 20px auto;
+    padding: 15px 25px;
+    background: #ffffff;
+    border: 1px solid #e8ecf1;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Ordered list containing the breadcrumb items */
-.breadcrumb-nav ol {
-    display: flex; /* Use flexbox to align items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
-    list-style: none; /* Remove default list markers */
+/* ----- ARTICLE TYPOGRAPHY ----- */
+article h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+article h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #007bff;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+article p, 
+article ul, 
+article ol {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+article ul,
+article ol {
+    padding-left: 1.5rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+/* ----- IMAGES ----- */
+article img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- TABLES ----- */
+article .table-container,
+div.tablecontainer {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+article table,
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
     margin: 0;
+}
+
+article th, 
+article td,
+th, 
+td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e8ecf1;
+    color: #4a5568;
+}
+
+article thead th,
+thead th {
+    background-color: #f7fafc;
+    color: #1a202c;
+    font-weight: 700;
+    border-bottom: 2px solid #cbd5e1;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+article tbody tr:hover,
+tbody tr:hover {
+    background-color: #f0f7ff;
+}
+
+/* ----- VIDEOS/IFRAMES ----- */
+article .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 3rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+article .embed-container iframe,
+article .embed-container video,
+article .embed-container object,
+article .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ----- CODE BLOCKS ----- */
+article pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+article pre code {
+    color: #e2e8f0;
+    background: transparent;
     padding: 0;
 }
 
-/* Individual list items */
-.breadcrumb-nav li {
-    display: inline-flex; /* Use inline-flex for alignment */
+article code {
+    background-color: #f1f5f9;
+    color: #e91e63;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+}
+
+/* ----- FEATURE BOXES ----- */
+article .features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+article .feature-box {
+    padding: 2rem;
+    border: 1px solid #e8ecf1;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article .feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+article .feature-box svg {
+    width: 32px;
+    height: 32px;
+    fill: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+article .feature-text strong {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+}
+
+article .feature-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ----- STEPS ----- */
+article .steps-container {
+    margin: 4rem 0;
+}
+
+article .steps {
+    margin: 2.5rem 0;
+    border-left: 4px solid #e2e8f0;
+    padding-left: 3rem;
+}
+
+article .step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+article .step:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+article .step-number {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    position: absolute;
+    left: -55px;
+    top: 0;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3), 0 0 0 6px #ffffff;
+}
+
+article .step-content h3 {
+    margin-top: 0;
+    color: #2d3748;
+    font-size: 1.4rem;
+}
+
+article .step-content p {
+    margin-bottom: 1rem;
+}
+
+article .step img {
+    max-width: 100%;
+    max-height: 250px;
+    margin: 1.5rem 0 0 0;
+    border: 1px solid #e8ecf1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+/* ----- CARDS ----- */
+article .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+article .card {
+    border: 1px solid #e8ecf1;
+    border-radius: 12px;
+    padding: 2.5rem;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+article .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    border-color: #007bff;
+}
+
+article .card img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto 1.5rem auto;
+    border: none;
+    object-fit: contain;
+}
+
+article .card h3 {
+    margin: 1rem 0 0.75rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+article .card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* ----- ABOUT SECTION ----- */
+article .about {
+    margin: 4rem 0;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    color: #4a5568;
+}
+
+/* ----- BREADCRUMB NAVIGATION ----- */
+.breadcrumb-nav {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.breadcrumb-nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     align-items: center;
 }
 
-/* Separator between list items */
-.breadcrumb-nav li:not(:last-child)::after {
-    content: '>'; /* Visual separator */
-    margin: 0 0.5rem; /* Space the separator */
-    color: #ccc; /* Lighter color for the separator */
-    font-weight: 300;
+.breadcrumb-nav li {
+    display: inline-flex;
+    align-items: center;
 }
 
-/* Links within the breadcrumb */
+.breadcrumb-nav li:not(:last-child)::after {
+    content: '>';
+    margin: 0 0.75rem;
+    color: #cbd5e1;
+    font-weight: 400;
+}
+
 .breadcrumb-nav a {
-    text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Primary link color */
+    text-decoration: none;
+    color: #007bff;
     transition: color 0.2s ease;
+    font-weight: 500;
 }
 
 .breadcrumb-nav a:hover,
 .breadcrumb-nav a:focus {
-    color: #0056b3; /* Darker color on hover/focus */
+    color: #0056b3;
     text-decoration: underline;
 }
 
-/* Styling for the last item (current page) */
 .breadcrumb-nav li[aria-current="page"] {
-    color: #333; /* Darker color for the current page */
-    font-weight: 600; /* Make it slightly bolder */
+    color: #2d3748;
+    font-weight: 600;
 }
 
-/* Optional: Add a subtle border or background if needed for visual separation
-.breadcrumb-nav {
-    border-bottom: 1px solid #eee;
-}
-*/
+/* ----- RESPONSIVE DESIGN ----- */
+@media (max-width: 768px) {
+    article {
+        padding: 30px 25px;
+        margin: 30px 15px;
+    }
 
-/* Mobile optimization (optional, adjust as needed) */
-@media (max-width: 600px) {
+    article h1 {
+        font-size: 2rem;
+    }
+
+    article h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+    }
+
+    article h3 {
+        font-size: 1.3rem;
+    }
+
+    article p,
+    article ul,
+    article ol {
+        font-size: 1.05rem;
+    }
+
+    article .features-container,
+    article .cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    article .steps {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    article .step {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e8ecf1;
+    }
+
+    article .step-number {
+        position: static;
+        margin: 0 0 1rem 0;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    article .card img {
+        max-width: 100px;
+    }
+
+    article .about {
+        padding: 2rem;
+    }
+
+    .breadcrumb-nav {
+        padding: 1rem 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        padding: 25px 20px;
+        margin: 20px 10px;
+    }
+
+    article h1 {
+        font-size: 1.75rem;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+    }
+
+    article h3 {
+        font-size: 1.2rem;
+    }
+
+    article p,
+    article ul,
+    article ol {
+        font-size: 1rem;
+    }
+
+    article .feature-box,
+    article .card {
+        padding: 1.5rem;
+    }
+
+    article .about {
+        padding: 1.5rem;
+    }
+
+    article table {
+        min-width: 100%;
+    }
+
     .breadcrumb-nav {
         padding: 0.75rem 0;
         margin-bottom: 1rem;
+        font-size: 0.85rem;
     }
-    .breadcrumb-nav ol {
-        padding-left: 1rem; /* Add some padding if needed on very small screens */
-    }
+
     .breadcrumb-nav li:not(:last-child)::after {
-        margin: 0 0.3rem;
+        margin: 0 0.4rem;
     }
 }
