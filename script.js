@@ -956,6 +956,8 @@ function toWave(text) {
   return text.split("").map(ch => map[ch] || ch).join("");
 }
 
+
+
 function updateOutputs(text) {
   // Cursive
   const cursiveEl = document.getElementById("CursiveOutput");
@@ -1298,6 +1300,163 @@ function toXcross(text) {
   };
   return text.split("").map(ch => map[ch] || ch).join("");
 }
+
+function toQuickMaths(text) {
+  const map = {
+     a: "⍲", b: "⌦", c: "⍧", d: "⟄", e: "ℇ", f: "🜅", g: "⅁", h: "ℍ",
+  i: "⟟", j: "⏎", k: "⏧", l: "⎾", m: "⍓", n: "☊", o: "⌾", p: "⍴",
+  q: "ℚ", r: "☈", s: "⎎", t: "⍑", u: "⌰", v: "⍻", w: "⏙", x: "🝍",
+  y: "⍦", z: "☡",
+
+  A: "⍲", B: "⌦", C: "⍧", D: "⟄", E: "ℇ", F: "🜅", G: "⅁", H: "ℍ",
+  I: "⟟", J: "⏎", K: "⏧", L: "⎾", M: "⍓", N: "☊", O: "⌾", P: "⍴",
+  Q: "ℚ", R: "☈", S: "⎎", T: "⍑", U: "⌰", V: "⍻", W: "⏙", X: "🝍",
+  Y: "⍦", Z: "☡"
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toSlither(text) {
+  const map = {
+     a: "ɒ", b: "d", c: "ɔ", d: "b", e: "ɘ", f: "Ꮈ", g: "ǫ", h: "ʜ",
+  i: "i", j: "ꞁ", k: "ʞ", l: "|", m: "m", n: "ᴎ", o: "o", p: "q",
+  q: "p", r: "ɿ", s: "ꙅ", t: "ƚ", u: "u", v: "v", w: "w", x: "x",
+  y: "ʏ", z: "ƹ",
+  A: "A", B: "ᙠ", C: "Ɔ", D: "ᗡ", E: "Ǝ", F: "ꟻ", G: "Ꭾ", H: "H",
+  I: "I", J: "Ⴑ", K: "⋊", L: "⅃", M: "M", N: "Ͷ", O: "O", P: "ꟼ",
+  Q: "Ọ", R: "Я", S: "Ꙅ", T: "T", U: "U", V: "V", W: "W", X: "X",
+  Y: "Y", Z: "Ƹ"
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toAllWays(text) {
+  const map = {
+   'a':'ꜛᴀ͎ꜜ','b':'ꜛʙ͎ꜜ','c':'ꜛᴄ͎ꜜ','d':'ꜛᴅ͎ꜜ','e':'ꜛᴇ͎ꜜ','f':'ꜛꜰ͎ꜜ','g':'ꜛɢ͎ꜜ','h':'ꜛʜ͎ꜜ','i':'ꜛɪ͎ꜜ','j':'ꜛᴊ͎ꜜ','k':'ꜛᴋ͎ꜜ','l':'ꜛʟ͎ꜜ','m':'ꜛᴍ͎ꜜ','n':'ꜛɴ͎ꜜ','o':'ꜛᴏ͎ꜜ','p':'ꜛᴘ͎ꜜ','q':'ꜛǫ͎ꜜ','r':'ꜛʀ͎ꜜ','s':'ꜛs͎ꜜ','t':'ꜛᴛ͎ꜜ','u':'ꜛᴜ͎ꜜ','v':'ꜛᴠ͎ꜜ','w':'ꜛᴡ͎ꜜ','x':'ꜛx͎ꜜ','y':'ꜛʏ͎ꜜ','z':'ꜛᴢ͎ꜜ','A':'ꜛᴀ͎ꜜ','B':'ꜛʙ͎ꜜ','C':'ꜛᴄ͎ꜜ','D':'ꜛᴅ͎ꜜ','E':'ꜛᴇ͎ꜜ','F':'ꜛꜰ͎ꜜ','G':'ꜛɢ͎ꜜ','H':'ꜛʜ͎ꜜ','I':'ꜛɪ͎ꜜ','J':'ꜛᴊ͎ꜜ','K':'ꜛᴋ͎ꜜ','L':'ꜛʟ͎ꜜ','M':'ꜛᴍ͎ꜜ','N':'ꜛɴ͎ꜜ','O':'ꜛᴏ͎ꜜ','P':'ꜛᴘ͎ꜜ','Q':'ꜛǫ͎ꜜ','R':'ꜛʀ͎ꜜ','S':'ꜛs͎ꜜ','T':'ꜛᴛ͎ꜜ','U':'ꜛᴜ͎ꜜ','V':'ꜛᴠ͎ꜜ','W':'ꜛᴡ͎ꜜ','X':'ꜛx͎ꜜ','Y':'ꜛʏ͎ꜜ','Z':'ꜛᴢ͎ꜜ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toDIYAsterisks(text) {
+  const map = {
+   a: "𝐚⃥⃒̸", b: "𝐛⃥⃒̸", c: "𝐜⃥⃒̸", d: "𝐝⃥⃒̸", e: "𝐞⃥⃒̸",
+f: "𝐟⃥⃒̸", g: "𝐠⃥⃒̸", h: "𝐡⃥⃒̸", i: "𝐢⃥⃒̸", j: "𝐣⃥⃒̸",
+k: "𝐤⃥⃒̸", l: "𝐥⃥⃒̸", m: "𝐦⃥⃒̸", n: "𝐧⃥⃒̸", o: "𝐨⃥⃒̸",
+p: "𝐩⃥⃒̸", q: "𝐪⃥⃒̸", r: "𝐫⃥⃒̸", s: "𝐬⃥⃒̸", t: "𝐭⃥⃒̸",
+u: "𝐮⃥⃒̸", v: "𝐯⃥⃒̸", w: "𝐰⃥⃒̸", x: "𝐱⃥⃒̸",
+y: "𝐲⃥⃒̸", z: "𝐳⃥⃒̸",
+
+A: "𝐀⃥⃒̸", B: "𝐁⃥⃒̸", C: "𝐂⃥⃒̸", D: "𝐃⃥⃒̸", E: "𝐄⃥⃒̸",
+F: "𝐅⃥⃒̸", G: "𝐆⃥⃒̸", H: "𝐇⃥⃒̸", I: "𝐈⃥⃒̸", J: "𝐉⃥⃒̸",
+K: "𝐊⃥⃒̸", L: "𝐋⃥⃒̸", M: "𝐌⃥⃒̸", N: "𝐍⃥⃒̸", O: "𝐎⃥⃒̸",
+P: "𝐏⃥⃒̸", Q: "𝐐⃥⃒̸", R: "𝐑⃥⃒̸", S: "𝐒⃥⃒̸", T: "𝐓⃥⃒̸",
+U: "𝐔⃥⃒̸", V: "𝐕⃥⃒̸", W: "𝐖⃥⃒̸", X: "𝐗⃥⃒̸",
+Y: "𝐘⃥⃒̸", Z: "𝐙⃥⃒̸"
+
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toCliffs(text) {
+  const map = {
+a: "༼𝚊", b: "༼𝚋", c: "༼𝚌", d: "༼𝚍", e: "༼𝚎",
+f: "༼𝚏", g: "༼𝚐", h: "༼𝚑", i: "༼𝚒", j: "༼𝚓",
+k: "༼𝚔", l: "༼𝚕", m: "༼𝚖", n: "༼𝚗", o: "༼𝚘",
+p: "༼𝚙", q: "༼𝚚", r: "༼𝚛", s: "༼𝚜", t: "༼𝚝",
+u: "༼𝚞", v: "༼𝚟", w: "༼𝚠", x: "༼𝚡",
+y: "༼𝚢", z: "༼𝚣",
+
+A: "༼𝙰", B: "༼𝙱", C: "༼𝙲", D: "༼𝙳", E: "༼𝙴",
+F: "༼𝙵", G: "༼𝙶", H: "༼𝙷", I: "༼𝙸", J: "༼𝙹",
+K: "༼𝙺", L: "༼𝙻", M: "༼𝙼", N: "༼𝙽", O: "༼𝙾",
+P: "༼𝙿", Q: "༼𝚀", R: "༼𝚁", S: "༼𝚂", T: "༼𝚃",
+U: "༼𝚄", V: "༼𝚅", W: "༼𝚆", X: "༼𝚇",
+Y: "༼𝚈", Z: "༼𝚉"
+
+
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toAngular(text) {
+  const map = {
+a: "λ", b: "b", c: "ᄃ", d: "d", e: "ө",
+f: "f", g: "g", h: "ή", i: "i", j: "j",
+k: "k", l: "ᄂ", m: "m", n: "п", o: "σ",
+p: "p", q: "q", r: "я", s: "ƨ", t: "ƭ",
+u: "ц", v: "v", w: "щ", x: "x",
+y: "y", z: "z",
+
+A: "Λ", B: "B", C: "ᄃ", D: "D", E: "Σ",
+F: "F", G: "G", H: "Ή", I: "I", J: "J",
+K: "K", L: "ᄂ", M: "M", N: "П", O: "Ө",
+P: "P", Q: "Q", R: "Я", S: "Ƨ", T: "Ƭ",
+U: "Ц", V: "V", W: "Щ", X: "X",
+Y: "Y", Z: "Z"
+
+
+
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toTheOperator(text) {
+  const map = {
+a: "𝚊⃥̸⃝", b: "𝚋⃥̸⃝", c: "𝚌⃥̸⃝", d: "𝚍⃥̸⃝", e: "𝚎⃥̸⃝",
+f: "𝚏⃥̸⃝", g: "𝚐⃥̸⃝", h: "𝚑⃥̸⃝", i: "𝚒⃥̸⃝", j: "𝚓⃥̸⃝",
+k: "𝚔⃥̸⃝", l: "𝚕⃥̸⃝", m: "𝚖⃥̸⃝", n: "𝚗⃥̸⃝", o: "𝚘⃥̸⃝",
+p: "𝚙⃥̸⃝", q: "𝚚⃥̸⃝", r: "𝚛⃥̸⃝", s: "𝚜⃥̸⃝", t: "𝚝⃥̸⃝",
+u: "𝚞⃥̸⃝", v: "𝚟⃥̸⃝", w: "𝚠⃥̸⃝", x: "𝚡⃥̸⃝",
+y: "𝚢⃥̸⃝", z: "𝚣⃥̸⃝",
+
+A: "𝙰⃥̸⃝", B: "𝙱⃥̸⃝", C: "𝙲⃥̸⃝", D: "𝙳⃥̸⃝", E: "𝙴⃥̸⃝",
+F: "𝙵⃥̸⃝", G: "𝙶⃥̸⃝", H: "𝙷⃥̸⃝", I: "𝙸⃥̸⃝", J: "𝙹⃥̸⃝",
+K: "𝙺⃥̸⃝", L: "𝙻⃥̸⃝", M: "𝙼⃥̸⃝", N: "𝙽⃥̸⃝", O: "𝙾⃥̸⃝",
+P: "𝙿⃥̸⃝", Q: "𝚀⃥̸⃝", R: "𝚁⃥̸⃝", S: "𝚂⃥̸⃝", T: "𝚃⃥̸⃝",
+U: "𝚄⃥̸⃝", V: "𝚅⃥̸⃝", W: "𝚆⃥̸⃝", X: "𝚇⃥̸⃝",
+Y: "𝚈⃥̸⃝", Z: "𝚉⃥̸⃝"
+
+
+
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+
+const TheOperatorEl = document.getElementById("TheOperatorOutput");
+if (TheOperatorEl) {
+  TheOperatorEl.textContent = text ? toTheOperator(text) : toTheOperator("TheOperator");
+}
+const AngularEl = document.getElementById("AngularOutput");
+if (AngularEl) {
+  AngularEl.textContent = text ? toAngular(text) : toAngular("Angular");
+}
+const CliffsEl = document.getElementById("CliffsOutput");
+if (CliffsEl) {
+  CliffsEl.textContent = text ? toCliffs(text) : toCliffs("Cliffs");
+}
+const DIYAsterisksEl = document.getElementById("DIYAsterisksOutput");
+if (DIYAsterisksEl) {
+  DIYAsterisksEl.textContent = text ? toDIYAsterisks(text) : toDIYAsterisks("DIYAsterisks");
+}
+
+
+const AllWaysEl = document.getElementById("AllWaysOutput");
+if (AllWaysEl) {
+  AllWaysEl.textContent = text ? toAllWays(text) : toAllWays("AllWays");
+}
+
+const SlitherEl = document.getElementById("SlitherOutput");
+if (SlitherEl) {
+  SlitherEl.textContent = text ? toSlither(text) : toSlither("Slither");
+}
+
+const QuickMathsEl = document.getElementById("QuickMathsOutput");
+if (QuickMathsEl) {
+  QuickMathsEl.textContent = text ? toQuickMaths(text) : toQuickMaths("QuickMaths");
+}
+
+
 const xCrossEl = document.getElementById("X-crossOutput");
 if (xCrossEl) {
   xCrossEl.textContent = text ? toXcross(text) : toXcross("X-cross");
