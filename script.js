@@ -1422,6 +1422,131 @@ Y: "𝚈⃥̸⃝", Z: "𝚉⃥̸⃝"
   return text.split("").map(ch => map[ch] || ch).join("");
 }
 
+function toreverseText(text) {
+  const map = {
+ 'a': 'z', 'b': 'y', 'c': 'x', 'd': 'w', 'e': 'v',
+    'f': 'u', 'g': 't', 'h': 's', 'i': 'r', 'j': 'q',
+    'k': 'p', 'l': 'o', 'm': 'n', 'n': 'm', 'o': 'l',
+    'p': 'k', 'q': 'j', 'r': 'i', 's': 'h', 't': 'g',
+    'u': 'f', 'v': 'e', 'w': 'd', 'x': 'c', 'y': 'b',
+    'z': 'a',
+    'A': 'Z', 'B': 'Y', 'C': 'X', 'D': 'W', 'E': 'V',
+    'F': 'U', 'G': 'T', 'H': 'S', 'I': 'R', 'J': 'Q',
+    'K': 'P', 'L': 'O', 'M': 'N', 'N': 'M', 'O': 'L',
+    'P': 'K', 'Q': 'J', 'R': 'I', 'S': 'H', 'T': 'G',
+    'U': 'F', 'V': 'E', 'W': 'D', 'X': 'C', 'Y': 'B',
+    'Z': 'A'
+   
+
+
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+
+const reverseTextEl = document.getElementById("reverseTextOutput");
+if (reverseTextEl) {
+  reverseTextEl.textContent = text ? toreverseText(text) : toreverseText("reverseText");
+}
+function mirroredText(text) {
+  const map = {
+    'a': 'ɒ', 'b': 'd', 'c': 'ɔ', 'd': 'b', 'e': 'ɘ',
+    'f': 'ʇ', 'g': 'ᵷ', 'h': 'ʜ', 'i': 'i', 'j': 'ņ',
+    'k': 'ʞ', 'l': '|', 'm': 'w', 'n': 'u', 'o': 'o',
+    'p': 'q', 'q': 'p', 'r': 'ɿ', 's': 'ƨ', 't': 'ƚ',
+    'u': 'n', 'v': 'v', 'w': 'm', 'x': 'x', 'y': 'ʏ',
+    'z': 'z',
+    'A': 'Ɒ', 'B': 'ᗺ', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ',
+    'F': 'ᖴ', 'G': 'Ᵹ', 'H': 'H', 'I': 'I', 'J': 'ſ',
+    'K': 'ʞ', 'L': '⅃', 'M': 'M', 'N': 'N', 'O': 'O',
+    'P': 'Գ', 'Q': 'Q', 'R': 'Я', 'S': 'Ƨ', 'T': 'T',
+    'U': 'U', 'V': 'V', 'W': 'W', 'X': 'X', 'Y': 'Y',
+    'Z': 'Z'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const mirroredTextEl = document.getElementById("mirroredTextOutput");
+if (mirroredTextEl) {
+  mirroredTextEl.textContent = text ? mirroredText(text) : mirroredText("Mirrored Text");
+}
+
+function reverseWordsOnly(text) {
+  const map = {
+    'a': 'z', 'b': 'y', 'c': 'x', 'd': 'w', 'e': 'v',
+    'f': 'u', 'g': 't', 'h': 's', 'i': 'r', 'j': 'q',
+    'k': 'p', 'l': 'o', 'm': 'n', 'n': 'm', 'o': 'l',
+    'p': 'k', 'q': 'j', 'r': 'i', 's': 'h', 't': 'g',
+    'u': 'f', 'v': 'e', 'w': 'd', 'x': 'c', 'y': 'b',
+    'z': 'a',
+    'A': 'Z', 'B': 'Y', 'C': 'X', 'D': 'W', 'E': 'V',
+    'F': 'U', 'G': 'T', 'H': 'S', 'I': 'R', 'J': 'Q',
+    'K': 'P', 'L': 'O', 'M': 'N', 'N': 'M', 'O': 'L',
+    'P': 'K', 'Q': 'J', 'R': 'I', 'S': 'H', 'T': 'G',
+    'U': 'F', 'V': 'E', 'W': 'D', 'X': 'C', 'Y': 'B',
+    'Z': 'A'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const reverseWordsOnlyEl = document.getElementById("reverseWordsOnlyOutput");
+if (reverseWordsOnlyEl) {
+  reverseWordsOnlyEl.textContent = text ? reverseWordsOnly(text) : reverseWordsOnly("Reverse Words Only");
+}
+
+function backwardWordsOnly(text) {
+  return text.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
+
+const backwardWordsOnlyEl = document.getElementById("backwardWordsOnlyOutput");
+if (backwardWordsOnlyEl) {
+  backwardWordsOnlyEl.textContent = text ? backwardWordsOnly(text) : backwardWordsOnly("Backward Words Only");
+}
+
+function mirroredLettersOnly(text) {
+  const map = {
+    'a': 'ɒ', 'b': 'd', 'c': 'ɔ', 'd': 'b', 'e': 'ɘ',
+    'f': 'ʇ', 'g': 'ᵷ', 'h': 'ʜ', 'i': 'i', 'j': 'ņ',
+    'k': 'ʞ', 'l': '|', 'm': 'w', 'n': 'u', 'o': 'o',
+    'p': 'q', 'q': 'p', 'r': 'ɿ', 's': 'ƨ', 't': 'ƚ',
+    'u': 'n', 'v': 'v', 'w': 'm', 'x': 'x', 'y': 'ʏ',
+    'z': 'z',
+    'A': 'Ɒ', 'B': 'ᗺ', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ',
+    'F': 'ᖴ', 'G': 'Ᵹ', 'H': 'H', 'I': 'I', 'J': 'ſ',
+    'K': 'ʞ', 'L': '⅃', 'M': 'M', 'N': 'N', 'O': 'O',
+    'P': 'Գ', 'Q': 'Q', 'R': 'Я', 'S': 'Ƨ', 'T': 'T',
+    'U': 'U', 'V': 'V', 'W': 'W', 'X': 'X', 'Y': 'Y',
+    'Z': 'Z'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const mirroredLettersOnlyEl = document.getElementById("mirroredLettersOnlyOutput");
+if (mirroredLettersOnlyEl) {
+  mirroredLettersOnlyEl.textContent = text ? mirroredLettersOnly(text) : mirroredLettersOnly("Mirrored Letters Only");
+}
+function upsideDown(text) {
+  const map = {
+    'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ',
+    'f': 'ɟ', 'g': 'ƃ', 'h': 'ɥ', 'i': 'ᴉ', 'j': 'ɾ',
+    'k': 'ʞ', 'l': 'l', 'm': 'ɯ', 'n': 'u', 'o': 'o',
+    'p': 'd', 'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ',
+    'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x', 'y': 'ʎ',
+    'z': 'z',
+    'A': '∀', 'B': 'ᗺ', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ',
+    'F': 'ᖴ', 'G': 'פ', 'H': 'H', 'I': 'I', 'J': 'ſ',
+    'K': 'ʞ', 'L': '˥', 'M': 'W', 'N': 'N', 'O': 'O',
+    'P': 'Ԁ', 'Q': 'Q', 'R': 'ᴿ', 'S': 'S', 'T': '┴',
+    'U': '∩', 'V': 'Λ', 'W': 'M', 'X': 'X', 'Y': '⅄',
+    'Z': 'Z'
+  };
+  return text.split("").reverse().map(ch => map[ch] || ch).join("");
+}
+
+const upsideDownEl = document.getElementById("upsideDownOutput");
+if (upsideDownEl) {
+  upsideDownEl.textContent = text ? upsideDown(text) : upsideDown("Upside Down");
+}
 
 const TheOperatorEl = document.getElementById("TheOperatorOutput");
 if (TheOperatorEl) {
