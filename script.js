@@ -1466,6 +1466,429 @@ function mirroredText(text) {
   return text.split("").map(ch => map[ch] || ch).join("");
 }
 
+function italicSans(text) {
+  const map = {
+    'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦',
+    'f': '𝘧', 'g': '𝘨', 'h': '𝘩', 'i': '𝘪', 'j': '𝘫',
+    'k': '𝘬', 'l': '𝘭', 'm': '𝘮', 'n': '𝘯', 'o': '𝘰',
+    'p': '𝘱', 'q': '𝘲', 'r': '𝘳', 's': '𝘴', 't': '𝘵',
+    'u': '𝘶', 'v': '𝘷', 'w': '𝘸', 'x': '𝘹', 'y': '𝘺',
+    'z': '𝘻',
+    'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌',
+    'F': '𝘍', 'G': '𝘎', 'H': '𝘏', 'I': '𝘐', 'J': '𝘑',
+    'K': '𝘒', 'L': '𝘓', 'M': '𝘔', 'N': '𝘕', 'O': '𝘖',
+    'P': '𝘗', 'Q': '𝘘', 'R': '𝘙', 'S': '𝘚', 'T': '𝘛',
+    'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟', 'Y': '𝘠',
+    'Z': '𝘡'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const italicSansEl = document.getElementById("italicSansOutput");
+if (italicSansEl) {
+  italicSansEl.textContent = text ? italicSans(text) : italicSans("Italic (sans)");
+}
+
+function boldItalicSans(text) {
+  const map = {
+    'a': '𝙖', 'b': '𝙗', 'c': '𝙘', 'd': '𝙙', 'e': '𝙚',
+    'f': '𝙛', 'g': '𝙜', 'h': '𝙝', 'i': '𝙞', 'j': '𝙟',
+    'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': '𝙤',
+    'p': '𝙥', 'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩',
+    'u': '𝙪', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭', 'y': '𝙮',
+    'z': '𝙯',
+    'A': '𝘼', 'B': '𝘽', 'C': '𝘾', 'D': '𝘿', 'E': '𝙀',
+    'F': '𝙁', 'G': '𝙂', 'H': '𝙃', 'I': '𝙄', 'J': '𝙅',
+    'K': '𝙆', 'L': '𝙇', 'M': '𝙈', 'N': '𝙉', 'O': '𝙊',
+    'P': '𝙋', 'Q': '𝙌', 'R': '𝙍', 'S': '𝙎', 'T': '𝙏',
+    'U': '𝙐', 'V': '𝙑', 'W': '𝙒', 'X': '𝙓', 'Y': '𝙔',
+    'Z': '𝙕'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const boldItalicSansEl = document.getElementById("boldItalicSansOutput");
+if (boldItalicSansEl) {
+  boldItalicSansEl.textContent = text ? boldItalicSans(text) : boldItalicSans("Bold / italic (sans)");
+}
+
+function alternatingBold(text) {
+  const map = {
+    'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞',
+    'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢', 'j': '𝐣',
+    'k': '𝐤', 'l': '𝐥', 'm': '𝐦', 'n': '𝐧', 'o': '𝐨',
+    'p': '𝐩', 'q': '𝐪', 'r': '𝐫', 's': '𝐬', 't': '𝐭',
+    'u': '𝐮', 'v': '𝐯', 'w': '𝐰', 'x': '𝐱', 'y': '𝐲',
+    'z': '𝐳',
+    'A': '𝐀', 'B': '𝐁', 'C': '𝐂', 'D': '𝐃', 'E': '𝐄',
+    'F': '𝐅', 'G': '𝐆', 'H': '𝐇', 'I': '𝐈', 'J': '𝐉',
+    'K': '𝐊', 'L': '𝐋', 'M': '𝐌', 'N': '𝐍', 'O': '𝐎',
+    'P': '𝐏', 'Q': '𝐐', 'R': '𝐑', 'S': '𝐒', 'T': '𝐓',
+    'U': '𝐔', 'V': '𝐕', 'W': '𝐖', 'X': '𝐗', 'Y': '𝐘',
+    'Z': '𝐙'
+  };
+  let charIndex = 0;
+  return text.split("").map(ch => {
+    if (/[a-zA-Z]/.test(ch)) {
+      const result = charIndex % 2 === 0 ? (map[ch] || ch) : ch;
+      charIndex++;
+      return result;
+    }
+    return ch;
+  }).join("");
+}
+
+const alternatingBoldEl = document.getElementById("alternatingBoldOutput");
+if (alternatingBoldEl) {
+  alternatingBoldEl.textContent = text ? alternatingBold(text) : alternatingBold("Alternating Bold");
+}
+
+function alternatingItalic(text) {
+  const map = {
+    'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒',
+    'f': '𝑓', 'g': '𝑔', 'h': 'ℎ', 'i': '𝑖', 'j': '𝑗',
+    'k': '𝑘', 'l': '𝑙', 'm': '𝑚', 'n': '𝑛', 'o': '𝑜',
+    'p': '𝑝', 'q': '𝑞', 'r': '𝑟', 's': '𝑠', 't': '𝑡',
+    'u': '𝑢', 'v': '𝑣', 'w': '𝑤', 'x': '𝑥', 'y': '𝑦',
+    'z': '𝑧',
+    'A': '𝐴', 'B': '𝐵', 'C': '𝐶', 'D': '𝐷', 'E': '𝐸',
+    'F': '𝐹', 'G': '𝐺', 'H': '𝐻', 'I': '𝐼', 'J': '𝐽',
+    'K': '𝐾', 'L': '𝐿', 'M': '𝑀', 'N': '𝑁', 'O': '𝑂',
+    'P': '𝑃', 'Q': '𝑄', 'R': '𝑅', 'S': '𝑆', 'T': '𝑇',
+    'U': '𝑈', 'V': '𝑉', 'W': '𝑊', 'X': '𝑋', 'Y': '𝑌',
+    'Z': '𝑍'
+  };
+  let charIndex = 0;
+  return text.split("").map(ch => {
+    if (/[a-zA-Z]/.test(ch)) {
+      const result = charIndex % 2 === 0 ? (map[ch] || ch) : ch;
+      charIndex++;
+      return result;
+    }
+    return ch;
+  }).join("");
+}
+
+const alternatingItalicEl = document.getElementById("alternatingItalicOutput");
+if (alternatingItalicEl) {
+  alternatingItalicEl.textContent = text ? alternatingItalic(text) : alternatingItalic("Alternating Italic");
+}
+
+function italicSwitchSerifs(text) {
+  const map = {
+    'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒',
+    'f': '𝑓', 'g': '𝑔', 'h': 'ℎ', 'i': '𝑖', 'j': '𝑗',
+    'k': '𝑘', 'l': '𝑙', 'm': '𝑚', 'n': '𝑛', 'o': '𝑜',
+    'p': '𝑝', 'q': '𝑞', 'r': '𝑟', 's': '𝑠', 't': '𝑡',
+    'u': '𝑢', 'v': '𝑣', 'w': '𝑤', 'x': '𝑥', 'y': '𝑦',
+    'z': '𝑧',
+    'A': '𝐴', 'B': '𝐵', 'C': '𝐶', 'D': '𝐷', 'E': '𝐸',
+    'F': '𝐹', 'G': '𝐺', 'H': '𝐻', 'I': '𝐼', 'J': '𝐽',
+    'K': '𝐾', 'L': '𝐿', 'M': '𝑀', 'N': '𝑁', 'O': '𝑂',
+    'P': '𝑃', 'Q': '𝑄', 'R': '𝑅', 'S': '𝑆', 'T': '𝑇',
+    'U': '𝑈', 'V': '𝑉', 'W': '𝑊', 'X': '𝑋', 'Y': '𝑌',
+    'Z': '𝑍'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const italicSwitchSerifsEl = document.getElementById("italicSwitchSerifsOutput");
+if (italicSwitchSerifsEl) {
+  italicSwitchSerifsEl.textContent = text ? italicSwitchSerifs(text) : italicSwitchSerifs("Italic Switch Serifs");
+}
+
+function beauty(text) {
+  const map = {
+    'a': 'ꪖ', 'b': '᥇', 'c': 'ᥴ', 'd': 'ᦔ', 'e': 'ꫀ',
+    'f': 'ᠻ', 'g': 'ᧁ', 'h': 'ꫝ', 'i': 'ﺃ', 'j': '꠹',
+    'k': 'ᛕ', 'l': 'ꪶ', 'm': 'ꪑ', 'n': 'ꪀ', 'o': 'ꪮ',
+    'p': 'ᜣ', 'q': 'ꪇ', 'r': '᥅', 's': 'ᦓ', 't': 'ꪻ',
+    'u': 'ꪊ', 'v': 'ꪜ', 'w': '᭙', 'x': '᥊', 'y': 'ꪗ',
+    'z': 'ɀ',
+    'A': 'ꪖ', 'B': '᥇', 'C': 'ᥴ', 'D': 'ᦔ', 'E': 'ꫀ',
+    'F': 'ᠻ', 'G': 'ᧁ', 'H': 'ꫝ', 'I': 'ﺃ', 'J': '꠹',
+    'K': 'ᛕ', 'L': 'ꪶ', 'M': 'ꪑ', 'N': 'ꪀ', 'O': 'ꪮ',
+    'P': 'ᜣ', 'Q': 'ꪇ', 'R': '᥅', 'S': 'ᦓ', 'T': 'ꪻ',
+    'U': 'ꪊ', 'V': 'ꪜ', 'W': '᭙', 'X': '᥊', 'Y': 'ꪗ',
+    'Z': 'ɀ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const beautyEl = document.getElementById("beautyOutput");
+if (beautyEl) {
+  beautyEl.textContent = text ? beauty(text) : beauty("beauty");
+}
+
+function belgan(text) {
+  const map = {
+    'a': 'ǟ', 'b': 'ɮ', 'c': 'ƈ', 'd': 'ɖ', 'e': 'ɛ',
+    'f': 'ʄ', 'g': 'ɢ', 'h': 'ɦ', 'i': 'ɨ', 'j': 'ʝ',
+    'k': 'ӄ', 'l': 'ʟ', 'm': 'ʍ', 'n': 'ռ', 'o': 'օ',
+    'p': 'ք', 'q': 'զ', 'r': 'ʀ', 's': 'ֆ', 't': 'ȶ',
+    'u': 'ʊ', 'v': 'ʋ', 'w': 'ա', 'x': 'Ӽ', 'y': 'ʏ',
+    'z': 'ʐ',
+
+    'A': 'ǟ', 'B': 'ɮ', 'C': 'ƈ', 'D': 'ɖ', 'E': 'ɛ',
+    'F': 'ʄ', 'G': 'ɢ', 'H': 'ɦ', 'I': 'ɨ', 'J': 'ʝ',
+    'K': 'ӄ', 'L': 'ʟ', 'M': 'ʍ', 'N': 'ռ', 'O': 'օ',
+    'P': 'ք', 'Q': 'զ', 'R': 'ʀ', 'S': 'ֆ', 'T': 'ȶ',
+    'U': 'ʊ', 'V': 'ʋ', 'W': 'ա', 'X': 'Ӽ', 'Y': 'ʏ',
+    'Z': 'ʐ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const belganEl = document.getElementById("belganOutput");
+if (belganEl) {
+  belganEl.textContent = text ? belgan(text) : belgan("Belgan");
+}
+function christmas(text) {
+  const map = {
+    'a':'𖤬','b':'ꔪ','c':'ꛕ','d':'𖤀','e':'𖤟','f':'ꘘ',
+    'g':'ꚽ','h':'ꛅ','i':'ꛈ','j':'ꚠ','k':'𖤰','l':'ꚳ',
+    'm':'𖢑','n':'ꛘ','o':'𖣠','p':'ㄗ','q':'ꚩ','r':'𖦪',
+    's':'ꕷ','t':'𖢧','u':'ꚶ','v':'ꚴ','w':'ꛃ','x':'𖤗',
+    'y':'ꚲ','z':'ꛉ',
+
+    'A':'𖤬','B':'ꔪ','C':'ꛕ','D':'𖤀','E':'𖤟','F':'ꘘ',
+    'G':'ꚽ','H':'ꛅ','I':'ꛈ','J':'ꚠ','K':'𖤰','L':'ꚳ',
+    'M':'𖢑','N':'ꛘ','O':'𖣠','P':'ㄗ','Q':'ꚩ','R':'𖦪',
+    'S':'ꕷ','T':'𖢧','U':'ꚶ','V':'ꚴ','W':'ꛃ','X':'𖤗',
+    'Y':'ꚲ','Z':'ꛉ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const christmasEl = document.getElementById("christmasOutput");
+if (christmasEl) {
+  christmasEl.textContent = text ? christmas(text) : christmas("Christmas");
+}
+
+function calista(text) {
+  const map = {
+    'a':'Δ','b':'β','c':'Ć','d':'Đ','e':'€','f':'₣',
+    'g':'Ǥ','h':'Ħ','i':'Ɨ','j':'Ĵ','k':'Ҝ','l':'Ł',
+    'm':'Μ','n':'Ň','o':'Ø','p':'Ƥ','q':'Ω','r':'Ř',
+    's':'Ş','t':'Ŧ','u':'Ữ','v':'V','w':'Ŵ','x':'Ж',
+    'y':'¥','z':'Ž',
+
+    'A':'Δ','B':'β','C':'Ć','D':'Đ','E':'€','F':'₣',
+    'G':'Ǥ','H':'Ħ','I':'Ɨ','J':'Ĵ','K':'Ҝ','L':'Ł',
+    'M':'Μ','N':'Ň','O':'Ø','P':'Ƥ','Q':'Ω','R':'Ř',
+    'S':'Ş','T':'Ŧ','U':'Ữ','V':'V','W':'Ŵ','X':'Ж',
+    'Y':'¥','Z':'Ž'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const calistaEl = document.getElementById("calistaOutput");
+if (calistaEl) {
+  calistaEl.textContent = text ? calista(text) : calista("Calista");
+}
+function monoline(text) {
+  const map = {
+    'a':'а','b':'б','c':'c','d':'д','e':'ё','f':'f',
+    'g':'g','h':'н','i':'ї','j':'j','k':'к','l':'г',
+    'm':'ѫ','n':'п','o':'ѳ','p':'p','q':'ф','r':'я',
+    's':'$','t':'т','u':'ц','v':'ѵ','w':'щ','x':'ж',
+    'y':'ч','z':'з',
+
+    'A':'А','B':'Б','C':'C','D':'Д','E':'Є','F':'F',
+    'G':'G','H':'H','I':'Ї','J':'J','K':'К','L':'Г',
+    'M':'Ѫ','N':'Й','O':'Ѳ','P':'P','Q':'Ф','R':'Я',
+    'S':'$','T':'T','U':'Ц','V':'Ѵ','W':'Ш','X':'Ж',
+    'Y':'Ч','Z':'З'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const monolineEl = document.getElementById("monolineOutput");
+if (monolineEl) {
+  monolineEl.textContent = text ? monoline(text) : monoline("Monoline");
+}
+function moshra(text) {
+  const map = {
+    'a':'ค','b':'๒','c':'ς','d':'๔','e':'є','f':'Ŧ',
+    'g':'ﻮ','h':'ђ','i':'เ','j':'ן','k':'к','l':'ɭ',
+    'm':'๓','n':'ภ','o':'๏','p':'ק','q':'ợ','r':'г',
+    's':'ร','t':'Շ','u':'ย','v':'ש','w':'ฬ','x':'א',
+    'y':'ץ','z':'չ',
+
+    'A':'ค','B':'๒','C':'ς','D':'๔','E':'є','F':'Ŧ',
+    'G':'ﻮ','H':'ђ','I':'เ','J':'ן','K':'к','L':'ɭ',
+    'M':'๓','N':'ภ','O':'๏','P':'ק','Q':'ợ','R':'г',
+    'S':'ร','T':'Շ','U':'ย','V':'ש','W':'ฬ','X':'א',
+    'Y':'ץ','Z':'չ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const moshraEl = document.getElementById("moshraOutput");
+if (moshraEl) {
+  moshraEl.textContent = text ? moshra(text) : moshra("Moshra");
+}
+function aesthetical(text) {
+  const map = {
+    'a':'ﾑ','b':'乃','c':'ᄃ','d':'り','e':'乇','f':'ｷ',
+    'g':'ム','h':'ん','i':'ﾉ','j':'ﾌ','k':'ズ','l':'ﾚ',
+    'm':'ﾶ','n':'刀','o':'の','p':'ｱ','q':'ゐ','r':'尺',
+    's':'丂','t':'ｲ','u':'ひ','v':'√','w':'W','x':'ﾒ',
+    'y':'ﾘ','z':'乙',
+
+    'A':'ﾑ','B':'乃','C':'ᄃ','D':'り','E':'乇','F':'ｷ',
+    'G':'ム','H':'ん','I':'ﾉ','J':'ﾌ','K':'ズ','L':'ﾚ',
+    'M':'ﾶ','N':'刀','O':'の','P':'ｱ','Q':'ゐ','R':'尺',
+    'S':'丂','T':'ｲ','U':'ひ','V':'√','W':'W','X':'ﾒ',
+    'Y':'ﾘ','Z':'乙'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const aestheticalEl = document.getElementById("aestheticalOutput");
+if (aestheticalEl) {
+  aestheticalEl.textContent = text ? aesthetical(text) : aesthetical("Aesthetical");
+}
+function midnight(text) {
+  const map = {
+    'a':'Д','b':'Б','c':'C','d':'D','e':'Ξ','f':'F',
+    'g':'G','h':'H','i':'I','j':'J','k':'Ҝ','l':'L',
+    'm':'M','n':'И','o':'Ф','p':'P','q':'Ǫ','r':'Я',
+    's':'S','t':'Γ','u':'Ц','v':'V','w':'Щ','x':'Ж',
+    'y':'У','z':'Z',
+
+    'A':'Д','B':'Б','C':'C','D':'D','E':'Ξ','F':'F',
+    'G':'G','H':'H','I':'I','J':'J','K':'Ҝ','L':'L',
+    'M':'M','N':'И','O':'Ф','P':'P','Q':'Ǫ','R':'Я',
+    'S':'S','T':'Γ','U':'Ц','V':'V','W':'Щ','X':'Ж',
+    'Y':'У','Z':'Z'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const midnightEl = document.getElementById("midnightOutput");
+if (midnightEl) {
+  midnightEl.textContent = text ? midnight(text) : midnight("Midnight");
+}
+function softScript(text) {
+  const map = {
+    'a':'𝒂','b':'𝒃','c':'𝒄','d':'𝒅','e':'𝒆','f':'𝒇',
+    'g':'𝒈','h':'𝒉','i':'𝒊','j':'𝒋','k':'𝒌','l':'𝒍',
+    'm':'𝒎','n':'𝒏','o':'𝒐','p':'𝒑','q':'𝒒','r':'𝒓',
+    's':'𝒔','t':'𝒕','u':'𝒖','v':'𝒗','w':'𝒘','x':'𝒙',
+    'y':'𝒚','z':'𝒛',
+
+    'A':'𝑨','B':'𝑩','C':'𝑪','D':'𝑫','E':'𝑬','F':'𝑭',
+    'G':'𝑮','H':'𝑯','I':'𝑰','J':'𝑱','K':'𝑲','L':'𝑳',
+    'M':'𝑴','N':'𝑵','O':'𝑶','P':'𝑷','Q':'𝑸','R':'𝑹',
+    'S':'𝑺','T':'𝑻','U':'𝑼','V':'𝑽','W':'𝑾','X':'𝑿',
+    'Y':'𝒀','Z':'𝒁'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const softScriptEl = document.getElementById("softScriptOutput");
+if (softScriptEl) {
+  softScriptEl.textContent = text ? softScript(text) : softScript("Soft Script");
+}
+function angelCursive(text) {
+  const map = {
+    'a':'𝐚','b':'𝐛','c':'𝐜','d':'𝐝','e':'𝐞','f':'𝐟',
+    'g':'𝐠','h':'𝐡','i':'𝐢','j':'𝐣','k':'𝐤','l':'𝐥',
+    'm':'𝐦','n':'𝐧','o':'𝐨','p':'𝐩','q':'𝐪','r':'𝐫',
+    's':'𝐬','t':'𝐭','u':'𝐮','v':'𝐯','w':'𝐰','x':'𝐱',
+    'y':'𝐲','z':'𝐳',
+
+    'A':'𝐀','B':'𝐁','C':'𝐂','D':'𝐃','E':'𝐄','F':'𝐅',
+    'G':'𝐆','H':'𝐇','I':'𝐈','J':'𝐉','K':'𝐊','L':'𝐋',
+    'M':'𝐌','N':'𝐍','O':'𝐎','P':'𝐏','Q':'𝐐','R':'𝐑',
+    'S':'𝐒','T':'𝐓','U':'𝐔','V':'𝐕','W':'𝐖','X':'𝐗',
+    'Y':'𝐘','Z':'𝐙'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const angelCursiveEl = document.getElementById("angelCursiveOutput");
+if (angelCursiveEl) {
+  angelCursiveEl.textContent = text ? angelCursive(text) : angelCursive("Angel Cursive");
+}
+function velvetScript(text) {
+  const map = {
+    'a':'𝓪','b':'𝓫','c':'𝓬','d':'𝓭','e':'𝓮','f':'𝓯',
+    'g':'𝓰','h':'𝓱','i':'𝓲','j':'𝓳','k':'𝓴','l':'𝓵',
+    'm':'𝓶','n':'𝓷','o':'𝓸','p':'𝓹','q':'𝓺','r':'𝓻',
+    's':'𝓼','t':'𝓽','u':'𝓾','v':'𝓿','w':'𝔀','x':'𝔁',
+    'y':'𝔂','z':'𝔃',
+
+    'A':'𝓐','B':'𝓑','C':'𝓒','D':'𝓓','E':'𝓔','F':'𝓕',
+    'G':'𝓖','H':'𝓗','I':'𝓘','J':'𝓙','K':'𝓚','L':'𝓛',
+    'M':'𝓜','N':'𝓝','O':'𝓞','P':'𝓟','Q':'𝓠','R':'𝓡',
+    'S':'𝓢','T':'𝓣','U':'𝓤','V':'𝓥','W':'𝓦','X':'𝓧',
+    'Y':'𝓨','Z':'𝓩'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const velvetScriptEl = document.getElementById("velvetScriptOutput");
+if (velvetScriptEl) {
+  velvetScriptEl.textContent = text ? velvetScript(text) : velvetScript("Velvet Script");
+}
+function boldAesthetic(text) {
+  const map = {
+    'a':'α','b':'ᑲ','c':'𝖼','d':'ᑯ','e':'𝖾','f':'𝖿',
+    'g':'𝗀','h':'ɦ','i':'𝗂','j':'𝗃','k':'𝗄','l':'ᥣ',
+    'm':'ꭑ','n':'𐓣','o':'ⱺ','p':'ρ','q':'𝗊','r':'𝗋',
+    's':'𝗌','t':'𝗍','u':'υ','v':'𝗏','w':'ω','x':'𝗑',
+    'y':'𝗒','z':'ƶ',
+
+    'A':'𝐀','B':'𝐁','C':'𝐂','D':'𝐃','E':'𝐄','F':'𝐅',
+    'G':'𝐆','H':'𝐇','I':'𝚰','J':'𝐉','K':'𝐊','L':'𝐋',
+    'M':'𝐌','N':'𝐍','O':'𝐎','P':'𝐏','Q':'𝐐','R':'𝐑',
+    'S':'𝐒','T':'𝐓','U':'𝐔','V':'𝐕','W':'𝐖','X':'𝐗',
+    'Y':'𝐘','Z':'𝐙'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const boldAestheticEl = document.getElementById("boldAestheticOutput");
+if (boldAestheticEl) {
+  boldAestheticEl.textContent = text ? boldAesthetic(text) : boldAesthetic("Bold Aesthetic");
+}
+function cloudBold(text) {
+  const map = {
+    'a':'𝒶','b':'𝒷','c':'𝒸','d':'𝒹','e':'ℯ','f':'𝒻',
+    'g':'𝑔','h':'𝒽','i':'𝒾','j':'𝒿','k':'𝓀','l':'𝓁',
+    'm':'𝓂','n':'𝓃','o':'ℴ','p':'𝓅','q':'𝓆','r':'𝓇',
+    's':'𝓈','t':'𝓉','u':'𝓊','v':'𝓋','w':'𝓌','x':'𝓍',
+    'y':'𝓎','z':'𝓏',
+
+    'A':'𝒜','B':'ℬ','C':'𝒞','D':'𝒟','E':'ℰ','F':'ℱ',
+    'G':'𝒢','H':'ℋ','I':'𝐼','J':'𝒥','K':'𝒦','L':'ℒ',
+    'M':'ℳ','N':'𝒩','O':'𝒪','P':'𝒫','Q':'𝒬','R':'ℛ',
+    'S':'𝒮','T':'𝒯','U':'𝒰','V':'𝒱','W':'𝒲','X':'𝒳',
+    'Y':'𝒴','Z':'𝒵'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const cloudBoldEl = document.getElementById("cloudBoldOutput");
+if (cloudBoldEl) {
+  cloudBoldEl.textContent = text ? cloudBold(text) : cloudBold("Cloud Bold");
+}
+
+
 const mirroredTextEl = document.getElementById("mirroredTextOutput");
 if (mirroredTextEl) {
   mirroredTextEl.textContent = text ? mirroredText(text) : mirroredText("Mirrored Text");
@@ -1547,6 +1970,52 @@ const upsideDownEl = document.getElementById("upsideDownOutput");
 if (upsideDownEl) {
   upsideDownEl.textContent = text ? upsideDown(text) : upsideDown("Upside Down");
 }
+
+function italicSerif(text) {
+  const map = {
+    'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒',
+    'f': '𝑓', 'g': '𝑔', 'h': 'ℎ', 'i': '𝑖', 'j': '𝑗',
+    'k': '𝑘', 'l': '𝑙', 'm': '𝑚', 'n': '𝑛', 'o': '𝑜',
+    'p': '𝑝', 'q': '𝑞', 'r': '𝑟', 's': '𝑠', 't': '𝑡',
+    'u': '𝑢', 'v': '𝑣', 'w': '𝑤', 'x': '𝑥', 'y': '𝑦',
+    'z': '𝑧',
+    'A': '𝐴', 'B': '𝐵', 'C': '𝐶', 'D': '𝐷', 'E': '𝐸',
+    'F': '𝐹', 'G': '𝐺', 'H': '𝐻', 'I': '𝐼', 'J': '𝐽',
+    'K': '𝐾', 'L': '𝐿', 'M': '𝑀', 'N': '𝑁', 'O': '𝑂',
+    'P': '𝑃', 'Q': '𝑄', 'R': '𝑅', 'S': '𝑆', 'T': '𝑇',
+    'U': '𝑈', 'V': '𝑉', 'W': '𝑊', 'X': '𝑋', 'Y': '𝑌',
+    'Z': '𝑍'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const italicSerifEl = document.getElementById("italicSerifOutput");
+if (italicSerifEl) {
+  italicSerifEl.textContent = text ? italicSerif(text) : italicSerif("Italic (serif)");
+}
+function boldItalicSerif(text) {
+  const map = {
+    'a': '𝒂', 'b': '𝒃', 'c': '𝒄', 'd': '𝒅', 'e': '𝒆',
+    'f': '𝒇', 'g': '𝒈', 'h': '𝒉', 'i': '𝒊', 'j': '𝒋',
+    'k': '𝒌', 'l': '𝒍', 'm': '𝒎', 'n': '𝒏', 'o': '𝒐',
+    'p': '𝒑', 'q': '𝒒', 'r': '𝒓', 's': '𝒔', 't': '𝒕',
+    'u': '𝒖', 'v': '𝒗', 'w': '𝒘', 'x': '𝒙', 'y': '𝒚',
+    'z': '𝒛',
+    'A': '𝑨', 'B': '𝑩', 'C': '𝑪', 'D': '𝑫', 'E': '𝑬',
+    'F': '𝑭', 'G': '𝑮', 'H': '𝑯', 'I': '𝑰', 'J': '𝑱',
+    'K': '𝑲', 'L': '𝑳', 'M': '𝑴', 'N': '𝑵', 'O': '𝑶',
+    'P': '𝑷', 'Q': '𝑸', 'R': '𝑹', 'S': '𝑺', 'T': '𝑻',
+    'U': '𝑼', 'V': '𝑽', 'W': '𝑾', 'X': '𝑿', 'Y': '𝒀',
+    'Z': '𝒁'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const boldItalicSerifEl = document.getElementById("boldItalicSerifOutput");
+if (boldItalicSerifEl) {
+  boldItalicSerifEl.textContent = text ? boldItalicSerif(text) : boldItalicSerif("Bold / italic (serif)");
+}
+
 
 const TheOperatorEl = document.getElementById("TheOperatorOutput");
 if (TheOperatorEl) {
