@@ -48,11 +48,14 @@
 <link rel="alternate" href="https://fontgen.in/th.html" hreflang="th">
 <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
 <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
+<link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
+
 </head>
 <body>
 
-    <nav class="navbar">
-    <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+ <nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
       <span class="icon-hamburger">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="6" x2="20" y2="6"/>
@@ -60,6 +63,7 @@
           <line x1="4" y1="18" x2="20" y2="18"/>
         </svg>
       </span>
+      <!-- Close SVG -->
       <span class="icon-close">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -73,50 +77,30 @@
     <div class="nav-menu" id="navMenu">
       <ul>
         <li>
-          <a href="https://fontgen.in/">Trang Chủ</a>
+          <a href="https://fontgen.in/">Home</a>
         </li>
-    <li>
+          <li>
+          <a href="https://fontgen.in/font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            Giới Thiệu
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/about-us.html">Về Chúng Tôi</a>
-            <a href="https://fontgen.in/contact-us.html">Liên Hệ</a>
-            <a href="https://fontgen.in/privacy-policy.html">Quyền Riêng Tư</a>
-            <a href="https://fontgen.in/faq.html">Hỏi Đáp (FAQ)</a>
-          </div>
+       
+    
+       <li>
+          <a href="https://fontgen.in/about-us.html">About</a>
         </li>
-      
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            Ngôn Ngữ
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/" data-lang="en">English</a>
-            <a href="https://fontgen.in/es.html" data-lang="es">Español</a>
-            <a href="https://fontgen.in/ar.html" data-lang="ar">العربية</a>
-            <a href="https://fontgen.in/fr.html" data-lang="fr">Français</a>
-            <a href="https://fontgen.in/de.html" data-lang="de">Deutsch</a>
-            <a href="https://fontgen.in/pt.html" data-lang="pt">Português</a>
-            <a href="https://fontgen.in/id.html" data-lang="id">Indonesian</a>
-            <a href="https://fontgen.in/hi.html" data-lang="hi">हिन्दी</a>
-            <a href="https://fontgen.in/it.html" data-lang="it">Italiano</a>
-            <a href="https://fontgen.in/ja.html" data-lang="ja">日本語</a>
-            <a href="https://fontgen.in/ru.html" data-lang="ru">Россия</a>
-            <a href="https://fontgen.in/th.html" data-lang="th">ประเทศไทย</a>
-            <a href="https://fontgen.in/tr.html" data-lang="tr">Türkiye</a>
-            <a href="https://fontgen.in/vi.html" data-lang="vi">Việt Nam</a>
-          </div>
+ 
+       
+         <li>
+          <a href="https://fontgen.in/privacy-policy.html">Privacy</a>
         </li>
+
+          
+         <li>
+          <a href="https://fontgen.in/contact-us.html">Contact</a>
+        </li>
+
       </ul>
 
     </div>
@@ -132,23 +116,31 @@
         <span class="clear-btn" onclick="clearInput()">×</span>
       </div>
 
-      <div class="tab-wrapper">
-        <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
-        <nav class="tab-nav" id="tabNav">
-          <a href="https://fontgen.in/" class="tab-link">Tất Cả Font</a>
-          <a href="https://fontgen.in/tools/cool.html" class="tab-link">Ngầu</a>
-          <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Phóng Khoáng</a>
-          <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Chữ Viết Tay</a>
-          <a href="https://fontgen.in/tools/small.html" class="tab-link">Nhỏ</a>
-          <a href="https://fontgen.in/tools/bold.html" class="tab-link">In Đậm</a>
-          <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch (Lỗi)</a>
-          <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Chữ Biểu Tượng</a>
-          <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Nghệ Thuật Chữ</a>
-          <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Gạch Ngang</a>
-          <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Vô Hình</a>
-        </nav>
-        <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
-      </div>
+     <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
     </div>
 
     <div class="output-box">
@@ -720,305 +712,66 @@
     <div id="copyNotification"></div>
 </div>
 
-<article>
-    <h2>Giới Thiệu Về Trình Tạo Font</h2>
-    <p>Dễ dàng tạo các font chữ phong cách từ văn bản đơn giản bằng công cụ trực tuyến miễn phí của chúng tôi. Bạn chỉ cần gõ văn bản và sao chép. Bạn có thể sử dụng nó trên tất cả các nền tảng xã hội như Tiểu sử Instagram (Instagram Bio), Facebook, Tên người dùng (Nickname), Twitter và các Nhóm WhatsApp.</p>
-    <p>Các font chữ này sử dụng Unicode, vì vậy chúng hoạt động trên hầu hết các thiết bị. Các kiểu chữ này giúp hồ sơ và bình luận của bạn trở nên cá nhân hóa và hấp dẫn hơn. Đây là cách tốt nhất để nổi bật giữa đám đông và bạn bè. Đây không chỉ là niềm vui—mà còn là một cách tuyệt vời để thể hiện suy nghĩ của bạn bằng cách sử dụng các biểu tượng độc đáo.</p>
-    <p>Có rất nhiều tùy chọn Văn Bản Độc Đáo (Fancy Text): tên ngầu, biệt danh, từ tiếng Anh kết hợp, chữ cái Hy Lạp, số độc đáo, tổ hợp bảng chữ cái và các tiện ích bổ sung emoji.</p>
-    <img src="https://fontgen.in/img/Font-Generator.png" alt="Hình ảnh minh họa Font Generator">
+<div class="contents">
 
-    <h2>Sao Chép và Dán Cho Mạng Xã Hội</h2>
-    <p>Chúng tôi là Công Cụ Thay Đổi Font Trực Tuyến số 1. Chúng tôi đã tạo ra 190 kiểu font khác nhau, bao gồm độc đáo (fancy), ngầu (cool), in đậm (bold) và viết tay (cursive). Nếu bạn muốn font mới để làm cho tiểu sử Instagram, bình luận của mình hấp dẫn hơn, những người có ảnh hưởng (influencers) thường sử dụng các danh mục khác nhau để tạo tên hồ sơ thời thượng và phong cách. Văn bản độc đáo có thể được sử dụng cho tên game, thiết kế áp phích, và nhiều mục đích khác. Chúng tôi cũng gợi ý các ký tự đặc biệt ASCII, biểu tượng, chữ cái tiếng Anh, và các thủ thuật căn chỉnh khoảng cách. Hãy thể hiện bản thân với các font chữ phong cách.</p>
-    <p>Chúng tôi là một trong những công cụ dễ sử dụng nhất hiện có—có khả năng tùy chỉnh cao, tương thích (responsive) và đi kèm với nhiều cách thú vị để biến đổi văn bản của bạn.</p>
+<h2>Giới thiệu về Trình tạo Phông chữ</h2>
+<img src="https://fontgen.in/img/Font-Generator.png" alt="">
 
-    <h2>Cách Công Cụ Hoạt Động</h2>
-    <ol>
-        <li>Nhập văn bản của bạn vào ô.</li>
-        <li>Công cụ sẽ tự động chuyển đổi nó thành các font chữ phong cách.</li>
-        <li>Sao chép kiểu chữ bằng cách nhấp vào nút.</li>
-        <li>Dán font chữ phong cách vào tiểu sử Instagram, tên Facebook hoặc bất kỳ nơi nào khác.</li>
-    </ol>
-    <p>Thật dễ dàng để tạo font bằng công cụ của chúng tôi. Công cụ này miễn phí 100% và cung cấp không giới hạn các kiểu font khác nhau.</p>
+<p>Chào mừng bạn đến với Fontgen.in — công cụ tạo văn bản đẹp. Chúng tôi cho phép bạn dễ dàng sao chép và dán các kiểu phông chữ từ danh sách đã tạo. Công cụ này hoàn toàn miễn phí và bao gồm hơn 121 ký hiệu độc đáo. Trình tạo phông chữ của chúng tôi được sử dụng để tạo bình luận, tiểu sử và các văn bản chuyên nghiệp hơn.</p>
 
-    <h2>Các Tên Phong Cách Miễn Phí Tốt Nhất Khác</h2>
-    <p>Với Trình Tạo Văn Bản Độc Đáo này, bạn có thể dễ dàng tạo hiệu ứng tên ngầu cho Instagram và các mạng xã hội khác. Giao tiếp với bạn bè và gia đình bằng cách gửi tên độc đáo của họ trong tin nhắn văn bản. Làm cho bạn nổi bật là người thú vị trong nhóm bạn bè của mình. Sao chép Tên người dùng cho Nam và Nữ Miễn Phí Trực Tuyến.</p>
-    <p>Các Kiểu Font Độc Đáo Phổ Biến được liệt kê dưới đây để bạn tham khảo:</p>
+<p>Như bạn đã biết, trình tạo phông chữ (còn gọi là trình tạo văn bản) sử dụng các ký tự Unicode để tạo và phân loại nhiều kiểu phông chữ khác nhau. Chúng tôi cung cấp ký hiệu cho từng chữ cái và bảng chữ cái để biến văn bản tiếng Anh thành các phông chữ ấn tượng, bao gồm văn bản 🅑🅤🅑🅑🅛🅔, chữ đậm, chữ nghiêng, 𝔣𝔞𝔫𝔠𝔶, gạch ngang, chữ nhỏ, bubble text và hơn 121 kiểu phông chữ thời trang khác.</p>
 
-    <h2>Font Thanh Lịch & Độc Đáo</h2>
-    <ul>
-        <li>Grace Script (Chữ Thanh Lịch)</li>
-        <li>Velvet Cursive (Viết Tay Nhung)</li>
-        <li>Clouded Curves (Đường Cong Mây)</li>
-        <li>Royal Gothic (Gothic Hoàng Gia)</li>
-        <li>Shadow Fraktur (Fraktur Bóng)</li>
-        <li>Twin-Line Strike (Gạch Ngang Đôi)</li>
-        <li>Retro Classic (Cổ Điển Retro)</li>
-        <li>Symbol Flair (Nét Biểu Tượng)</li>
-        <li>Tribal Carve (Chạm Khắc Bộ Lạc)</li>
-        <li>Antique Touch (Nét Cổ Xưa)</li>
-    </ul>
+<h2>Sao chép và Dán Dễ dàng</h2>
 
-    <h2>Font Sạch & Đơn Giản</h2>
-    <ul>
-        <li>Heavy Bold (Đậm Nặng)</li>
-        <li>Smooth Italic (Nghiêng Mượt)</li>
-        <li>Bold-Italic Blend (Pha Trộn Đậm-Nghiêng)</li>
-        <li>Clean Sans (Sans Sạch)</li>
-        <li>Strong Sans (Sans Mạnh Mẽ)</li>
-        <li>Streamlined Italic (Nghiêng Tinh Gọn)</li>
-        <li>Ultra Sans Bold (Sans Ultra Đậm)</li>
-        <li>Petite Caps (Chữ Hoa Nhỏ Xíu)</li>
-        <li>Code Mono (Mã Mono)</li>
-        <li>Wide Stretch (Kéo Rộng)</li>
-        <li>Soft Brackets (Ngoặc Mềm)</li>
-    </ul>
+<p>Tại trang web của chúng tôi, công cụ này được thiết kế để giúp việc sử dụng phông chữ đẹp trở nên đơn giản. Đó là lý do chúng tôi là một trong những công cụ tốt nhất. Trình tạo phông chữ của chúng tôi tạo ra các phông chữ thời trang và ký hiệu văn bản để giúp bạn tạo hồ sơ mạng xã hội hấp dẫn.</p>
 
-    <h2>Font Vui Nhộn & Ngầu</h2>
-    <ul>
-        <li>Bubble Pop (Bong Bóng Nổi)</li>
-        <li>Dark Orb (Quả Cầu Tối)</li>
-        <li>Solid Block (Khối Rắn)</li>
-        <li>Emoji Mix (Trộn Emoji)</li>
-        <li>Cute Curve (Đường Cong Dễ Thương)</li>
-        <li>Square Edge (Cạnh Vuông)</li>
-        <li>Wave Drift (Lượn Sóng)</li>
-        <li>Reverse Flip (Lật Ngược)</li>
-        <li>Upside Script (Script Đảo Ngược)</li>
-        <li>Mirror Twist (Xoắn Gương)</li>
-        <li>Backflip Text (Chữ Lộn Ngược)</li>
-        <li>Mini Type (Kiểu Nhỏ)</li>
-        <li>Ancient Script (Chữ Cổ)</li>
-        <li>Eastern Flow (Dòng Chảy Phương Đông)</li>
-        <li>Subscript Lite (Chỉ Số Dưới Nhẹ)</li>
-        <li>Vintage Italic (Nghiêng Cổ Điển)</li>
-    </ul>
+<p>Chúng tôi hỗ trợ hơn 128 ký tự ASCII và ký hiệu Unicode. Sao chép và dán phông chữ cho biệt danh, thiết kế và tin nhắn văn bản đẹp. Mỗi chữ cái và ký hiệu đều hoạt động trên mọi nền tảng.</p>
 
-    <h2>Font Hiện Đại & Tương Lai</h2>
-    <ul>
-        <li>Feather Soft (Mềm Mại Như Lông)</li>
-        <li>Dream Drift (Trôi Trong Mơ)</li>
-        <li>Fantasy Flow (Dòng Chảy Kỳ Ảo)</li>
-        <li>Asian Fusion (Hợp Nhất Châu Á)</li>
-        <li>Prime Style (Phong Cách Tối Ưu)</li>
-        <li>Neo Modern (Tân Hiện Đại)</li>
-        <li>Shadow Cast (Bóng Đổ)</li>
-        <li>Iconic Mark (Dấu Ấn Biểu Tượng)</li>
-        <li>Striped Edge (Cạnh Sọc)</li>
-        <li>Adaptive Form (Dạng Thích Ứng)</li>
-        <li>Varied Motion (Chuyển Động Đa Dạng)</li>
-        <li>Squiggle Line (Đường Uốn Lượn)</li>
-    </ul>
+<h2>Cách Hoạt động của Trình tạo này</h2>
 
-    <h2>Font Kiểu Chữ Ký</h2>
-    <ul>
-        <li>Playful Stroke (Nét Chơi Đùa)</li>
-        <li>Polished Line (Đường Nét Đánh Bóng)</li>
-        <li>Minimal Touch (Chạm Tối Giản)</li>
-        <li>Gentle Script (Script Dịu Dàng)</li>
-        <li>Trendy Sway (Đung Đưa Thời Thượng)</li>
-        <li>Paint Stroke (Nét Cọ)</li>
-        <li>Ornate Curve (Đường Cong Trang Trí)</li>
-        <li>Reverse Signature (Chữ Ký Đảo Ngược)</li>
-        <li>One-of-a-Kind Glyph (Ký Tự Độc Nhất)</li>
-        <li>Timeless Ink (Mực Vĩnh Cửu)</li>
-        <li>Static Mark (Dấu Hiệu Tĩnh)</li>
-    </ul>
+<ul>
+  <li>Nhập văn bản của bạn</li>
+  <li>Chọn phông chữ bạn thích</li>
+  <li>Sao chép</li>
+  <li>Dán vào hồ sơ mạng xã hội của bạn</li>
+</ul>
 
-    <h2>Hiệu Ứng Gạch Chân & Nhấn Mạnh</h2>
-    <ul>
-        <li>Dual Underline (Gạch Chân Kép)</li>
-        <li>Classic Line (Đường Kẻ Cổ Điển)</li>
-        <li>Strike Slash (Gạch Ngang Chéo)</li>
-        <li>Forward Strike (Gạch Ngang Tiến)</li>
-        <li>Top Bar Line (Đường Kẻ Thanh Trên)</li>
-        <li>Wave Slash (Gạch Chéo Sóng)</li>
-        <li>Boxed Underline (Gạch Chân Khung Hộp)</li>
-        <li>Wide Macron (Dấu Gạch Ngang Rộng)</li>
-    </ul>
+<h2>Cách Sử dụng Văn bản Đẹp</h2>
 
-    <h2>Khung Biểu Tượng Trang Trí</h2>
-    <ul>
-        <li>Curly Surround (Bao Quanh Xoăn)</li>
-        <li>Spark Ring (Vòng Lấp Lánh)</li>
-        <li>Moon Brackets (Ngoặc Trăng)</li>
-        <li>Arrow Wrap (Quấn Mũi Tên)</li>
-        <li>Dotted Edges (Mép Chấm Bi)</li>
-        <li>Angled Shell (Vỏ Góc Cạnh)</li>
-        <li>Arc Frame (Khung Cung)</li>
-    </ul>
+<p>Cách sử dụng văn bản đẹp là không giới hạn. Nhiều người dùng nó để tạo tên trên bài đăng Instagram, Facebook, TikTok, YouTube, Pinterest hoặc Snapchat.</p>
 
-    <h2>Điểm Nhấn Vương Giả & Vương Miện</h2>
-    <ul>
-        <li>Crown Point (Điểm Vương Miện)</li>
-        <li>Wave Crest (Đỉnh Sóng)</li>
-        <li>Arrow Peak (Đỉnh Mũi Tên)</li>
-        <li>Soft Tick Mark (Dấu Tích Mềm)</li>
-        <li>Regal Cap (Nắp Hoàng Gia)</li>
-        <li>Balanced Crown (Vương Miện Cân Bằng)</li>
-        <li>Z-Shaped Topper (Đỉnh Hình Z)</li>
-        <li>Curved Peak (Đỉnh Cong)</li>
-        <li>Spotted Crown (Vương Miện Chấm)</li>
-    </ul>
+<p>Nhiều người cũng muốn có tên phong cách cho các trò chơi như Free Fire, PUBG và Roblox. Những người sáng tạo sử dụng phong cách độc đáo của riêng mình. Chỉ cần sao chép và dán văn bản đẹp.</p>
 
-    <h2>Điểm Nhấn Cắt Ngang</h2>
-    <ul>
-        <li>Round Accent (Điểm Nhấn Tròn)</li>
-        <li>Cross Touch (Chạm Chéo)</li>
-        <li>Curve Link (Liên Kết Cong)</li>
-        <li>Under-Swoop (Uốn Lượn Dưới)</li>
-        <li>Arrow Support (Hỗ Trợ Mũi Tên)</li>
-        <li>Wave Crown (Vương Miện Sóng)</li>
-        <li>Wavy Base (Đế Lượn Sóng)</li>
-    </ul>
+<p>Chúng tôi khuyên bạn nên kết hợp các ký hiệu và phông chữ để thể hiện cá tính của mình theo cách phong cách nhất. Chúng tôi cũng sẽ thêm hơn 100 danh mục mới trong các bản cập nhật.</p>
 
-    <h2>Biểu Tượng Uốn Lượn & Xoáy</h2>
-    <ul>
-        <li>Loop Trail (Đường Mòn Vòng Lặp)</li>
-        <li>Arrow Zap (Mũi Tên Vụt)</li>
-        <li>Curvy Flick (Nét Cong)</li>
-        <li>Flow End (Kết Thúc Dòng Chảy)</li>
-        <li>Alpha Swoosh (Vút Alpha)</li>
-        <li>Twin Slash (Gạch Chéo Đôi)</li>
-        <li>Star Edge (Cạnh Sao)</li>
-    </ul>
+<h2>Nhiều Phông chữ Miễn phí Hơn</h2>
 
-    <h2>Các Kiểu Văn Bản Khung</h2>
-    <ul>
-        <li>Bold Box (Hộp Đậm)</li>
-        <li>Soft Box (Hộp Mềm)</li>
-        <li>Bracket Frame (Khung Ngoặc)</li>
-        <li>Round Shell (Vỏ Tròn)</li>
-        <li>Corner Cut Frame (Khung Cắt Góc)</li>
-        <li>Swirl Border (Viền Xoáy)</li>
-        <li>Triple Edge Box (Hộp Ba Cạnh)</li>
-        <li>Angular Frame (Khung Góc Cạnh)</li>
-        <li>Tick Corners (Góc Đánh Dấu)</li>
-        <li>Beam Outline (Viền Tia Sáng)</li>
-        <li>Arrow Frame (Khung Mũi Tên)</li>
-        <li>Accent Shell (Vỏ Điểm Nhấn)</li>
-        <li>Cloud Line (Đường Mây)</li>
-    </ul>
+<p>Trình tạo văn bản đẹp của chúng tôi tạo ra nhiều kiểu phông chữ ngay lập tức sau khi bạn nhập văn bản vào ô. Bạn có thể sao chép phông chữ từ danh sách xem trước bằng nút bấm.</p>
 
-    <h2>Các Kiểu Kết Hợp Biểu Tượng</h2>
-    <ul>
-        <li>Stellar Ring (Vòng Sao)</li>
-        <li>Star Burst (Sao Bùng Nổ)</li>
-        <li>Zig Flux (Dòng Zig)</li>
-        <li>Twist Spark (Tia Lửa Xoắn)</li>
-        <li>Focus Halo (Hào Quang Tập Trung)</li>
-        <li>Twin Arrow Mark (Dấu Mũi Tên Đôi)</li>
-        <li>Wave Flash (Sóng Chớp)</li>
-    </ul>
+<p>Nếu bạn tìm thấy các kiểu như Aesthetic, Bold, Fraktur hoặc Old English trên trang web của chúng tôi và muốn có thêm nhiều tùy chọn kiểu dáng hoặc ký hiệu khác, hãy cho chúng tôi biết — chúng tôi sẽ thêm vào sau.</p>
 
-    <h2>Khung Dòng Chảy Mượt Mà</h2>
-    <ul>
-        <li>Spark Digit (Chữ Số Lấp Lánh)</li>
-        <li>Corner Glide (Trượt Góc)</li>
-        <li>Mark Finish (Hoàn Thiện Dấu)</li>
-        <li>Zig Route (Tuyến Zig)</li>
-        <li>Glow Strip (Dải Phát Sáng)</li>
-        <li>Top Drive (Lái Trên)</li>
-        <li>Soft Mesh (Lưới Mềm)</li>
-        <li>Boxed Corner (Góc Đóng Hộp)</li>
-        <li>Disrupt Line (Đường Ngắt Quãng)</li>
-    </ul>
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> ·
+    <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
+  </p>
+</div>
 
-    <h2>Văn Bản Mặt Kawaii</h2>
-    <ul>
-        <li>Smiley Cute (Mặt Cười Dễ Thương)</li>
-        <li>Heart Eyes (Mắt Trái Tim)</li>
-        <li>Shine Spark Face (Mặt Lấp Lánh)</li>
-        <li>Bunny Joy (Niềm Vui Thỏ)</li>
-        <li>Happy Smile (Nụ Cười Hạnh Phúc)</li>
-        <li>Blush Star Eyes (Mắt Sao Má Hồng)</li>
-        <li>Mini Cat Face (Mặt Mèo Nhỏ)</li>
-        <li>Cheer Joy (Cổ Vũ Vui Vẻ)</li>
-        <li>Soft Sweet Smile (Nụ Cười Ngọt Ngào Mềm Mại)</li>
-        <li>Giggly Cat Face (Mặt Mèo Cười Khúc Khích)</li>
-        <li>Shy-Cute Expression (Biểu Cảm Dễ Thương Ngại Ngùng)</li>
-    </ul>
+</div>
 
-    <h2>Khung Sang Trọng & Trang Trí</h2>
-    <ul>
-        <li>Twist Emblem (Biểu Tượng Xoắn)</li>
-        <li>Lunar Glow (Ánh Sáng Mặt Trăng)</li>
-        <li>Smooth Path (Đường Đi Mượt)</li>
-        <li>Noble Line (Đường Nét Cao Quý)</li>
-        <li>Star Shine (Ánh Sao)</li>
-        <li>Gloss Beam (Chùm Tia Bóng)</li>
-        <li>Night Star (Sao Đêm)</li>
-        <li>Celestial Spiral (Xoắn Ốc Thiên Thể)</li>
-    </ul>
-
-    <h2>Viền Đậm & Mạnh Mẽ</h2>
-    <ul>
-        <li>Gym Line Frame (Khung Đường Kẻ Gym)</li>
-        <li>Block Shield (Khiên Khối)</li>
-        <li>Bar Outline (Viền Thanh)</li>
-        <li>Shimmer Edge (Cạnh Lấp Lánh)</li>
-        <li>Crafted Heavy (Thủ Công Nặng)</li>
-        <li>Bold Quote Box (Hộp Trích Dẫn Đậm)</li>
-        <li>Stream Border (Viền Dòng Chảy)</li>
-        <li>Verified Edge (Viền Đã Xác Minh)</li>
-    </ul>
-
-    <h2>Khung Kỳ Ảo & Phép Thuật</h2>
-    <ul>
-        <li>Flash Spark (Tia Lửa Chớp)</li>
-        <li>Petal Twist (Xoắn Cánh Hoa)</li>
-        <li>Star Drift (Trôi Dạt Sao)</li>
-        <li>Starfield Loop (Vòng Lặp Trường Sao)</li>
-        <li>Spark Burst (Tia Lửa Bùng Nổ)</li>
-        <li>Elegant Star Line (Đường Sao Thanh Lịch)</li>
-        <li>Star Touch Accent (Điểm Nhấn Chạm Sao)</li>
-        <li>Stellar Portal (Cổng Sao)</li>
-    </ul>
-
-    <h2>Font Nghệ Thuật & Sáng Tạo</h2>
-    <ul>
-        <li>Cosmic Shine (Ánh Sáng Vũ Trụ)</li>
-        <li>Deep Shadow Frame (Khung Bóng Sâu)</li>
-        <li>Elegant Flow Script (Script Dòng Chảy Thanh Lịch)</li>
-        <li>Midnight Gleam (Ánh Sáng Nửa Đêm)</li>
-        <li>Strike Script (Script Gạch Ngang)</li>
-        <li>Petal Loop (Vòng Lặp Cánh Hoa)</li>
-        <li>Blossom Curl (Xoắn Hoa)</li>
-        <li>Chic Edge (Cạnh Sành Điệu)</li>
-    </ul>
-
-    <h2>Font Chủ Đề Emoji</h2>
-    <ul>
-        <li>Sparkle Script (Script Lấp Lánh)</li>
-        <li>Cute Critters (Sinh Vật Dễ Thương)</li>
-        <li>Sweet Snacks (Đồ Ăn Vặt Ngọt Ngào)</li>
-        <li>Magic Stars (Sao Phép Thuật)</li>
-        <li>Floral Bloom (Hoa Nở)</li>
-        <li>Cosmic Pop (Pop Vũ Trụ)</li>
-        <li>Bubblegum Style (Kiểu Kẹo Cao Su)</li>
-        <li>Forest Friends (Bạn Bè Rừng Xanh)</li>
-        <li>Ocean Breeze (Gió Biển)</li>
-    </ul>
-
-    <h2>Font Ngẫu Nhiên & Kết Hợp</h2>
-    <ul>
-        <li>Funky Fusion (Hợp Nhất Độc Đáo)</li>
-        <li>Mystery Mix (Hỗn Hợp Bí Ẩn)</li>
-        <li>Edge Glitch (Lỗi Cạnh)</li>
-        <li>Soft Haze (Sương Mù Mềm)</li>
-        <li>Chaos Streak (Vệt Hỗn Loạn)</li>
-        <li>Scramble Text (Văn Bản Xáo Trộn)</li>
-        <li>Twist Surprise (Bất Ngờ Xoắn)</li>
-        <li>Hybrid Mode (Chế Độ Lai)</li>
-        <li>Mixed Blend (Pha Trộn Hỗn Hợp)</li>
-    </ul>
-
-    <h2>Các Câu Hỏi Thường Gặp (FAQ)</h2>
-    <p><strong>Công cụ này là gì?</strong><br>Đây là một trình tạo font chữ trực tuyến miễn phí cho phép bạn gõ văn bản và ngay lập tức biến nó thành các kiểu Unicode độc đáo.</p>
-    <p><strong>Tôi có thể sử dụng các font này ở đâu?</strong><br>Bạn có thể dán chúng vào Instagram, Facebook, Twitter, TikTok, Discord, và các ứng dụng nhắn tin như WhatsApp và Telegram.</p>
-    <p><strong>Trình đọc màn hình có đọc được các font này không?</strong><br>Không phải lúc nào cũng được. Văn bản Unicode độc đáo có thể không dễ truy cập, vì vậy hãy sử dụng văn bản thuần túy để rõ ràng khi cần thiết.</p>
-    <p><strong>Tại sao văn bản đôi khi hiển thị hộp hoặc dấu hỏi?</strong><br>Một số thiết bị hoặc ứng dụng không hỗ trợ mọi ký tự Unicode. Nếu điều đó xảy ra, hãy thử một kiểu font khác từ danh sách.</p>
-
-</article>
 
 <footer class="site-footer">
     <div class="footer-container">
