@@ -48,11 +48,14 @@
 <link rel="alternate" href="https://fontgen.in/th.html" hreflang="th">
 <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
 <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
+<link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
+
 </head>
 <body>
 
-    <nav class="navbar">
-    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç">
+   <nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
       <span class="icon-hamburger">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="6" x2="20" y2="6"/>
@@ -60,6 +63,7 @@
           <line x1="4" y1="18" x2="20" y2="18"/>
         </svg>
       </span>
+      <!-- Close SVG -->
       <span class="icon-close">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -73,51 +77,32 @@
     <div class="nav-menu" id="navMenu">
       <ul>
         <li>
-          <a href="https://fontgen.in/">Anasayfa</a>
+          <a href="https://fontgen.in/">Home</a>
         </li>
-       <li>
+          <li>
+          <a href="https://fontgen.in/font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            Hakkında
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/about-us.html">Hakkımızda</a>
-            <a href="https://fontgen.in/contact-us.html">Bize Ulaşın</a>
-            <a href="https://fontgen.in/privacy-policy.html">Gizlilik Politikası</a>
-            <a href="https://fontgen.in/faq.html">SSS (Sıkça Sorulan Sorular)</a>
-          </div>
+       
+    
+       <li>
+          <a href="https://fontgen.in/about-us.html">About</a>
         </li>
-      
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            Dil
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/" data-lang="en">English</a>
-            <a href="https://fontgen.in/es.html" data-lang="es">Español</a>
-            <a href="https://fontgen.in/ar.html" data-lang="ar">العربية</a>
-            <a href="https://fontgen.in/fr.html" data-lang="fr">Français</a>
-            <a href="https://fontgen.in/de.html" data-lang="de">Deutsch</a>
-            <a href="https://fontgen.in/pt.html" data-lang="pt">Português</a>
-            <a href="https://fontgen.in/id.html" data-lang="id">Indonesian</a>
-            <a href="https://fontgen.in/hi.html" data-lang="hi">हिन्दी</a>
-            <a href="https://fontgen.in/it.html" data-lang="it">Italiano</a>
-            <a href="https://fontgen.in/ja.html" data-lang="ja">日本語</a>
-            <a href="https://fontgen.in/ru.html" data-lang="ru">Россия</a>
-            <a href="https://fontgen.in/th.html" data-lang="th">ประเทศไทย</a>
-            <a href="https://fontgen.in/tr.html" data-lang="tr">Türkiye</a>
-            <a href="https://fontgen.in/vi.html" data-lang="vi">Việt Nam</a>
-          </div>
+ 
+       
+         <li>
+          <a href="https://fontgen.in/privacy-policy.html">Privacy</a>
         </li>
+
+          
+         <li>
+          <a href="https://fontgen.in/contact-us.html">Contact</a>
+        </li>
+
       </ul>
+
     </div>
 </nav>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -133,22 +118,30 @@
     </div>
 
     <div class="tab-wrapper">
-      <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
-      <nav class="tab-nav" id="tabNav">
-        <a href="https://fontgen.in/" class="tab-link">Tüm Fontlar</a>
-        <a href="https://fontgen.in/tools/cool.html" class="tab-link">Havalı</a>
-        <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Süslü</a>
-        <a href="https://fontgen.in/tools/cursive.html" class="tab-link">El Yazısı (Cursive)</a>
-        <a href="https://fontgen.in/tools/small.html" class="tab-link">Küçük</a>
-        <a href="https://fontgen.in/tools/bold.html" class="tab-link">Kalın</a>
-        <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Bozuk (Glitch)</a>
-        <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Sembol Metin</a>
-        <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Metin Sanatı</a>
-        <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Üstü Çizili</a>
-        <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Görünmez</a>
-      </nav>
-      <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
-    </div>
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
   </div>
 
   <div class="output-box">
@@ -716,304 +709,66 @@
   <div id="copyNotification"></div>
 </div>
 
-<article>
-    <h2>Font Oluşturucu Hakkında</h2>
-    <p>Ücretsiz çevrimiçi aracımızı kullanarak basit metinlerden kolayca şık fontlar oluşturun. Tek yapmanız gereken metninizi yazmak ve kopyalamaktır. Bu fontları Instagram Biyografisi, Facebook, Takma Ad, Twitter ve WhatsApp Grupları gibi tüm sosyal platformlarda kullanabilirsiniz.</p>
-    <p>Fontlar Unicode kullanır, bu nedenle çoğu cihazda çalışır. Bu stiller, profilinizi ve yorumlarınızı daha kişiselleştirilmiş ve çekici hale getirir. Diğerlerinden ve arkadaşlarınızdan sıyrılmanın en iyi yoludur. Bu sadece eğlenceli değil; aynı zamanda havalı semboller kullanarak düşüncelerinizi ifade etmenin harika bir yoludur.</p>
-    <p>Geniş bir Süslü Metin seçeneği yelpazesi mevcuttur: havalı isimler, takma adlar, karışık İngilizce kelimeler, Yunan harfleri, süslü sayılar, alfabe kombinasyonları ve emoji eklentileri.</p>
-    <img src="https://fontgen.in/img/Font-Generator.png" alt="Font Oluşturucu Aracı">
+<div class="contents">
 
-    <h2>Sosyal Medya İçin Kopyalayın ve Yapıştırın</h2>
-    <p>Biz, 1 numaralı Çevrimiçi Font Değiştiricisiyiz. Süslü, havalı, kalın ve el yazısı dahil olmak üzere 190 farklı font stili oluşturduk. Instagram biyografinizi ve yorumlarınızı daha çekici hale getirmek için yeni fontlar istiyorsanız, Influencer'lar (etkileyiciler) genellikle trend ve şık profil isimleri oluşturmak için farklı kategoriler kullanır. Süslü metin, oyun kullanıcı adları, poster tasarımı ve daha fazlası için kullanılabilir. Ayrıca ASCII özel karakterler, semboller, İngilizce harfler ve boşluk hileleri de öneriyoruz. Şık fontlarla kendinizi ifade edin.</p>
-    <p>Piyasadaki en kolay araçlardan biriyiz; son derece özelleştirilebilir, duyarlı (responsive) ve metninizi dönüştürmenin eğlenceli yollarıyla dolu.</p>
+<h2>Font Oluşturucu Hakkında</h2>
+<img src="https://fontgen.in/img/Font-Generator.png" alt="">
 
-    <h2>Oluşturucu Nasıl Çalışır?</h2>
-    <ol>
-      <li>Metninizi kutuya girin.</li>
-      <li>Araç otomatik olarak metni şık fontlara dönüştürecektir.</li>
-      <li>Butona tıklayarak stili kopyalayın.</li>
-      <li>Şık fontu Instagram biyografinize, Facebook adınıza veya herhangi bir yere yapıştırın.</li>
-    </ol>
-    <p>Aracımızla font oluşturmak bu kadar kolay. %100 ücretsizdir ve sınırsız farklı font stilleri sunar.</p>
+<p>Fontgen.in’e hoş geldiniz. Bu, şık metinler oluşturmak için kullanılan bir araçtır. Oluşturulan listeden yazı tipi stillerini kolayca kopyalayıp yapıştırmanıza olanak tanır. Bu araç %100 ücretsizdir ve 121’den fazla şık sembol içerir. Font oluşturucumuz; yorumlar, biyografiler ve daha profesyonel metinler hazırlamak için kullanılır.</p>
 
-    <h2>Daha Fazla Ücretsiz En İyi Şık İsimler</h2>
-    <p>Bu Süslü Metin Oluşturucu ile Instagram ve diğer sosyal ağlar için kolayca havalı isim efektleri oluşturabilirsiniz. Arkadaşlarınıza ve ailenize metin mesajlarında süslü isimlerini göndererek onlarla iletişim kurun. Arkadaş çevrenizde havalı olan kişi olarak kendinizi öne çıkarın. Erkek ve Kız Kullanıcı Adlarını Çevrimiçi Ücretsiz Kopyalayın.</p>
-    <p>Karar vermeniz için aşağıda listelenen Popüler Süslü Font Stilleri:</p>
+<p>Bildiğiniz gibi, bir font oluşturucu (metin oluşturucu olarak da adlandırılır) Unicode karakterlerini kullanarak farklı yazı tipi stillerinin oluşturulmasını ve sınıflandırılmasını sağlar. İngilizce metinleri havalı fontlara dönüştüren her harf ve alfabe için semboller sunuyoruz. 🅑🅤🅑🅑🅛🅔 metin, kalın, italik, 𝔣𝔞𝔫𝔠𝔶, üstü çizili, küçük metin, bubble text ve 121’den fazla diğer şık font türü bunlara dahildir.</p>
 
-    <h2>Zarif ve Süslü Fontlar</h2>
-    <ul>
-      <li>Zarafet El Yazısı</li>
-      <li>Kadife El Yazısı</li>
-      <li>Bulutlu Eğriler</li>
-      <li>Kraliyet Gotik</li>
-      <li>Gölge Fraktur</li>
-      <li>Çift Çizgili Vuruş</li>
-      <li>Retro Klasik</li>
-      <li>Sembol Havası</li>
-      <li>Kabile Oyması</li>
-      <li>Antik Dokunuş</li>
-    </ul>
+<h2>Kolay Kopyala ve Yapıştır</h2>
 
-    <h2>Temiz ve Sade Fontlar</h2>
-    <ul>
-      <li>Ağır Kalın</li>
-      <li>Pürüzsüz İtalik</li>
-      <li>Kalın-İtalik Karışım</li>
-      <li>Temiz Sans</li>
-      <li>Güçlü Sans</li>
-      <li>Akıcı İtalik</li>
-      <li>Ultra Sans Kalın</li>
-      <li>Minik Büyük Harfler</li>
-      <li>Kod Mono</li>
-      <li>Geniş Esneme</li>
-      <li>Yumuşak Köşeli Parantezler</li>
-    </ul>
+<p>Sitemizde bu aracı, şık fontları kullanmayı kolaylaştırmak için tasarladık. Bu yüzden en iyi araçlardan biriyiz. Font oluşturucumuz, sosyal medya profillerini daha çekici hale getirmek için stil sahibi fontlar ve metin sembolleri oluşturur.</p>
 
-    <h2>Eğlenceli ve Havalı Fontlar</h2>
-    <ul>
-      <li>Balon Patlaması</li>
-      <li>Koyu Küre</li>
-      <li>Katı Blok</li>
-      <li>Emoji Karışımı</li>
-      <li>Sevimli Eğri</li>
-      <li>Kare Kenar</li>
-      <li>Dalga Sürüklenmesi</li>
-      <li>Ters Çevirme</li>
-      <li>Ters Yüz Yazı</li>
-      <li>Ayna Bükümü</li>
-      <li>Geri Takla Metin</li>
-      <li>Mini Tip</li>
-      <li>Antik Yazı</li>
-      <li>Doğu Akışı</li>
-      <li>Alt İndeks Lite</li>
-      <li>Vintage İtalik</li>
-    </ul>
+<p>128’den fazla ASCII karakteri ve Unicode sembolünü destekliyoruz. Takma adlar, tasarımlar ve güzel metin mesajları için fontları kopyalayıp yapıştırabilirsiniz. Her şık harf ve sembol tüm platformlarda çalışır.</p>
 
-    <h2>Modern ve Fütüristik Fontlar</h2>
-    <ul>
-      <li>Tüy Yumuşaklığı</li>
-      <li>Rüya Sürüklenmesi</li>
-      <li>Fantezi Akışı</li>
-      <li>Asya Füzyonu</li>
-      <li>Birinci Sınıf Stil</li>
-      <li>Neo Modern</li>
-      <li>Gölge Dökümü</li>
-      <li>İkonik İşaret</li>
-      <li>Çizgili Kenar</li>
-      <li>Adaptif Form</li>
-      <li>Çeşitli Hareket</li>
-      <li>Kıvrımlı Çizgi</li>
-    </ul>
+<h2>Bu Oluşturucu Nasıl Çalışır?</h2>
 
-    <h2>İmza Tarzı Fontlar</h2>
-    <ul>
-      <li>Oyunbaz Vuruş</li>
-      <li>Cilalı Çizgi</li>
-      <li>Minimal Dokunuş</li>
-      <li>Nazik El Yazısı</li>
-      <li>Trend Sallanma</li>
-      <li>Boya Fırçası Vuruşu</li>
-      <li>Süslü Eğri</li>
-      <li>Ters İmza</li>
-      <li>Eşsiz Glif</li>
-      <li>Zamansız Mürekkep</li>
-      <li>Statik İşaret</li>
-    </ul>
+<ul>
+  <li>Metninizi yazın</li>
+  <li>Beğendiğiniz fontu seçin</li>
+  <li>Kopyalayın</li>
+  <li>Sosyal profilinize yapıştırın</li>
+</ul>
 
-    <h2>Altı Çizili ve Vurgu Efektleri</h2>
-    <ul>
-      <li>Çift Alt Çizgi</li>
-      <li>Klasik Çizgi</li>
-      <li>Vuruş Eğik Çizgi</li>
-      <li>İleri Vuruş</li>
-      <li>Üst Çubuk Çizgisi</li>
-      <li>Dalga Eğik Çizgi</li>
-      <li>Kutulu Alt Çizgi</li>
-      <li>Geniş Makron</li>
-    </ul>
+<h2>Şık Metinler Nasıl Kullanılır?</h2>
 
-    <h2>Dekoratif Sembol Sarıcıları</h2>
-    <ul>
-      <li>Kıvırcık Çevreleme</li>
-      <li>Kıvılcım Halkası</li>
-      <li>Ay Köşeli Parantezler</li>
-      <li>Ok Sarma</li>
-      <li>Noktalı Kenarlar</li>
-      <li>Açılı Kabuk</li>
-      <li>Yay Çerçeve</li>
-    </ul>
+<p>Havalı metinlerin kullanım alanı sınırsızdır. Birçok kişi bunları Instagram, Facebook, TikTok, YouTube, Pinterest veya Snapchat gönderilerinde isim oluşturmak için kullanır.</p>
 
-    <h2>Kraliyet ve Taç Vurguları</h2>
-    <ul>
-      <li>Taç Noktası</li>
-      <li>Dalga Tepesi</li>
-      <li>Ok Zirvesi</li>
-      <li>Yumuşak Tik İşareti</li>
-      <li>Asil Kapak</li>
-      <li>Dengeli Taç</li>
-      <li>Z Şeklinde Üstlük</li>
-      <li>Kavisli Zirve</li>
-      <li>Benekli Taç</li>
-    </ul>
+<p>Birçok kullanıcı ayrıca Free Fire, PUBG ve Roblox gibi oyunlar için şık isimler ister. Yaratıcı kişiler kendi benzersiz stillerini kullanır. Tek yapmanız gereken şık metni kopyalayıp yapıştırmaktır.</p>
 
-    <h2>Kesişen Vurgular</h2>
-    <ul>
-      <li>Yuvarlak Vurgu</li>
-      <li>Çapraz Dokunuş</li>
-      <li>Eğri Bağlantı</li>
-      <li>Alt Sarkaç</li>
-      <li>Ok Desteği</li>
-      <li>Dalga Tacı</li>
-      <li>Dalgalı Taban</li>
-    </ul>
+<p>Önerimiz, kişiliğinizi en şık şekilde göstermek için semboller ve fontları karıştırmanızdır. Güncellemelerde 100’den fazla yeni kategori de ekliyoruz.</p>
 
-    <h2>Döngü ve Kıvrım Sembolleri</h2>
-    <ul>
-      <li>Döngü İzi</li>
-      <li>Ok Vurumu</li>
-      <li>Kıvrımlı Savurma</li>
-      <li>Akış Sonu</li>
-      <li>Alfa Süpürme</li>
-      <li>Çift Eğik Çizgi</li>
-      <li>Yıldız Kenarı</li>
-    </ul>
+<h2>Daha Fazla Ücretsiz Font</h2>
 
-    <h2>Çerçeveli Metin Stilleri</h2>
-    <ul>
-      <li>Kalın Kutu</li>
-      <li>Yumuşak Kutu</li>
-      <li>Köşeli Parantez Çerçevesi</li>
-      <li>Yuvarlak Kabuk</li>
-      <li>Köşe Kesimli Çerçeve</li>
-      <li>Kıvrım Kenarlık</li>
-      <li>Üçlü Kenar Kutusu</li>
-      <li>Açılı Çerçeve</li>
-      <li>Tik Köşeler</li>
-      <li>Işın Ana Hattı</li>
-      <li>Ok Çerçevesi</li>
-      <li>Vurgu Kabuğu</li>
-      <li>Bulut Çizgisi</li>
-    </ul>
+<p>Şık metin oluşturucumuz, metni kutuya yazdıktan sonra anında birçok font stili oluşturur. Önizleme listesinden butonla fontları kopyalayabilirsiniz.</p>
 
-    <h2>Sembol Füzyon Stilleri</h2>
-    <ul>
-      <li>Yıldız Halkası</li>
-      <li>Yıldız Patlaması</li>
-      <li>Zig Akısı</li>
-      <li>Bükülme Kıvılcımı</li>
-      <li>Odak Halosu</li>
-      <li>Çift Ok İşareti</li>
-      <li>Dalga Parlaması</li>
-    </ul>
+<p>Sitemizde Aesthetic, Bold, Fraktur veya Old English gibi stiller keşfederseniz ve daha fazla stil seçeneği ya da sembol isterseniz, bize bildirin — ilerleyen zamanda ekleyeceğiz.</p>
 
-    <h2>Pürüzsüz Akış Çerçeveleri</h2>
-    <ul>
-      <li>Kıvılcım Rakamı</li>
-      <li>Köşe Kayması</li>
-      <li>İşaret Sonu</li>
-      <li>Zig Yolu</li>
-      <li>Parıltı Şeridi</li>
-      <li>Üst Sürüş</li>
-      <li>Yumuşak Ağ</li>
-      <li>Kutulu Köşe</li>
-      <li>Bozucu Çizgi</li>
-    </ul>
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> ·
+    <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
+  </p>
+</div>
 
-    <h2>Kawaii Yüz Metni</h2>
-    <ul>
-      <li>Gülen Sevimli</li>
-      <li>Kalp Gözler</li>
-      <li>Parlak Kıvılcım Yüzü</li>
-      <li>Tavşan Neşesi</li>
-      <li>Mutlu Gülümseme</li>
-      <li>Kızarık Yıldız Gözler</li>
-      <li>Mini Kedi Yüzü</li>
-      <li>Neşe Tezahrüatı</li>
-      <li>Yumuşak Tatlı Gülümseme</li>
-      <li>Kıkırdayan Kedi Yüzü</li>
-      <li>Utangaç-Sevimli İfade</li>
-    </ul>
+</div>
 
-    <h2>Lüks ve Süslü Çerçeveler</h2>
-    <ul>
-      <li>Bükülme Amblemi</li>
-      <li>Ay Parıltısı</li>
-      <li>Pürüzsüz Yol</li>
-      <li>Asil Çizgi</li>
-      <li>Yıldız Parlaklığı</li>
-      <li>Parlak Işın</li>
-      <li>Gece Yıldızı</li>
-      <li>Göksel Spiral</li>
-    </ul>
-
-    <h2>Kalın ve Güçlü Kenarlıklar</h2>
-    <ul>
-      <li>Spor Salonu Çizgi Çerçevesi</li>
-      <li>Blok Kalkan</li>
-      <li>Çubuk Ana Hattı</li>
-      <li>Parıltı Kenarı</li>
-      <li>Hazırlanmış Ağır</li>
-      <li>Kalın Alıntı Kutusu</li>
-      <li>Akış Kenarlığı</li>
-      <li>Doğrulanmış Kenar</li>
-    </ul>
-
-    <h2>Şaşırtıcı ve Büyülü Çerçeveler</h2>
-    <ul>
-      <li>Flaş Kıvılcım</li>
-      <li>Taç Yaprağı Bükümü</li>
-      <li>Yıldız Sürüklenmesi</li>
-      <li>Yıldız Alanı Döngüsü</li>
-      <li>Kıvılcım Patlaması</li>
-      <li>Zarif Yıldız Çizgisi</li>
-      <li>Yıldız Dokunuşu Vurgusu</li>
-      <li>Göksel Portal</li>
-    </ul>
-
-    <h2>Sanatsal ve Yaratıcı Fontlar</h2>
-    <ul>
-      <li>Kozmik Parlaklık</li>
-      <li>Derin Gölge Çerçevesi</li>
-      <li>Zarif Akış Yazısı</li>
-      <li>Geceyarısı Parıltısı</li>
-      <li>Vuruş Yazısı</li>
-      <li>Taç Yaprağı Döngüsü</li>
-      <li>Çiçek Açma Kıvrımı</li>
-      <li>Şık Kenar</li>
-    </ul>
-
-    <h2>Emoji Temalı Fontlar</h2>
-    <ul>
-      <li>Parıltılı Yazı</li>
-      <li>Sevimli Yaratıklar</li>
-      <li>Tatlı Atıştırmalıklar</li>
-      <li>Sihirli Yıldızlar</li>
-      <li>Çiçek Açılımı</li>
-      <li>Kozmik Pop</li>
-      <li>Balonlu Sakız Stili</li>
-      <li>Orman Dostları</li>
-      <li>Okyanus Esintisi</li>
-    </ul>
-
-    <h2>Rastgele ve Karışık Fontlar</h2>
-    <ul>
-      <li>Funky Füzyon</li>
-      <li>Gizemli Karışım</li>
-      <li>Kenar Bozukluğu (Glitch)</li>
-      <li>Yumuşak Pus</li>
-      <li>Kaos İzi</li>
-      <li>Karışık Metin</li>
-      <li>Bükülme Sürprizi</li>
-      <li>Hibrit Mod</li>
-      <li>Karışık Harman</li>
-    </ul>
-
-    <h2>Sıkça Sorulan Sorular (SSS)</h2>
-    <p><strong>Bu araç nedir?</strong><br>Metin yazmanıza ve onu anında süslü Unicode stillerine dönüştürmenize olanak tanıyan ücretsiz bir çevrimiçi font oluşturucudur.</p>
-    <p><strong>Bu fontları nerede kullanabilirim?</strong><br>Bunları Instagram, Facebook, Twitter, TikTok, Discord ve WhatsApp ve Telegram gibi mesajlaşma uygulamalarına yapıştırabilirsiniz.</p>
-    <p><strong>Ekran okuyucular bu fontları okur mu?</strong><br>Her zaman değil. Süslü Unicode metinler erişilebilir olmayabilir, bu nedenle gerektiğinde netlik için düz metin kullanın.</p>
-    <p><strong>Metin neden bazen kutular veya soru işaretleri gösteriyor?</strong><br>Bazı cihazlar veya uygulamalar her Unicode karakterini desteklemez. Bu olursa, listeden başka bir font stilini deneyin.</p>
-</article>
 
 <footer class="site-footer">
     <div class="footer-container">
