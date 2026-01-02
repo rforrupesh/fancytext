@@ -1168,6 +1168,101 @@ const acuteAccentsEl = document.getElementById("AcuteAccentsOutput");
 if (acuteAccentsEl) {
   acuteAccentsEl.textContent = text ? toAcuteAccents(text) : toAcuteAccents("Acute Accents");
 }
+
+function toVaporwave(text) {
+  const map = {
+    a:"ａ",b:"ｂ",c:"ｃ",d:"ｄ",e:"ｅ",f:"ｆ",g:"ｇ",h:"ｈ",
+    i:"ｉ",j:"ｊ",k:"ｋ",l:"ｌ",m:"ｍ",n:"ｎ",o:"ｏ",p:"ｐ",
+    q:"ｑ",r:"ｒ",s:"ｓ",t:"ｔ",u:"ｕ",v:"ｖ",w:"ｗ",x:"ｘ",
+    y:"ｙ",z:"ｚ",
+    A:"Ａ",B:"Ｂ",C:"Ｃ",D:"Ｄ",E:"Ｅ",F:"Ｆ",G:"Ｇ",H:"Ｈ",
+    I:"Ｉ",J:"Ｊ",K:"Ｋ",L:"Ｌ",M:"Ｍ",N:"Ｎ",O:"Ｏ",P:"Ｐ",
+    Q:"Ｑ",R:"Ｒ",S:"Ｓ",T:"Ｔ",U:"Ｕ",V:"Ｖ",W:"Ｗ",X:"Ｘ",
+    Y:"Ｙ",Z:"Ｚ",
+    "0":"０","1":"１","2":"２","3":"３","4":"４",
+    "5":"５","6":"６","7":"７","8":"８","9":"９",
+    " ":"　",".":"．",",":"，","!":"！","?":"？",
+    ":":"：",";":"；","(":"（",")":"）"
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function toVaporwaveJP(text) {
+  return toVaporwave(text) + " カ゚エ";
+}
+function toVaporwaveGlitch(text) {
+  return toVaporwave(text).replace(/　/g, "░");
+}
+function toVaporwaveBracket(text) {
+  return "【" + toVaporwave(text) + "】";
+}
+function toVaporwaveCyber(text) {
+  const map = {
+    a:"卂",b:"乃",c:"匚",d:"ᗪ",e:"乇",f:"千",g:"Ꮆ",h:"卄",
+    i:"丨",j:"ﾌ",k:"Ҝ",l:"ㄥ",m:"爪",n:"几",o:"ㄖ",p:"卩",
+    q:"Ɋ",r:"尺",s:"丂",t:"ㄒ",u:"ㄩ",v:"ᐯ",w:"山",x:"乂",
+    y:"ㄚ",z:"乙",
+    A:"卂",B:"乃",C:"匚",D:"ᗪ",E:"乇",F:"千",G:"Ꮆ",H:"卄",
+    I:"丨",J:"ﾌ",K:"Ҝ",L:"ㄥ",M:"爪",N:"几",O:"ㄖ",P:"卩",
+    Q:"Ɋ",R:"尺",S:"丂",T:"ㄒ",U:"ㄩ",V:"ᐯ",W:"山",X:"乂",
+    Y:"ㄚ",Z:"乙"
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+function toVaporwaveKatakana(text) {
+  const map = {
+    a:"丹",b:"乃",c:"匚",d:"刀",e:"ヨ",f:"下",g:"厶",h:"卄",
+    i:"工",j:"丁",k:"长",l:"乚",m:"从",n:"𠘨",o:"回",p:"尸",
+    q:"口",r:"尺",s:"丂",t:"卞",u:"凵",v:"∨",w:"山",x:"乂",
+    y:"丫",z:"乙",
+    A:"丹",B:"乃",C:"匚",D:"刀",E:"ヨ",F:"下",G:"厶",H:"卄",
+    I:"工",J:"丁",K:"长",L:"乚",M:"从",N:"𠘨",O:"回",P:"尸",
+    Q:"口",R:"尺",S:"丂",T:"卞",U:"凵",V:"∨",W:"山",X:"乂",
+    Y:"丫",Z:"乙"
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Vaporwave Classic
+const vaporwaveEl = document.getElementById("VaporwaveOutput");
+if (vaporwaveEl) {
+  vaporwaveEl.textContent = text ? toVaporwave(text) : toVaporwave("Vaporwave Text");
+}
+
+// Vaporwave + Japanese
+const vaporwaveJPEl = document.getElementById("VaporwaveJPOutput");
+if (vaporwaveJPEl) {
+  vaporwaveJPEl.textContent = text ? toVaporwaveJP(text) : toVaporwaveJP("Vaporwave Text");
+}
+
+// Vaporwave Glitch
+const vaporwaveGlitchEl = document.getElementById("VaporwaveGlitchOutput");
+if (vaporwaveGlitchEl) {
+  vaporwaveGlitchEl.textContent = text ? toVaporwaveGlitch(text) : toVaporwaveGlitch("Vaporwave Text");
+}
+
+// Vaporwave Bracket
+const vaporwaveBracketEl = document.getElementById("VaporwaveBracketOutput");
+if (vaporwaveBracketEl) {
+  vaporwaveBracketEl.textContent = text ? toVaporwaveBracket(text) : toVaporwaveBracket("Vaporwave Text");
+}
+
+// Vaporwave Cyber
+const vaporwaveCyberEl = document.getElementById("VaporwaveCyberOutput");
+if (vaporwaveCyberEl) {
+  vaporwaveCyberEl.textContent = text ? toVaporwaveCyber(text) : toVaporwaveCyber("Vaporwave Text");
+}
+
+// Vaporwave Katakana
+const vaporwaveKatakanaEl = document.getElementById("VaporwaveKatakanaOutput");
+if (vaporwaveKatakanaEl) {
+  vaporwaveKatakanaEl.textContent = text ? toVaporwaveKatakana(text) : toVaporwaveKatakana("Vaporwave Text");
+}
+
+// Vaporwave Mixed
+
+
+
 function toUnderlinedbyDashes(text) {
   const map = {
     a: "𝐚", b: "ᵇ", c: "¢", d: "ᗪ", e: "ｅ", f: "ғ", g: "g", h: "ⓗ",
@@ -1843,6 +1938,2703 @@ const velvetScriptEl = document.getElementById("velvetScriptOutput");
 if (velvetScriptEl) {
   velvetScriptEl.textContent = text ? velvetScript(text) : velvetScript("Velvet Script");
 }
+
+ //demonic
+function bloodSharp(text) {
+  const map = {
+    'a':'ᗩ','b':'ᗷ','c':'ᑕ','d':'ᗪ','e':'E','f':'ᖴ',
+    'g':'G','h':'ᕼ','i':'I','j':'ᒍ','k':'K','l':'ᒪ',
+    'm':'ᗰ','n':'ᑎ','o':'O','p':'ᑭ','q':'ᑫ','r':'ᖇ',
+    's':'ᔕ','t':'T','u':'ᑌ','v':'ᐯ','w':'ᗯ','x':'᙭',
+    'y':'Y','z':'ᘔ',
+
+    'A':'ᗩ','B':'ᗷ','C':'ᑕ','D':'ᗪ','E':'E','F':'ᖴ',
+    'G':'G','H':'ᕼ','I':'I','J':'ᒍ','K':'K','L':'ᒪ',
+    'M':'ᗰ','N':'ᑎ','O':'O','P':'ᑭ','Q':'ᑫ','R':'ᖇ',
+    'S':'ᔕ','T':'T','U':'ᑌ','V':'ᐯ','W':'ᗯ','X':'᙭',
+    'Y':'Y','Z':'ᘔ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const bloodSharpEl = document.getElementById("bloodSharpOutput");
+if (bloodSharpEl) {
+  bloodSharpEl.textContent = text ? bloodSharp(text) : bloodSharp("Blood Sharp");
+}
+
+function darkBubble(text) {
+  const map = {
+    'a': '🅐', 'b': '🅑', 'c': '🅒', 'd': '🅓', 'e': '🅔',
+    'f': '🅕', 'g': '🅖', 'h': '🅗', 'i': '🅘', 'j': '🅙',
+    'k': '🅚', 'l': '🅛', 'm': '🅜', 'n': '🅝', 'o': '🅞',
+    'p': '🅟', 'q': '🅠', 'r': '🅡', 's': '🅢', 't': '🅣',
+    'u': '🅤', 'v': '🅥', 'w': '🅦', 'x': '🅧', 'y': '🅨',
+    'z': '🅩',
+    'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔',
+    'F': '🅕', 'G': '🅖', 'H': '🅗', 'I': '🅘', 'J': '🅙',
+    'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞',
+    'P': '🅟', 'Q': '🅠', 'R': '🅡', 'S': '🅢', 'T': '🅣',
+    'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧', 'Y': '🅨',
+    'Z': '🅩'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const darkBubbleEl = document.getElementById("darkBubbleOutput");
+if (darkBubbleEl) {
+  darkBubbleEl.textContent = text ? darkBubble(text) : darkBubble("Dark Bubble");
+}
+
+function bigRussian(text) {
+  const map = {
+    'a': 'Д', 'b': 'Б', 'c': 'C', 'd': 'D', 'e': 'Ξ',
+    'f': 'F', 'g': 'G', 'h': 'H', 'i': 'I', 'j': 'J',
+    'k': 'Ҝ', 'l': 'L', 'm': 'M', 'n': 'И', 'o': 'Ф',
+    'p': 'P', 'q': 'Ǫ', 'r': 'Я', 's': 'S', 't': 'Γ',
+    'u': 'Ц', 'v': 'V', 'w': 'Щ', 'x': 'Ж', 'y': 'У',
+    'z': 'Z',
+    'A': 'Д', 'B': 'Б', 'C': 'C', 'D': 'D', 'E': 'Ξ',
+    'F': 'F', 'G': 'G', 'H': 'H', 'I': 'I', 'J': 'J',
+    'K': 'Ҝ', 'L': 'L', 'M': 'M', 'N': 'И', 'O': 'Ф',
+    'P': 'P', 'Q': 'Ǫ', 'R': 'Я', 'S': 'S', 'T': 'Γ',
+    'U': 'Ц', 'V': 'V', 'W': 'Щ', 'X': 'Ж', 'Y': 'У',
+    'Z': 'Z'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const bigRussianEl = document.getElementById("bigRussianOutput");
+if (bigRussianEl) {
+  bigRussianEl.textContent = text ? bigRussian(text) : bigRussian("Big Russian");
+}
+function asianFusion(text) {
+  const map = {
+    'a': 'ﾑ', 'b': '乃', 'c': 'ᄃ', 'd': 'り', 'e': '乇',
+    'f': 'ｷ', 'g': 'ム', 'h': 'ん', 'i': 'ﾉ', 'j': 'ﾌ',
+    'k': 'ズ', 'l': 'ﾚ', 'm': 'ﾶ', 'n': '刀', 'o': 'の',
+    'p': 'ｱ', 'q': 'ゐ', 'r': '尺', 's': '丂', 't': 'ｲ',
+    'u': 'ひ', 'v': '√', 'w': 'W', 'x': 'ﾒ', 'y': 'ﾘ',
+    'z': '乙',
+    'A': 'ﾑ', 'B': '乃', 'C': 'ᄃ', 'D': 'り', 'E': '乇',
+    'F': 'ｷ', 'G': 'ム', 'H': 'ん', 'I': 'ﾉ', 'J': 'ﾌ',
+    'K': 'ズ', 'L': 'ﾚ', 'M': 'ﾶ', 'N': '刀', 'O': 'の',
+    'P': 'ｱ', 'Q': 'ゐ', 'R': '尺', 'S': '丂', 'T': 'ｲ',
+    'U': 'ひ', 'V': '√', 'W': 'W', 'X': 'ﾒ', 'Y': 'ﾘ',
+    'Z': '乙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const asianFusionEl = document.getElementById("asianFusionOutput");
+if (asianFusionEl) {
+  asianFusionEl.textContent = text ? asianFusion(text) : asianFusion("Asian Fusion");
+}
+
+function mythical(text) {
+  const map = {
+    'a': 'Λ', 'b': 'ß', 'c': 'Ƈ', 'd': 'Ð', 'e': 'Ë',
+    'f': 'Ғ', 'g': 'Ɠ', 'h': 'Ħ', 'i': 'Ï', 'j': 'J',
+    'k': 'Ҡ', 'l': 'Ł', 'm': '₥', 'n': 'Ŋ', 'o': 'Ø',
+    'p': 'P', 'q': 'Ǫ', 'r': 'Я', 's': 'Ƨ', 't': 'ŧ',
+    'u': 'ų', 'v': 'V', 'w': 'Щ', 'x': 'Ж', 'y': 'Ϋ',
+    'z': 'Z',
+    'A': 'Λ', 'B': 'ß', 'C': 'Ƈ', 'D': 'Ð', 'E': 'Ë',
+    'F': 'Ғ', 'G': 'Ɠ', 'H': 'Ħ', 'I': 'Ï', 'J': 'J',
+    'K': 'Ҡ', 'L': 'Ł', 'M': '₥', 'N': 'Ŋ', 'O': 'Ø',
+    'P': 'P', 'Q': 'Ǫ', 'R': 'Я', 'S': 'Ƨ', 'T': 'ŧ',
+    'U': 'ų', 'V': 'V', 'W': 'Щ', 'X': 'Ж', 'Y': 'Ϋ',
+    'Z': 'Z'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const mythicalEl = document.getElementById("mythicalOutput");
+if (mythicalEl) {
+  mythicalEl.textContent = text ? mythical(text) : mythical("Mythical");
+}
+
+function alpha(text) {
+  const map = {
+    'a': 'α', 'b': 'ɓ', 'c': 'ĉ', 'd': '∂', 'e': 'ε',
+    'f': 'ƒ', 'g': 'ɠ', 'h': 'ɦ', 'i': 'เ', 'j': 'ʝ',
+    'k': 'қ', 'l': 'ℓ', 'm': 'ɱ', 'n': 'ɳ', 'o': 'σ',
+    'p': 'ρ', 'q': 'φ', 'r': 'г', 's': 'ร', 't': 'ƭ',
+    'u': 'µ', 'v': 'ѵ', 'w': 'ω', 'x': 'א', 'y': 'ყ',
+    'z': 'ƺ',
+    'A': 'α', 'B': 'ɓ', 'C': 'ĉ', 'D': '∂', 'E': 'ε',
+    'F': 'ƒ', 'G': 'ɠ', 'H': 'ɦ', 'I': 'เ', 'J': 'ʝ',
+    'K': 'қ', 'L': 'ℓ', 'M': 'ɱ', 'N': 'ɳ', 'O': 'σ',
+    'P': 'ρ', 'Q': 'φ', 'R': 'г', 'S': 'ร', 'T': 'ƭ',
+    'U': 'µ', 'V': 'ѵ', 'W': 'ω', 'X': 'א', 'Y': 'ყ',
+    'Z': 'ƺ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const alphaEl = document.getElementById("alphaOutput");
+if (alphaEl) {
+  alphaEl.textContent = text ? alpha(text) : alpha("Alpha");
+}
+
+function liner(text) {
+  const map = {
+    'a': '₳', 'b': '฿', 'c': 'Ȼ', 'd': 'Ɖ', 'e': 'Ɇ',
+    'f': 'Ŧ', 'g': 'Ǥ', 'h': 'Ħ', 'i': 'ı', 'j': 'J',
+    'k': '₭', 'l': 'Ⱡ', 'm': '₥', 'n': '₦', 'o': 'Ø',
+    'p': '₱', 'q': 'Q', 'r': 'Ɽ', 's': '₴', 't': '₮',
+    'u': 'Ʉ', 'v': 'V', 'w': '₩', 'x': 'Ӿ', 'y': 'Ɏ',
+    'z': 'Ƶ',
+    'A': '₳', 'B': '฿', 'C': 'Ȼ', 'D': 'Ɖ', 'E': 'Ɇ',
+    'F': 'Ŧ', 'G': 'Ǥ', 'H': 'Ħ', 'I': 'ı', 'J': 'J',
+    'K': '₭', 'L': 'Ⱡ', 'M': '₥', 'N': '₦', 'O': 'Ø',
+    'P': '₱', 'Q': 'Q', 'R': 'Ɽ', 'S': '₴', 'T': '₮',
+    'U': 'Ʉ', 'V': 'V', 'W': '₩', 'X': 'Ӿ', 'Y': 'Ɏ',
+    'Z': 'Ƶ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const linerEl = document.getElementById("linerOutput");
+if (linerEl) {
+  linerEl.textContent = text ? liner(text) : liner("Liner");
+}
+
+function echo(text) {
+  const map = {
+    'a': 'ᗩ', 'b': 'ᗷ', 'c': 'ᑕ', 'd': 'ᗪ', 'e': 'ᙓ',
+    'f': 'ᖴ', 'g': 'ᘜ', 'h': 'ᕼ', 'i': 'ᓰ', 'j': 'ᒍ',
+    'k': 'K', 'l': 'ᒪ', 'm': 'ᗰ', 'n': 'ᑎ', 'o': 'O',
+    'p': 'ᑭ', 'q': 'ᑫ', 'r': 'ᖇ', 's': 'S', 't': 'ᑎ',
+    'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭', 'y': 'Ꭹ',
+    'z': 'Ꮓ',
+    'A': 'ᗩ', 'B': 'ᗷ', 'C': 'ᑕ', 'D': 'ᗪ', 'E': 'ᙓ',
+    'F': 'ᖴ', 'G': 'ᘜ', 'H': 'ᕼ', 'I': 'ᓰ', 'J': 'ᒍ',
+    'K': 'K', 'L': 'ᒪ', 'M': 'ᗰ', 'N': 'ᑎ', 'O': 'O',
+    'P': 'ᑭ', 'Q': 'ᑫ', 'R': 'ᖇ', 'S': 'S', 'T': 'ᑎ',
+    'U': 'ᑌ', 'V': 'ᐯ', 'W': 'ᗯ', 'X': '᙭', 'Y': 'Ꭹ',
+    'Z': 'Ꮓ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const echoEl = document.getElementById("echoOutput");
+if (echoEl) {
+  echoEl.textContent = text ? echo(text) : echo("Echo");
+}
+
+function elegant(text) {
+  const map = {
+    'a': 'მ', 'b': 'ზ', 'c': 'ე', 'd': 'ძ', 'e': 'პ',
+    'f': 'f', 'g': 'ც', 'h': 'h', 'i': 'í', 'j': 'ʝ',
+    'k': 'κ', 'l': 'l', 'm': 'ო', 'n': 'ղ', 'o': 'ѻ',
+    'p': 'ρ', 'q': 'გ', 'r': 'Γ', 's': 'ჰ', 't': 'ŧ',
+    'u': 'υ', 'v': 'v', 'w': 'w', 'x': 'ჯ', 'y': 'ყ',
+    'z': 'ɀ',
+    'A': 'მ', 'B': 'ზ', 'C': 'ე', 'D': 'ძ', 'E': 'პ',
+    'F': 'f', 'G': 'ც', 'H': 'h', 'I': 'í', 'J': 'ʝ',
+    'K': 'κ', 'L': 'l', 'M': 'ო', 'N': 'ղ', 'O': 'ѻ',
+    'P': 'ρ', 'Q': 'გ', 'R': 'Γ', 'S': 'ჰ', 'T': 'ŧ',
+    'U': 'υ', 'V': 'v', 'W': 'w', 'X': 'ჯ', 'Y': 'ყ',
+    'Z': 'ɀ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const elegantEl = document.getElementById("elegantOutput");
+if (elegantEl) {
+  elegantEl.textContent = text ? elegant(text) : elegant("Elegant");
+}
+
+function starsMid(text) {
+  const map = {
+    'a': 'A༙྇', 'b': 'B༙྇', 'c': 'C༙྇', 'd': 'D༙྇', 'e': 'E༙྇',
+    'f': 'F༙྇', 'g': 'G༙྇', 'h': 'H༙྇', 'i': 'I༙྇', 'j': 'J༙྇',
+    'k': 'K༙྇', 'l': 'L༙྇', 'm': 'M༙྇', 'n': 'N༙྇', 'o': 'O༙྇',
+    'p': 'P༙྇', 'q': 'Q༙྇', 'r': 'R༙྇', 's': 'S༙྇', 't': 'T༙྇',
+    'u': 'U༙྇', 'v': 'V༙྇', 'w': 'W༙྇', 'x': 'X༙྇', 'y': 'Y༙྇',
+    'z': 'Z༙྇',
+    'A': 'A༙྇', 'B': 'B༙྇', 'C': 'C༙྇', 'D': 'D༙྇', 'E': 'E༙྇',
+    'F': 'F༙྇', 'G': 'G༙྇', 'H': 'H༙྇', 'I': 'I༙྇', 'J': 'J༙྇',
+    'K': 'K༙྇', 'L': 'L༙྇', 'M': 'M༙྇', 'N': 'N༙྇', 'O': 'O༙྇',
+    'P': 'P༙྇', 'Q': 'Q༙྇', 'R': 'R༙྇', 'S': 'S༙྇', 'T': 'T༙྇',
+    'U': 'U༙྇', 'V': 'V༙྇', 'W': 'W༙྇', 'X': 'X༙྇', 'Y': 'Y༙྇',
+    'Z': 'Z༙྇'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const starsMidEl = document.getElementById("starsMidOutput");
+if (starsMidEl) {
+  starsMidEl.textContent = text ? starsMid(text) : starsMid("starsMid");
+}
+
+function superScript(text) {
+  const map = {
+    'a': 'ᴬ', 'b': 'ᴮ', 'c': 'ᶜ', 'd': 'ᴰ', 'e': 'ᴱ',
+    'f': 'ᶠ', 'g': 'ᴳ', 'h': 'ᴴ', 'i': 'ᴵ', 'j': 'ᴶ',
+    'k': 'ᴷ', 'l': 'ᴸ', 'm': 'ᴹ', 'n': 'ᴺ', 'o': 'ᴼ',
+    'p': 'ᴾ', 'q': 'ᑫ', 'r': 'ᴿ', 's': 'ˢ', 't': 'ᵀ',
+    'u': 'ᵁ', 'v': 'ⱽ', 'w': 'ᵂ', 'x': 'ˣ', 'y': 'ᵞ',
+    'z': 'ᶻ',
+    'A': 'ᴬ', 'B': 'ᴮ', 'C': 'ᶜ', 'D': 'ᴰ', 'E': 'ᴱ',
+    'F': 'ᶠ', 'G': 'ᴳ', 'H': 'ᴴ', 'I': 'ᴵ', 'J': 'ᴶ',
+    'K': 'ᴷ', 'L': 'ᴸ', 'M': 'ᴹ', 'N': 'ᴺ', 'O': 'ᴼ',
+    'P': 'ᴾ', 'Q': 'ᑫ', 'R': 'ᴿ', 'S': 'ˢ', 'T': 'ᵀ',
+    'U': 'ᵁ', 'V': 'ⱽ', 'W': 'ᵂ', 'X': 'ˣ', 'Y': 'ᵞ',
+    'Z': 'ᶻ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const superScriptEl = document.getElementById("superScriptOutput");
+if (superScriptEl) {
+  superScriptEl.textContent = text ? superScript(text) : superScript("Super Script");
+}
+
+function subScript(text) {
+  const map = {
+    'a': 'ₐ', 'b': 'b', 'c': 'c', 'd': 'd', 'e': 'ₑ',
+    'f': 'f', 'g': 'g', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ',
+    'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ', 'n': 'ₙ', 'o': 'ₒ',
+    'p': 'ₚ', 'q': 'q', 'r': 'ᵣ', 's': 'ₛ', 't': 'ₜ',
+    'u': 'ᵘ', 'v': 'ᵛ', 'w': 'w', 'x': 'ₓ', 'y': 'y',
+    'z': '𝓏',
+    'A': 'ₐ', 'B': 'b', 'C': 'c', 'D': 'd', 'E': 'ₑ',
+    'F': 'f', 'G': 'g', 'H': 'ₕ', 'I': 'ᵢ', 'J': 'ⱼ',
+    'K': 'ₖ', 'L': 'ₗ', 'M': 'ₘ', 'N': 'ₙ', 'O': 'ₒ',
+    'P': 'ₚ', 'Q': 'q', 'R': 'ᵣ', 'S': 'ₛ', 'T': 'ₜ',
+    'U': 'ᵘ', 'V': 'ᵛ', 'W': 'w', 'X': 'ₓ', 'Y': 'y',
+    'Z': '𝓏'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const subScriptEl = document.getElementById("subScriptOutput");
+if (subScriptEl) {
+  subScriptEl.textContent = text ? subScript(text) : subScript("Sub Script");
+}
+
+function boldItalic(text) {
+  const map = {
+    'a': '𝒂', 'b': '𝒃', 'c': '𝒄', 'd': '𝒅', 'e': '𝒆',
+    'f': '𝒇', 'g': '𝒈', 'h': '𝒉', 'i': '𝒊', 'j': '𝒋',
+    'k': '𝒌', 'l': '𝒍', 'm': '𝒎', 'n': '𝒏', 'o': '𝒐',
+    'p': '𝒑', 'q': '𝒒', 'r': '𝒓', 's': '𝒔', 't': '𝒕',
+    'u': '𝒖', 'v': '𝒗', 'w': '𝒘', 'x': '𝒙', 'y': '𝒚',
+    'z': '𝒛',
+    'A': '𝑨', 'B': '𝑩', 'C': '𝑪', 'D': '𝑫', 'E': '𝑬',
+    'F': '𝑭', 'G': '𝑮', 'H': '𝑯', 'I': '𝑰', 'J': '𝑱',
+    'K': '𝑲', 'L': '𝑳', 'M': '𝑴', 'N': '𝑵', 'O': '𝑶',
+    'P': '𝑷', 'Q': '𝑸', 'R': '𝑹', 'S': '𝑺', 'T': '𝑻',
+    'U': '𝑼', 'V': '𝑽', 'W': '𝑾', 'X': '𝑿', 'Y': '𝒀',
+    'Z': '𝒁'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const boldItalicEl = document.getElementById("boldItalicOutput");
+if (boldItalicEl) {
+  boldItalicEl.textContent = text ? boldItalic(text) : boldItalic("Bold Italic");
+}
+
+function ageOld(text) {
+  const map = {
+    'a': 'Ꭿ', 'b': 'Ᏸ', 'c': 'Ꮸ', 'd': 'Ꭰ', 'e': 'Ꭼ',
+    'f': 'Ꮀ', 'g': 'Ꮆ', 'h': 'Ꮋ', 'i': 'Ꭸ', 'j': 'Ꮰ',
+    'k': 'Ꮶ', 'l': 'Ꮭ', 'm': 'Ꮇ', 'n': 'Ꮑ', 'o': 'Ꮎ',
+    'p': 'Ꮲ', 'q': 'Ꮕ', 'r': 'Ꮢ', 's': 'Ꮥ', 't': 'Ꮦ',
+    'u': 'Ꮼ', 'v': 'Ꮙ', 'w': 'Ꮿ', 'x': 'Ꮂ', 'y': 'Ꮍ',
+    'z': 'Ꮓ',
+    'A': 'Ꭿ', 'B': 'Ᏸ', 'C': 'Ꮸ', 'D': 'Ꭰ', 'E': 'Ꭼ',
+    'F': 'Ꮀ', 'G': 'Ꮆ', 'H': 'Ꮋ', 'I': 'Ꭸ', 'J': 'Ꮰ',
+    'K': 'Ꮶ', 'L': 'Ꮭ', 'M': 'Ꮇ', 'N': 'Ꮑ', 'O': 'Ꮎ',
+    'P': 'Ꮲ', 'Q': 'Ꮕ', 'R': 'Ꮢ', 'S': 'Ꮥ', 'T': 'Ꮦ',
+    'U': 'Ꮼ', 'V': 'Ꮙ', 'W': 'Ꮿ', 'X': 'Ꮂ', 'Y': 'Ꮍ',
+    'Z': 'Ꮓ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const ageOldEl = document.getElementById("ageOldOutput");
+if (ageOldEl) {
+  ageOldEl.textContent = text ? ageOld(text) : ageOld("Age Old");
+}
+
+
+function dotJoiner(text) {
+  return text.split("").map(ch => ch + '̊⫶').join("");
+}
+
+const dotJoinerEl = document.getElementById("dotJoinerOutput");
+if (dotJoinerEl) {
+  dotJoinerEl.textContent = text ? dotJoiner(text) : dotJoiner("Dot Joiner");
+}
+
+function shade(text) {
+  return text.split("").map(ch => '░' + ch + '░').join("");
+}
+
+const shadeEl = document.getElementById("shadeOutput");
+if (shadeEl) {
+  shadeEl.textContent = text ? shade(text) : shade("Shade");
+}
+
+function crossAbove(text) {
+  return text.split("").map(ch => ch + '͓̽').join("");
+}
+
+const crossAboveEl = document.getElementById("crossAboveOutput");
+if (crossAboveEl) {
+  crossAboveEl.textContent = text ? crossAbove(text) : crossAbove("Cross Above");
+}
+
+function corner(text) {
+  return text.split("").map(ch => '⌜' + ch + '⌝').join("");
+}
+
+const cornerEl = document.getElementById("cornerOutput");
+if (cornerEl) {
+  cornerEl.textContent = text ? corner(text) : corner("Corner");
+}
+
+function squiggleRightLeft(text) {
+  return text.split("").map(ch => '⇜' + ch + '⇝').join("");
+}
+
+const squiggleRightLeftEl = document.getElementById("squiggleRightLeftOutput");
+if (squiggleRightLeftEl) {
+  squiggleRightLeftEl.textContent = text ? squiggleRightLeft(text) : squiggleRightLeft("Squiggle Right-Left");
+}
+
+function waveJoiner(text) {
+  return text.split("").map(ch => '≋' + ch + '≋').join("");
+}
+
+const waveJoinerEl = document.getElementById("waveJoinerOutput");
+if (waveJoinerEl) {
+  waveJoinerEl.textContent = text ? waveJoiner(text) : waveJoiner("Wave Joiner");
+}
+
+function whiteParenthesis(text) {
+  return text.split("").map(ch => '⦅' + ch + '⦆').join("");
+}
+
+const whiteParenthesisEl = document.getElementById("whiteParenthesisOutput");
+if (whiteParenthesisEl) {
+  whiteParenthesisEl.textContent = text ? whiteParenthesis(text) : whiteParenthesis("White Parenthesis");
+}
+
+function bulletJoin(text) {
+  return text.split("").map(ch => '▪▪' + ch + '▪▪').join("");
+}
+
+const bulletJoinEl = document.getElementById("bulletJoinOutput");
+if (bulletJoinEl) {
+  bulletJoinEl.textContent = text ? bulletJoin(text) : bulletJoin("Bullet Join");
+}
+
+function arrowJoiner(text) {
+  return text.split("").map(ch => '⤶⤷' + ch + '⤶⤷').join("");
+}
+
+const arrowJoinerEl = document.getElementById("arrowJoinerOutput");
+if (arrowJoinerEl) {
+  arrowJoinerEl.textContent = text ? arrowJoiner(text) : arrowJoiner("Arrow Joiner");
+}
+
+function slashedText(text) {
+  return text.split("").map(ch => '〵' + ch + '〵').join("");
+}
+
+const slashedTextEl = document.getElementById("slashedTextOutput");
+if (slashedTextEl) {
+  slashedTextEl.textContent = text ? slashedText(text) : slashedText("Slashed Text");
+}
+
+function blackFloretteText(text) {
+  return text.split("").map(ch => '【' + ch + '】').join("【 】");
+}
+
+const blackFloretteTextEl = document.getElementById("blackFloretteTextOutput");
+if (blackFloretteTextEl) {
+  blackFloretteTextEl.textContent = text ? blackFloretteText(text) : blackFloretteText("Black Florette Text");
+}
+
+function lineSeparatorBlock(text) {
+  return text.split("").map(ch => '╎' + ch + '╎').join("");
+}
+
+const lineSeparatorBlockEl = document.getElementById("lineSeparatorBlockOutput");
+if (lineSeparatorBlockEl) {
+  lineSeparatorBlockEl.textContent = text ? lineSeparatorBlock(text) : lineSeparatorBlock("Line Separator Block");
+}
+
+function lowLine(text) {
+  return text.split("").map(ch => ch + '̲').join("");
+}
+
+const lowLineEl = document.getElementById("lowLineOutput");
+if (lowLineEl) {
+  lowLineEl.textContent = text ? lowLine(text) : lowLine("Low Line");
+}
+
+function doubleMacron(text) {
+  return text.split("").map(ch => ch + '͟').join("");
+}
+
+const doubleMacronEl = document.getElementById("doubleMacronOutput");
+if (doubleMacronEl) {
+  doubleMacronEl.textContent = text ? doubleMacron(text) : doubleMacron("Double Macron");
+}
+
+function strangeLook(text) {
+  const map = {
+    'a': 'ค', 'b': '๒', 'c': 'ς', 'd': '๔', 'e': 'є',
+    'f': 'Ŧ', 'g': 'ﻮ', 'h': 'ђ', 'i': 'เ', 'j': 'ן',
+    'k': 'к', 'l': 'ɭ', 'm': '๓', 'n': 'ภ', 'o': '๏',
+    'p': 'ק', 'q': 'ợ', 'r': 'г', 's': 'ร', 't': 'Շ',
+    'u': 'ย', 'v': 'ש', 'w': 'ฬ', 'x': 'א', 'y': 'ץ',
+    'z': 'չ',
+    'A': 'ค', 'B': '๒', 'C': 'ς', 'D': '๔', 'E': 'є',
+    'F': 'Ŧ', 'G': 'ﻮ', 'H': 'ђ', 'I': 'เ', 'J': 'ן',
+    'K': 'к', 'L': 'ɭ', 'M': '๓', 'N': 'ภ', 'O': '๏',
+    'P': 'ק', 'Q': 'ợ', 'R': 'г', 'S': 'ร', 'T': 'Շ',
+    'U': 'ย', 'V': 'ש', 'W': 'ฬ', 'X': 'א', 'Y': 'ץ',
+    'Z': 'չ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const strangeLookEl = document.getElementById("strangeLookOutput");
+if (strangeLookEl) {
+  strangeLookEl.textContent = text ? strangeLook(text) : strangeLook("Strange Look");
+}
+
+function zombies(text) {
+  const map = {
+    'a': 'ǟ', 'b': 'ɮ', 'c': 'ƈ', 'd': 'ɖ', 'e': 'ɛ',
+    'f': 'ʄ', 'g': 'ɢ', 'h': 'ɦ', 'i': 'ɨ', 'j': 'ʝ',
+    'k': 'ӄ', 'l': 'ʟ', 'm': 'ʍ', 'n': 'Ն', 'o': 'օ',
+    'p': 'ք', 'q': 'զ', 'r': 'ʀ', 's': 'ֆ', 't': 'ȶ',
+    'u': 'ʊ', 'v': 'ʋ', 'w': 'ա', 'x': 'Ӽ', 'y': 'ʏ',
+    'z': 'ʐ',
+    'A': 'ǟ', 'B': 'ɮ', 'C': 'ƈ', 'D': 'ɖ', 'E': 'ɛ',
+    'F': 'ʄ', 'G': 'ɢ', 'H': 'ɦ', 'I': 'ɨ', 'J': 'ʝ',
+    'K': 'ӄ', 'L': 'ʟ', 'M': 'ʍ', 'N': 'Ն', 'O': 'օ',
+    'P': 'ք', 'Q': 'զ', 'R': 'ʀ', 'S': 'ֆ', 'T': 'ȶ',
+    'U': 'ʊ', 'V': 'ʋ', 'W': 'ա', 'X': 'Ӽ', 'Y': 'ʏ',
+    'Z': 'ʐ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const zombiesEl = document.getElementById("zombiesOutput");
+if (zombiesEl) {
+  zombiesEl.textContent = text ? zombies(text) : zombies("Zombies");
+}
+
+function creepy(text) {
+  const map = {
+    'a': 'ă', 'b': 'β', 'c': 'Č', 'd': 'Ď', 'e': 'Ĕ',
+    'f': 'Ŧ', 'g': 'Ğ', 'h': 'Ĥ', 'i': 'Ĩ', 'j': 'Ĵ',
+    'k': 'Ķ', 'l': 'Ĺ', 'm': 'М', 'n': 'Ń', 'o': 'Ő',
+    'p': 'Р', 'q': 'Q', 'r': 'Ŕ', 's': 'Ś', 't': 'Ť',
+    'u': 'Ú', 'v': 'V', 'w': 'Ŵ', 'x': 'Ж', 'y': 'Ŷ',
+    'z': 'Ź',
+    'A': 'Ă', 'B': 'β', 'C': 'Č', 'D': 'Ď', 'E': 'Ĕ',
+    'F': 'Ŧ', 'G': 'Ğ', 'H': 'Ĥ', 'I': 'Ĩ', 'J': 'Ĵ',
+    'K': 'Ķ', 'L': 'Ĺ', 'M': 'М', 'N': 'Ń', 'O': 'Ő',
+    'P': 'Р', 'Q': 'Q', 'R': 'Ŕ', 'S': 'Ś', 'T': 'Ť',
+    'U': 'Ú', 'V': 'V', 'W': 'Ŵ', 'X': 'Ж', 'Y': 'Ŷ',
+    'Z': 'Ź'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const creepyEl = document.getElementById("creepyOutput");
+if (creepyEl) {
+  creepyEl.textContent = text ? creepy(text) : creepy("Creepy");
+}
+
+function mysterious(text) {
+  return text.split("").map(ch => ch + '҉').join("");
+}
+
+const mysteriousEl = document.getElementById("mysteriousOutput");
+if (mysteriousEl) {
+  mysteriousEl.textContent = text ? mysterious(text) : mysterious("Mysterious");
+}
+
+function bizarre(text) {
+  return text.split("").map(ch => ch + '̾').join("");
+}
+
+const bizarreEl = document.getElementById("bizarreOutput");
+if (bizarreEl) {
+  bizarreEl.textContent = text ? bizarre(text) : bizarre("Bizarre");
+}
+
+function zigzag(text) {
+  const combining = ['̵', '̡', '͍', '͍', '̿', '͐', '͝'];
+  return text.split("").map(ch => {
+    const randomCombining = combining.sort(() => 0.5 - Math.random()).slice(0, 3).join('');
+    return ch + randomCombining;
+  }).join("");
+}
+
+const zigzagEl = document.getElementById("zigzagOutput");
+if (zigzagEl) {
+  zigzagEl.textContent = text ? zigzag(text) : zigzag("zigzag");
+}
+
+function halloween(text) {
+  const combining = ['͉', '͔', '͍', '̢', '͖', '͜', '͙', '̝', '̠', '̫', '͕', '̟', '̡', '̼', '͓', '̺', '̞', '͎', '̻', '͇', '̪', '̦', '͚', '̘'];
+  return text.split("").map(ch => {
+    const randomCombining = combining.sort(() => 0.5 - Math.random()).slice(0, 3).join('');
+    return ch + randomCombining;
+  }).join("");
+}
+
+const halloweenEl = document.getElementById("halloweenOutput");
+if (halloweenEl) {
+  halloweenEl.textContent = text ? halloween(text) : halloween("Halloween");
+}
+
+function freaky(text) {
+  const combining = ['̔', '͘', '͑', '̽', '͆', '̐', '̈́', '̿', '͊', '͒', '̾', '͠', '̕', '̀', '͋', '͌', '̓', '͛', '̚', '͝'];
+  return text.split("").map(ch => {
+    const randomCombining = combining.sort(() => 0.5 - Math.random()).slice(0, 3).join('');
+    return ch + randomCombining;
+  }).join("");
+}
+
+const freakyEl = document.getElementById("freakyOutput");
+if (freakyEl) {
+  freakyEl.textContent = text ? freaky(text) : freaky("Freaky");
+}
+
+function scratch(text) {
+  const map = {
+    'a': 'ค', 'b': '๒', 'c': 'ς', 'd': '๔', 'e': 'є',
+    'f': 'Ŧ', 'g': 'ﻮ', 'h': 'ђ', 'i': 'เ', 'j': 'ן',
+    'k': 'к', 'l': 'ɭ', 'm': '๓', 'n': 'ภ', 'o': '๏',
+    'p': 'ק', 'q': 'ợ', 'r': 'г', 's': 'ร', 't': 'Շ',
+    'u': 'ย', 'v': 'ש', 'w': 'ฬ', 'x': 'א', 'y': 'ץ',
+    'z': 'չ',
+    'A': 'ค', 'B': '๒', 'C': 'ς', 'D': '๔', 'E': 'є',
+    'F': 'Ŧ', 'G': 'ﻮ', 'H': 'ђ', 'I': 'เ', 'J': 'ן',
+    'K': 'к', 'L': 'ɭ', 'M': '๓', 'N': 'ภ', 'O': '๏',
+    'P': 'ק', 'Q': 'ợ', 'R': 'г', 'S': 'ร', 'T': 'Շ',
+    'U': 'ย', 'V': 'ש', 'W': 'ฬ', 'X': 'א', 'Y': 'ץ',
+    'Z': 'չ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const scratchEl = document.getElementById("scratchOutput");
+if (scratchEl) {
+  scratchEl.textContent = text ? scratch(text) : scratch("Scratch");
+}
+
+function doodle(text) {
+  const map = {
+    'a': 'ą', 'b': 'ც', 'c': 'ƈ', 'd': 'ɖ', 'e': 'ɛ',
+    'f': 'ʄ', 'g': 'ɠ', 'h': 'ɧ', 'i': 'ı', 'j': 'ʝ',
+    'k': 'ƙ', 'l': 'Ɩ', 'm': 'ɱ', 'n': 'ŋ', 'o': 'ơ',
+    'p': '℘', 'q': 'զ', 'r': 'ཞ', 's': 'ʂ', 't': 'ɬ',
+    'u': 'ų', 'v': '۷', 'w': 'ῳ', 'x': 'ҳ', 'y': 'ყ',
+    'z': 'ʑ',
+    'A': 'ą', 'B': 'ც', 'C': 'ƈ', 'D': 'ɖ', 'E': 'ɛ',
+    'F': 'ʄ', 'G': 'ɠ', 'H': 'ɧ', 'I': 'ı', 'J': 'ʝ',
+    'K': 'ƙ', 'L': 'Ɩ', 'M': 'ɱ', 'N': 'ŋ', 'O': 'ơ',
+    'P': '℘', 'Q': 'զ', 'R': 'ཞ', 'S': 'ʂ', 'T': 'ɬ',
+    'U': 'ų', 'V': '۷', 'W': 'ῳ', 'X': 'ҳ', 'Y': 'ყ',
+    'Z': 'ʑ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const doodleEl = document.getElementById("doodleOutput");
+if (doodleEl) {
+  doodleEl.textContent = text ? doodle(text) : doodle("Doodle");
+}
+
+function pencil(text) {
+  const map = {
+    'a': 'Λ', 'b': 'Ϧ', 'c': 'ㄈ', 'd': 'Ð', 'e': 'Ɛ',
+    'f': 'F', 'g': 'Ɠ', 'h': 'н', 'i': 'ɪ', 'j': 'ﾌ',
+    'k': 'Қ', 'l': 'Ł', 'm': '௱', 'n': 'Л', 'o': 'Ø',
+    'p': 'þ', 'q': 'Ҩ', 'r': '尺', 's': 'ら', 't': 'Ť',
+    'u': 'Ц', 'v': 'Ɣ', 'w': 'Ɯ', 'x': 'χ', 'y': 'Ϥ',
+    'z': 'Ẕ',
+    'A': 'Λ', 'B': 'Ϧ', 'C': 'ㄈ', 'D': 'Ð', 'E': 'Ɛ',
+    'F': 'F', 'G': 'Ɠ', 'H': 'н', 'I': 'ɪ', 'J': 'ﾌ',
+    'K': 'Қ', 'L': 'Ł', 'M': '௱', 'N': 'Л', 'O': 'Ø',
+    'P': 'þ', 'Q': 'Ҩ', 'R': '尺', 'S': 'ら', 'T': 'Ť',
+    'U': 'Ц', 'V': 'Ɣ', 'W': 'Ɯ', 'X': 'χ', 'Y': 'Ϥ',
+    'Z': 'Ẕ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const pencilEl = document.getElementById("pencilOutput");
+if (pencilEl) {
+  pencilEl.textContent = text ? pencil(text) : pencil("Pencil");
+}
+
+function scribble(text) {
+  const map = {
+    'a': 'Թ', 'b': 'Յ', 'c': 'Շ', 'd': 'Ժ', 'e': 'ȝ',
+    'f': 'Բ', 'g': 'Գ', 'h': 'ɧ', 'i': 'ɿ', 'j': 'ʝ',
+    'k': 'ƙ', 'l': 'ʅ', 'm': 'ʍ', 'n': 'Ռ', 'o': 'Ծ',
+    'p': 'ρ', 'q': 'φ', 'r': 'Ր', 's': 'Տ', 't': 'Ե',
+    'u': 'Մ', 'v': 'ע', 'w': 'ա', 'x': 'Ճ', 'y': 'Վ',
+    'z': 'Հ',
+    'A': 'Թ', 'B': 'Յ', 'C': 'Շ', 'D': 'Ժ', 'E': 'ȝ',
+    'F': 'Բ', 'G': 'Գ', 'H': 'ɧ', 'I': 'ɿ', 'J': 'ʝ',
+    'K': 'ƙ', 'L': 'ʅ', 'M': 'ʍ', 'N': 'Ռ', 'O': 'Ծ',
+    'P': 'ρ', 'Q': 'φ', 'R': 'Ր', 'S': 'Տ', 'T': 'Ե',
+    'U': 'Մ', 'V': 'ע', 'W': 'ա', 'X': 'Ճ', 'Y': 'Վ',
+    'Z': 'Հ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const scribbleEl = document.getElementById("scribbleOutput");
+if (scribbleEl) {
+  scribbleEl.textContent = text ? scribble(text) : scribble("Scribble");
+}
+
+function curlicue(text) {
+  const map = {
+    'a': 'ƛ', 'b': 'Ɓ', 'c': 'Ƈ', 'd': 'Ɗ', 'e': 'Є',
+    'f': 'Ƒ', 'g': 'Ɠ', 'h': 'Ӈ', 'i': 'Ɩ', 'j': 'ʆ',
+    'k': 'Ƙ', 'l': 'Լ', 'm': 'M', 'n': 'Ɲ', 'o': 'Ơ',
+    'p': 'Ƥ', 'q': 'Ƣ', 'r': 'Ʀ', 's': 'Ƨ', 't': 'Ƭ',
+    'u': 'Ʋ', 'v': 'Ɣ', 'w': 'Ɯ', 'x': 'Х', 'y': 'Ƴ',
+    'z': 'Ȥ',
+    'A': 'ƛ', 'B': 'Ɓ', 'C': 'Ƈ', 'D': 'Ɗ', 'E': 'Є',
+    'F': 'Ƒ', 'G': 'Ɠ', 'H': 'Ӈ', 'I': 'Ɩ', 'J': 'ʆ',
+    'K': 'Ƙ', 'L': 'Լ', 'M': 'M', 'N': 'Ɲ', 'O': 'Ơ',
+    'P': 'Ƥ', 'Q': 'Ƣ', 'R': 'Ʀ', 'S': 'Ƨ', 'T': 'Ƭ',
+    'U': 'Ʋ', 'V': 'Ɣ', 'W': 'Ɯ', 'X': 'Х', 'Y': 'Ƴ',
+    'Z': 'Ȥ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const curlicueEl = document.getElementById("curlicueOutput");
+if (curlicueEl) {
+  curlicueEl.textContent = text ? curlicue(text) : curlicue("Curlicue");
+}
+
+function drawn(text) {
+  return text.split("").map(ch => ch + '͓̽').join("");
+}
+
+const drawnEl = document.getElementById("drawnOutput");
+if (drawnEl) {
+  drawnEl.textContent = text ? drawn(text) : drawn("drawn");
+}
+function surrounded(text) {
+  return text.split("").map(ch => '⧼' + ch + '̼⧽').join("");
+}
+
+const surroundedEl = document.getElementById("surroundedOutput");
+if (surroundedEl) {
+  surroundedEl.textContent = text ? surrounded(text) : surrounded("Surrounded");
+}
+
+function fenced(text) {
+  return text.split("").map(ch => '[' + ch + '̲̅]').join("");
+}
+
+const fencedEl = document.getElementById("fencedOutput");
+if (fencedEl) {
+  fencedEl.textContent = text ? fenced(text) : fenced("Fenced");
+}
+
+function thickBox(text) {
+  return text.split("").map(ch => '⟦' + ch + '⟧').join("");
+}
+
+const thickBoxEl = document.getElementById("thickBoxOutput");
+if (thickBoxEl) {
+  thickBoxEl.textContent = text ? thickBox(text) : thickBox("Thick Box");
+}
+
+function integral(text) {
+  return text.split("").map(ch => '⌠' + ch + '⌡').join("");
+}
+
+const integralEl = document.getElementById("integralOutput");
+if (integralEl) {
+  integralEl.textContent = text ? integral(text) : integral("Integral");
+}
+
+function moon(text) {
+  return text.split("").map(ch => '☽☾' + ch + '☽☾').join("");
+}
+
+const moonEl = document.getElementById("moonOutput");
+if (moonEl) {
+  moonEl.textContent = text ? moon(text) : moon("Moon");
+}
+
+function tibetanStyle(text) {
+  return text.split("").map(ch => '࿚࿙' + ch + '࿚࿙').join("");
+}
+
+const tibetanStyleEl = document.getElementById("tibetanStyleOutput");
+if (tibetanStyleEl) {
+  tibetanStyleEl.textContent = text ? tibetanStyle(text) : tibetanStyle("Tibetan Style");
+}
+
+function newsquareBracketAngleFrameStyle(text) {
+  return text.split("").map(ch => '⁆⁅' + ch + '⁆⁅').join("");
+}
+
+const newsquareBracketAngleFrameStyleEl = document.getElementById("newsquareBracketAngleFrameStyleOutput");
+if (newsquareBracketAngleFrameStyleEl) {
+  newsquareBracketAngleFrameStyleEl.textContent = text ? newsquareBracketAngleFrameStyle(text) : newsquareBracketAngleFrameStyle("Newsquare Bracket Angle Frame Style");
+}
+
+function housedStyle(text) {
+  return text.split("").map(ch => ' ⊹ ' + ch + ' ⊹ ').join("");
+}
+
+const housedStyleEl = document.getElementById("housedStyleOutput");
+if (housedStyleEl) {
+  housedStyleEl.textContent = text ? housedStyle(text) : housedStyle("Housed Style");
+}
+
+function fountainStyle(text) {
+  return text.split("").map(ch => ' ☑ ' + ch + ' ☑ ').join("");
+}
+
+const fountainStyleEl = document.getElementById("fountainStyleOutput");
+if (fountainStyleEl) {
+  fountainStyleEl.textContent = text ? fountainStyle(text) : fountainStyle("Fountain Style");
+}
+
+function prettified(text) {
+  return text.split("").map(ch => 'ミ★ ' + ch + ' ★彡').join('ミ★ ★彡');
+}
+
+const prettifiedEl = document.getElementById("prettifiedOutput");
+if (prettifiedEl) {
+  prettifiedEl.textContent = text ? prettified(text) : prettified("Prettified");
+}
+
+function starLined(text) {
+  return text.split("").map(ch => '- ' + ch + ' -').join('- -');
+}
+
+const starLinedEl = document.getElementById("starLinedOutput");
+if (starLinedEl) {
+  starLinedEl.textContent = text ? starLined(text) : starLined("StarLined");
+}
+
+function rectangleSideFade(text) {
+  const map = {
+    'a': 'Ꭿ', 'b': 'Ᏸ', 'c': 'Ꮸ', 'd': 'Ꭰ', 'e': 'Ꭼ',
+    'f': 'Ꮀ', 'g': 'Ꮆ', 'h': 'Ꮋ', 'i': 'Ꭸ', 'j': 'Ꮰ',
+    'k': 'Ꮶ', 'l': 'Ꮭ', 'm': 'Ꮇ', 'n': 'Ꮑ', 'o': 'Ꮎ',
+    'p': 'Ꮲ', 'q': 'Ꮕ', 'r': 'Ꮢ', 's': 'Ꮥ', 't': 'Ꮦ',
+    'u': 'Ꮼ', 'v': 'Ꮙ', 'w': 'Ꮿ', 'x': 'Ꮂ', 'y': 'Ꮍ',
+    'z': 'Ꮓ',
+    'A': 'Ꭿ', 'B': 'Ᏸ', 'C': 'Ꮸ', 'D': 'Ꭰ', 'E': 'Ꭼ',
+    'F': 'Ꮀ', 'G': 'Ꮆ', 'H': 'Ꮋ', 'I': 'Ꭸ', 'J': 'Ꮰ',
+    'K': 'Ꮶ', 'L': 'Ꮭ', 'M': 'Ꮇ', 'N': 'Ꮑ', 'O': 'Ꮎ',
+    'P': 'Ꮲ', 'Q': 'Ꮕ', 'R': 'Ꮢ', 'S': 'Ꮥ', 'T': 'Ꮦ',
+    'U': 'Ꮼ', 'V': 'Ꮙ', 'W': 'Ꮿ', 'X': 'Ꮂ', 'Y': 'Ꮍ',
+    'Z': 'Ꮓ'
+  };
+  return '█▓▒­░⡷⠂ ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' ⠐⢾░▒▓█';
+}
+
+const rectangleSideFadeEl = document.getElementById("rectangleSideFadeOutput");
+if (rectangleSideFadeEl) {
+  rectangleSideFadeEl.textContent = text ? rectangleSideFade(text) : rectangleSideFade("Rectangle side fade");
+}
+
+function quotation(text) {
+  const map = {
+    'a': 'ꋫ', 'b': 'ꍗ', 'c': 'ꏳ', 'd': 'ꂟ', 'e': 'ꏂ',
+    'f': 'ꄟ', 'g': 'ꍌ', 'h': 'ꃬ', 'i': '꒐', 'j': '꒻',
+    'k': 'ꀘ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꂚ', 'o': 'ꉻ',
+    'p': 'ꉣ', 'q': 'ꋠ', 'r': 'ꋪ', 's': 'ꑄ', 't': '꓄',
+    'u': 'ꀎ', 'v': '꒦', 'w': 'ꅐ', 'x': 'ꉼ', 'y': 'ꐞ',
+    'z': '꒗',
+    'A': 'ꋫ', 'B': 'ꍗ', 'C': 'ꏳ', 'D': 'ꂟ', 'E': 'ꏂ',
+    'F': 'ꄟ', 'G': 'ꍌ', 'H': 'ꃬ', 'I': '꒐', 'J': '꒻',
+    'K': 'ꀘ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꂚ', 'O': 'ꉻ',
+    'P': 'ꉣ', 'Q': 'ꋠ', 'R': 'ꋪ', 'S': 'ꑄ', 'T': '꓄',
+    'U': 'ꀎ', 'V': '꒦', 'W': 'ꅐ', 'X': 'ꉼ', 'Y': 'ꐞ',
+    'Z': '꒗'
+  };
+  return '❝ ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' ❞';
+}
+
+const quotationEl = document.getElementById("quotationOutput");
+if (quotationEl) {
+  quotationEl.textContent = text ? quotation(text) : quotation("Quotation");
+}
+
+function cuteNotes(text) {
+  const map = {
+    'a': '🅐', 'b': '🅑', 'c': '🅒', 'd': '🅓', 'e': '🅔',
+    'f': '∱', 'g': '🅖', 'h': '🅗', 'i': '🅘', 'j': '🅙',
+    'k': '🅚', 'l': '🅛', 'm': '🅜', 'n': '🅝', 'o': '🅞',
+    'p': '🅟', 'q': '🅠', 'r': '🅡', 's': 'ֆ', 't': '🅣',
+    'u': '🅤', 'v': '🅥', 'w': '🅦', 'x': '🅧', 'y': '🅨',
+    'z': '🅩',
+    'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔',
+    'F': '∱', 'G': '🅖', 'H': '🅗', 'I': '🅘', 'J': '🅙',
+    'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞',
+    'P': '🅟', 'Q': '🅠', 'R': '🅡', 'S': 'ֆ', 'T': '🅣',
+    'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧', 'Y': '🅨',
+    'Z': '🅩'
+  };
+  return '⁺˚⋆｡°✩ ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' ✩°｡⋆˚⁺';
+}
+
+const cuteNotesEl = document.getElementById("cuteNotesOutput");
+if (cuteNotesEl) {
+  cuteNotesEl.textContent = text ? cuteNotes(text) : cuteNotes("Cute Notes");
+}
+
+function superFrog(text) {
+  const map = {
+    'a': 'ꍏ', 'b': 'ꌃ', 'c': 'ꉓ', 'd': 'ꀸ', 'e': 'ꍟ',
+    'f': 'ꎇ', 'g': 'ꁅ', 'h': 'ꃅ', 'i': 'ꀤ', 'j': 'ꀭ',
+    'k': 'ꀘ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꈤ', 'o': 'ꂦ',
+    'p': 'ꉣ', 'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌗ', 't': '꓄',
+    'u': 'ꀎ', 'v': 'ꃴ', 'w': 'ꅏ', 'x': 'ꊼ', 'y': 'ꌩ',
+    'z': 'ꁴ',
+    'A': 'ꍏ', 'B': 'ꌃ', 'C': 'ꉓ', 'D': 'ꀸ', 'E': 'ꍟ',
+    'F': 'ꎇ', 'G': 'ꁅ', 'H': 'ꃅ', 'I': 'ꀤ', 'J': 'ꀭ',
+    'K': 'ꀘ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꈤ', 'O': 'ꂦ',
+    'P': 'ꉣ', 'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌗ', 'T': '꓄',
+    'U': 'ꀎ', 'V': 'ꃴ', 'W': 'ꅏ', 'X': 'ꊼ', 'Y': 'ꌩ',
+    'Z': 'ꁴ'
+  };
+  return '▄︻デ♬ ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' ♣══━一';
+}
+
+const superFrogEl = document.getElementById("superFrogOutput");
+if (superFrogEl) {
+  superFrogEl.textContent = text ? superFrog(text) : superFrog("Super Frog");
+}
+
+function lovedrops(text) {
+  const map = {
+    'a': '₳', 'b': '฿', 'c': 'Ȼ', 'd': 'Ɖ', 'e': 'Ɇ',
+    'f': 'Ŧ', 'g': 'Ǥ', 'h': 'Ħ', 'i': 'ı', 'j': 'J',
+    'k': '₭', 'l': 'Ⱡ', 'm': '₥', 'n': '₦', 'o': 'Ø',
+    'p': '₱', 'q': 'Q', 'r': 'Ɽ', 's': '₴', 't': '₮',
+    'u': 'Ʉ', 'v': 'V', 'w': '₩', 'x': 'Ӿ', 'y': 'Ɏ',
+    'z': 'Ƶ',
+    'A': '₳', 'B': '฿', 'C': 'Ȼ', 'D': 'Ɖ', 'E': 'Ɇ',
+    'F': 'Ŧ', 'G': 'Ǥ', 'H': 'Ħ', 'I': 'ı', 'J': 'J',
+    'K': '₭', 'L': 'Ⱡ', 'M': '₥', 'N': '₦', 'O': 'Ø',
+    'P': '₱', 'Q': 'Q', 'R': 'Ɽ', 'S': '₴', 'T': '₮',
+    'U': 'Ʉ', 'V': 'V', 'W': '₩', 'X': 'Ӿ', 'Y': 'Ɏ',
+    'Z': 'Ƶ'
+  };
+  return '˚₊· ͟͟͞͞➳❥ ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' 𖨆♡𖨆';
+}
+
+const lovedropsEl = document.getElementById("lovedropsOutput");
+if (lovedropsEl) {
+  lovedropsEl.textContent = text ? lovedrops(text) : lovedrops("Lovedrops");
+}
+
+function butterfly(text) {
+  const map = {
+    'a': 'ᗩ', 'b': 'ᗷ', 'c': 'ᑕ', 'd': 'ᗪ', 'e': 'ᗴ',
+    'f': 'ᖴ', 'g': 'Ǥ', 'h': 'ᕼ', 'i': 'Ꭵ', 'j': 'ᒎ',
+    'k': 'ᛕ', 'l': 'ᒪ', 'm': 'ᗰ', 'n': 'ᑎ', 'o': 'ᗝ',
+    'p': 'ᑭ', 'q': 'Ɋ', 'r': 'ᖇ', 's': 'ᔕ', 't': '丅',
+    'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭', 'y': 'Ƴ',
+    'z': '乙',
+    'A': 'ᗩ', 'B': 'ᗷ', 'C': 'ᑕ', 'D': 'ᗪ', 'E': 'ᗴ',
+    'F': 'ᖴ', 'G': 'Ǥ', 'H': 'ᕼ', 'I': 'Ꭵ', 'J': 'ᒎ',
+    'K': 'ᛕ', 'L': 'ᒪ', 'M': 'ᗰ', 'N': 'ᑎ', 'O': 'ᗝ',
+    'P': 'ᑭ', 'Q': 'Ɋ', 'R': 'ᖇ', 'S': 'ᔕ', 'T': '丅',
+    'U': 'ᑌ', 'V': 'ᐯ', 'W': 'ᗯ', 'X': '᙭', 'Y': 'Ƴ',
+    'Z': '乙'
+  };
+  return 'ʚïɞ𓆩♡𓆪 ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' 𓆩♡𓆪 ཐིཋྀ';
+}
+
+const butterflyEl = document.getElementById("butterflyOutput");
+if (butterflyEl) {
+  butterflyEl.textContent = text ? butterfly(text) : butterfly("Butterfly");
+}
+
+function cutiePie(text) {
+  const map = {
+    'a': 'α', 'b': 'Ⴆ', 'c': 'ƈ', 'd': 'ԃ', 'e': 'ҽ',
+    'f': 'ϝ', 'g': 'ɠ', 'h': 'ԋ', 'i': 'ι', 'j': 'ʝ',
+    'k': 'ƙ', 'l': 'ʅ', 'm': 'ɱ', 'n': 'ɳ', 'o': 'σ',
+    'p': 'ρ', 'q': 'ϙ', 'r': 'ɾ', 's': 'ʂ', 't': 'ƚ',
+    'u': 'υ', 'v': 'ʋ', 'w': 'ɯ', 'x': 'x', 'y': 'ყ',
+    'z': 'ȥ',
+    'A': 'α', 'B': 'Ⴆ', 'C': 'ƈ', 'D': 'ԃ', 'E': 'ҽ',
+    'F': 'ϝ', 'G': 'ɠ', 'H': 'ԋ', 'I': 'ι', 'J': 'ʝ',
+    'K': 'ƙ', 'L': 'ʅ', 'M': 'ɱ', 'N': 'ɳ', 'O': 'σ',
+    'P': 'ρ', 'Q': 'ϙ', 'R': 'ɾ', 'S': 'ʂ', 'T': 'ƚ',
+    'U': 'υ', 'V': 'ʋ', 'W': 'ɯ', 'X': 'x', 'Y': 'ყ',
+    'Z': 'ȥ'
+  };
+  return '(◍•ᴗ•◍) ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' ෴෴';
+}
+
+const cutiePieEl = document.getElementById("cutiePieOutput");
+if (cutiePieEl) {
+  cutiePieEl.textContent = text ? cutiePie(text) : cutiePie("Cutie Pie");
+}
+
+function unblocked(text) {
+  const map = {
+    'a': 'Ꭿ', 'b': 'в', 'c': 'Ȼ', 'd': '𝐝', 'e': 'ⓔ',
+    'f': '∱', 'g': 'Ɠ', 'h': 'ⓗ', 'i': '𝒊', 'j': 'ʝ',
+    'k': 'ꀘ', 'l': 'ʅ', 'm': 'ₘ', 'n': '𝑛', 'o': 'ὄ',
+    'p': 'ꉣ', 'q': '🅠', 'r': 'ʀ', 's': '𝘀', 't': '𝙩',
+    'u': 'ꮼ', 'v': '𝐯', 'w': 'w', 'x': 'ꉧ', 'y': '𝘺',
+    'z': 'ɀ',
+    'A': 'α', 'B': '𝗕', 'C': 'ꉔ', 'D': 'Ɗ', 'E': '𝔼',
+    'F': '𝐹', 'G': '𝙂', 'H': 'Ӈ', 'I': '𝑰', 'J': 'ጋ',
+    'K': '𝐊', 'L': '𝘓', 'M': '𝕄', 'N': '刀', 'O': '🅞',
+    'P': 'ｱ', 'Q': 'q', 'R': '𝖱', 'S': '🅢', 'T': 'ŧ',
+    'U': 'υ', 'V': '√', 'W': 'ฬ', 'X': 'א', 'Y': '🆈',
+    'Z': '𝑍'
+  };
+  return '▞▞▞ ' + text.split("").map(ch => map[ch] || ch).join(" ") + ' ▞▞▞';
+}
+
+const unblockedEl = document.getElementById("unblockedOutput");
+if (unblockedEl) {
+  unblockedEl.textContent = text ? unblocked(text) : unblocked("unblocked");
+}
+function emojiPanda(text) {
+  const map = {
+    'a': 'ꁲ', 'b': 'ꃃ', 'c': 'ꇃ', 'd': 'ꂡ', 'e': 'ꏹ',
+    'f': 'ꄙ', 'g': 'ꁍ', 'h': 'ꀍ', 'i': 'ꀤ', 'j': 'ꀭ',
+    'k': 'ꈵ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꋊ', 'o': 'ꁏ',
+    'p': 'ꉣ', 'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌗ', 't': 'ꋖ',
+    'u': 'ꌈ', 'v': 'ꃴ', 'w': 'ꅏ', 'x': 'ꋚ', 'y': 'ꂖ',
+    'z': 'ꁴ',
+    'A': 'ꁲ', 'B': 'ꃃ', 'C': 'ꇃ', 'D': 'ꂡ', 'E': 'ꏹ',
+    'F': 'ꄙ', 'G': 'ꁍ', 'H': 'ꀍ', 'I': 'ꀤ', 'J': 'ꀭ',
+    'K': 'ꈵ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꋊ', 'O': 'ꁏ',
+    'P': 'ꉣ', 'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌗ', 'T': 'ꋖ',
+    'U': 'ꌈ', 'V': 'ꃴ', 'W': 'ꅏ', 'X': 'ꋚ', 'Y': 'ꂖ',
+    'Z': 'ꁴ'
+  };
+  return '🔥🐼  ' + text.split("").map(ch => map[ch] || ch).join(" ") + '  👽💎';
+}
+
+const emojiPandaEl = document.getElementById("emojiPandaOutput");
+if (emojiPandaEl) {
+  emojiPandaEl.textContent = text ? emojiPanda(text) : emojiPanda("Emoji Panda");
+}
+
+function alienGem(text) {
+  const map = {
+    'a': 'Ã', 'b': '𝕓', 'c': 'Ⓒ', 'd': 'ᗪ', 'e': 'Ẹ',
+    'f': 'ｆ', 'g': 'Ğ', 'h': '𝓗', 'i': '𝕀', 'j': '𝓙',
+    'k': 'Ҝ', 'l': '𝕃', 'm': 'ⓜ', 'n': 'ή', 'o': 'σ',
+    'p': '𝓅', 'q': 'ợ', 'r': '𝐑', 's': 'ѕ', 't': 'т',
+    'u': '𝓊', 'v': 'ν', 'w': 'ᗯ', 'x': 'Ж', 'y': '𝔂',
+    'z': 'ｚ',
+    'A': 'Ａ', 'B': 'ᵇ', 'C': '¢', 'D': '𝕕', 'E': 'ⓔ',
+    'F': 'Ⓕ', 'G': 'ﻮ', 'H': 'ђ', 'I': 'Ꭵ', 'J': 'ｊ',
+    'K': 'ᛕ', 'L': 'ℓ', 'M': '𝓂', 'N': 'ⓝ', 'O': '𝔬',
+    'P': '𝓅', 'Q': 'q', 'R': 'я', 'S': '𝔰', 'T': '𝔱',
+    'U': '𝓾', 'V': 'ν', 'W': 'Ⓦ', 'X': 'χ', 'Y': 'ү',
+    'Z': 'z'
+  };
+  return 'ඏ✌  ' + text.split("").map(ch => map[ch] || ch).join(" ") + '  👹🌷';
+}
+
+const alienGemEl = document.getElementById("alienGemOutput");
+if (alienGemEl) {
+  alienGemEl.textContent = text ? alienGem(text) : alienGem("Alien Gem");
+}
+
+function wavyStyle(text) {
+  const map = {
+    'a': '𝒜', 'b': 'ҍ', 'c': 'ℭ', 'd': 'ꂟ', 'e': 'ꏂ',
+    'f': '𝑭', 'g': 'ꁍ', 'h': 'ꃬ', 'i': 'ᓰ', 'j': 'ʝ',
+    'k': '𝙺', 'l': 'ᒪ', 'm': '𝕄', 'n': '𝐍', 'o': '💮',
+    'p': '🅟', 'q': 'ℚ', 'r': 'ℜ', 's': 'Ş', 't': 'т',
+    'u': 'Ա', 'v': 'ᐯ', 'w': 'ա', 'x': '𝖃', 'y': '𝒴',
+    'z': 'Հ',
+    'A': '卂', 'B': 'ℬ', 'C': 'Ꮯ', 'D': '🅳', 'E': '𝐞',
+    'F': 'ꄘ', 'G': '𝑔', 'H': 'ᕼ', 'I': 'ì', 'J': '꒻',
+    'K': '𝓀', 'L': 'l', 'M': 'ɱ', 'N': 'Ｎ', 'O': '🍪',
+    'P': 'ᕵ', 'Q': '𝓺', 'R': 'r', 'S': 's', 'T': 'ȶ',
+    'U': 'Ꮼ', 'V': 'ע', 'W': '𝖜', 'X': 'X', 'Y': 'վ',
+    'Z': 'Ȥ'
+  };
+  return 'ıllıllı  ' + text.split("").map(ch => map[ch] || ch).join(" ") + '  ıllıllı';
+}
+
+const wavyStyleEl = document.getElementById("wavyStyleOutput");
+if (wavyStyleEl) {
+  wavyStyleEl.textContent = text ? wavyStyle(text) : wavyStyle("Wavy Style");
+}
+
+function barsMusic(text) {
+  const map = {
+    'a': '𝔄', 'b': '𝑩', 'c': '¢', 'd': '◗', 'e': '𝐸',
+    'f': 'ʄ', 'g': '❡', 'h': 'Ꮒ', 'i': '♗', 'j': 'J',
+    'k': '𝔎', 'l': '꒒', 'm': 'ꂵ', 'n': '𝓝', 'o': '💞',
+    'p': 'ℙ', 'q': 'ꁸ', 'r': 'ɾ', 's': '𝘚', 't': 'Ꮖ',
+    'u': '⩏', 'v': '⩔', 'w': 'Ꮃ', 'x': '𝑿', 'y': '𝒀',
+    'z': '𝗭',
+    'A': '♬', 'B': '𝚋', 'C': 'ƈ', 'D': '໓', 'E': 'ℯ',
+    'F': '𝐟', 'G': '𝕘', 'H': 'ᕼ', 'I': '𝑖', 'J': 'ꀭ',
+    'K': '𝚔', 'L': 'Ꮮ', 'M': '𝖒', 'N': '𝑛', 'O': '☯',
+    'P': '🅿', 'Q': 'ᕴ', 'R': 'ᖇ', 'S': '𝓈', 'T': '꓄',
+    'U': '⩏', 'V': 'ѵ', 'W': 'ꅐ', 'X': '🅇', 'Y': '🆈',
+    'Z': '𝘻'
+  };
+  return '▌│█║▌║▌║  ' + text.split("").map(ch => map[ch] || ch).join(" ") + '  ║▌║▌║█│▌';
+}
+
+const barsMusicEl = document.getElementById("barsMusicOutput");
+if (barsMusicEl) {
+  barsMusicEl.textContent = text ? barsMusic(text) : barsMusic("Bars Music");
+}
+
+function strikethroughHeart(text) {
+  return '*•.¸♡ ' + text.split("").map(ch => ch + '̶').join(" ̶") + ' ̶♡¸.•*';
+}
+
+const strikethroughHeartEl = document.getElementById("strikethroughHeartOutput");
+if (strikethroughHeartEl) {
+  strikethroughHeartEl.textContent = text ? strikethroughHeart(text) : strikethroughHeart("Strikethrough Heart");
+}
+
+function musicNotes(text) {
+  return '♫ ♪ ♫ ' + text.split("").map(ch => ch + '̷').join(" ̷") + ' ̷♫ ♪ ♫';
+}
+
+const musicNotesEl = document.getElementById("musicNotesOutput");
+if (musicNotesEl) {
+  musicNotesEl.textContent = text ? musicNotes(text) : musicNotes("Music Notes");
+}
+
+function tildeOverlay(text) {
+  return text.split("").map(ch => ch + '̴').join("");
+}
+
+const tildeOverlayEl = document.getElementById("tildeOverlayOutput");
+if (tildeOverlayEl) {
+  tildeOverlayEl.textContent = text ? tildeOverlay(text) : tildeOverlay("Tilde Overlay");
+}
+
+function slashThrough(text) {
+  const map = {
+    'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎',
+    'f': '𝚏', 'g': '𝚐', 'h': '𝚑', 'i': '𝚒', 'j': '𝚓',
+    'k': '𝚔', 'l': '𝚕', 'm': '𝚖', 'n': '𝚗', 'o': '𝚘',
+    'p': '𝚙', 'q': '𝚚', 'r': '𝚛', 's': '𝚜', 't': '𝚝',
+    'u': '𝚞', 'v': '𝚟', 'w': '𝚠', 'x': '𝚡', 'y': '𝚢',
+    'z': '𝚣',
+    'A': '𝙰', 'B': '𝙱', 'C': '𝙲', 'D': '𝙳', 'E': '𝙴',
+    'F': '𝙵', 'G': '𝙶', 'H': '𝙷', 'I': '𝙸', 'J': '𝙹',
+    'K': '𝙺', 'L': '𝙻', 'M': '𝙼', 'N': '𝙽', 'O': '𝙾',
+    'P': '𝙿', 'Q': '𝚀', 'R': '𝚁', 'S': '𝚂', 'T': '𝚃',
+    'U': '𝚄', 'V': '𝚅', 'W': '𝚆', 'X': '𝚇', 'Y': '𝚈',
+    'Z': '𝚉'
+  };
+  return text.split("").map(ch => (map[ch] || ch) + '̷').join("");
+}
+
+const slashThroughEl = document.getElementById("slashThroughOutput");
+if (slashThroughEl) {
+  slashThroughEl.textContent = text ? slashThrough(text) : slashThrough("Slash Through");
+}
+
+function topBottom(text) {
+  return text.split("").map(ch => ch + '̲̅').join("");
+}
+
+const topBottomEl = document.getElementById("topBottomOutput");
+if (topBottomEl) {
+  topBottomEl.textContent = text ? topBottom(text) : topBottom("Top Bottom");
+}
+
+function doubleOverline(text) {
+  return text.split("").map(ch => ch + '̿').join("");
+}
+
+const doubleOverlineEl = document.getElementById("doubleOverlineOutput");
+if (doubleOverlineEl) {
+  doubleOverlineEl.textContent = text ? doubleOverline(text) : doubleOverline("Double Overline");
+}
+
+function arrowUnderline(text) {
+  return text.split("").map(ch => ch + '͢').join("");
+}
+
+const arrowUnderlineEl = document.getElementById("arrowUnderlineOutput");
+if (arrowUnderlineEl) {
+  arrowUnderlineEl.textContent = text ? arrowUnderline(text) : arrowUnderline("Arrow Underline");
+}
+function demonicOccult(text) {
+  const map = {
+    'a':'ค','b':'๒','c':'ς','d':'๔','e':'є','f':'Ŧ',
+    'g':'ﻮ','h':'ђ','i':'เ','j':'ן','k':'к','l':'ɭ',
+    'm':'๓','n':'ภ','o':'๏','p':'ק','q':'ợ','r':'г',
+    's':'ร','t':'Շ','u':'ย','v':'ש','w':'ฬ','x':'א',
+    'y':'ץ','z':'չ',
+
+    'A':'ค','B':'๒','C':'ς','D':'๔','E':'є','F':'Ŧ',
+    'G':'ﻮ','H':'ђ','I':'เ','J':'ן','K':'к','L':'ɭ',
+    'M':'๓','N':'ภ','O':'๏','P':'ק','Q':'ợ','R':'г',
+    'S':'ร','T':'Շ','U':'ย','V':'ש','W':'ฬ','X':'א',
+    'Y':'ץ','Z':'չ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const demonicOccultEl = document.getElementById("demonicOccultOutput");
+if (demonicOccultEl) {
+  demonicOccultEl.textContent = text
+    ? demonicOccult(text)
+    : demonicOccult("Demonic Occult");
+}
+
+function glitchCursed(text) {
+  const marks = [
+    '\u0300','\u0301','\u0302','\u0303',
+    '\u0304','\u0305','\u0306','\u0307',
+    '\u0308','\u030A','\u030C',
+    '\u0316','\u0317','\u0318',
+    '\u0319','\u031A','\u0334','\u0335'
+  ];
+
+  return text.split("").map(ch => {
+    if (ch === " ") return ch;
+    let out = ch;
+    const count = 1 + Math.floor(Math.random() * 2); // controlled glitch
+    for (let i = 0; i < count; i++) {
+      out += marks[Math.floor(Math.random() * marks.length)];
+    }
+    return out;
+  }).join("");
+}
+const glitchCursedEl = document.getElementById("glitchCursedOutput");
+if (glitchCursedEl) {
+  glitchCursedEl.textContent = text
+    ? glitchCursed(text)
+    : glitchCursed("Glitch Cursed");
+}
+
+function ashesText(text) {
+  const map = {
+    'a':'ᴀ','b':'ʙ','c':'ᴄ','d':'ᴅ','e':'ᴇ','f':'ꜰ',
+    'g':'ɢ','h':'ʜ','i':'ɪ','j':'ᴊ','k':'ᴋ','l':'ʟ',
+    'm':'ᴍ','n':'ɴ','o':'ᴏ','p':'ᴘ','q':'ǫ','r':'ʀ',
+    's':'ꜱ','t':'ᴛ','u':'ᴜ','v':'ᴠ','w':'ᴡ','x':'x',
+    'y':'ʏ','z':'ᴢ',
+
+    'A':'ᴀ','B':'ʙ','C':'ᴄ','D':'ᴅ','E':'ᴇ','F':'ꜰ',
+    'G':'ɢ','H':'ʜ','I':'ɪ','J':'ᴊ','K':'ᴋ','L':'ʟ',
+    'M':'ᴍ','N':'ɴ','O':'ᴏ','P':'ᴘ','Q':'ǫ','R':'ʀ',
+    'S':'ꜱ','T':'ᴛ','U':'ᴜ','V':'ᴠ','W':'ᴡ','X':'x',
+    'Y':'ʏ','Z':'ᴢ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const ashesTextEl = document.getElementById("ashesTextOutput");
+if (ashesTextEl) {
+  ashesTextEl.textContent = text
+    ? ashesText(text)
+    : ashesText("Ashes");
+}
+
+
+function glitchyZalgo(text) {
+  const up = [
+    '\u0300','\u0301','\u0302','\u0303','\u0304','\u0305',
+    '\u0306','\u0307','\u0308','\u030A','\u030C'
+  ];
+
+  const mid = [
+    '\u0334','\u0335','\u0336','\u0337','\u0338'
+  ];
+
+  const down = [
+    '\u0316','\u0317','\u0318','\u0319','\u031A',
+    '\u0323','\u0324','\u0325','\u0326','\u0327',
+    '\u0328','\u0329','\u032D','\u032E','\u0330'
+  ];
+
+  return text.split("").map(ch => {
+    if (ch === " ") return ch;
+
+    let out = ch;
+
+    const upCount = 1 + Math.floor(Math.random() * 3);
+    const midCount = Math.floor(Math.random() * 2);
+    const downCount = 2 + Math.floor(Math.random() * 4);
+
+    for (let i = 0; i < upCount; i++) {
+      out += up[Math.floor(Math.random() * up.length)];
+    }
+    for (let i = 0; i < midCount; i++) {
+      out += mid[Math.floor(Math.random() * mid.length)];
+    }
+    for (let i = 0; i < downCount; i++) {
+      out += down[Math.floor(Math.random() * down.length)];
+    }
+
+    return out;
+  }).join("");
+}
+
+
+const glitchyZalgoEl = document.getElementById("glitchyZalgoOutput");
+if (glitchyZalgoEl) {
+  glitchyZalgoEl.textContent = text
+    ? glitchyZalgo(text)
+    : glitchyZalgo("Glitchy Zalgo");
+}
+
+function gothicScary(text) {
+  const map = {
+    'a':'𝖆','b':'𝖇','c':'𝖈','d':'𝖉','e':'𝖊','f':'𝖋',
+    'g':'𝖌','h':'𝖍','i':'𝖎','j':'𝖏','k':'𝖐','l':'𝖑',
+    'm':'𝖒','n':'𝖓','o':'𝖔','p':'𝖕','q':'𝖖','r':'𝖗',
+    's':'𝖘','t':'𝖙','u':'𝖚','v':'𝖛','w':'𝖜','x':'𝖝',
+    'y':'𝖞','z':'𝖟',
+
+    'A':'𝕬','B':'𝕭','C':'𝕮','D':'𝕯','E':'𝕰','F':'𝕱',
+    'G':'𝕲','H':'𝕳','I':'𝕴','J':'𝕵','K':'𝕶','L':'𝕷',
+    'M':'𝕸','N':'𝕹','O':'𝕺','P':'𝕻','Q':'𝕼','R':'𝕽',
+    'S':'𝕾','T':'𝕿','U':'𝖀','V':'𝖁','W':'𝖂','X':'𝖃',
+    'Y':'𝖄','Z':'𝖅'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const gothicScaryEl = document.getElementById("gothicScaryOutput");
+if (gothicScaryEl) {
+  gothicScaryEl.textContent = text
+    ? gothicScary(text)
+    : gothicScary("Gothic Scary");
+}
+
+function darkFantasy(text) {
+  const map = {
+    'a':'α','b':'ɓ','c':'ƈ','d':'ɗ','e':'ҽ','f':'ƒ',
+    'g':'ɠ','h':'ħ','i':'ɨ','j':'ʝ','k':'ƙ','l':'ʟ',
+    'm':'ɱ','n':'ɳ','o':'σ','p':'ρ','q':'զ','r':'ɾ',
+    's':'ʂ','t':'ƚ','u':'ʋ','v':'ʋ','w':'ω','x':'χ',
+    'y':'ყ','z':'ʐ',
+
+    'A':'Δ','B':'β','C':'Ƈ','D':'Ɗ','E':'Ξ','F':'Ƒ',
+    'G':'Ɠ','H':'Ħ','I':'Ι','J':'ʝ','K':'Ƙ','L':'Ɫ',
+    'M':'Μ','N':'Ɲ','O':'Θ','P':'Ƥ','Q':'Ɋ','R':'Ʀ',
+    'S':'Ƨ','T':'Ƭ','U':'Ʊ','V':'Ʋ','W':'Ѡ','X':'Ж',
+    'Y':'¥','Z':'Ƶ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const darkFantasyEl = document.getElementById("darkFantasyOutput");
+if (darkFantasyEl) {
+  darkFantasyEl.textContent = text
+    ? darkFantasy(text)
+    : darkFantasy("Dark Fantasy");
+}
+
+function nightmareText(text) {
+  const map = {
+    'a':'λ','b':'ƀ','c':'ↄ','d':'ɗ','e':'є','f':'Ғ',
+    'g':'ɠ','h':'һ','i':'ı','j':'ʝ','k':'ƙ','l':'ʟ',
+    'm':'ʍ','n':'η','o':'ø','p':'ρ','q':'զ','r':'ɾ',
+    's':'ϟ','t':'†','u':'υ','v':'ѵ','w':'ω','x':'✕',
+    'y':'γ','z':'ȥ',
+
+    'A':'Λ','B':'ß','C':'Ↄ','D':'Ð','E':'Ξ','F':'Ғ',
+    'G':'Ǥ','H':'Ħ','I':'Ι','J':'ʝ','K':'Ҡ','L':'Ɫ',
+    'M':'Μ','N':'И','O':'Ø','P':'Ƥ','Q':'Ǫ','R':'Я',
+    'S':'Ϟ','T':'†','U':'Ʊ','V':'Ѵ','W':'Ш','X':'✕',
+    'Y':'Ұ','Z':'Ƶ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const nightmareTextEl = document.getElementById("nightmareTextOutput");
+if (nightmareTextEl) {
+  nightmareTextEl.textContent = text
+    ? nightmareText(text)
+    : nightmareText("Nightmare");
+}
+function ritualSoText(text) {
+  const map = {
+    // Lowercase completely replaced with So symbols
+    'a':'☯','b':'☬','c':'☸','d':'☢','e':'☣','f':'☤',
+    'g':'☥','h':'☦','i':'☧','j':'☨','k':'☩','l':'☪',
+    'm':'☫','n':'☭','o':'☮','p':'☯','q':'☸','r':'☹',
+    's':'☻','t':'☼','u':'☽','v':'☾','w':'♄','x':'♅',
+    'y':'♆','z':'♇',
+
+    // Uppercase completely replaced with So symbols
+    'A':'⚀','B':'⚁','C':'⚂','D':'⚃','E':'⚄','F':'⚅',
+    'G':'☘','H':'☙','I':'☚','J':'☛','K':'☜','L':'☝',
+    'M':'☞','N':'☟','O':'☠','P':'☡','Q':'☢','R':'☣',
+    'S':'☤','T':'☥','U':'☦','V':'☧','W':'☨','X':'☩',
+    'Y':'☪','Z':'☫',
+
+    // Some basic punctuation
+    '!':'✶','?':'✷','*':'✸','+':'✹','@':'✺','&':'✻',
+    '%':'✼','#':'✽','$':'✾'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const ritualSoTextEl = document.getElementById("ritualSoTextOutput");
+if (ritualSoTextEl) {
+  ritualSoTextEl.textContent = text
+    ? ritualSoText(text)
+    : ritualSoText("Ritual So");
+}
+function hellfireText(text) {
+  const map = {
+    // Lowercase letters → “hellfire” style symbols
+    'a':'Ⱥ','b':'ɮ','c':'Ƈ','d':'Đ','e':'Ɇ','f':'Ƒ',
+    'g':'Ǥ','h':'Ӊ','i':'Ꭵ','j':'Ɉ','k':'Ҝ','l':'Ӏ',
+    'm':'Ɱ','n':'Ŋ','o':'Ø','p':'Þ','q':'Ɋ','r':'Я',
+    's':'Ƨ','t':'Ƭ','u':'Ʋ','v':'Ѵ','w':'Ш','x':'Ӿ',
+    'y':'Ɏ','z':'Ƶ',
+
+    // Uppercase letters → “hellfire” style symbols
+    'A':'Ⱥ','B':'ɮ','C':'Ƈ','D':'Đ','E':'Ɇ','F':'Ƒ',
+    'G':'Ǥ','H':'Ӊ','I':'Ꭵ','J':'Ɉ','K':'Ҝ','L':'Ӏ',
+    'M':'Ɱ','N':'Ŋ','O':'Ø','P':'Þ','Q':'Ɋ','R':'Я',
+    'S':'Ƨ','T':'Ƭ','U':'Ʋ','V':'Ѵ','W':'Ш','X':'Ӿ',
+    'Y':'Ɏ','Z':'Ƶ',
+
+    // Fire/chaotic symbols
+    '!':'🔥','?':'⚡','*':'✦','+':'✧','@':'☥','&':'⚜',
+    '%':'☢','#':'⛧','$':'⚡'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const hellfireTextEl = document.getElementById("hellfireTextOutput");
+if (hellfireTextEl) {
+  hellfireTextEl.textContent = text
+    ? hellfireText(text)
+    : hellfireText("Hellfire");
+}
+function boneScript(text) {
+  const map = {
+    // Lowercase → Symbol characters
+    'a':'☠','b':'⚓','c':'⚒','d':'✙','e':'✦','f':'✧',
+    'g':'⚡','h':'✪','i':'✠','j':'✵','k':'✶','l':'☤',
+    'm':'✸','n':'✹','o':'✺','p':'✻','q':'✼','r':'✽',
+    's':'✾','t':'✿','u':'❁','v':'❂','w':'❃','x':'❄',
+    'y':'❅','z':'❆',
+
+    // Uppercase → Symbol characters
+    'A':'★','B':'☆','C':'☉','D':'☼','E':'☾','F':'☽',
+    'G':'☿','H':'♁','I':'♀','J':'♃','K':'♄','L':'♅',
+    'M':'♆','N':'♇','O':'♈','P':'♉','Q':'♊','R':'♋',
+    'S':'♌','T':'♍','U':'♎','V':'♏','W':'♐','X':'♑',
+    'Y':'♒','Z':'♓',
+
+    // Punctuation / symbols
+    '!':'☢','?':'☣','*':'⚜','+':'✥','@':'☤','&':'⚛',
+    '%':'☮','#':'☯','$':'✵'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const boneScriptEl = document.getElementById("boneScriptOutput");
+if (boneScriptEl) {
+  boneScriptEl.textContent = text
+    ? boneScript(text)
+    : boneScript("Bone Script");
+}
+function elderRunes(text) {
+  const map = {
+    // Lowercase → Runic
+    'a':'ᚨ','b':'ᛒ','c':'ᚲ','d':'ᛞ','e':'ᛖ','f':'ᚠ',
+    'g':'ᚷ','h':'ᚺ','i':'ᛁ','j':'ᛃ','k':'ᚲ','l':'ᛚ',
+    'm':'ᛗ','n':'ᚾ','o':'ᛟ','p':'ᛈ','q':'ᛩ','r':'ᚱ',
+    's':'ᛋ','t':'ᛏ','u':'ᚢ','v':'ᚡ','w':'ᚹ','x':'ᛪ',
+    'y':'ᛇ','z':'ᛉ',
+
+    // Uppercase → Runic
+    'A':'ᚨ','B':'ᛒ','C':'ᚲ','D':'ᛞ','E':'ᛖ','F':'ᚠ',
+    'G':'ᚷ','H':'ᚺ','I':'ᛁ','J':'ᛃ','K':'ᚲ','L':'ᛚ',
+    'M':'ᛗ','N':'ᚾ','O':'ᛟ','P':'ᛈ','Q':'ᛩ','R':'ᚱ',
+    'S':'ᛋ','T':'ᛏ','U':'ᚢ','V':'ᚡ','W':'ᚹ','X':'ᛪ',
+    'Y':'ᛇ','Z':'ᛉ',
+
+    // Optional runic symbols
+    '!':'ᛉ','?':'ᛦ','*':'ᛤ','+':'ᛥ','@':'ᛣ','&':'ᛢ',
+    '%':'ᛧ','#':'ᛨ','$':'ᛩ'
+  };
+
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const elderRunesEl = document.getElementById("elderRunesOutput");
+if (elderRunesEl) {
+  elderRunesEl.textContent = text
+    ? elderRunes(text)
+    : elderRunes("Elder Runes");
+}
+
+
+
+ //end demonic
+
+function doubleStruckNumber(text) {
+  const map = {
+    '0': '𝟘', '1': '𝟙', '2': '𝟚', '3': '𝟛', '4': '𝟜',
+    '5': '𝟝', '6': '𝟞', '7': '𝟟', '8': '𝟠', '9': '𝟡'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const doubleStruckNumberEl = document.getElementById("doubleStruckNumberOutput");
+if (doubleStruckNumberEl) {
+  doubleStruckNumberEl.textContent = text ? doubleStruckNumber(text) : doubleStruckNumber("123456789");
+}
+
+// Bold
+function boldNumber(text) {
+  const map = {
+    '0': '𝟎', '1': '𝟏', '2': '𝟐', '3': '𝟑', '4': '𝟒',
+    '5': '𝟓', '6': '𝟔', '7': '𝟕', '8': '𝟖', '9': '𝟗'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Monospace
+function monospaceNumber(text) {
+  const map = {
+    '0': '𝟶', '1': '𝟷', '2': '𝟸', '3': '𝟹', '4': '𝟺',
+    '5': '𝟻', '6': '𝟼', '7': '𝟽', '8': '𝟾', '9': '𝟿'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Fullwidth
+function fullwidthNumber(text) {
+  const map = {
+    '0': '０', '1': '１', '2': '２', '3': '３', '4': '４',
+    '5': '５', '6': '６', '7': '７', '8': '８', '9': '９'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Parenthesized
+function parenthesizedNumber(text) {
+  const map = {
+    '1': '⑴', '2': '⑵', '3': '⑶', '4': '⑷', '5': '⑸',
+    '6': '⑹', '7': '⑺', '8': '⑻', '9': '⑼', '0': '⓪'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Keycap Emoji
+function keycapNumber(text) {
+  const map = {
+    '0': '0️⃣', '1': '1️⃣', '2': '2️⃣', '3': '3️⃣', '4': '4️⃣',
+    '5': '5️⃣', '6': '6️⃣', '7': '7️⃣', '8': '8️⃣', '9': '9️⃣'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Circled
+function circledNumber(text) {
+  const map = {
+    '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④',
+    '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Negative Circled
+function negativeCircledNumber(text) {
+  const map = {
+    '0': '⓿', '1': '❶', '2': '❷', '3': '❸', '4': '❹',
+    '5': '❺', '6': '❻', '7': '❼', '8': '❽', '9': '❾'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Superscript
+function superscriptNumber(text) {
+  const map = {
+    '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
+    '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Subscript
+function subscriptNumber(text) {
+  const map = {
+    '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄',
+    '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Double Circled
+function doubleCircledNumber(text) {
+  const map = {
+    '1': '⓵', '2': '⓶', '3': '⓷', '4': '⓸', '5': '⓹',
+    '6': '⓺', '7': '⓻', '8': '⓼', '9': '⓽', '0': '⓪'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Roman Numeral
+function romanNumber(text) {
+  const map = {
+    '1': 'Ⅰ', '2': 'Ⅱ', '3': 'Ⅲ', '4': 'Ⅳ', '5': 'Ⅴ',
+    '6': 'Ⅵ', '7': 'Ⅶ', '8': 'Ⅷ', '9': 'Ⅸ', '0': '0'
+  };
+  return text.split("").map(ch => map[ch] || ch).join(" ").trim();
+}
+
+// Small Roman Numeral
+function smallRomanNumber(text) {
+  const map = {
+    '1': 'ⅰ', '2': 'ⅱ', '3': 'ⅲ', '4': 'ⅳ', '5': 'ⅴ',
+    '6': 'ⅵ', '7': 'ⅶ', '8': 'ⅷ', '9': 'ⅸ', '0': '0'
+  };
+  return text.split("").map(ch => map[ch] || ch).join(" ").trim();
+}
+
+// Arabic-Indic
+function arabicIndicNumber(text) {
+  const map = {
+    '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤',
+    '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Sans-Serif
+function sansSerifNumber(text) {
+  const map = {
+    '0': '𝟢', '1': '𝟣', '2': '𝟤', '3': '𝟥', '4': '𝟦',
+    '5': '𝟧', '6': '𝟨', '7': '𝟩', '8': '𝟪', '9': '𝟫'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Sans-Serif Bold
+function sansSerifBoldNumber(text) {
+  const map = {
+    '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰',
+    '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Upside Down
+function upsideDownNumber(text) {
+  const map = {
+    '0': '0', '1': '⇂', '2': 'ᘔ', '3': 'Ɛ', '4': '߈',
+    '5': 'ϛ', '6': '9', '7': 'ㄥ', '8': '8', '9': '6'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+
+// Initialize all outputs
+const boldNumberEl = document.getElementById("boldNumberOutput");
+if (boldNumberEl) {
+  boldNumberEl.textContent = text ? boldNumber(text) : boldNumber("0123456789");
+}
+
+const monospaceNumberEl = document.getElementById("monospaceNumberOutput");
+if (monospaceNumberEl) {
+  monospaceNumberEl.textContent = text ? monospaceNumber(text) : monospaceNumber("0123456789");
+}
+
+const fullwidthNumberEl = document.getElementById("fullwidthNumberOutput");
+if (fullwidthNumberEl) {
+  fullwidthNumberEl.textContent = text ? fullwidthNumber(text) : fullwidthNumber("0123456789");
+}
+
+const parenthesizedNumberEl = document.getElementById("parenthesizedNumberOutput");
+if (parenthesizedNumberEl) {
+  parenthesizedNumberEl.textContent = text ? parenthesizedNumber(text) : parenthesizedNumber("0123456789");
+}
+
+const keycapNumberEl = document.getElementById("keycapNumberOutput");
+if (keycapNumberEl) {
+  keycapNumberEl.textContent = text ? keycapNumber(text) : keycapNumber("0123456789");
+}
+
+const circledNumberEl = document.getElementById("circledNumberOutput");
+if (circledNumberEl) {
+  circledNumberEl.textContent = text ? circledNumber(text) : circledNumber("0123456789");
+}
+
+const negativeCircledNumberEl = document.getElementById("negativeCircledNumberOutput");
+if (negativeCircledNumberEl) {
+  negativeCircledNumberEl.textContent = text ? negativeCircledNumber(text) : negativeCircledNumber("0123456789");
+}
+
+const superscriptNumberEl = document.getElementById("superscriptNumberOutput");
+if (superscriptNumberEl) {
+  superscriptNumberEl.textContent = text ? superscriptNumber(text) : superscriptNumber("0123456789");
+}
+
+const subscriptNumberEl = document.getElementById("subscriptNumberOutput");
+if (subscriptNumberEl) {
+  subscriptNumberEl.textContent = text ? subscriptNumber(text) : subscriptNumber("0123456789");
+}
+
+const doubleCircledNumberEl = document.getElementById("doubleCircledNumberOutput");
+if (doubleCircledNumberEl) {
+  doubleCircledNumberEl.textContent = text ? doubleCircledNumber(text) : doubleCircledNumber("0123456789");
+}
+
+const romanNumberEl = document.getElementById("romanNumberOutput");
+if (romanNumberEl) {
+  romanNumberEl.textContent = text ? romanNumber(text) : romanNumber("123456789");
+}
+
+const smallRomanNumberEl = document.getElementById("smallRomanNumberOutput");
+if (smallRomanNumberEl) {
+  smallRomanNumberEl.textContent = text ? smallRomanNumber(text) : smallRomanNumber("123456789");
+}
+
+const arabicIndicNumberEl = document.getElementById("arabicIndicNumberOutput");
+if (arabicIndicNumberEl) {
+  arabicIndicNumberEl.textContent = text ? arabicIndicNumber(text) : arabicIndicNumber("0123456789");
+}
+
+const sansSerifNumberEl = document.getElementById("sansSerifNumberOutput");
+if (sansSerifNumberEl) {
+  sansSerifNumberEl.textContent = text ? sansSerifNumber(text) : sansSerifNumber("0123456789");
+}
+
+const sansSerifBoldNumberEl = document.getElementById("sansSerifBoldNumberOutput");
+if (sansSerifBoldNumberEl) {
+  sansSerifBoldNumberEl.textContent = text ? sansSerifBoldNumber(text) : sansSerifBoldNumber("0123456789");
+}
+
+const upsideDownNumberEl = document.getElementById("upsideDownNumberOutput");
+if (upsideDownNumberEl) {
+  upsideDownNumberEl.textContent = text ? upsideDownNumber(text) : upsideDownNumber("0123456789");
+}
+
+function squares(text) {
+  const map = {
+    'a': '🄰', 'b': '🄱', 'c': '🄲', 'd': '🄳', 'e': '🄴',
+    'f': '🄵', 'g': '🄶', 'h': '🄷', 'i': '🄸', 'j': '🄹',
+    'k': '🄺', 'l': '🄻', 'm': '🄼', 'n': '🄽', 'o': '🄾',
+    'p': '🄿', 'q': '🅀', 'r': '🅁', 's': '🅂', 't': '🅃',
+    'u': '🅄', 'v': '🅅', 'w': '🅆', 'x': '🅇', 'y': '🅈',
+    'z': '🅉',
+    'A': '🄰', 'B': '🄱', 'C': '🄲', 'D': '🄳', 'E': '🄴',
+    'F': '🄵', 'G': '🄶', 'H': '🄷', 'I': '🄸', 'J': '🄹',
+    'K': '🄺', 'L': '🄻', 'M': '🄼', 'N': '🄽', 'O': '🄾',
+    'P': '🄿', 'Q': '🅀', 'R': '🅁', 'S': '🅂', 'T': '🅃',
+    'U': '🅄', 'V': '🅅', 'W': '🅆', 'X': '🅇', 'Y': '🅈',
+    'Z': '🅉'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+const squaresEl = document.getElementById("squaresOutput");
+if (squaresEl && typeof text !== 'undefined') {
+  squaresEl.textContent = text ? squares(text) : squares("Squares");
+}
+
+//japanese
+
+
+function fullwidth(text) {
+  const map = {
+    'a': 'ａ', 'b': 'ｂ', 'c': 'ｃ', 'd': 'ｄ', 'e': 'ｅ', 'f': 'ｆ', 'g': 'ｇ', 'h': 'ｈ', 'i': 'ｉ', 'j': 'ｊ',
+    'k': 'ｋ', 'l': 'ｌ', 'm': 'ｍ', 'n': 'ｎ', 'o': 'ｏ', 'p': 'ｐ', 'q': 'ｑ', 'r': 'ｒ', 's': 'ｓ', 't': 'ｔ',
+    'u': 'ｕ', 'v': 'ｖ', 'w': 'ｗ', 'x': 'ｘ', 'y': 'ｙ', 'z': 'ｚ',
+    'A': 'Ａ', 'B': 'Ｂ', 'C': 'Ｃ', 'D': 'Ｄ', 'E': 'Ｅ', 'F': 'Ｆ', 'G': 'Ｇ', 'H': 'Ｈ', 'I': 'Ｉ', 'J': 'Ｊ',
+    'K': 'Ｋ', 'L': 'Ｌ', 'M': 'Ｍ', 'N': 'Ｎ', 'O': 'Ｏ', 'P': 'Ｐ', 'Q': 'Ｑ', 'R': 'Ｒ', 'S': 'Ｓ', 'T': 'Ｔ',
+    'U': 'Ｕ', 'V': 'Ｖ', 'W': 'Ｗ', 'X': 'Ｘ', 'Y': 'Ｙ', 'Z': 'Ｚ',
+    '0': '０', '1': '１', '2': '２', '3': '３', '4': '４', '5': '５', '6': '６', '7': '７', '8': '８', '9': '９',
+    ' ': '　'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function extraThicc(text) {
+  const map = {
+    'a': '卂', 'b': '乃', 'c': '匚', 'd': '刀', 'e': '乇', 'f': '下', 'g': '厶', 'h': '卄', 'i': '工', 'j': '丁',
+    'k': '长', 'l': '乚', 'm': '从', 'n': '𠘨', 'o': '口', 'p': '尸', 'q': '㔿', 'r': '尺', 's': '丂', 't': '丅',
+    'u': '凵', 'v': 'ᐯ', 'w': '山', 'x': '乂', 'y': 'ㄚ', 'z': '乙',
+    'A': '卂', 'B': '乃', 'C': '匚', 'D': '刀', 'E': '乇', 'F': '下', 'G': '厶', 'H': '卄', 'I': '工', 'J': '丁',
+    'K': '长', 'L': '乚', 'M': '从', 'N': '𠘨', 'O': '口', 'P': '尸', 'Q': '㔿', 'R': '尺', 'S': '丂', 'T': '丅',
+    'U': '凵', 'V': 'ᐯ', 'W': '山', 'X': '乂', 'Y': 'ㄚ', 'Z': '乙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function katakana(text) {
+  const map = {
+    'a': 'ア', 'b': 'ビ', 'c': 'シ', 'd': 'デ', 'e': 'エ', 'f': 'フ', 'g': 'ジ', 'h': 'ハ', 'i': 'イ', 'j': 'ジェ',
+    'k': 'カ', 'l': 'ル', 'm': 'ム', 'n': 'ン', 'o': 'オ', 'p': 'プ', 'q': 'ク', 'r': 'ラ', 's': 'ス', 't': 'ト',
+    'u': 'ウ', 'v': 'ヴ', 'w': 'ワ', 'x': 'クス', 'y': 'ヤ', 'z': 'ズ',
+    'A': 'ア', 'B': 'ビ', 'C': 'シ', 'D': 'デ', 'E': 'エ', 'F': 'フ', 'G': 'ジ', 'H': 'ハ', 'I': 'イ', 'J': 'ジェ',
+    'K': 'カ', 'L': 'ル', 'M': 'ム', 'N': 'ン', 'O': 'オ', 'P': 'プ', 'Q': 'ク', 'R': 'ラ', 'S': 'ス', 'T': 'ト',
+    'U': 'ウ', 'V': 'ヴ', 'W': 'ワ', 'X': 'クス', 'Y': 'ヤ', 'Z': 'ズ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function hiragana(text) {
+  const map = {
+    'a': 'あ', 'b': 'び', 'c': 'し', 'd': 'で', 'e': 'え', 'f': 'ふ', 'g': 'じ', 'h': 'は', 'i': 'い', 'j': 'じぇ',
+    'k': 'か', 'l': 'る', 'm': 'む', 'n': 'ん', 'o': 'お', 'p': 'ぷ', 'q': 'く', 'r': 'ら', 's': 'す', 't': 'と',
+    'u': 'う', 'v': 'ゔ', 'w': 'わ', 'x': 'くす', 'y': 'や', 'z': 'ず',
+    'A': 'あ', 'B': 'び', 'C': 'し', 'D': 'で', 'E': 'え', 'F': 'ふ', 'G': 'じ', 'H': 'は', 'I': 'い', 'J': 'じぇ',
+    'K': 'か', 'L': 'る', 'M': 'む', 'N': 'ん', 'O': 'お', 'P': 'ぷ', 'Q': 'く', 'R': 'ら', 'S': 'す', 'T': 'と',
+    'U': 'う', 'V': 'ゔ', 'W': 'わ', 'X': 'くす', 'Y': 'や', 'Z': 'ず'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function halfwidthKatakana(text) {
+  const map = {
+    'a': 'ｱ', 'b': 'ﾋﾞ', 'c': 'ｼ', 'd': 'ﾃﾞ', 'e': 'ｴ', 'f': 'ﾌ', 'g': 'ｼﾞ', 'h': 'ﾊ', 'i': 'ｲ', 'j': 'ｼﾞｪ',
+    'k': 'ｶ', 'l': 'ﾙ', 'm': 'ﾑ', 'n': 'ﾝ', 'o': 'ｵ', 'p': 'ﾌﾟ', 'q': 'ｸ', 'r': 'ﾗ', 's': 'ｽ', 't': 'ﾄ',
+    'u': 'ｳ', 'v': 'ｳﾞ', 'w': 'ﾜ', 'x': 'ｸｽ', 'y': 'ﾔ', 'z': 'ｽﾞ',
+    'A': 'ｱ', 'B': 'ﾋﾞ', 'C': 'ｼ', 'D': 'ﾃﾞ', 'E': 'ｴ', 'F': 'ﾌ', 'G': 'ｼﾞ', 'H': 'ﾊ', 'I': 'ｲ', 'J': 'ｼﾞｪ',
+    'K': 'ｶ', 'L': 'ﾙ', 'M': 'ﾑ', 'N': 'ﾝ', 'O': 'ｵ', 'P': 'ﾌﾟ', 'Q': 'ｸ', 'R': 'ﾗ', 'S': 'ｽ', 'T': 'ﾄ',
+    'U': 'ｳ', 'V': 'ｳﾞ', 'W': 'ﾜ', 'X': 'ｸｽ', 'Y': 'ﾔ', 'Z': 'ｽﾞ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function kanjiStyle(text) {
+  const map = {
+    'a': '亜', 'b': '部', 'c': '千', 'd': '出', 'e': '江', 'f': '布', 'g': '具', 'h': '保', 'i': '以', 'j': '辞',
+    'k': '家', 'l': '留', 'm': '武', 'n': '尓', 'o': '於', 'p': '布', 'q': '久', 'r': '良', 's': '須', 't': '天',
+    'u': '宇', 'v': 'ヴ', 'w': '和', 'x': '久須', 'y': '也', 'z': '受',
+    'A': '亜', 'B': '部', 'C': '千', 'D': '出', 'E': '江', 'F': '布', 'G': '具', 'H': '保', 'I': '以', 'J': '辞',
+    'K': '家', 'L': '留', 'M': '武', 'N': '尓', 'O': '於', 'P': '布', 'Q': '久', 'R': '良', 'S': '須', 'T': '天',
+    'U': '宇', 'V': 'ヴ', 'W': '和', 'X': '久須', 'Y': '也', 'Z': '受'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function aestheticJapanese(text) {
+  const map = {
+    'a': 'ａ　', 'b': 'ｂ　', 'c': 'ｃ　', 'd': 'ｄ　', 'e': 'ｅ　', 'f': 'ｆ　', 'g': 'ｇ　', 'h': 'ｈ　', 
+    'i': 'ｉ　', 'j': 'ｊ　', 'k': 'ｋ　', 'l': 'ｌ　', 'm': 'ｍ　', 'n': 'ｎ　', 'o': 'ｏ　', 'p': 'ｐ　',
+    'q': 'ｑ　', 'r': 'ｒ　', 's': 'ｓ　', 't': 'ｔ　', 'u': 'ｕ　', 'v': 'ｖ　', 'w': 'ｗ　', 'x': 'ｘ　',
+    'y': 'ｙ　', 'z': 'ｚ　',
+    'A': 'Ａ　', 'B': 'Ｂ　', 'C': 'Ｃ　', 'D': 'Ｄ　', 'E': 'Ｅ　', 'F': 'Ｆ　', 'G': 'Ｇ　', 'H': 'Ｈ　',
+    'I': 'Ｉ　', 'J': 'Ｊ　', 'K': 'Ｋ　', 'L': 'Ｌ　', 'M': 'Ｍ　', 'N': 'Ｎ　', 'O': 'Ｏ　', 'P': 'Ｐ　',
+    'Q': 'Ｑ　', 'R': 'Ｒ　', 'S': 'Ｓ　', 'T': 'Ｔ　', 'U': 'Ｕ　', 'V': 'Ｖ　', 'W': 'Ｗ　', 'X': 'Ｘ　',
+    'Y': 'Ｙ　', 'Z': 'Ｚ　',
+    ' ': '　　'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function vaporwaveMix(text) {
+  return fullwidth(text.toLowerCase()) + ' ' + katakana(text);
+}
+
+function cornerBrackets(text) {
+  return '「' + text + '」';
+}
+
+function whiteCorners(text) {
+  return '『' + text + '』';
+}
+
+function cjkSymbols(text) {
+  return '〖' + text + '〗';
+}
+
+function hangul(text) {
+  const map = {
+    'a': '아', 'b': '비', 'c': '씨', 'd': '디', 'e': '에', 'f': '에프', 'g': '지', 'h': '에이치', 'i': '아이', 'j': '제이',
+    'k': '케이', 'l': '엘', 'm': '엠', 'n': '엔', 'o': '오', 'p': '피', 'q': '큐', 'r': '알', 's': '에스', 't': '티',
+    'u': '유', 'v': '브이', 'w': '더블유', 'x': '엑스', 'y': '와이', 'z': '제트',
+    'A': '에이', 'B': '비', 'C': '씨', 'D': '디', 'E': '이', 'F': '에프', 'G': '지', 'H': '에이치', 'I': '아이', 'J': '제이',
+    'K': '케이', 'L': '엘', 'M': '엠', 'N': '엔', 'O': '오', 'P': '피', 'Q': '큐', 'R': '알', 'S': '에스', 'T': '티',
+    'U': '유', 'V': '브이', 'W': '더블유', 'X': '엑스', 'Y': '와이', 'Z': '제트'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function bopomofo(text) {
+  const map = {
+    'a': 'ㄚ', 'b': 'ㄅ', 'c': 'ㄘ', 'd': 'ㄉ', 'e': 'ㄜ', 'f': 'ㄈ', 'g': 'ㄍ', 'h': 'ㄏ', 'i': 'ㄧ', 'j': 'ㄐ',
+    'k': 'ㄎ', 'l': 'ㄌ', 'm': 'ㄇ', 'n': 'ㄋ', 'o': 'ㄛ', 'p': 'ㄆ', 'q': 'ㄑ', 'r': 'ㄖ', 's': 'ㄙ', 't': 'ㄊ',
+    'u': 'ㄨ', 'v': 'ㄩ', 'w': 'ㄨ', 'x': 'ㄒ', 'y': 'ㄧ', 'z': 'ㄗ',
+    'A': 'ㄚ', 'B': 'ㄅ', 'C': 'ㄘ', 'D': 'ㄉ', 'E': 'ㄜ', 'F': 'ㄈ', 'G': 'ㄍ', 'H': 'ㄏ', 'I': 'ㄧ', 'J': 'ㄐ',
+    'K': 'ㄎ', 'L': 'ㄌ', 'M': 'ㄇ', 'N': 'ㄋ', 'O': 'ㄛ', 'P': 'ㄆ', 'Q': 'ㄑ', 'R': 'ㄖ', 'S': 'ㄙ', 'T': 'ㄊ',
+    'U': 'ㄨ', 'V': 'ㄩ', 'W': 'ㄨ', 'X': 'ㄒ', 'Y': 'ㄧ', 'Z': 'ㄗ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function yiSyllables(text) {
+  const map = {
+    'a': 'ꀀ', 'b': 'ꀖ', 'c': 'ꀸ', 'd': 'ꁕ', 'e': 'ꁸ', 'f': 'ꂠ', 'g': 'ꂸ', 'h': 'ꃀ', 'i': 'ꃀ', 'j': 'ꃕ',
+    'k': 'ꃰ', 'l': 'ꄀ', 'm': 'ꄜ', 'n': 'ꄸ', 'o': 'ꅀ', 'p': 'ꅜ', 'q': 'ꅸ', 'r': 'ꆀ', 's': 'ꆜ', 't': 'ꆸ',
+    'u': 'ꇀ', 'v': 'ꇜ', 'w': 'ꇸ', 'x': 'ꈀ', 'y': 'ꈜ', 'z': 'ꈸ',
+    'A': 'ꀀ', 'B': 'ꀖ', 'C': 'ꀸ', 'D': 'ꁕ', 'E': 'ꁸ', 'F': 'ꂠ', 'G': 'ꂸ', 'H': 'ꃀ', 'I': 'ꃀ', 'J': 'ꃕ',
+    'K': 'ꃰ', 'L': 'ꄀ', 'M': 'ꄜ', 'N': 'ꄸ', 'O': 'ꅀ', 'P': 'ꅜ', 'Q': 'ꅸ', 'R': 'ꆀ', 'S': 'ꆜ', 'T': 'ꆸ',
+    'U': 'ꇀ', 'V': 'ꇜ', 'W': 'ꇸ', 'X': 'ꈀ', 'Y': 'ꈜ', 'Z': 'ꈸ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function lisu(text) {
+  const map = {
+    'a': 'ꓐ', 'b': 'ꓑ', 'c': 'ꓒ', 'd': 'ꓓ', 'e': 'ꓔ', 'f': 'ꓕ', 'g': 'ꓖ', 'h': 'ꓗ', 'i': 'ꓲ', 'j': 'ꓙ',
+    'k': 'ꓚ', 'l': 'ꓛ', 'm': 'ꓜ', 'n': 'ꓝ', 'o': 'ꓳ', 'p': 'ꓑ', 'q': 'ꓠ', 'r': 'ꓡ', 's': 'ꓢ', 't': 'ꓔ',
+    'u': 'ꓴ', 'v': 'ꓦ', 'w': 'ꓪ', 'x': 'ꓫ', 'y': 'ꓬ', 'z': 'ꓭ',
+    'A': 'ꓐ', 'B': 'ꓑ', 'C': 'ꓒ', 'D': 'ꓓ', 'E': 'ꓔ', 'F': 'ꓕ', 'G': 'ꓖ', 'H': 'ꓗ', 'I': 'ꓲ', 'J': 'ꓙ',
+    'K': 'ꓚ', 'L': 'ꓛ', 'M': 'ꓜ', 'N': 'ꓝ', 'O': 'ꓳ', 'P': 'ꓑ', 'Q': 'ꓠ', 'R': 'ꓡ', 'S': 'ꓢ', 'T': 'ꓔ',
+    'U': 'ꓴ', 'V': 'ꓦ', 'W': 'ꓪ', 'X': 'ꓫ', 'Y': 'ꓬ', 'Z': 'ꓭ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function vai(text) {
+  const map = {
+    'a': 'ꔀ', 'b': 'ꔁ', 'c': 'ꔂ', 'd': 'ꔃ', 'e': 'ꔀ', 'f': 'ꔉ', 'g': 'ꔖ', 'h': 'ꔜ', 'i': 'ꔤ', 'j': 'ꔨ',
+    'k': 'ꔰ', 'l': 'ꔷ', 'm': 'ꕀ', 'n': 'ꕂ', 'o': 'ꕐ', 'p': 'ꕙ', 'q': 'ꕤ', 'r': 'ꕪ', 's': 'ꕶ', 't': 'ꕿ',
+    'u': 'ꖁ', 'v': 'ꖕ', 'w': 'ꖙ', 'x': 'ꖝ', 'y': 'ꖡ', 'z': 'ꖨ',
+    'A': 'ꔀ', 'B': 'ꔁ', 'C': 'ꔂ', 'D': 'ꔃ', 'E': 'ꔀ', 'F': 'ꔉ', 'G': 'ꔖ', 'H': 'ꔜ', 'I': 'ꔤ', 'J': 'ꔨ',
+    'K': 'ꔰ', 'L': 'ꔷ', 'M': 'ꕀ', 'N': 'ꕂ', 'O': 'ꕐ', 'P': 'ꕙ', 'Q': 'ꕤ', 'R': 'ꕪ', 'S': 'ꕶ', 'T': 'ꕿ',
+    'U': 'ꖁ', 'V': 'ꖕ', 'W': 'ꖙ', 'X': 'ꖝ', 'Y': 'ꖡ', 'Z': 'ꖨ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function bamum(text) {
+  const map = {
+    'a': 'ꚠ', 'b': 'ꚡ', 'c': 'ꚢ', 'd': 'ꚣ', 'e': 'ꚤ', 'f': 'ꚥ', 'g': 'ꚦ', 'h': 'ꚧ', 'i': 'ꚨ', 'j': 'ꚩ',
+    'k': 'ꚪ', 'l': 'ꚫ', 'm': 'ꚬ', 'n': 'ꚭ', 'o': 'ꚮ', 'p': 'ꚯ', 'q': 'ꚰ', 'r': 'ꚱ', 's': 'ꚲ', 't': 'ꚳ',
+    'u': 'ꚴ', 'v': 'ꚵ', 'w': 'ꚶ', 'x': 'ꚷ', 'y': 'ꚸ', 'z': 'ꚹ',
+    'A': 'ꚠ', 'B': 'ꚡ', 'C': 'ꚢ', 'D': 'ꚣ', 'E': 'ꚤ', 'F': 'ꚥ', 'G': 'ꚦ', 'H': 'ꚧ', 'I': 'ꚨ', 'J': 'ꚩ',
+    'K': 'ꚪ', 'L': 'ꚫ', 'M': 'ꚬ', 'N': 'ꚭ', 'O': 'ꚮ', 'P': 'ꚯ', 'Q': 'ꚰ', 'R': 'ꚱ', 'S': 'ꚲ', 'T': 'ꚳ',
+    'U': 'ꚴ', 'V': 'ꚵ', 'W': 'ꚶ', 'X': 'ꚷ', 'Y': 'ꚸ', 'Z': 'ꚹ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function javanese(text) {
+  const map = {
+    'a': 'ꦄ', 'b': 'ꦧ', 'c': 'ꦕ', 'd': 'ꦢ', 'e': 'ꦺ', 'f': 'ꦥ꦳', 'g': 'ꦒ', 'h': 'ꦲ', 'i': 'ꦆ', 'j': 'ꦗ',
+    'k': 'ꦏ', 'l': 'ꦭ', 'm': 'ꦩ', 'n': 'ꦤ', 'o': 'ꦎ', 'p': 'ꦥ', 'q': 'ꦐ', 'r': 'ꦫ', 's': 'ꦱ', 't': 'ꦠ',
+    'u': 'ꦈ', 'v': 'ꦮ꦳', 'w': 'ꦮ', 'x': 'ꦏ꧀ꦱ', 'y': 'ꦪ', 'z': 'ꦗ꦳',
+    'A': 'ꦄ', 'B': 'ꦧ', 'C': 'ꦕ', 'D': 'ꦢ', 'E': 'ꦺ', 'F': 'ꦥ꦳', 'G': 'ꦒ', 'H': 'ꦲ', 'I': 'ꦆ', 'J': 'ꦗ',
+    'K': 'ꦏ', 'L': 'ꦭ', 'M': 'ꦩ', 'N': 'ꦤ', 'O': 'ꦎ', 'P': 'ꦥ', 'Q': 'ꦐ', 'R': 'ꦫ', 'S': 'ꦱ', 'T': 'ꦠ',
+    'U': 'ꦈ', 'V': 'ꦮ꦳', 'W': 'ꦮ', 'X': 'ꦏ꧀ꦱ', 'Y': 'ꦪ', 'Z': 'ꦗ꦳'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function taile(text) {
+  const map = {
+    'a': 'ᥐ', 'b': 'ᥑ', 'c': 'ᥒ', 'd': 'ᥓ', 'e': 'ᥔ', 'f': 'ᥕ', 'g': 'ᥖ', 'h': 'ᥗ', 'i': 'ᥣ', 'j': 'ᥙ',
+    'k': 'ᥐ', 'l': 'ᥚ', 'm': 'ᥛ', 'n': 'ᥜ', 'o': 'ᥨ', 'p': 'ᥞ', 'q': 'ᥟ', 'r': 'ᥰ', 's': 'ᥡ', 't': 'ᥢ',
+    'u': 'ᥧ', 'v': 'ᥫ', 'w': 'ᥬ', 'x': 'ᥭ', 'y': 'ᥭ', 'z': '᥮',
+    'A': 'ᥐ', 'B': 'ᥑ', 'C': 'ᥒ', 'D': 'ᥓ', 'E': 'ᥔ', 'F': 'ᥕ', 'G': 'ᥖ', 'H': 'ᥗ', 'I': 'ᥣ', 'J': 'ᥙ',
+    'K': 'ᥐ', 'L': 'ᥚ', 'M': 'ᥛ', 'N': 'ᥜ', 'O': 'ᥨ', 'P': 'ᥞ', 'Q': 'ᥟ', 'R': 'ᥰ', 'S': 'ᥡ', 'T': 'ᥢ',
+    'U': 'ᥧ', 'V': 'ᥫ', 'W': 'ᥬ', 'X': 'ᥭ', 'Y': 'ᥭ', 'Z': '᥮'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function buginese(text) {
+  const map = {
+    'a': 'ᨀ', 'b': 'ᨁ', 'c': 'ᨂ', 'd': 'ᨃ', 'e': 'ᨕ', 'f': 'ᨙ', 'g': 'ᨈ', 'h': 'ᨖ', 'i': 'ᨗ', 'j': 'ᨎ',
+    'k': 'ᨀ', 'l': 'ᨒ', 'm': 'ᨆ', 'n': 'ᨊ', 'o': 'ᨚ', 'p': 'ᨄ', 'q': 'ᨀ', 'r': 'ᨙ', 's': 'ᨔ', 't': 'ᨈ',
+    'u': 'ᨘ', 'v': 'ᨆ', 'w': 'ᨓ', 'x': 'ᨀᨔ', 'y': 'ᨐ', 'z': 'ᨎ',
+    'A': 'ᨀ', 'B': 'ᨁ', 'C': 'ᨂ', 'D': 'ᨃ', 'E': 'ᨕ', 'F': 'ᨙ', 'G': 'ᨈ', 'H': 'ᨖ', 'I': 'ᨗ', 'J': 'ᨎ',
+    'K': 'ᨀ', 'L': 'ᨒ', 'M': 'ᨆ', 'N': 'ᨊ', 'O': 'ᨚ', 'P': 'ᨄ', 'Q': 'ᨀ', 'R': 'ᨙ', 'S': 'ᨔ', 'T': 'ᨈ',
+    'U': 'ᨘ', 'V': 'ᨆ', 'W': 'ᨓ', 'X': 'ᨀᨔ', 'Y': 'ᨐ', 'Z': 'ᨎ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function balinese(text) {
+  const map = {
+    'a': 'ᬅ', 'b': 'ᬩ', 'c': 'ᬘ', 'd': 'ᬤ', 'e': 'ᬏ', 'f': 'ᬧ', 'g': 'ᬕ', 'h': 'ᬳ', 'i': 'ᬇ', 'j': 'ᬚ',
+    'k': 'ᬓ', 'l': 'ᬮ', 'm': 'ᬫ', 'n': 'ᬦ', 'o': 'ᬑ', 'p': 'ᬧ', 'q': 'ᬓ', 'r': 'ᬭ', 's': 'ᬲ', 't': 'ᬢ',
+    'u': 'ᬉ', 'v': 'ᬯ', 'w': 'ᬯ', 'x': 'ᬓ᭄ᬱ', 'y': 'ᬬ', 'z': 'ᬚ',
+    'A': 'ᬅ', 'B': 'ᬩ', 'C': 'ᬘ', 'D': 'ᬤ', 'E': 'ᬏ', 'F': 'ᬧ', 'G': 'ᬕ', 'H': 'ᬳ', 'I': 'ᬇ', 'J': 'ᬚ',
+    'K': 'ᬓ', 'L': 'ᬮ', 'M': 'ᬫ', 'N': 'ᬦ', 'O': 'ᬑ', 'P': 'ᬧ', 'Q': 'ᬓ', 'R': 'ᬭ', 'S': 'ᬲ', 'T': 'ᬢ',
+    'U': 'ᬉ', 'V': 'ᬯ', 'W': 'ᬯ', 'X': 'ᬓ᭄ᬱ', 'Y': 'ᬬ', 'Z': 'ᬚ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function sundanese(text) {
+  const map = {
+    'a': 'ᮃ', 'b': 'ᮘ', 'c': 'ᮎ', 'd': 'ᮓ', 'e': 'ᮨ', 'f': 'ᮖ', 'g': 'ᮌ', 'h': 'ᮠ', 'i': 'ᮤ', 'j': 'ᮏ',
+    'k': 'ᮊ', 'l': 'ᮜ', 'm': 'ᮙ', 'n': 'ᮔ', 'o': 'ᮧ', 'p': 'ᮕ', 'q': 'ᮋ', 'r': 'ᮛ', 's': 'ᮞ', 't': 'ᮒ',
+    'u': 'ᮥ', 'v': 'ᮗ', 'w': 'ᮝ', 'x': 'ᮊᮞ', 'y': 'ᮚ', 'z': 'ᮐ',
+    'A': 'ᮃ', 'B': 'ᮘ', 'C': 'ᮎ', 'D': 'ᮓ', 'E': 'ᮨ', 'F': 'ᮖ', 'G': 'ᮌ', 'H': 'ᮠ', 'I': 'ᮤ', 'J': 'ᮏ',
+    'K': 'ᮊ', 'L': 'ᮜ', 'M': 'ᮙ', 'N': 'ᮔ', 'O': 'ᮧ', 'P': 'ᮕ', 'Q': 'ᮋ', 'R': 'ᮛ', 'S': 'ᮞ', 'T': 'ᮒ',
+    'U': 'ᮥ', 'V': 'ᮗ', 'W': 'ᮝ', 'X': 'ᮊᮞ', 'Y': 'ᮚ', 'Z': 'ᮐ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function lepcha(text) {
+  const map = {
+    'a': 'ᰀ', 'b': 'ᰁ', 'c': 'ᰂ', 'd': 'ᰃ', 'e': 'ᰣ', 'f': 'ᰤ', 'g': 'ᰄ', 'h': 'ᰅ', 'i': 'ᰦ', 'j': 'ᰆ',
+    'k': 'ᰀ', 'l': 'ᰇ', 'm': 'ᰈ', 'n': 'ᰉ', 'o': 'ᰧ', 'p': 'ᰊ', 'q': 'ᰋ', 'r': 'ᰌ', 's': 'ᰍ', 't': 'ᰎ',
+    'u': 'ᰪ', 'v': 'ᰏ', 'w': 'ᰐ', 'x': 'ᰑ', 'y': 'ᰒ', 'z': 'ᰓ',
+    'A': 'ᰀ', 'B': 'ᰁ', 'C': 'ᰂ', 'D': 'ᰃ', 'E': 'ᰣ', 'F': 'ᰤ', 'G': 'ᰄ', 'H': 'ᰅ', 'I': 'ᰦ', 'J': 'ᰆ',
+    'K': 'ᰀ', 'L': 'ᰇ', 'M': 'ᰈ', 'N': 'ᰉ', 'O': 'ᰧ', 'P': 'ᰊ', 'Q': 'ᰋ', 'R': 'ᰌ', 'S': 'ᰍ', 'T': 'ᰎ',
+    'U': 'ᰪ', 'V': 'ᰏ', 'W': 'ᰐ', 'X': 'ᰑ', 'Y': 'ᰒ', 'Z': 'ᰓ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+function smallKana(text) {
+  return 'ぁ' + text + 'ゖ';
+}
+
+function enclosedKatakana(text) {
+  return '㋐' + text + '㋾';
+}
+
+function circledKatakana(text) {
+  return '㌀' + text + '㍿';
+}
+
+function parenthesizedKatakana(text) {
+  return '㈀' + text + '㈹';
+}
+
+function radicalStyle(text) {
+  return '⺀' + text + '⺃';
+}
+
+function ideographic(text) {
+  return '〆' + text + '〡';
+}
+
+function verticalMarks(text) {
+  return '︱' + text + '︴';
+}
+
+function phoneticExt(text) {
+  const smallCaps = text.toUpperCase().split('').map(c => {
+    const code = c.charCodeAt(0);
+    if (code >= 65 && code <= 90) {
+      return String.fromCharCode(code + 0x1D00 - 0x41);
+    }
+    return c;
+  }).join('');
+  return smallCaps;
+}
+
+function cjkStrokes(text) {
+  return '㇀' + text + '㇣';
+}
+
+function kanbun(text) {
+  return '㆐' + text + '㆟';
+}
+
+function smallForm(text) {
+  return '﹐' + text + '﹫';
+}
+
+// Apply all conversions
+const fullwidthEl = document.getElementById("fullwidthOutput");
+if (fullwidthEl) {
+  fullwidthEl.textContent = text ? fullwidth(text) : fullwidth("Vaporwave");
+}
+
+const extraThiccEl = document.getElementById("extraThiccOutput");
+if (extraThiccEl) {
+  extraThiccEl.textContent = text ? extraThicc(text) : extraThicc("Extra Thicc");
+}
+
+const katakanaEl = document.getElementById("katakanaOutput");
+if (katakanaEl) {
+  katakanaEl.textContent = text ? katakana(text) : katakana("Katakana");
+}
+
+const hiraganaEl = document.getElementById("hiraganaOutput");
+if (hiraganaEl) {
+  hiraganaEl.textContent = text ? hiragana(text) : hiragana("Hiragana");
+}
+
+const halfwidthKatakanaEl = document.getElementById("halfwidthKatakanaOutput");
+if (halfwidthKatakanaEl) {
+  halfwidthKatakanaEl.textContent = text ? halfwidthKatakana(text) : halfwidthKatakana("Katakana");
+}
+
+const kanjiStyleEl = document.getElementById("kanjiStyleOutput");
+if (kanjiStyleEl) {
+  kanjiStyleEl.textContent = text ? kanjiStyle(text) : kanjiStyle("Kanji");
+}
+
+const aestheticJapaneseEl = document.getElementById("aestheticJapaneseOutput");
+if (aestheticJapaneseEl) {
+  aestheticJapaneseEl.textContent = text ? aestheticJapanese(text) : aestheticJapanese("Aesthetic");
+}
+
+const vaporwaveMixEl = document.getElementById("vaporwaveMixOutput");
+if (vaporwaveMixEl) {
+  vaporwaveMixEl.textContent = text ? vaporwaveMix(text) : vaporwaveMix("Vaporwave");
+}
+
+const cornerBracketsEl = document.getElementById("cornerBracketsOutput");
+if (cornerBracketsEl) {
+  cornerBracketsEl.textContent = text ? cornerBrackets(text) : cornerBrackets("Brackets");
+}
+
+const whiteCornersEl = document.getElementById("whiteCornersOutput");
+if (whiteCornersEl) {
+  whiteCornersEl.textContent = text ? whiteCorners(text) : whiteCorners("Corners");
+}
+
+const cjkSymbolsEl = document.getElementById("cjkSymbolsOutput");
+if (cjkSymbolsEl) {
+  cjkSymbolsEl.textContent = text ? cjkSymbols(text) : cjkSymbols("CJK");
+}
+
+const hangulEl = document.getElementById("hangulOutput");
+if (hangulEl) {
+  hangulEl.textContent = text ? hangul(text) : hangul("Korean");
+}
+
+const bopomofoEl = document.getElementById("bopomofoOutput");
+if (bopomofoEl) {
+  bopomofoEl.textContent = text ? bopomofo(text) : bopomofo("Bopomofo");
+}
+
+const yiSyllablesEl = document.getElementById("yiSyllablesOutput");
+if (yiSyllablesEl) {
+  yiSyllablesEl.textContent = text ? yiSyllables(text) : yiSyllables("Yi");
+}
+
+const lisuEl = document.getElementById("lisuOutput");
+if (lisuEl) {
+  lisuEl.textContent = text ? lisu(text) : lisu("Lisu");
+}
+
+const vaiEl = document.getElementById("vaiOutput");
+if (vaiEl) {
+  vaiEl.textContent = text ? vai(text) : vai("Vai");
+}
+
+const bamumEl = document.getElementById("bamumOutput");
+if (bamumEl) {
+  bamumEl.textContent = text ? bamum(text) : bamum("Bamum");
+}
+
+const javaneseEl = document.getElementById("javaneseOutput");
+if (javaneseEl) {
+  javaneseEl.textContent = text ? javanese(text) : javanese("Javanese");
+}
+
+const taileEl = document.getElementById("taileOutput");
+if (taileEl) {
+  taileEl.textContent = text ? taile(text) : taile("Tai Le");
+}
+
+const bugineseEl = document.getElementById("bugineseOutput");
+if (bugineseEl) {
+  bugineseEl.textContent = text ? buginese(text) : buginese("Buginese");
+}
+
+const balineseEl = document.getElementById("balineseOutput");
+if (balineseEl) {
+  balineseEl.textContent = text ? balinese(text) : balinese("Balinese");
+}
+
+const sundaneseEl = document.getElementById("sundaneseOutput");
+if (sundaneseEl) {
+  sundaneseEl.textContent = text ? sundanese(text) : sundanese("Sundanese");
+}
+
+const lepchaEl = document.getElementById("lepchaOutput");
+if (lepchaEl) {
+  lepchaEl.textContent = text ? lepcha(text) : lepcha("Lepcha");
+}
+
+const smallKanaEl = document.getElementById("smallKanaOutput");
+if (smallKanaEl) {
+  smallKanaEl.textContent = text ? smallKana(text) : smallKana("Small");
+}
+
+const enclosedKatakanaEl = document.getElementById("enclosedKatakanaOutput");
+if (enclosedKatakanaEl) {
+  enclosedKatakanaEl.textContent = text ? enclosedKatakana(text) : enclosedKatakana("Enclosed");
+}
+
+const circledKatakanaEl = document.getElementById("circledKatakanaOutput");
+if (circledKatakanaEl) {
+  circledKatakanaEl.textContent = text ? circledKatakana(text) : circledKatakana("Circled");
+}
+
+const parenthesizedKatakanaEl = document.getElementById("parenthesizedKatakanaOutput");
+if (parenthesizedKatakanaEl) {
+  parenthesizedKatakanaEl.textContent = text ? parenthesizedKatakana(text) : parenthesizedKatakana("Parenthesized");
+}
+
+const radicalStyleEl = document.getElementById("radicalStyleOutput");
+if (radicalStyleEl) {
+  radicalStyleEl.textContent = text ? radicalStyle(text) : radicalStyle("Radical");
+}
+
+const ideographicEl = document.getElementById("ideographicOutput");
+if (ideographicEl) {
+  ideographicEl.textContent = text ? ideographic(text) : ideographic("Ideographic");
+}
+
+const verticalMarksEl = document.getElementById("verticalMarksOutput");
+if (verticalMarksEl) {
+  verticalMarksEl.textContent = text ? verticalMarks(text) : verticalMarks("Vertical");
+}
+
+const phoneticExtEl = document.getElementById("phoneticExtOutput");
+if (phoneticExtEl) {
+  phoneticExtEl.textContent = text ? phoneticExt(text) : phoneticExt("Phonetic");
+}
+
+const cjkStrokesEl = document.getElementById("cjkStrokesOutput");
+if (cjkStrokesEl) {
+  cjkStrokesEl.textContent = text ? cjkStrokes(text) : cjkStrokes("Strokes");
+}
+
+const kanbunEl = document.getElementById("kanbunOutput");
+if (kanbunEl) {
+  kanbunEl.textContent = text ? kanbun(text) : kanbun("Kanbun");
+}
+
+const smallFormEl = document.getElementById("smallFormOutput");
+if (smallFormEl) {
+  smallFormEl.textContent = text ? smallForm(text) : smallForm("Small Form");
+}
+
+//end japanese
+function squaredLatin(text) {
+  const map = {
+    'a': '🅰', 'b': '🅱', 'c': '🅲', 'd': '🅳', 'e': '🅴',
+    'f': '🅵', 'g': '🅶', 'h': '🅷', 'i': '🅸', 'j': '🅹',
+    'k': '🅺', 'l': '🅻', 'm': '🅼', 'n': '🅽', 'o': '🅾',
+    'p': '🅿', 'q': '🆀', 'r': '🆁', 's': '🆂', 't': '🆃',
+    'u': '🆄', 'v': '🆅', 'w': '🆆', 'x': '🆇', 'y': '🆈',
+    'z': '🆉',
+    'A': '🅰', 'B': '🅱', 'C': '🅲', 'D': '🅳', 'E': '🅴',
+    'F': '🅵', 'G': '🅶', 'H': '🅷', 'I': '🅸', 'J': '🅹',
+    'K': '🅺', 'L': '🅻', 'M': '🅼', 'N': '🅽', 'O': '🅾',
+    'P': '🅿', 'Q': '🆀', 'R': '🆁', 'S': '🆂', 'T': '🆃',
+    'U': '🆄', 'V': '🆅', 'W': '🆆', 'X': '🆇', 'Y': '🆈',
+    'Z': '🆉'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const squaredLatinEl = document.getElementById("squaredLatinOutput");
+if (squaredLatinEl) {
+  squaredLatinEl.textContent = text ? squaredLatin(text) : squaredLatin("Squared Latin");
+}
+
+function ancient(text) {
+  const map = {
+    'a': 'ꍏ', 'b': 'ꌃ', 'c': 'ꉓ', 'd': 'ꀸ', 'e': 'ꍟ',
+    'f': 'ꎇ', 'g': 'ꁅ', 'h': 'ꃅ', 'i': 'ꀤ', 'j': 'ꀭ',
+    'k': 'ꀘ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꈤ', 'o': 'ꂦ',
+    'p': 'ꉣ', 'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌗ', 't': '꓄',
+    'u': 'ꀎ', 'v': 'ꃴ', 'w': 'ꅏ', 'x': 'ꊼ', 'y': 'ꌩ',
+    'z': 'ꁴ',
+    'A': 'ꍏ', 'B': 'ꌃ', 'C': 'ꉓ', 'D': 'ꀸ', 'E': 'ꍟ',
+    'F': 'ꎇ', 'G': 'ꁅ', 'H': 'ꃅ', 'I': 'ꀤ', 'J': 'ꀭ',
+    'K': 'ꀘ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꈤ', 'O': 'ꂦ',
+    'P': 'ꉣ', 'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌗ', 'T': '꓄',
+    'U': 'ꀎ', 'V': 'ꃴ', 'W': 'ꅏ', 'X': 'ꊼ', 'Y': 'ꌩ',
+    'Z': 'ꁴ'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const ancientEl = document.getElementById("ancientOutput");
+if (ancientEl) {
+  ancientEl.textContent = text ? ancient(text) : ancient("Ancient");
+}
+// Squared
+function squaredNumber(text) {
+  const map = {
+    '0': '🄌', '1': '🄐', '2': '🄑', '3': '🄒', '4': '🄓',
+    '5': '🄔', '6': '🄕', '7': '🄖', '8': '🄗', '9': '🄘'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Negative Squared
+function negativeSquaredNumber(text) {
+  const map = {
+    '0': '🄋', '1': '➀', '2': '➁', '3': '➂', '4': '➃',
+    '5': '➄', '6': '➅', '7': '➆', '8': '➇', '9': '➈'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Dingbat Negative Circled
+function dingbatNegativeCircledNumber(text) {
+  const map = {
+    '1': '➊', '2': '➋', '3': '➌', '4': '➍', '5': '➎',
+    '6': '➏', '7': '➐', '8': '➑', '9': '➒', '0': '⓿'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Dingbat Circled Sans-Serif
+function dingbatCircledSansSerifNumber(text) {
+  const map = {
+    '1': '➀', '2': '➁', '3': '➂', '4': '➃', '5': '➄',
+    '6': '➅', '7': '➆', '8': '➇', '9': '➈', '0': '🄋'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Fullwidth Circled
+function fullwidthCircledNumber(text) {
+  const map = {
+    '0': '⓪', '1': '⓵', '2': '⓶', '3': '⓷', '4': '⓸',
+    '5': '⓹', '6': '⓺', '7': '⓻', '8': '⓼', '9': '⓽'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Segmented (7-segment display style)
+function segmentedNumber(text) {
+  const map = {
+    '0': '🯰', '1': '🯱', '2': '🯲', '3': '🯳', '4': '🯴',
+    '5': '🯵', '6': '🯶', '7': '🯷', '8': '🯸', '9': '🯹'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Period-enclosed
+function periodEnclosedNumber(text) {
+  const map = {
+    '0': '🄀', '1': '🄁', '2': '🄂', '3': '🄃', '4': '🄄',
+    '5': '🄅', '6': '🄆', '7': '🄇', '8': '🄈', '9': '🄉'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Comma-enclosed (inverted)
+function commaEnclosedNumber(text) {
+  const map = {
+    '0': '🄊', '1': '⒈', '2': '⒉', '3': '⒊', '4': '⒋',
+    '5': '⒌', '6': '⒍', '7': '⒎', '8': '⒏', '9': '⒐'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Thai Digits
+function thaiNumber(text) {
+  const map = {
+    '0': '๐', '1': '๑', '2': '๒', '3': '๓', '4': '๔',
+    '5': '๕', '6': '๖', '7': '๗', '8': '๘', '9': '๙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Devanagari Digits
+function devanagariNumber(text) {
+  const map = {
+    '0': '०', '1': '१', '2': '२', '3': '३', '4': '४',
+    '5': '५', '6': '६', '7': '७', '8': '८', '9': '९'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Bengali Digits
+function bengaliNumber(text) {
+  const map = {
+    '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪',
+    '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Gujarati Digits
+function gujaratiNumber(text) {
+  const map = {
+    '0': '૦', '1': '૧', '2': '૨', '3': '૩', '4': '૪',
+    '5': '૫', '6': '૬', '7': '૭', '8': '૮', '9': '૯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Gurmukhi Digits
+function gurmukhiNumber(text) {
+  const map = {
+    '0': '੦', '1': '੧', '2': '੨', '3': '੩', '4': '੪',
+    '5': '੫', '6': '੬', '7': '੭', '8': '੮', '9': '੯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Tamil Digits
+function tamilNumber(text) {
+  const map = {
+    '0': '௦', '1': '௧', '2': '௨', '3': '௩', '4': '௪',
+    '5': '௫', '6': '௬', '7': '௭', '8': '௮', '9': '௯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Telugu Digits
+function teluguNumber(text) {
+  const map = {
+    '0': '౦', '1': '౧', '2': '౨', '3': '౩', '4': '౪',
+    '5': '౫', '6': '౬', '7': '౭', '8': '౮', '9': '౯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Kannada Digits
+function kannadaNumber(text) {
+  const map = {
+    '0': '೦', '1': '೧', '2': '೨', '3': '೩', '4': '೪',
+    '5': '೫', '6': '೬', '7': '೭', '8': '೮', '9': '೯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Malayalam Digits
+function malayalamNumber(text) {
+  const map = {
+    '0': '൦', '1': '൧', '2': '൨', '3': '൩', '4': '൪',
+    '5': '൫', '6': '൬', '7': '൭', '8': '൮', '9': '൯'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Myanmar Digits
+function myanmarNumber(text) {
+  const map = {
+    '0': '၀', '1': '၁', '2': '၂', '3': '၃', '4': '၄',
+    '5': '၅', '6': '၆', '7': '၇', '8': '၈', '9': '၉'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Khmer Digits
+function khmerNumber(text) {
+  const map = {
+    '0': '០', '1': '១', '2': '២', '3': '៣', '4': '៤',
+    '5': '៥', '6': '៦', '7': '៧', '8': '៨', '9': '៩'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Mongolian Digits
+function mongolianNumber(text) {
+  const map = {
+    '0': '᠐', '1': '᠑', '2': '᠒', '3': '᠓', '4': '᠔',
+    '5': '᠕', '6': '᠖', '7': '᠗', '8': '᠘', '9': '᠙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+const squaredNumberEl = document.getElementById("squaredNumberOutput");
+if (squaredNumberEl) {
+  squaredNumberEl.textContent = text ? squaredNumber(text) : squaredNumber("0123456789");
+}
+
+const negativeSquaredNumberEl = document.getElementById("negativeSquaredNumberOutput");
+if (negativeSquaredNumberEl) {
+  negativeSquaredNumberEl.textContent = text ? negativeSquaredNumber(text) : negativeSquaredNumber("0123456789");
+}
+
+const dingbatNegativeCircledNumberEl = document.getElementById("dingbatNegativeCircledNumberOutput");
+if (dingbatNegativeCircledNumberEl) {
+  dingbatNegativeCircledNumberEl.textContent = text ? dingbatNegativeCircledNumber(text) : dingbatNegativeCircledNumber("0123456789");
+}
+
+const dingbatCircledSansSerifNumberEl = document.getElementById("dingbatCircledSansSerifNumberOutput");
+if (dingbatCircledSansSerifNumberEl) {
+  dingbatCircledSansSerifNumberEl.textContent = text ? dingbatCircledSansSerifNumber(text) : dingbatCircledSansSerifNumber("0123456789");
+}
+
+const fullwidthCircledNumberEl = document.getElementById("fullwidthCircledNumberOutput");
+if (fullwidthCircledNumberEl) {
+  fullwidthCircledNumberEl.textContent = text ? fullwidthCircledNumber(text) : fullwidthCircledNumber("0123456789");
+}
+
+const segmentedNumberEl = document.getElementById("segmentedNumberOutput");
+if (segmentedNumberEl) {
+  segmentedNumberEl.textContent = text ? segmentedNumber(text) : segmentedNumber("0123456789");
+}
+
+const periodEnclosedNumberEl = document.getElementById("periodEnclosedNumberOutput");
+if (periodEnclosedNumberEl) {
+  periodEnclosedNumberEl.textContent = text ? periodEnclosedNumber(text) : periodEnclosedNumber("0123456789");
+}
+
+const commaEnclosedNumberEl = document.getElementById("commaEnclosedNumberOutput");
+if (commaEnclosedNumberEl) {
+  commaEnclosedNumberEl.textContent = text ? commaEnclosedNumber(text) : commaEnclosedNumber("0123456789");
+}
+
+const thaiNumberEl = document.getElementById("thaiNumberOutput");
+if (thaiNumberEl) {
+  thaiNumberEl.textContent = text ? thaiNumber(text) : thaiNumber("0123456789");
+}
+
+const devanagariNumberEl = document.getElementById("devanagariNumberOutput");
+if (devanagariNumberEl) {
+  devanagariNumberEl.textContent = text ? devanagariNumber(text) : devanagariNumber("0123456789");
+}
+
+const bengaliNumberEl = document.getElementById("bengaliNumberOutput");
+if (bengaliNumberEl) {
+  bengaliNumberEl.textContent = text ? bengaliNumber(text) : bengaliNumber("0123456789");
+}
+
+const gujaratiNumberEl = document.getElementById("gujaratiNumberOutput");
+if (gujaratiNumberEl) {
+  gujaratiNumberEl.textContent = text ? gujaratiNumber(text) : gujaratiNumber("0123456789");
+}
+
+const gurmukhiNumberEl = document.getElementById("gurmukhiNumberOutput");
+if (gurmukhiNumberEl) {
+  gurmukhiNumberEl.textContent = text ? gurmukhiNumber(text) : gurmukhiNumber("0123456789");
+}
+
+const tamilNumberEl = document.getElementById("tamilNumberOutput");
+if (tamilNumberEl) {
+  tamilNumberEl.textContent = text ? tamilNumber(text) : tamilNumber("0123456789");
+}
+
+const teluguNumberEl = document.getElementById("teluguNumberOutput");
+if (teluguNumberEl) {
+  teluguNumberEl.textContent = text ? teluguNumber(text) : teluguNumber("0123456789");
+}
+
+const kannadaNumberEl = document.getElementById("kannadaNumberOutput");
+if (kannadaNumberEl) {
+  kannadaNumberEl.textContent = text ? kannadaNumber(text) : kannadaNumber("0123456789");
+}
+
+const malayalamNumberEl = document.getElementById("malayalamNumberOutput");
+if (malayalamNumberEl) {
+  malayalamNumberEl.textContent = text ? malayalamNumber(text) : malayalamNumber("0123456789");
+}
+
+const myanmarNumberEl = document.getElementById("myanmarNumberOutput");
+if (myanmarNumberEl) {
+  myanmarNumberEl.textContent = text ? myanmarNumber(text) : myanmarNumber("0123456789");
+}
+
+const khmerNumberEl = document.getElementById("khmerNumberOutput");
+if (khmerNumberEl) {
+  khmerNumberEl.textContent = text ? khmerNumber(text) : khmerNumber("0123456789");
+}
+
+const mongolianNumberEl = document.getElementById("mongolianNumberOutput");
+if (mongolianNumberEl) {
+  mongolianNumberEl.textContent = text ? mongolianNumber(text) : mongolianNumber("0123456789");
+}
+
+
+// Persian/Farsi Digits (widely used in Iran, Afghanistan)
+function persianNumber(text) {
+  const map = {
+    '0': '۰', '1': '۱', '2': '۲', '3': '۳', '4': '۴',
+    '5': '۵', '6': '۶', '7': '۷', '8': '۸', '9': '۹'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Tibetan Digits
+function tibetanNumber(text) {
+  const map = {
+    '0': '༠', '1': '༡', '2': '༢', '3': '༣', '4': '༤',
+    '5': '༥', '6': '༦', '7': '༧', '8': '༨', '9': '༩'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Lao Digits
+function laoNumber(text) {
+  const map = {
+    '0': '໐', '1': '໑', '2': '໒', '3': '໓', '4': '໔',
+    '5': '໕', '6': '໖', '7': '໗', '8': '໘', '9': '໙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Limbu Digits
+function limbuNumber(text) {
+  const map = {
+    '0': '᥆', '1': '᥇', '2': '᥈', '3': '᥉', '4': '᥊',
+    '5': '᥋', '6': '᥌', '7': '᥍', '8': '᥎', '9': '᥏'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// New Tai Lue Digits
+function newTaiLueNumber(text) {
+  const map = {
+    '0': '᧐', '1': '᧑', '2': '᧒', '3': '᧓', '4': '᧔',
+    '5': '᧕', '6': '᧖', '7': '᧗', '8': '᧘', '9': '᧙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Saurashtra Digits
+function saurashtraNumber(text) {
+  const map = {
+    '0': '꣐', '1': '꣑', '2': '꣒', '3': '꣓', '4': '꣔',
+    '5': '꣕', '6': '꣖', '7': '꣗', '8': '꣘', '9': '꣙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Ol Chiki Digits
+function olChikiNumber(text) {
+  const map = {
+    '0': '᱐', '1': '᱑', '2': '᱒', '3': '᱓', '4': '᱔',
+    '5': '᱕', '6': '᱖', '7': '᱗', '8': '᱘', '9': '᱙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Javanese Digits
+function javaneseNumber(text) {
+  const map = {
+    '0': '꧐', '1': '꧑', '2': '꧒', '3': '꧓', '4': '꧔',
+    '5': '꧕', '6': '꧖', '7': '꧗', '8': '꧘', '9': '꧙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Cham Digits
+function chamNumber(text) {
+  const map = {
+    '0': '꩐', '1': '꩑', '2': '꩒', '3': '꩓', '4': '꩔',
+    '5': '꩕', '6': '꩖', '7': '꩗', '8': '꩘', '9': '꩙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Meetei Mayek Digits
+function meeteiMayekNumber(text) {
+  const map = {
+    '0': '꯰', '1': '꯱', '2': '꯲', '3': '꯳', '4': '꯴',
+    '5': '꯵', '6': '꯶', '7': '꯷', '8': '꯸', '9': '꯹'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Adlam Digits
+function adlamNumber(text) {
+  const map = {
+    '0': '𞥐', '1': '𞥑', '2': '𞥒', '3': '𞥓', '4': '𞥔',
+    '5': '𞥕', '6': '𞥖', '7': '𞥗', '8': '𞥘', '9': '𞥙'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Ethiopic Numerals (1-9 only)
+function ethiopicNumber(text) {
+  const map = {
+    '1': '፩', '2': '፪', '3': '፫', '4': '፬', '5': '፭',
+    '6': '፮', '7': '፯', '8': '፰', '9': '፱', '0': '0'
+  };
+  return text.split("").map(ch => map[ch] || ch).join("");
+}
+
+// Initialize all
+const persianNumberEl = document.getElementById("persianNumberOutput");
+if (persianNumberEl) {
+  persianNumberEl.textContent = text ? persianNumber(text) : persianNumber("0123456789");
+}
+
+const tibetanNumberEl = document.getElementById("tibetanNumberOutput");
+if (tibetanNumberEl) {
+  tibetanNumberEl.textContent = text ? tibetanNumber(text) : tibetanNumber("0123456789");
+}
+
+const laoNumberEl = document.getElementById("laoNumberOutput");
+if (laoNumberEl) {
+  laoNumberEl.textContent = text ? laoNumber(text) : laoNumber("0123456789");
+}
+
+const limbuNumberEl = document.getElementById("limbuNumberOutput");
+if (limbuNumberEl) {
+  limbuNumberEl.textContent = text ? limbuNumber(text) : limbuNumber("0123456789");
+}
+
+const newTaiLueNumberEl = document.getElementById("newTaiLueNumberOutput");
+if (newTaiLueNumberEl) {
+  newTaiLueNumberEl.textContent = text ? newTaiLueNumber(text) : newTaiLueNumber("0123456789");
+}
+
+const saurashtraNumberEl = document.getElementById("saurashtraNumberOutput");
+if (saurashtraNumberEl) {
+  saurashtraNumberEl.textContent = text ? saurashtraNumber(text) : saurashtraNumber("0123456789");
+}
+
+const olChikiNumberEl = document.getElementById("olChikiNumberOutput");
+if (olChikiNumberEl) {
+  olChikiNumberEl.textContent = text ? olChikiNumber(text) : olChikiNumber("0123456789");
+}
+
+const javaneseNumberEl = document.getElementById("javaneseNumberOutput");
+if (javaneseNumberEl) {
+  javaneseNumberEl.textContent = text ? javaneseNumber(text) : javaneseNumber("0123456789");
+}
+
+const chamNumberEl = document.getElementById("chamNumberOutput");
+if (chamNumberEl) {
+  chamNumberEl.textContent = text ? chamNumber(text) : chamNumber("0123456789");
+}
+
+const meeteiMayekNumberEl = document.getElementById("meeteiMayekNumberOutput");
+if (meeteiMayekNumberEl) {
+  meeteiMayekNumberEl.textContent = text ? meeteiMayekNumber(text) : meeteiMayekNumber("0123456789");
+}
+
+const adlamNumberEl = document.getElementById("adlamNumberOutput");
+if (adlamNumberEl) {
+  adlamNumberEl.textContent = text ? adlamNumber(text) : adlamNumber("0123456789");
+}
+
+const ethiopicNumberEl = document.getElementById("ethiopicNumberOutput");
+if (ethiopicNumberEl) {
+  ethiopicNumberEl.textContent = text ? ethiopicNumber(text) : ethiopicNumber("123456789");
+}
+
+
 function boldAesthetic(text) {
   const map = {
     'a':'α','b':'ᑲ','c':'𝖼','d':'ᑯ','e':'𝖾','f':'𝖿',
@@ -1865,6 +4657,16 @@ const boldAestheticEl = document.getElementById("boldAestheticOutput");
 if (boldAestheticEl) {
   boldAestheticEl.textContent = text ? boldAesthetic(text) : boldAesthetic("Bold Aesthetic");
 }
+
+function doubleUnderline(text) {
+  return text.split("").map(ch => ch + '̳').join("");
+}
+
+const doubleUnderlineEl = document.getElementById("doubleUnderlineOutput");
+if (doubleUnderlineEl) {
+  doubleUnderlineEl.textContent = text ? doubleUnderline(text) : doubleUnderline("Double Underline");
+}
+
 function cloudBold(text) {
   const map = {
     'a':'𝒶','b':'𝒷','c':'𝒸','d':'𝒹','e':'ℯ','f':'𝒻',
@@ -2435,11 +5237,6 @@ if (underlineEl) {
   underlineEl.textContent = text ? toUnderline(text) : toUnderline("Underline");
 }
 
-const doubleUnderlineEl = document.getElementById("DoubleUnderlineOutput");
-if (doubleUnderlineEl) {
-  doubleUnderlineEl.textContent = text ? toDoubleUnderline(text) : toDoubleUnderline("Double Underline");
-}
-
 const dottedEl = document.getElementById("DottedOutput");
 if (dottedEl) {
   dottedEl.textContent = text ? toDotted(text) : toDotted("Dotted Line");
@@ -2521,21 +5318,23 @@ function copyToClipboard(id) {
   });
 }
 
-// Auto-inject SVG icons into all copy buttons
 function addCopyIcons() {
   document.querySelectorAll(".copy-btn").forEach(btn => {
     if (!btn.innerHTML.trim()) {
       btn.innerHTML = `
-       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
              viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
           <path d="M5 15H4a2 2 0 0 1-2-2V4
                    a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>`;
+        </svg>
+        <span class="copy-text">Copy</span>
+      `;
     }
   });
 }
+
 
 // ---------- On Page Load ----------
 /**
