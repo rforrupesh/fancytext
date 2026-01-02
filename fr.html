@@ -48,11 +48,14 @@
 <link rel="alternate" href="https://fontgen.in/th.html" hreflang="th">
 <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
 <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
+<link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
+
 </head>
 <body>
 
-    <nav class="navbar">
-    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+ <nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
       <span class="icon-hamburger">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="6" x2="20" y2="6"/>
@@ -60,6 +63,7 @@
           <line x1="4" y1="18" x2="20" y2="18"/>
         </svg>
       </span>
+      <!-- Close SVG -->
       <span class="icon-close">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -73,58 +77,35 @@
     <div class="nav-menu" id="navMenu">
       <ul>
         <li>
-          <a href="https://fontgen.in/">Accueil</a>
+          <a href="https://fontgen.in/">Home</a>
         </li>
-       <li>
+          <li>
+          <a href="https://fontgen.in/font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            À Propos
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/about-us.html">Qui Sommes-Nous</a>
-            <a href="https://fontgen.in/contact-us.html">Nous Contacter</a>
-             <a href="https://fontgen.in/privacy-policy.html">Confidentialité</a>
-            <a href="https://fontgen.in/faq.html">FAQ</a>
-          </div>
-        </li>
-      
+       
     
-          <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            Langue
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-                            <a  href="https://fontgen.in/" data-lang="en">English</a>
-                            <a  href="https://fontgen.in/es.html" data-lang="es">Español</a>
-                            <a  href="https://fontgen.in/ar.html" data-lang="ar">العربية</a>
-                            <a  href="https://fontgen.in/fr.html" data-lang="fr">Français</a>
-                            <a  href="https://fontgen.in/de.html" data-lang="de">Deutsch</a>
-                            <a  href="https://fontgen.in/pt.html" data-lang="pt">Português</a>
-                            <a  href="https://fontgen.in/id.html" data-lang="id">Indonesian</a>
-                            <a  href="https://fontgen.in/hi.html" data-lang="hi">हिन्दी </a>
-                            <a  href="https://fontgen.in/it.html" data-lang="it">Italiano</a>
-                            <a  href="https://fontgen.in/ja.html" data-lang="ja">日本語</a>
-                            <a  href="https://fontgen.in/ru.html" data-lang="ru">Россия</a>
-                            <a  href="https://fontgen.in/th.html" data-lang="th">ประเทศไทย</a>
-                            <a  href="https://fontgen.in/tr.html" data-lang="tr">Türkiye</a>
-                            <a  href="https://fontgen.in/vi.html" data-lang="vi">Việt Nam</a>
-          </div>
+       <li>
+          <a href="https://fontgen.in/about-us.html">About</a>
         </li>
-        
+ 
+       
+         <li>
+          <a href="https://fontgen.in/privacy-policy.html">Privacy</a>
+        </li>
+
+          
+         <li>
+          <a href="https://fontgen.in/contact-us.html">Contact</a>
+        </li>
+
       </ul>
 
     </div>
-  </nav>
-
-  <div class="nav-overlay" id="navOverlay"></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
 
   <div class="output-list">
   <h1>Générateur de Polices</h1>
@@ -136,23 +117,31 @@
       <span class="clear-btn" onclick="clearInput()">×</span>
     </div>
 
-    <div class="tab-wrapper">
-      <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
-      <nav class="tab-nav" id="tabNav">
-        <a href="https://fontgen.in/" class="tab-link">Toutes les Polices</a>
-        <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
-        <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fantaisie</a>
-        <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
-        <a href="https://fontgen.in/tools/small.html" class="tab-link">Petite</a>
-        <a href="https://fontgen.in/tools/bold.html" class="tab-link">Gras</a>
-        <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
-        <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Texte Symbole</a>
-        <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Art Textuel</a>
-        <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Barré</a>
-        <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Invisible</a>
-      </nav>
-      <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
-    </div>
+   <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
   </div>
 
   <div class="output-box">
@@ -713,304 +702,67 @@
   <div id="copyNotification"></div>
 </div>
 
-<article>
-  <h2>À Propos du Générateur de Polices</h2>
-  <p>Créez facilement des polices stylées à partir d'un texte simple grâce à notre outil en ligne gratuit. Il vous suffit de taper votre texte et de le copier. Vous pouvez l'utiliser sur toutes les plateformes sociales comme la bio Instagram, Facebook, votre Surnom, Twitter et les Groupes WhatsApp.</p>
-  <p>Les polices utilisent Unicode, elles fonctionnent donc sur la plupart des appareils. Ces styles rendent votre profil et vos commentaires plus personnalisés et attrayants. C'est la meilleure façon de vous démarquer des autres et de vos amis. Ce n'est pas seulement amusant, c'est aussi un excellent moyen d'exprimer vos pensées en utilisant des symboles fantaisie.</p>
-  <p>Il existe un large éventail d'options de Texte Fantaisie : des noms sympas, des surnoms, des mots anglais mélangés, des lettres grecques, des chiffres fantaisie, des combinaisons d'alphabet et des compléments d'émojis.</p>
-  <img src="https://fontgen.in/img/Font-Generator.png" alt="Générateur de Polices Stylées pour les Réseaux Sociaux">
+<div class="contents">
 
-  <h2>Copier et Coller pour les Réseaux Sociaux</h2>
-  <p>Nous sommes le #1 des Changeurs de Polices en Ligne. Nous avons créé 190 styles de police différents, incluant fantaisie, cool, gras et cursive. Si vous souhaitez de nouvelles polices pour rendre votre bio Instagram et vos commentaires plus attrayants, les influenceurs utilisent souvent différentes catégories pour créer des noms de profil tendance et stylés. Le texte fantaisie peut être utilisé pour les pseudonymes de jeu, la conception d'affiches, et plus encore. Nous suggérons également des caractères spéciaux ASCII, des symboles, des lettres anglaises et des astuces d'espacement. Exprimez-vous avec des polices stylées.</p>
-  <p>Nous sommes l'un des outils les plus simples qui existent : hautement personnalisable, réactif et rempli de façons amusantes de transformer votre texte.</p>
+<h2>À propos du générateur de polices</h2>
+<img src="https://fontgen.in/img/Font-Generator.png" alt="">
 
-  <h2>Comment Fonctionne le Générateur</h2>
-  <ol>
-    <li>Saisissez votre texte dans la boîte.</li>
-    <li>L'outil le convertira automatiquement en polices stylées.</li>
-    <li>Copiez le style en cliquant sur le bouton.</li>
-    <li>Collez la police stylée dans votre bio Instagram, votre nom Facebook ou n'importe où ailleurs.</li>
-  </ol>
-  <p>C'est aussi simple que cela de générer des polices avec notre outil. Il est 100% gratuit et offre un nombre illimité de styles de police différents.</p>
+<p>Bienvenue sur Fontgen.in, un outil qui génère du texte stylé. Nous vous permettons de copier et coller facilement des styles de police à partir de la liste générée. Cet outil est 100 % gratuit et comprend plus de 121 symboles fantaisie. Notre générateur de polices est utilisé pour créer des commentaires, des bios et des textes plus professionnels.</p>
 
-  <h2>Plus de Meilleurs Noms Stylés Gratuits</h2>
-  <p>Avec ce Générateur de Texte Fantaisie, vous pouvez facilement créer des effets de nom sympas pour Instagram et d'autres réseaux sociaux. Communiquez avec vos amis et votre famille en leur envoyant leurs noms fantaisie par messages texte. Démarquez-vous comme la personne cool de votre cercle d'amis. Copiez des Noms d'Utilisateur pour Garçons et Filles Gratuitement en Ligne.</p>
-  <p>Styles de Polices Fantaisie Populaires listés ci-dessous pour vous aider à décider :</p>
+<p>Comme vous le savez peut-être, un générateur de polices (également appelé générateur de texte) utilise des caractères Unicode pour permettre la création et la classification de différents styles de police. Nous fournissons des symboles pour chaque lettre et alphabet afin de transformer le texte anglais en polices originales, notamment le texte 🅑🅤🅑🅑🅛🅔, le gras, l’italique, le 𝔣𝔞𝔫𝔠𝔶, le texte barré, le petit texte, le texte en bulles, et plus de 121 autres styles de polices.</p>
 
-  <h2>Polices Élégantes et Fantaisie</h2>
-  <ul>
-    <li>Script Grâce</li>
-    <li>Cursive Velours</li>
-    <li>Courbes Nuageuses</li>
-    <li>Gothique Royal</li>
-    <li>Fraktur Ombrée</li>
-    <li>Barrer Double-Ligne</li>
-    <li>Classique Rétro</li>
-    <li>Touche de Symbole</li>
-    <li>Gravure Tribale</li>
-    <li>Touche Antique</li>
-  </ul>
+<h2>Copier et coller facilement</h2>
 
-  <h2>Polices Simples et Claires</h2>
-  <ul>
-    <li>Gras Épais</li>
-    <li>Italique Doux</li>
-    <li>Mélange Gras-Italique</li>
-    <li>Sans Serif Clair</li>
-    <li>Sans Serif Fort</li>
-    <li>Italique Épuré</li>
-    <li>Ultra Sans Serif Gras</li>
-    <li>Petites Casse</li>
-    <li>Mono Code</li>
-    <li>Élargi Étiré</li>
-    <li>Crochets Souples</li>
-  </ul>
+<p>Sur notre site, nous avons conçu cet outil pour rendre l’utilisation des polices fantaisie simple et rapide. C’est pourquoi nous faisons partie des meilleurs outils. Notre générateur de polices crée des polices stylées et des symboles de texte pour vous aider à rendre vos profils sur les réseaux sociaux plus attrayants.</p>
 
-  <h2>Polices Amusantes et Cool</h2>
-  <ul>
-    <li>Bulle Pop</li>
-    <li>Orbe Sombre</li>
-    <li>Bloc Solide</li>
-    <li>Mélange d'Émojis</li>
-    <li>Courbe Mignonne</li>
-    <li>Bord Carré</li>
-    <li>Dérive Ondulée</li>
-    <li>Retournement Inversé</li>
-    <li>Script Inversé</li>
-    <li>Torsion Miroir</li>
-    <li>Texte Culbute</li>
-    <li>Mini Type</li>
-    <li>Script Ancien</li>
-    <li>Flux Oriental</li>
-    <li>Indice Léger</li>
-    <li>Italique Vintage</li>
-  </ul>
+<p>Nous prenons en charge plus de 128 caractères ASCII et symboles Unicode. Copiez et collez des polices pour des surnoms, des designs et de beaux messages texte. Chaque lettre et symbole fantaisie fonctionne sur toutes les plateformes.</p>
 
-  <h2>Polices Modernes et Futuristes</h2>
-  <ul>
-    <li>Plume Douce</li>
-    <li>Dérive de Rêve</li>
-    <li>Flux Fantaisie</li>
-    <li>Fusion Asiatique</li>
-    <li>Style Prime</li>
-    <li>Néo Moderne</li>
-    <li>Ombre Portée</li>
-    <li>Marque Iconique</li>
-    <li>Bord Rayé</li>
-    <li>Forme Adaptative</li>
-    <li>Mouvement Varié</li>
-    <li>Ligne Ondulée (Squiggle)</li>
-  </ul>
+<h2>Comment fonctionne ce générateur</h2>
 
-  <h2>Polices Style Signature</h2>
-  <ul>
-    <li>Trait Ludique</li>
-    <li>Ligne Polie</li>
-    <li>Touche Minimale</li>
-    <li>Script Doux</li>
-    <li>Balancement Tendance</li>
-    <li>Trait de Peinture</li>
-    <li>Courbe Ornée</li>
-    <li>Signature Inverse</li>
-    <li>Glyphe Unique en son Genre</li>
-    <li>Encre Intemporelle</li>
-    <li>Marque Statique</li>
-  </ul>
+<ul>
+  <li>Saisissez votre texte</li>
+  <li>Choisissez une police qui vous plaît</li>
+  <li>Copiez-la</li>
+  <li>Collez-la sur votre profil social</li>
+</ul>
 
-  <h2>Effets de Soulignement et d'Emphase</h2>
-  <ul>
-    <li>Double Soulignement</li>
-    <li>Ligne Classique</li>
-    <li>Barre Oblique</li>
-    <li>Barre Avant</li>
-    <li>Ligne de Barre Supérieure</li>
-    <li>Barre Oblique Ondulée</li>
-    <li>Soulignement En Boîte</li>
-    <li>Macron Large</li>
-  </ul>
+<h2>Comment utiliser les textes stylés</h2>
 
-  <h2>Conteneurs de Symboles Décoratifs</h2>
-  <ul>
-    <li>Entourage Bouclé</li>
-    <li>Anneau Étincelant</li>
-    <li>Crochets Lune</li>
-    <li>Encadrement Flèche</li>
-    <li>Bords Pointillés</li>
-    <li>Coque Angulaire</li>
-    <li>Cadre Arc</li>
-  </ul>
+<p>Les possibilités d’utilisation du texte stylé sont illimitées. De nombreuses personnes l’utilisent pour créer des noms sur Instagram, Facebook, TikTok, YouTube, Pinterest ou Snapchat.</p>
 
-  <h2>Accents Royaux et Couronnes</h2>
-  <ul>
-    <li>Pointe de Couronne</li>
-    <li>Crête Vague</li>
-    <li>Pic de Flèche</li>
-    <li>Marque de Coche Douce</li>
-    <li>Calotte Régale</li>
-    <li>Couronne Équilibrée</li>
-    <li>Dessus en Forme de Z</li>
-    <li>Pic Courbé</li>
-    <li>Couronne Pointillée</li>
-  </ul>
+<p>Beaucoup souhaitent également des noms stylés pour des jeux comme Free Fire, PUBG et Roblox. Les personnes créatives utilisent leur propre style unique. Il suffit de copier et coller le texte fantaisie.</p>
 
-  <h2>Accents Entrecroisés</h2>
-  <ul>
-    <li>Accent Rond</li>
-    <li>Touche Croisée</li>
-    <li>Lien Courbe</li>
-    <li>Sous-Swoosh</li>
-    <li>Support de Flèche</li>
-    <li>Couronne Vague</li>
-    <li>Base Ondulée</li>
-  </ul>
+<p>Notre conseil est de mélanger symboles et polices afin d’exprimer votre personnalité de la manière la plus élégante possible. Nous ajoutons également plus de 100 nouvelles catégories lors des mises à jour.</p>
 
-  <h2>Symboles Bouclés et Volutes</h2>
-  <ul>
-    <li>Trace en Boucle</li>
-    <li>Flèche Zap</li>
-    <li>Mouvement Courbe</li>
-    <li>Fin de Flux</li>
-    <li>Swoosh Alpha</li>
-    <li>Double Barre Oblique</li>
-    <li>Bord d'Étoile</li>
-  </ul>
+<h2>Plus de polices gratuites</h2>
 
-  <h2>Styles de Texte Encadré</h2>
-  <ul>
-    <li>Boîte Grasse</li>
-    <li>Boîte Douce</li>
-    <li>Cadre à Crochets</li>
-    <li>Coque Ronde</li>
-    <li>Cadre à Coupe d'Angle</li>
-    <li>Bordure en Volute</li>
-    <li>Boîte à Triple Bord</li>
-    <li>Cadre Angulaire</li>
-    <li>Coins à Coche</li>
-    <li>Contour Faisceau</li>
-    <li>Cadre Flèche</li>
-    <li>Coque d'Accent</li>
-    <li>Ligne Nuage</li>
-  </ul>
+<p>Notre générateur de texte fantaisie crée instantanément de nombreux styles de polices après la saisie du texte dans le champ prévu à cet effet. Vous pouvez copier les polices depuis la liste d’aperçu à l’aide du bouton.</p>
 
-  <h2>Styles de Fusion de Symboles</h2>
-  <ul>
-    <li>Anneau Stellaire</li>
-    <li>Éclat d'Étoile</li>
-    <li>Flux Zig-zag</li>
-    <li>Étincelle Torsadée</li>
-    <li>Halo Focalisé</li>
-    <li>Double Marque de Flèche</li>
-    <li>Éclair de Vague</li>
-  </ul>
+<p>Si vous découvrez sur notre site des styles tels que Aesthetic, Bold, Fraktur ou Old English et que vous souhaitez encore plus d’options de styles ou de symboles, faites-le nous savoir — nous les ajouterons ultérieurement.</p>
 
-  <h2>Cadres à Flux Doux</h2>
-  <ul>
-    <li>Chiffre Étincelant</li>
-    <li>Glissement de Coin</li>
-    <li>Finition Marque</li>
-    <li>Route Zig-zag</li>
-    <li>Bande Lumineuse</li>
-    <li>Conduite Supérieure</li>
-    <li>Maille Douce</li>
-    <li>Coin En Boîte</li>
-    <li>Ligne de Rupture</li>
-  </ul>
 
-  <h2>Texte Visage Kawaii</h2>
-  <ul>
-    <li>Mignon Souriant</li>
-    <li>Yeux Cœur</li>
-    <li>Visage Étincelant Brillant</li>
-    <li>Joie Lapin</li>
-    <li>Sourire Heureux</li>
-    <li>Yeux Étoiles Rougissants</li>
-    <li>Mini Visage de Chat</li>
-    <li>Joie de Vivre</li>
-    <li>Doux Sourire Tendre</li>
-    <li>Visage de Chat Rigolard</li>
-    <li>Expression Timide et Mignonne</li>
-  </ul>
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> .
+        <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
 
-  <h2>Cadres de Luxe et Ornementaux</h2>
-  <ul>
-    <li>Emblème Torsadé</li>
-    <li>Lueur Lunaire</li>
-    <li>Chemin Doux</li>
-    <li>Ligne Noble</li>
-    <li>Éclat d'Étoile</li>
-    <li>Faisceau Brillant</li>
-    <li>Étoile de Nuit</li>
-    <li>Spirale Céleste</li>
-  </ul>
+  </p>
+</div>
 
-  <h2>Bordures Grasses et Fortes</h2>
-  <ul>
-    <li>Cadre Ligne de Gym</li>
-    <li>Bouclier de Bloc</li>
-    <li>Contour de Barre</li>
-    <li>Bord Scintillant</li>
-    <li>Artisanat Lourd</li>
-    <li>Boîte de Citation Grasse</li>
-    <li>Bordure de Flux</li>
-    <li>Bord Vérifié</li>
-  </ul>
-
-  <h2>Cadres Fantaisistes et Magiques</h2>
-  <ul>
-    <li>Étincelle Flash</li>
-    <li>Torsion de Pétale</li>
-    <li>Dérive d'Étoile</li>
-    <li>Boucle de Champ d'Étoiles</li>
-    <li>Éclat d'Étincelle</li>
-    <li>Ligne d'Étoile Élégante</li>
-    <li>Accent de Touche d'Étoile</li>
-    <li>Portail Stellaire</li>
-  </ul>
-
-  <h2>Polices Artistiques et Créatives</h2>
-  <ul>
-    <li>Éclat Cosmique</li>
-    <li>Cadre Ombre Profonde</li>
-    <li>Script Flux Élégant</li>
-    <li>Lueur de Minuit</li>
-    <li>Script Barré</li>
-    <li>Boucle de Pétale</li>
-    <li>Courbe Florale</li>
-    <li>Bord Chic</li>
-  </ul>
-
-  <h2>Polices Thème Émoji</h2>
-  <ul>
-    <li>Script Pailleté</li>
-    <li>Petites Créatures Mignonnes</li>
-    <li>Collations Sucrées</li>
-    <li>Étoiles Magiques</li>
-    <li>Fleuraison Florale</li>
-    <li>Pop Cosmique</li>
-    <li>Style Chewing-gum</li>
-    <li>Amis de la Forêt</li>
-    <li>Brise Océane</li>
-  </ul>
-
-  <h2>Polices Aléatoires et Mixtes</h2>
-  <ul>
-    <li>Fusion Funky</li>
-    <li>Mélange Mystère</li>
-    <li>Glitch de Bord</li>
-    <li>Brume Douce</li>
-    <li>Strie de Chaos</li>
-    <li>Texte Brouillé</li>
-    <li>Surprise Torsadée</li>
-    <li>Mode Hybride</li>
-    <li>Mélange Mixte</li>
-  </ul>
-
-  <h2>Questions Fréquemment Posées</h2>
-  <p><strong>Qu'est-ce que cet outil ?</strong><br>C'est un générateur de polices en ligne gratuit qui vous permet de taper du texte et de le transformer instantanément en styles Unicode fantaisie.</p>
-  <p><strong>Où puis-je utiliser ces polices ?</strong><br>Vous pouvez les coller sur Instagram, Facebook, Twitter, TikTok, Discord, et des applications de messagerie comme WhatsApp et Telegram.</p>
-  <p><strong>Les lecteurs d'écran liront-ils ces polices ?</strong><br>Pas toujours. Le texte Unicode fantaisie peut ne pas être accessible, utilisez donc du texte simple pour la clarté lorsque nécessaire.</p>
-  <p><strong>Pourquoi le texte affiche-t-il parfois des boîtes ou des points d'interrogation ?</strong><br>Certains appareils ou applications ne prennent pas en charge tous les caractères Unicode. Si cela se produit, essayez un autre style de police de la liste.</p>
-</article>
+</div>
 
 <footer class="site-footer">
   <div class="footer-container">
