@@ -56,85 +56,63 @@
 <link rel="alternate" href="https://fontgen.in/th.html" hreflang="th">
 <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
 <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
+<link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
+
 </head>
 <body>
-<nav class="navbar" role="navigation" aria-label="การนำทางหลัก">
-  <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="navMenu">
-    <!-- Hamburger SVG -->
-    <span class="icon-hamburger" aria-hidden="true">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-        <line x1="4" y1="6" x2="20" y2="6"/>
-        <line x1="4" y1="12" x2="20" y2="12"/>
-        <line x1="4" y1="18" x2="20" y2="18"/>
-      </svg>
-    </span>
-    <!-- Close SVG -->
-    <span class="icon-close" aria-hidden="true">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </span>
-  </button>
-
-  <a href="https://fontgen.in/" class="logo" aria-label="ไปยังหน้าแรก">
-    <img src="https://fontgen.in/img/logo_header.png" alt="FontGen โลโก้">
-  </a>
-
-  <div class="nav-menu" id="navMenu" aria-hidden="true">
-    <ul>
-      <li>
-        <a href="https://fontgen.in/">หน้าแรก</a>
-      </li>
-
-      <li>
+<nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
+      <span class="icon-hamburger">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+      </span>
+      <!-- Close SVG -->
+      <span class="icon-close">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </span>
+    </button>
+    <a href="https://fontgen.in/" class="logo">
+      <img src="https://fontgen.in/img/logo_header.png" alt="Logo">
+    </a>
+    <div class="nav-menu" id="navMenu">
+      <ul>
+        <li>
+          <a href="https://fontgen.in/">Home</a>
+        </li>
+          <li>
+          <a href="https://fontgen.in/font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
+       
+    
+       <li>
+          <a href="https://fontgen.in/about-us.html">About</a>
+        </li>
+ 
+       
+         <li>
+          <a href="https://fontgen.in/privacy-policy.html">Privacy</a>
+        </li>
 
-      <li class="dropdown">
-        <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="aboutMenu">
-          เกี่ยวกับ
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2" aria-hidden="true" focusable="false">
-            <polyline points="6 8 10 12 14 8"/>
-          </svg>
-        </button>
-        <div class="dropdown-content" id="aboutMenu" role="menu" aria-label="เมนูเกี่ยวกับ">
-          <a href="https://fontgen.in/about-us.html" role="menuitem">เกี่ยวกับเรา</a>
-          <a href="https://fontgen.in/contact-us.html" role="menuitem">ติดต่อ</a>
-          <a href="https://fontgen.in/privacy-policy.html" role="menuitem">นโยบายความเป็นส่วนตัว</a>
-          <a href="https://fontgen.in/faq.html" role="menuitem">คำถามที่พบบ่อย</a>
-        </div>
-      </li>
+          
+         <li>
+          <a href="https://fontgen.in/contact-us.html">Contact</a>
+        </li>
 
-      <li class="dropdown">
-        <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
-          ภาษา
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2" aria-hidden="true" focusable="false">
-            <polyline points="6 8 10 12 14 8"/>
-          </svg>
-        </button>
-        <div class="dropdown-content" id="langMenu" role="menu" aria-label="เลือกภาษา">
-          <a href="https://fontgen.in/" data-lang="en" role="menuitem">English</a>
-          <a href="https://fontgen.in/es.html" data-lang="es" role="menuitem">Español</a>
-          <a href="https://fontgen.in/ar.html" data-lang="ar" role="menuitem">العربية</a>
-          <a href="https://fontgen.in/fr.html" data-lang="fr" role="menuitem">Français</a>
-          <a href="https://fontgen.in/de.html" data-lang="de" role="menuitem">Deutsch</a>
-          <a href="https://fontgen.in/pt.html" data-lang="pt" role="menuitem">Português</a>
-          <a href="https://fontgen.in/id.html" data-lang="id" role="menuitem">Indonesian</a>
-          <a href="https://fontgen.in/hi.html" data-lang="hi" role="menuitem">हिन्दी</a>
-          <a href="https://fontgen.in/it.html" data-lang="it" role="menuitem">Italiano</a>
-          <a href="https://fontgen.in/ja.html" data-lang="ja" role="menuitem">日本語</a>
-          <a href="https://fontgen.in/ru.html" data-lang="ru" role="menuitem">Русский</a>
-          <a href="https://fontgen.in/th.html" data-lang="th" role="menuitem">ไทย</a>
-          <a href="https://fontgen.in/tr.html" data-lang="tr" role="menuitem">Türkçe</a>
-          <a href="https://fontgen.in/vi.html" data-lang="vi" role="menuitem">Tiếng Việt</a>
-        </div>
-      </li>
-    </ul>
-  </div>
+      </ul>
+
+    </div>
 </nav>
-
-<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <div class="output-list">
   <h1>เครื่องสร้างฟอนต์</h1>
@@ -147,23 +125,32 @@
       <span class="clear-btn" onclick="clearInput()" role="button" aria-label="ล้างข้อความ">×</span>
     </div>
 
-    <div class="tab-wrapper">
-      <span class="scroll-btn left-btn" id="scrollLeftBtn" aria-hidden="true">&lt;</span>
-      <nav class="tab-nav" id="tabNav" role="navigation" aria-label="เมนูประเภทฟอนต์">
-        <a href="https://fontgen.in/" class="tab-link">ฟอนต์ทั้งหมด</a>
-        <a href="https://fontgen.in/tools/cool.html" class="tab-link">คูล</a>
-        <a href="https://fontgen.in/tools/fancy.html" class="tab-link">แฟนซี</a>
-        <a href="https://fontgen.in/tools/cursive.html" class="tab-link">ตัวเขียน</a>
-        <a href="https://fontgen.in/tools/small.html" class="tab-link">ขนาดเล็ก</a>
-        <a href="https://fontgen.in/tools/bold.html" class="tab-link">ตัวหนา</a>
-        <a href="https://fontgen.in/tools/glitch.html" class="tab-link">กลิทช์</a>
-        <a href="https://fontgen.in/tools/symbols.html" class="tab-link">ข้อความสัญลักษณ์</a>
-        <a href="https://fontgen.in/tools/text-art.html" class="tab-link">ศิลปะข้อความ</a>
-        <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">ขีดทับ</a>
-        <a href="https://fontgen.in/tools/invisible.html" class="tab-link">ล่องหน</a>
-      </nav>
-      <span class="scroll-btn right-btn" id="scrollRightBtn" aria-hidden="true">&gt;</span>
-    </div>
+  
+  <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
   </div>
 
   <!-- Curly Wrap -->
@@ -463,305 +450,67 @@
 
   <div id="copyNotification" aria-live="polite"></div>
 </div>
-<article>
-    <h2>เกี่ยวกับเครื่องสร้างฟอนต์</h2>
-    <p>สร้างฟอนต์สวย ๆ จากข้อความธรรมดาได้ง่าย ๆ ด้วยเครื่องมือออนไลน์ฟรีของเรา เพียงพิมพ์ข้อความและคัดลอกไปใช้ คุณสามารถใช้ฟอนต์เหล่านี้บนโซเชียลทุกแพลตฟอร์ม เช่น Instagram Bio, Facebook, ชื่อเล่น, Twitter และกลุ่ม WhatsApp</p>
-    <p>ฟอนต์ทั้งหมดใช้ Unicode จึงสามารถใช้งานได้บนอุปกรณ์ส่วนใหญ่ สไตล์เหล่านี้ช่วยให้โปรไฟล์และคอมเมนต์ของคุณโดดเด่นและเป็นส่วนตัวมากขึ้น นี่เป็นวิธีที่ดีที่สุดในการสร้างความแตกต่างจากเพื่อน ๆ ของคุณ มันไม่ใช่แค่สนุก—ยังเป็นวิธีที่ยอดเยี่ยมในการแสดงความคิดของคุณผ่านสัญลักษณ์สวย ๆ</p>
-    <p>มีตัวเลือก Fancy Text หลากหลาย เช่น ชื่อเท่ ๆ ชื่อเล่น คำภาษาอังกฤษผสม ตัวอักษรกรีก ตัวเลขแฟนซี การรวมตัวอักษร และสัญลักษณ์เสริม Emoji</p>
-    <img src="https://fontgen.in/img/Font-Generator.png" alt="เครื่องสร้างฟอนต์">
 
-    <h2>คัดลอกและวางบนโซเชียลมีเดีย</h2>
-    <p>เราเป็น #1 Online Font Changer เราสร้างฟอนต์มากกว่า 190 แบบ รวมถึงฟอนต์แฟนซี เท่ หนา และตัวเขียนเอียง หากคุณต้องการฟอนต์ใหม่เพื่อทำ Instagram Bio หรือคอมเมนต์ให้โดดเด่น ผู้ใช้อินฟลูเอนเซอร์มักใช้ฟอนต์หลายประเภทเพื่อสร้างชื่อโปรไฟล์ทันสมัย ฟอนต์แฟนซีสามารถใช้กับชื่อในเกม การออกแบบโปสเตอร์ และอื่น ๆ เราแนะนำตัวอักษรพิเศษ ASCII สัญลักษณ์ ตัวอักษรภาษาอังกฤษ และเทคนิคการเว้นวรรคเพื่อสร้างสไตล์ของคุณเอง</p>
-    <p>เราเป็นเครื่องมือที่ใช้งานง่าย ปรับแต่งได้สูง รองรับทุกอุปกรณ์ และเต็มไปด้วยวิธีสนุก ๆ ในการแปลงข้อความของคุณ</p>
+<div class="contents">
 
-    <h2>วิธีการทำงานของเครื่องสร้างฟอนต์</h2>
-    <ol>
-        <li>ใส่ข้อความของคุณลงในกล่องข้อความ</li>
-        <li>เครื่องมือจะเปลี่ยนข้อความเป็นฟอนต์สวย ๆ ให้อัตโนมัติ</li>
-        <li>คัดลอกสไตล์โดยคลิกปุ่ม</li>
-        <li>วางฟอนต์สวย ๆ ลงใน Instagram Bio, ชื่อ Facebook หรือที่อื่น ๆ</li>
-    </ol>
-    <p>ง่าย ๆ เพียงเท่านี้ในการสร้างฟอนต์ด้วยเครื่องมือของเรา ฟรี 100% และมีฟอนต์หลายสไตล์ไม่จำกัด</p>
+<h2>เกี่ยวกับเครื่องมือสร้างฟอนต์</h2>
+<img src="https://fontgen.in/img/Font-Generator.png" alt="">
 
-    <h2>ฟอนต์ชื่อสวยฟรีเพิ่มเติม</h2>
-    <p>ด้วย Fancy Text Generator คุณสามารถสร้างเอฟเฟกต์ชื่อเท่ ๆ สำหรับ Instagram และโซเชียลอื่น ๆ ส่งชื่อสวย ๆ ให้เพื่อนและครอบครัวทางข้อความ ทำให้คุณโดดเด่นเป็นคนเท่ในกลุ่มเพื่อน คัดลอกชื่อผู้ใช้สำหรับผู้ชายและผู้หญิงได้ฟรีออนไลน์</p>
-    <p>ฟอนต์แฟนซียอดนิยมมีดังนี้:</p>
+<p>ยินดีต้อนรับสู่ Fontgen.in เครื่องมือสำหรับสร้างข้อความสวยงาม เราช่วยให้คุณสามารถคัดลอกและวางสไตล์ฟอนต์จากรายการที่สร้างขึ้นได้อย่างง่ายดาย เครื่องมือนี้ใช้งานฟรี 100% และมีสัญลักษณ์สวยงามมากกว่า 121 แบบ เครื่องมือสร้างฟอนต์ของเราถูกใช้ในการทำคอมเมนต์ ประวัติส่วนตัว (ไบโอ) และข้อความที่ดูเป็นมืออาชีพมากขึ้น</p>
 
-    <h2>ฟอนต์หรู & แฟนซี</h2>
-    <ul>
-        <li>Grace Script</li>
-        <li>Velvet Cursive</li>
-        <li>Clouded Curves</li>
-        <li>Royal Gothic</li>
-        <li>Shadow Fraktur</li>
-        <li>Twin-Line Strike</li>
-        <li>Retro Classic</li>
-        <li>Symbol Flair</li>
-        <li>Tribal Carve</li>
-        <li>Antique Touch</li>
-    </ul>
+<p>อย่างที่คุณทราบ เครื่องมือสร้างฟอนต์ (หรือที่เรียกว่า Text Generator) ใช้อักขระ Unicode เพื่อสร้างและจัดหมวดหมู่สไตล์ฟอนต์ที่แตกต่างกัน เรามีสัญลักษณ์สำหรับทุกตัวอักษรและอัลฟาเบตที่ช่วยเปลี่ยนข้อความภาษาอังกฤษให้กลายเป็นฟอนต์เท่ ๆ เช่น ข้อความ 🅑🅤🅑🅑🅛🅔 ตัวหนา ตัวเอียง 𝔣𝔞𝔫𝔠𝔶 ขีดฆ่า ข้อความตัวเล็ก bubble text และฟอนต์สวยงามอื่น ๆ อีกกว่า 121 แบบ</p>
 
-    <h2>ฟอนต์เรียบง่าย & สะอาดตา</h2>
-    <ul>
-        <li>Heavy Bold</li>
-        <li>Smooth Italic</li>
-        <li>Bold-Italic Blend</li>
-        <li>Clean Sans</li>
-        <li>Strong Sans</li>
-        <li>Streamlined Italic</li>
-        <li>Ultra Sans Bold</li>
-        <li>Petite Caps</li>
-        <li>Code Mono</li>
-        <li>Wide Stretch</li>
-        <li>Soft Brackets</li>
-    </ul>
+<h2>คัดลอกและวางได้ง่าย</h2>
 
-    <h2>ฟอนต์สนุก & เท่</h2>
-    <ul>
-        <li>Bubble Pop</li>
-        <li>Dark Orb</li>
-        <li>Solid Block</li>
-        <li>Emoji Mix</li>
-        <li>Cute Curve</li>
-        <li>Square Edge</li>
-        <li>Wave Drift</li>
-        <li>Reverse Flip</li>
-        <li>Upside Script</li>
-        <li>Mirror Twist</li>
-        <li>Backflip Text</li>
-        <li>Mini Type</li>
-        <li>Ancient Script</li>
-        <li>Eastern Flow</li>
-        <li>Subscript Lite</li>
-        <li>Vintage Italic</li>
-    </ul>
+<p>เราออกแบบเครื่องมือนี้ให้ใช้งานฟอนต์สวย ๆ ได้อย่างง่ายดาย นั่นคือเหตุผลที่ทำให้เราเป็นหนึ่งในเครื่องมือที่ดีที่สุด เครื่องมือสร้างฟอนต์ของเราช่วยสร้างฟอนต์และสัญลักษณ์ข้อความที่ดูดี เพื่อช่วยให้โปรไฟล์โซเชียลมีเดียของคุณน่าสนใจมากยิ่งขึ้น</p>
 
-    <h2>ฟอนต์ทันสมัย & ล้ำอนาคต</h2>
-    <ul>
-        <li>Feather Soft</li>
-        <li>Dream Drift</li>
-        <li>Fantasy Flow</li>
-        <li>Asian Fusion</li>
-        <li>Prime Style</li>
-        <li>Neo Modern</li>
-        <li>Shadow Cast</li>
-        <li>Iconic Mark</li>
-        <li>Striped Edge</li>
-        <li>Adaptive Form</li>
-        <li>Varied Motion</li>
-        <li>Squiggle Line</li>
-    </ul>
+<p>เรารองรับอักขระ ASCII มากกว่า 128 ตัว และสัญลักษณ์ Unicode คุณสามารถคัดลอกและวางฟอนต์สำหรับชื่อเล่น งานออกแบบ และข้อความสวยงามได้ ทุกตัวอักษรและสัญลักษณ์สามารถใช้งานได้บนทุกแพลตฟอร์ม</p>
 
-    <h2>ฟอนต์สไตล์ลายเซ็น</h2>
-    <ul>
-        <li>Playful Stroke</li>
-        <li>Polished Line</li>
-        <li>Minimal Touch</li>
-        <li>Gentle Script</li>
-        <li>Trendy Sway</li>
-        <li>Paint Stroke</li>
-        <li>Ornate Curve</li>
-        <li>Reverse Signature</li>
-        <li>One-of-a-Kind Glyph</li>
-        <li>Timeless Ink</li>
-        <li>Static Mark</li>
-    </ul>
+<h2>เครื่องมือนี้ทำงานอย่างไร</h2>
 
-    <h2>เอฟเฟกต์ขีดเส้นใต้ & เน้นข้อความ</h2>
-    <ul>
-        <li>Dual Underline</li>
-        <li>Classic Line</li>
-        <li>Strike Slash</li>
-        <li>Forward Strike</li>
-        <li>Top Bar Line</li>
-        <li>Wave Slash</li>
-        <li>Boxed Underline</li>
-        <li>Wide Macron</li>
-    </ul>
+<ul>
+  <li>พิมพ์ข้อความของคุณ</li>
+  <li>เลือกฟอนต์ที่คุณชอบ</li>
+  <li>คัดลอก</li>
+  <li>วางบนโปรไฟล์โซเชียลของคุณ</li>
+</ul>
 
-    <h2>ตัวหุ้มสัญลักษณ์ตกแต่ง</h2>
-    <ul>
-        <li>Curly Surround</li>
-        <li>Spark Ring</li>
-        <li>Moon Brackets</li>
-        <li>Arrow Wrap</li>
-        <li>Dotted Edges</li>
-        <li>Angled Shell</li>
-        <li>Arc Frame</li>
-    </ul>
+<h2>วิธีใช้ข้อความสวยงาม</h2>
 
-    <h2>เครื่องหมายราชวงศ์ & มงกุฎ</h2>
-    <ul>
-        <li>Crown Point</li>
-        <li>Wave Crest</li>
-        <li>Arrow Peak</li>
-        <li>Soft Tick Mark</li>
-        <li>Regal Cap</li>
-        <li>Balanced Crown</li>
-        <li>Z-Shaped Topper</li>
-        <li>Curved Peak</li>
-        <li>Spotted Crown</li>
-    </ul>
+<p>การใช้งานข้อความเท่ ๆ ไม่มีขีดจำกัด หลายคนใช้เพื่อสร้างชื่อบนโพสต์ Instagram, Facebook, TikTok, YouTube, Pinterest หรือ Snapchat</p>
 
-    <h2>เครื่องหมายตัดกัน</h2>
-    <ul>
-        <li>Round Accent</li>
-        <li>Cross Touch</li>
-        <li>Curve Link</li>
-        <li>Under-Swoop</li>
-        <li>Arrow Support</li>
-        <li>Wave Crown</li>
-        <li>Wavy Base</li>
-    </ul>
+<p>หลายคนยังต้องการชื่อเท่ ๆ สำหรับเกมอย่าง Free Fire, PUBG และ Roblox ผู้ที่มีความคิดสร้างสรรค์จะใช้สไตล์ที่เป็นเอกลักษณ์ของตนเอง เพียงคัดลอกและวางข้อความสวยงาม</p>
 
-    <h2>สัญลักษณ์วง & หมุนวน</h2>
-    <ul>
-        <li>Loop Trail</li>
-        <li>Arrow Zap</li>
-        <li>Curvy Flick</li>
-        <li>Flow End</li>
-        <li>Alpha Swoosh</li>
-        <li>Twin Slash</li>
-        <li>Star Edge</li>
-    </ul>
+<p>คำแนะนำของเราคือการผสมผสานสัญลักษณ์และฟอนต์เพื่อแสดงตัวตนของคุณในแบบที่ดูดีที่สุด เราจะเพิ่มหมวดหมู่ใหม่มากกว่า 100 หมวดในอัปเดตถัดไป</p>
 
-    <h2>สไตล์ข้อความกรอบ</h2>
-    <ul>
-        <li>Bold Box</li>
-        <li>Soft Box</li>
-        <li>Bracket Frame</li>
-        <li>Round Shell</li>
-        <li>Corner Cut Frame</li>
-        <li>Swirl Border</li>
-        <li>Triple Edge Box</li>
-        <li>Angular Frame</li>
-        <li>Tick Corners</li>
-        <li>Beam Outline</li>
-        <li>Arrow Frame</li>
-        <li>Accent Shell</li>
-        <li>Cloud Line</li>
-    </ul>
+<h2>ฟอนต์ฟรีเพิ่มเติม</h2>
 
-    <h2>สไตล์ฟิวชันสัญลักษณ์</h2>
-    <ul>
-        <li>Stellar Ring</li>
-        <li>Star Burst</li>
-        <li>Zig Flux</li>
-        <li>Twist Spark</li>
-        <li>Focus Halo</li>
-        <li>Twin Arrow Mark</li>
-        <li>Wave Flash</li>
-    </ul>
+<p>เครื่องมือสร้างข้อความสวยงามของเราจะสร้างฟอนต์หลากหลายสไตล์ทันทีหลังจากคุณพิมพ์ข้อความลงในช่อง คุณสามารถคัดลอกฟอนต์จากรายการแสดงตัวอย่างได้ด้วยปุ่ม</p>
 
-    <h2>กรอบลื่นไหล</h2>
-    <ul>
-        <li>Spark Digit</li>
-        <li>Corner Glide</li>
-        <li>Mark Finish</li>
-        <li>Zig Route</li>
-        <li>Glow Strip</li>
-        <li>Top Drive</li>
-        <li>Soft Mesh</li>
-        <li>Boxed Corner</li>
-        <li>Disrupt Line</li>
-    </ul>
+<p>หากคุณพบสไตล์อย่าง Aesthetic, Bold, Fraktur หรือ Old English บนเว็บไซต์ของเรา และต้องการตัวเลือกฟอนต์หรือสัญลักษณ์เพิ่มเติม โปรดแจ้งให้เราทราบ — เราจะเพิ่มให้ในภายหลัง</p>
 
-    <h2>ข้อความหน้า Kawaii</h2>
-    <ul>
-        <li>Smiley Cute</li>
-        <li>Heart Eyes</li>
-        <li>Shine Spark Face</li>
-        <li>Bunny Joy</li>
-        <li>Happy Smile</li>
-        <li>Blush Star Eyes</li>
-        <li>Mini Cat Face</li>
-        <li>Cheer Joy</li>
-        <li>Soft Sweet Smile</li>
-        <li>Giggly Cat Face</li>
-        <li>Shy-Cute Expression</li>
-    </ul>
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> ·
+    <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
+  </p>
+</div>
 
-    <h2>กรอบหรู & ตกแต่ง</h2>
-    <ul>
-        <li>Twist Emblem</li>
-        <li>Lunar Glow</li>
-        <li>Smooth Path</li>
-        <li>Noble Line</li>
-        <li>Star Shine</li>
-        <li>Gloss Beam</li>
-        <li>Night Star</li>
-        <li>Celestial Spiral</li>
-    </ul>
+</div>
 
-    <h2>กรอบหนา & แข็งแรง</h2>
-    <ul>
-        <li>Gym Line Frame</li>
-        <li>Block Shield</li>
-        <li>Bar Outline</li>
-        <li>Shimmer Edge</li>
-        <li>Crafted Heavy</li>
-        <li>Bold Quote Box</li>
-        <li>Stream Border</li>
-        <li>Verified Edge</li>
-    </ul>
-
-    <h2>กรอบแฟนตาซี & มหัศจรรย์</h2>
-    <ul>
-        <li>Flash Spark</li>
-        <li>Petal Twist</li>
-        <li>Star Drift</li>
-        <li>Starfield Loop</li>
-        <li>Spark Burst</li>
-        <li>Elegant Star Line</li>
-        <li>Star Touch Accent</li>
-        <li>Stellar Portal</li>
-    </ul>
-
-    <h2>ฟอนต์ศิลปะ & สร้างสรรค์</h2>
-    <ul>
-        <li>Cosmic Shine</li>
-        <li>Deep Shadow Frame</li>
-        <li>Elegant Flow Script</li>
-        <li>Midnight Gleam</li>
-        <li>Strike Script</li>
-        <li>Petal Loop</li>
-        <li>Blossom Curl</li>
-        <li>Chic Edge</li>
-    </ul>
-
-    <h2>ฟอนต์ธีม Emoji</h2>
-    <ul>
-        <li>Sparkle Script</li>
-        <li>Cute Critters</li>
-        <li>Sweet Snacks</li>
-        <li>Magic Stars</li>
-        <li>Floral Bloom</li>
-        <li>Cosmic Pop</li>
-        <li>Bubblegum Style</li>
-        <li>Forest Friends</li>
-        <li>Ocean Breeze</li>
-    </ul>
-
-    <h2>ฟอนต์สุ่ม & ผสม</h2>
-    <ul>
-        <li>Funky Fusion</li>
-        <li>Mystery Mix</li>
-        <li>Edge Glitch</li>
-        <li>Soft Haze</li>
-        <li>Chaos Streak</li>
-        <li>Scramble Text</li>
-        <li>Twist Surprise</li>
-        <li>Hybrid Mode</li>
-        <li>Mixed Blend</li>
-    </ul>
-
-    <h2>คำถามที่พบบ่อย</h2>
-    <p><strong>เครื่องมือนี้คืออะไร?</strong><br>เป็นเครื่องสร้างฟอนต์ออนไลน์ฟรีที่ให้คุณพิมพ์ข้อความและแปลงเป็นสไตล์ Unicode สวย ๆ ได้ทันที</p>
-    <p><strong>สามารถใช้ฟอนต์เหล่านี้ที่ไหนได้บ้าง?</strong><br>คุณสามารถวางบน Instagram, Facebook, Twitter, TikTok, Discord และแอปแชทอย่าง WhatsApp และ Telegram</p>
-    <p><strong>ตัวอ่านหน้าจออ่านฟอนต์เหล่านี้ได้ไหม?</strong><br>ไม่เสมอไป ฟอนต์ Unicode อาจไม่สามารถเข้าถึงได้ ควรใช้ข้อความธรรมดาเพื่อความชัดเจนเมื่อจำเป็น</p>
-    <p><strong>ทำไมบางครั้งข้อความแสดงเป็นกล่องหรือเครื่องหมายคำถาม?</strong><br>อุปกรณ์หรือแอปบางตัวไม่รองรับทุกตัวอักษร Unicode หากเกิดปัญหานี้ ให้ลองฟอนต์สไตล์อื่นจากรายการ</p>
-
-</article>
 
 <footer class="site-footer">
   <div class="footer-container">
