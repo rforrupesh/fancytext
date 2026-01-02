@@ -2,12 +2,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            
         }
 
         body {
-            /* Using a cleaner, high-contrast palette */
+          /* Using a cleaner, high-contrast palette */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: hsla(347, 89%, 61%, 1);
+background: rgb(216, 46, 83);
 
 background: linear-gradient(90deg, hsla(347, 89%, 61%, 1) 0%, hsla(242, 42%, 40%, 1) 100%);
 
@@ -18,10 +19,11 @@ background: -webkit-linear-gradient(90deg, hsla(347, 89%, 61%, 1) 0%, hsla(242, 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", endColorstr="#3E3B92", GradientType=1 );
 
 
-            color: #f8fafc; /* Very Light Gray (Slate 50) */
+            color: #e8ecf0; /* Very Light Gray (Slate 50) */
             line-height: 1.6;
             min-height: 100vh;
         }
+
 
         .notification {
             position: fixed;
@@ -446,7 +448,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", en
             padding: 0 10px; /* Added padding for mobile screen edges */
         }
 
-        .output-list h1{
+        .output-list h1, .output-list h2, .output-list h4{
             margin: 2px;
             /* White text for dark gradient background */
             color: #f8fafc; 
@@ -674,41 +676,62 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", en
             font-weight: 400;
         }
         /* ---------- Copy Button (Refined) ---------- */
-        .copy-btn {
-            cursor: pointer;
-            /* Button appearance */
-            background: #007bff;
-            color: white;
-            border: none;
-            width: 44px; /* Fixed width/height for a perfect square button */
-            height: 44px; 
-            padding: 0; /* Remove padding */
-            border-radius: 8px; /* Rounded corners */
-            transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.25s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4);
-        }
+    .copy-btn {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
 
-        .copy-btn svg {
-            width: 20px;
-            height: 20px;
-            stroke: #fff;
-            fill: none; /* Ensure fill is none if using strokes */
-            transition: stroke 0.25s ease;
-        }
+  /* default = icon-only */
+  width: 44px;
+  height: 44px;
+  padding: 0;
 
-        .copy-btn:hover {
-            background:#026cde;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.6);
-        }
-        .copy-btn:active {
-            transform: translateY(1px);
-            box-shadow: 0 1px 5px rgba(0, 123, 255, 0.5);
-        }
+  border-radius: 8px;
+  transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.25s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4);
+}
+
+/* ✅ When text exists → auto width */
+.copy-btn:has(.copy-text) {
+  width: auto;
+  padding-inline: 14px;
+}
+
+/* Icon */
+.copy-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  fill: none;
+  flex-shrink: 0;
+}
+
+/* Text */
+.copy-text {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Hover / active */
+.copy-btn:hover {
+  background: #026cde;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.6);
+}
+
+.copy-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 5px rgba(0, 123, 255, 0.5);
+}
 
 
         /* ---------- Copy Notification ---------- */
@@ -749,8 +772,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", en
 
 
      
- /* ----- ARTICLE CONTAINER ----- */
-article {
+ /* ----- .contents CONTAINER ----- */
+.contents {
     max-width: 800px;
     color: #2c3e50;
     margin: 20px auto;
@@ -761,8 +784,8 @@ article {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ----- ARTICLE TYPOGRAPHY ----- */
-article h1 {
+/* ----- .contents TYPOGRAPHY ----- */
+.contents h1 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #1a202c;
@@ -771,7 +794,7 @@ article h1 {
     margin-bottom: 1rem;
 }
 
-article h2 {
+.contents h2 {
     font-size: 2rem;
     font-weight: 700;
     color: #2d3748;
@@ -781,7 +804,7 @@ article h2 {
     border-bottom: 3px solid #007bff;
 }
 
-article h3 {
+.contents h3 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #2d3748;
@@ -789,26 +812,26 @@ article h3 {
     margin-bottom: 0.75rem;
 }
 
-article p, 
-article ul, 
-article ol {
+.contents p, 
+.contents ul, 
+.contents ol {
     font-size: 1.1rem;
     color: #4a5568;
     line-height: 1.8;
     margin-bottom: 1rem;
 }
 
-article ul,
-article ol {
+.contents ul,
+.contents ol {
     padding-left: 1.5rem;
 }
 
-article li {
+.contents li {
     margin-bottom: 0.5rem;
 }
 
 /* ----- IMAGES ----- */
-article img {
+.contents img {
     max-width: 100%;
     height: auto;
     margin: 1rem auto;
@@ -818,7 +841,7 @@ article img {
 }
 
 /* ----- TABLES ----- */
-article .table-container,
+.contents .table-container,
 div.tablecontainer {
     margin: 1.5rem 0;
     overflow-x: auto;
@@ -828,7 +851,7 @@ div.tablecontainer {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-article table,
+.contents table,
 table {
     width: 100%;
     min-width: 600px;
@@ -836,8 +859,8 @@ table {
     margin: 0;
 }
 
-article th, 
-article td,
+.contents th, 
+.contents td,
 th, 
 td {
     padding: 12px 16px;
@@ -846,7 +869,7 @@ td {
     color: #4a5568;
 }
 
-article thead th,
+.contents thead th,
 thead th {
     background-color: #f7fafc;
     color: #1a202c;
@@ -857,13 +880,13 @@ thead th {
     letter-spacing: 0.5px;
 }
 
-article tbody tr:hover,
+.contents tbody tr:hover,
 tbody tr:hover {
     background-color: #f0f7ff;
 }
 
 /* ----- VIDEOS/IFRAMES ----- */
-article .embed-container {
+.contents .embed-container {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -874,10 +897,10 @@ article .embed-container {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-article .embed-container iframe,
-article .embed-container video,
-article .embed-container object,
-article .embed-container embed {
+.contents .embed-container iframe,
+.contents .embed-container video,
+.contents .embed-container object,
+.contents .embed-container embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -887,7 +910,7 @@ article .embed-container embed {
 }
 
 /* ----- CODE BLOCKS ----- */
-article pre {
+.contents pre {
     background: #1e293b;
     color: #e2e8f0;
     padding: 1.5rem;
@@ -899,13 +922,13 @@ article pre {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-article pre code {
+.contents pre code {
     color: #e2e8f0;
     background: transparent;
     padding: 0;
 }
 
-article code {
+.contents code {
     background-color: #f1f5f9;
     color: #e91e63;
     padding: 3px 8px;
@@ -915,14 +938,14 @@ article code {
 }
 
 /* ----- FEATURE BOXES ----- */
-article .features-container {
+.contents .features-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 3rem 0;
 }
 
-article .feature-box {
+.contents .feature-box {
     padding: 2rem;
     border: 1px solid #e8ecf1;
     border-radius: 12px;
@@ -931,19 +954,19 @@ article .feature-box {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-article .feature-box:hover {
+.contents .feature-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
-article .feature-box svg {
+.contents .feature-box svg {
     width: 32px;
     height: 32px;
     fill: #007bff;
     margin-bottom: 1.5rem;
 }
 
-article .feature-text strong {
+.contents .feature-text strong {
     display: block;
     font-size: 1.2rem;
     font-weight: 700;
@@ -951,7 +974,7 @@ article .feature-text strong {
     margin-bottom: 0.75rem;
 }
 
-article .feature-text p {
+.contents .feature-text p {
     margin: 0;
     font-size: 1rem;
     color: #64748b;
@@ -959,17 +982,17 @@ article .feature-text p {
 }
 
 /* ----- STEPS ----- */
-article .steps-container {
+.contents .steps-container {
     margin: 4rem 0;
 }
 
-article .steps {
+.contents .steps {
     margin: 2.5rem 0;
     border-left: 4px solid #e2e8f0;
     padding-left: 3rem;
 }
 
-article .step {
+.contents .step {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1.5rem;
@@ -979,12 +1002,12 @@ article .step {
     position: relative;
 }
 
-article .step:last-child {
+.contents .step:last-child {
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
-article .step-number {
+.contents .step-number {
     width: 45px;
     height: 45px;
     background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
@@ -1002,17 +1025,17 @@ article .step-number {
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3), 0 0 0 6px #ffffff;
 }
 
-article .step-content h3 {
+.contents .step-content h3 {
     margin-top: 0;
     color: #2d3748;
     font-size: 1.4rem;
 }
 
-article .step-content p {
+.contents .step-content p {
     margin-bottom: 1rem;
 }
 
-article .step img {
+.contents .step img {
     max-width: 100%;
     max-height: 250px;
     margin: 1.5rem 0 0 0;
@@ -1022,15 +1045,15 @@ article .step img {
 }
 
 /* ----- CARDS ----- */
-article .cards {
+.contents .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin: 3rem 0;
 }
 
-article .card {
-    border: 1px solid #e8ecf1;
+.contents .card {
+    border: 1px solid #0e0e0f;
     border-radius: 12px;
     padding: 2.5rem;
     background: #ffffff;
@@ -1039,13 +1062,15 @@ article .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-article .card:hover {
+.contents .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     border-color: #007bff;
+    background-color: #e6e8ea;
+    color: #000;
 }
 
-article .card img {
+.contents .card img {
     width: 100%;
     max-width: 120px;
     height: auto;
@@ -1054,14 +1079,14 @@ article .card img {
     object-fit: contain;
 }
 
-article .card h3 {
+.contents .card h3 {
     margin: 1rem 0 0.75rem 0;
     font-size: 1.25rem;
     font-weight: 700;
     color: #2d3748;
 }
 
-article .card p {
+.contents .card p {
     margin: 0;
     font-size: 1rem;
     color: #4a5568;
@@ -1069,7 +1094,7 @@ article .card p {
 }
 
 /* ----- ABOUT SECTION ----- */
-article .about {
+.contents .about {
     margin: 4rem 0;
     padding: 2.5rem;
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
@@ -1128,59 +1153,59 @@ article .about {
 
 /* ----- RESPONSIVE DESIGN ----- */
 @media (max-width: 768px) {
-    article {
+    .contents {
         padding: 30px 25px;
         margin: 30px 15px;
     }
 
-    article h1 {
+    .contents h1 {
         font-size: 2rem;
     }
 
-    article h2 {
+    .contents h2 {
         font-size: 1.75rem;
         margin-top: 2.5rem;
     }
 
-    article h3 {
+    .contents h3 {
         font-size: 1.3rem;
     }
 
-    article p,
-    article ul,
-    article ol {
+    .contents p,
+    .contents ul,
+    .contents ol {
         font-size: 1.05rem;
     }
 
-    article .features-container,
-    article .cards {
+    .contents .features-container,
+    .contents .cards {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    article .steps {
+    .contents .steps {
         border-left: none;
         padding-left: 0;
     }
 
-    article .step {
+    .contents .step {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding-bottom: 2rem;
         border-bottom: 1px solid #e8ecf1;
     }
 
-    article .step-number {
+    .contents .step-number {
         position: static;
         margin: 0 0 1rem 0;
         box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
     }
 
-    article .card img {
+    .contents .card img {
         max-width: 100px;
     }
 
-    article .about {
+    .contents .about {
         padding: 2rem;
     }
 
@@ -1191,39 +1216,39 @@ article .about {
 }
 
 @media (max-width: 480px) {
-    article {
+    .contents {
         padding: 25px 20px;
         margin: 20px 10px;
     }
 
-    article h1 {
+    .contents h1 {
         font-size: 1.75rem;
     }
 
-    article h2 {
+    .contents h2 {
         font-size: 1.5rem;
     }
 
-    article h3 {
+    .contents h3 {
         font-size: 1.2rem;
     }
 
-    article p,
-    article ul,
-    article ol {
+    .contents p,
+    .contents ul,
+    .contents ol {
         font-size: 1rem;
     }
 
-    article .feature-box,
-    article .card {
+    .contents .feature-box,
+    .contents .card {
         padding: 1.5rem;
     }
 
-    article .about {
+    .contents .about {
         padding: 1.5rem;
     }
 
-    article table {
+    .contents table {
         min-width: 100%;
     }
 
@@ -1237,3 +1262,29 @@ article .about {
         margin: 0 0.4rem;
     }
 }
+
+ .contents  a {
+            color: rgb(155, 13, 13);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+            position: relative;
+            transition: color 0.2s ease;
+            display: inline;
+            background: linear-gradient(to top, rgb(175, 9, 9) 0%, rgb(130, 5, 5) 100%);
+            background-size: 100% 0%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            transition: background-size 0.2s ease, color 0.2s ease;
+        }
+
+        /* Hover effect */
+       .contents a:hover {
+            color: white;
+            text-decoration-thickness: 2px;
+            background-size: 100% 100%;
+        }
+
+       .contents a:hover::before {
+            height: 0%;
+        }
