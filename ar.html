@@ -48,11 +48,13 @@
 <link rel="alternate" href="https://fontgen.in/th.html" hreflang="th">
 <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
 <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
+<link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
 </head>
 <body dir="rtl">
 
-    <nav class="navbar">
-    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+<nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
       <span class="icon-hamburger">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="6" x2="20" y2="6"/>
@@ -60,6 +62,7 @@
           <line x1="4" y1="18" x2="20" y2="18"/>
         </svg>
       </span>
+      <!-- Close SVG -->
       <span class="icon-close">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -67,62 +70,41 @@
         </svg>
       </span>
     </button>
-    <a href="/" class="logo">
-      <img src="https://fontgen.in/img/logo_header.png" alt="شعار مولد الخطوط">
+    <a href="https://fontgen.in/" class="logo">
+      <img src="https://fontgen.in/img/logo_header.png" alt="Logo">
     </a>
-    <div class="nav-menu" id="navMenu" dir="rtl"> <ul>
+    <div class="nav-menu" id="navMenu">
+      <ul>
         <li>
-          <a href="https://fontgen.in/">الرئيسية</a>
+          <a href="https://fontgen.in/">Home</a>
         </li>
-            <li>
+          <li>
+          <a href="./font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            حول الموقع
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/about-us.html">من نحن</a>
-            <a href="https://fontgen.in/contact-us.html">اتصل بنا</a>
-            <a href="https://fontgen.in/privacy-policy.html">سياسة الخصوصية</a>
-            <a href="https://fontgen.in/faq.html">الأسئلة الشائعة</a>
-          </div>
+       
+    
+       <li>
+          <a href="./about-us.html">About</a>
         </li>
-      
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            اللغة
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/" data-lang="en">English</a>
-            <a href="https://fontgen.in/es.html" data-lang="es">Español</a>
-            <a href="https://fontgen.in/ar.html" data-lang="ar">العربية</a>
-            <a href="https://fontgen.in/fr.html" data-lang="fr">Français</a>
-            <a href="https://fontgen.in/de.html" data-lang="de">Deutsch</a>
-            <a href="https://fontgen.in/pt.html" data-lang="pt">Português</a>
-            <a href="https://fontgen.in/id.html" data-lang="id">Indonesian</a>
-            <a href="https://fontgen.in/hi.html" data-lang="hi">हिन्दी</a>
-            <a href="https://fontgen.in/it.html" data-lang="it">Italiano</a>
-            <a href="https://fontgen.in/ja.html" data-lang="ja">日本語</a>
-            <a href="https://fontgen.in/ru.html" data-lang="ru">Россия</a>
-            <a href="https://fontgen.in/th.html" data-lang="th">ประเทศไทย</a>
-            <a href="https://fontgen.in/tr.html" data-lang="tr">Türkiye</a>
-            <a href="https://fontgen.in/vi.html" data-lang="vi">Việt Nam</a>
-          </div>
+ 
+       
+         <li>
+          <a href="./privacy-policy.html">Privacy</a>
         </li>
-        
+
+          
+         <li>
+          <a href="./contact-us.html">Contact</a>
+        </li>
+
       </ul>
 
     </div>
-  </nav>
-
-  <div class="nav-overlay" id="navOverlay"></div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
 
 
   <div class="output-list" dir="rtl">
@@ -138,17 +120,25 @@
         <div class="tab-wrapper">
             <span class="scroll-btn left-btn" id="scrollLeftBtn" dir="ltr">&lt;</span>
             <nav class="tab-nav" id="tabNav" dir="rtl">
-                <a href="https://fontgen.in/" class="tab-link">جميع الخطوط</a>
-                <a href="https://fontgen.in/tools/cool.html" class="tab-link">رائعة</a>
-                <a href="https://fontgen.in/tools/fancy.html" class="tab-link">مزخرفة</a>
-                <a href="https://fontgen.in/tools/cursive.html" class="tab-link">متصلة</a>
-                <a href="https://fontgen.in/tools/small.html" class="tab-link">صغيرة</a>
-                <a href="https://fontgen.in/tools/bold.html" class="tab-link">عريضة</a>
-                <a href="https://fontgen.in/tools/glitch.html" class="tab-link">متقطعة</a>
-                <a href="https://fontgen.in/tools/symbols.html" class="tab-link">نص رموز</a>
-                <a href="https://fontgen.in/tools/text-art.html" class="tab-link">فن النص</a>
-                <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">يتوسطه خط</a>
-                <a href="https://fontgen.in/tools/invisible.html" class="tab-link">مخفية</a>
+                <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
             </nav>
             <span class="scroll-btn right-btn" id="scrollRightBtn" dir="ltr">&gt;</span>
         </div>
@@ -703,7 +693,7 @@
     <div id="copyNotification"></div>
 </div>
 
-<article dir="rtl">
+<div class="contents" dir="rtl">
     <h2>حول مولد الخطوط</h2>
     <p>قم بإنشاء خطوط أنيقة بسهولة من نص بسيط باستخدام أداتنا المجانية عبر الإنترنت. ما عليك سوى كتابة النص الخاص بك ونسخه. يمكنك استخدامه عبر جميع منصات التواصل الاجتماعي مثل بايو إنستغرام، وفيسبوك، والاسم المستعار (Nickname)، وتويتر، ومجموعات واتساب.</p>
     <p>تستخدم هذه الخطوط نظام يونيكود (Unicode)، لذا فهي تعمل على معظم الأجهزة. تجعل هذه الأنماط ملفك الشخصي وتعليقاتك أكثر تميزًا وجاذبية. إنها أفضل طريقة للتميز عن الآخرين والأصدقاء. الأمر ليس ممتعًا فحسب، بل هو أيضًا طريقة رائعة للتعبير عن أفكارك باستخدام رموز مزخرفة.</p>
@@ -1000,7 +990,31 @@
     <p><strong>أين يمكنني استخدام هذه الخطوط؟</strong><br>يمكنك لصقها في إنستغرام، وفيسبوك، وتويتر، وتيك توك، وديسكورد، وتطبيقات المراسلة مثل واتساب وتيليجرام.</p>
     <p><strong>هل ستقرأ قارئات الشاشة هذه الخطوط؟</strong><br>ليس دائمًا. قد لا يكون نص يونيكود المزخرف متاحًا دائمًا لجميع قارئات الشاشة، لذا استخدم نصًا عاديًا للوضوح عند الحاجة.</p>
     <p><strong>لماذا يظهر النص أحيانًا على شكل مربعات أو علامات استفهام؟</strong><br>بعض الأجهزة أو التطبيقات لا تدعم كل حرف من حروف يونيكود. إذا حدث ذلك، جرب نمط خط آخر من القائمة.</p>
-</article>
+
+
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> .
+        <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
+
+  </p>
+</div>
+
+
+</div>
 
 <footer class="site-footer" dir="rtl">
     <div class="footer-container">
