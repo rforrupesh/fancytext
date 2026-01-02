@@ -53,85 +53,64 @@
   <link rel="alternate" href="https://fontgen.in/th.html" hreflang="th">
   <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
   <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
+  <link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
+
 </head>
 <body>
-<nav class="navbar" role="navigation" aria-label="Главная навигация">
-  <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
-    <!-- Hamburger SVG -->
-    <span class="icon-hamburger" aria-hidden="true">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="4" y1="6" x2="20" y2="6"/>
-        <line x1="4" y1="12" x2="20" y2="12"/>
-        <line x1="4" y1="18" x2="20" y2="18"/>
-      </svg>
-    </span>
-    <!-- Close SVG -->
-    <span class="icon-close" aria-hidden="true">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </span>
-  </button>
 
-  <a href="https://fontgen.in/" class="logo" aria-label="Перейти на главную">
-    <img src="https://fontgen.in/img/logo_header.png" alt="Логотип">
-  </a>
-
-  <div class="nav-menu" id="navMenu" aria-hidden="true">
-    <ul>
-      <li>
-        <a href="https://fontgen.in/">Главная</a>
-      </li>
-
-    <li>
+<nav class="navbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <!-- Hamburger SVG -->
+      <span class="icon-hamburger">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+      </span>
+      <!-- Close SVG -->
+      <span class="icon-close">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </span>
+    </button>
+    <a href="https://fontgen.in/" class="logo">
+      <img src="https://fontgen.in/img/logo_header.png" alt="Logo">
+    </a>
+    <div class="nav-menu" id="navMenu">
+      <ul>
+        <li>
+          <a href="https://fontgen.in/">Home</a>
+        </li>
+          <li>
+          <a href="https://fontgen.in/font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
+       
+    
+       <li>
+          <a href="https://fontgen.in/about-us.html">About</a>
+        </li>
+ 
+       
+         <li>
+          <a href="https://fontgen.in/privacy-policy.html">Privacy</a>
+        </li>
 
-      <li class="dropdown">
-        <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-          О нас
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2" aria-hidden="true">
-            <polyline points="6 8 10 12 14 8"/>
-          </svg>
-        </button>
-        <div class="dropdown-content" role="menu" aria-label="О нас — список">
-          <a href="https://fontgen.in/about-us.html" role="menuitem">О нас</a>
-          <a href="https://fontgen.in/contact-us.html" role="menuitem">Контакты</a>
-          <a href="https://fontgen.in/privacy-policy.html" role="menuitem">Политика конфиденциальности</a>
-          <a href="https://fontgen.in/faq.html" role="menuitem">FAQ</a>
-        </div>
-      </li>
+          
+         <li>
+          <a href="https://fontgen.in/contact-us.html">Contact</a>
+        </li>
 
-      <li class="dropdown">
-        <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-          Язык
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2" aria-hidden="true">
-            <polyline points="6 8 10 12 14 8"/>
-          </svg>
-        </button>
-        <div class="dropdown-content" role="menu" aria-label="Выбор языка">
-          <a href="https://fontgen.in/" data-lang="en" role="menuitem">Английский</a>
-          <a href="https://fontgen.in/es.html" data-lang="es" role="menuitem">Испанский</a>
-          <a href="https://fontgen.in/ar.html" data-lang="ar" role="menuitem">Арабский</a>
-          <a href="https://fontgen.in/fr.html" data-lang="fr" role="menuitem">Французский</a>
-          <a href="https://fontgen.in/de.html" data-lang="de" role="menuitem">Немецкий</a>
-          <a href="https://fontgen.in/pt.html" data-lang="pt" role="menuitem">Португальский</a>
-          <a href="https://fontgen.in/id.html" data-lang="id" role="menuitem">Индонезийский</a>
-          <a href="https://fontgen.in/hi.html" data-lang="hi" role="menuitem">Хинди</a>
-          <a href="https://fontgen.in/it.html" data-lang="it" role="menuitem">Итальянский</a>
-          <a href="https://fontgen.in/ja.html" data-lang="ja" role="menuitem">Японский</a>
-          <a href="https://fontgen.in/ru.html" data-lang="ru" role="menuitem">Русский</a>
-          <a href="https://fontgen.in/th.html" data-lang="th" role="menuitem">Тайский</a>
-          <a href="https://fontgen.in/tr.html" data-lang="tr" role="menuitem">Турецкий</a>
-          <a href="https://fontgen.in/vi.html" data-lang="vi" role="menuitem">Вьетнамский</a>
-        </div>
-      </li>
-    </ul>
-  </div>
+      </ul>
+
+    </div>
 </nav>
-
-<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <div class="output-list">
   <h1>Генератор шрифтов</h1>
@@ -140,27 +119,35 @@
   <!-- ✅ Поиск + вкладки -->
   <div class="search-section" id="searchSection">
     <div class="input-container">
-      <input type="text" id="userInput" placeholder="FontGen" onfocus="this.value=''" oninput="handleInputChange()" aria-label="Ввод текста пользователя" />
+      <input type="text" id="userInput" placeholder="Type something..." onfocus="this.value=''" oninput="handleInputChange()" aria-label="Ввод текста пользователя" />
       <button class="clear-btn" onclick="clearInput()" aria-label="Очистить поле">×</button>
     </div>
 
-    <div class="tab-wrapper">
-      <button class="scroll-btn left-btn" id="scrollLeftBtn" aria-label="Прокрутить вкладки влево">&lt;</button>
-      <nav class="tab-nav" id="tabNav" role="navigation" aria-label="Навигация по категориям шрифтов">
-        <a href="https://fontgen.in/" class="tab-link">Все шрифты</a>
-        <a href="https://fontgen.in/tools/cool.html" class="tab-link">Крутые</a>
-        <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Фантазийные</a>
-        <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Курсив</a>
-        <a href="https://fontgen.in/tools/small.html" class="tab-link">Малые</a>
-        <a href="https://fontgen.in/tools/bold.html" class="tab-link">Жирные</a>
-        <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Глитч</a>
-        <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Символы</a>
-        <a href="https://fontgen.in/tools/text-art.html" class="tab-link">Текст-арт</a>
-        <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Зачёркнутые</a>
-        <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Невидимые</a>
-      </nav>
-      <button class="scroll-btn right-btn" id="scrollRightBtn" aria-label="Прокрутить вкладки вправо">&gt;</button>
-    </div>
+     <div class="tab-wrapper">
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
   </div>
 
   <!-- Curly Wrap -->
@@ -728,308 +715,67 @@
 
   <div id="copyNotification" aria-live="polite"></div>
 </div>
-<article>
-  <h2>О генераторе шрифтов</h2>
-  <p>Легко создавайте стильные шрифты из обычного текста с помощью нашего бесплатного онлайн-инструмента. Просто введите текст и скопируйте его. Вы можете использовать полученные шрифты во всех социальных сетях — в био Instagram, в имени на Facebook, в Twitter и в группах WhatsApp.</p>
 
-  <p>Шрифты основаны на Unicode, поэтому они работают на большинстве устройств. Эти стили делают ваш профиль и комментарии более персонализированными и привлекательными. Это не только весело — это ещё отличный способ выразить мысли с помощью красивых символов.</p>
+<div class="contents">
 
-  <p>Доступен широкий диапазон вариантов Fancy Text: крутые имена, прозвища, смешанные английские слова, греческие буквы, стильные цифры, комбинации алфавитов и добавление эмодзи.</p>
+<h2>О генераторе шрифтов</h2>
+<img src="https://fontgen.in/img/Font-Generator.png" alt="">
 
-  <img src="https://fontgen.in/img/Font-Generator.png" alt="Пример выходных стильных шрифтов от Font Generator">
+<p>Добро пожаловать на Fontgen.in — инструмент для создания стильного текста. Мы позволяем легко копировать и вставлять стили шрифтов из сгенерированного списка. Этот инструмент на 100% бесплатный и включает более 121 стильный символ. Наш генератор шрифтов используется для создания комментариев, биографий и более профессиональных текстов.</p>
 
-  <h2>Копировать и вставить для социальных сетей</h2>
-  <p>Мы — онлайн-изменитель шрифтов №1. Мы создали 190 различных стилей шрифтов, включая фантазийные, крутые, жирные и курсивные. Если вы хотите новые шрифты для привлекательного описания в Instagram или эффектных комментариев, инфлюенсеры часто используют разные категории для создания трендовых и стильных имён профилей. Fancy text подходит для игровых никнеймов, дизайна постеров и многого другого. Мы также предлагаем специальные ASCII-символы, символы, английские буквы и хитрости с пробелами. Выразите себя с помощью стильных шрифтов.</p>
+<p>Как вы, возможно, знаете, генератор шрифтов (также называемый генератором текста) использует символы Unicode, что позволяет создавать и классифицировать различные стили шрифтов. Мы предоставляем символы для каждой буквы и алфавита, которые превращают обычный текст в красивые шрифты, включая 🅑🅤🅑🅑🅛🅔 текст, жирный, курсив, 𝔣𝔞𝔫𝔠𝔶, зачёркнутый, маленький текст, bubble text и более 121 другого стильного типа шрифтов.</p>
 
-  <p>Наш инструмент — один из самых простых: высоконастраиваемый, адаптивный и наполненный забавными способами преобразования вашего текста.</p>
+<h2>Простое копирование и вставка</h2>
 
-  <h2>Как работает генератор</h2>
-  <ol>
-    <li>Введите текст в поле.</li>
-    <li>Инструмент автоматически преобразует его в стильные шрифты.</li>
-    <li>Скопируйте стиль, нажав кнопку.</li>
-    <li>Вставьте стильный шрифт в своё описание в Instagram, имя в Facebook или в любое другое место.</li>
-  </ol>
-  <p>Так просто генерировать шрифты с помощью нашего инструмента. Он полностью бесплатен и предлагает неограниченное количество стилей шрифтов.</p>
+<p>На нашем сайте мы разработали этот инструмент так, чтобы стильные шрифты было легко использовать. Именно поэтому мы считаемся одним из лучших инструментов. Наш генератор шрифтов создаёт красивые шрифты и текстовые символы, помогая создавать привлекательные профили в социальных сетях.</p>
 
-  <h2>Ещё больше лучших стильных имён — бесплатно</h2>
-  <p>С этим Fancy Text Generator вы легко создадите крутые эффекты имён для Instagram и других соцсетей. Общайтесь с друзьями и семьёй, отправляя им их стильные имена в сообщениях. Выделяйтесь среди друзей. Копируйте никнеймы для парней и девушек — бесплатно онлайн.</p>
-  <p>Популярные стили Fancy Font перечислены ниже, чтобы вы могли выбрать:</p>
+<p>Мы поддерживаем более 128 ASCII-символов и Unicode-символов. Копируйте и вставляйте шрифты для никнеймов, дизайнов и красивых текстовых сообщений. Каждая стильная буква и символ работает на всех платформах.</p>
 
-  <h2>Элегантные и фантазийные шрифты</h2>
-  <ul>
-    <li>Grace Script</li>
-    <li>Velvet Cursive</li>
-    <li>Clouded Curves</li>
-    <li>Royal Gothic</li>
-    <li>Shadow Fraktur</li>
-    <li>Twin-Line Strike</li>
-    <li>Retro Classic</li>
-    <li>Symbol Flair</li>
-    <li>Tribal Carve</li>
-    <li>Antique Touch</li>
-  </ul>
+<h2>Как работает этот генератор</h2>
 
-  <h2>Чистые и простые шрифты</h2>
-  <ul>
-    <li>Heavy Bold</li>
-    <li>Smooth Italic</li>
-    <li>Bold-Italic Blend</li>
-    <li>Clean Sans</li>
-    <li>Strong Sans</li>
-    <li>Streamlined Italic</li>
-    <li>Ultra Sans Bold</li>
-    <li>Petite Caps</li>
-    <li>Code Mono</li>
-    <li>Wide Stretch</li>
-    <li>Soft Brackets</li>
-  </ul>
+<ul>
+  <li>Введите текст</li>
+  <li>Выберите понравившийся шрифт</li>
+  <li>Скопируйте его</li>
+  <li>Вставьте в свой социальный профиль</li>
+</ul>
 
-  <h2>Весёлые и крутые шрифты</h2>
-  <ul>
-    <li>Bubble Pop</li>
-    <li>Dark Orb</li>
-    <li>Solid Block</li>
-    <li>Emoji Mix</li>
-    <li>Cute Curve</li>
-    <li>Square Edge</li>
-    <li>Wave Drift</li>
-    <li>Reverse Flip</li>
-    <li>Upside Script</li>
-    <li>Mirror Twist</li>
-    <li>Backflip Text</li>
-    <li>Mini Type</li>
-    <li>Ancient Script</li>
-    <li>Eastern Flow</li>
-    <li>Subscript Lite</li>
-    <li>Vintage Italic</li>
-  </ul>
+<h2>Как использовать стильный текст</h2>
 
-  <h2>Современные и футуристические шрифты</h2>
-  <ul>
-    <li>Feather Soft</li>
-    <li>Dream Drift</li>
-    <li>Fantasy Flow</li>
-    <li>Asian Fusion</li>
-    <li>Prime Style</li>
-    <li>Neo Modern</li>
-    <li>Shadow Cast</li>
-    <li>Iconic Mark</li>
-    <li>Striped Edge</li>
-    <li>Adaptive Form</li>
-    <li>Varied Motion</li>
-    <li>Squiggle Line</li>
-  </ul>
+<p>Возможности использования красивого текста безграничны. Многие люди применяют его для создания имён в постах Instagram, Facebook, TikTok, YouTube, Pinterest или Snapchat.</p>
 
-  <h2>Подписьные (Signature) шрифты</h2>
-  <ul>
-    <li>Playful Stroke</li>
-    <li>Polished Line</li>
-    <li>Minimal Touch</li>
-    <li>Gentle Script</li>
-    <li>Trendy Sway</li>
-    <li>Paint Stroke</li>
-    <li>Ornate Curve</li>
-    <li>Reverse Signature</li>
-    <li>One-of-a-Kind Glyph</li>
-    <li>Timeless Ink</li>
-    <li>Static Mark</li>
-  </ul>
+<p>Многие также хотят стильные имена для игр, таких как Free Fire, PUBG и Roblox. Творческие люди используют собственный уникальный стиль. Просто скопируйте и вставьте стильный текст.</p>
 
-  <h2>Эффекты подчёркивания и акцента</h2>
-  <ul>
-    <li>Dual Underline</li>
-    <li>Classic Line</li>
-    <li>Strike Slash</li>
-    <li>Forward Strike</li>
-    <li>Top Bar Line</li>
-    <li>Wave Slash</li>
-    <li>Boxed Underline</li>
-    <li>Wide Macron</li>
-  </ul>
+<p>Мы рекомендуем сочетать символы и шрифты, чтобы максимально стильно показать вашу индивидуальность. В обновлениях мы также добавляем более 100 новых категорий.</p>
 
-  <h2>Декоративные обёртки-символы</h2>
-  <ul>
-    <li>Curly Surround</li>
-    <li>Spark Ring</li>
-    <li>Moon Brackets</li>
-    <li>Arrow Wrap</li>
-    <li>Dotted Edges</li>
-    <li>Angled Shell</li>
-    <li>Arc Frame</li>
-  </ul>
+<h2>Больше бесплатных шрифтов</h2>
 
-  <h2>Королевские и коронные акценты</h2>
-  <ul>
-    <li>Crown Point</li>
-    <li>Wave Crest</li>
-    <li>Arrow Peak</li>
-    <li>Soft Tick Mark</li>
-    <li>Regal Cap</li>
-    <li>Balanced Crown</li>
-    <li>Z-Shaped Topper</li>
-    <li>Curved Peak</li>
-    <li>Spotted Crown</li>
-  </ul>
+<p>Наш генератор стильного текста создаёт множество стилей шрифтов мгновенно после ввода текста в поле. Вы можете копировать шрифты из списка предварительного просмотра с помощью кнопки.</p>
 
-  <h2>Пересекающиеся акценты</h2>
-  <ul>
-    <li>Round Accent</li>
-    <li>Cross Touch</li>
-    <li>Curve Link</li>
-    <li>Under-Swoop</li>
-    <li>Arrow Support</li>
-    <li>Wave Crown</li>
-    <li>Wavy Base</li>
-  </ul>
+<p>Если вы найдёте на нашем сайте стили, такие как Aesthetic, Bold, Fraktur или Old English, и захотите больше вариантов стилей или символов, сообщите нам — мы добавим их позже.</p>
 
-  <h2>Петля и завитки (Loop & Swirl)</h2>
-  <ul>
-    <li>Loop Trail</li>
-    <li>Arrow Zap</li>
-    <li>Curvy Flick</li>
-    <li>Flow End</li>
-    <li>Alpha Swoosh</li>
-    <li>Twin Slash</li>
-    <li>Star Edge</li>
-  </ul>
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> ·
+    <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
+  </p>
+</div>
 
-  <h2>Оформленные стили текста (Framed Text)</h2>
-  <ul>
-    <li>Bold Box</li>
-    <li>Soft Box</li>
-    <li>Bracket Frame</li>
-    <li>Round Shell</li>
-    <li>Corner Cut Frame</li>
-    <li>Swirl Border</li>
-    <li>Triple Edge Box</li>
-    <li>Angular Frame</li>
-    <li>Tick Corners</li>
-    <li>Beam Outline</li>
-    <li>Arrow Frame</li>
-    <li>Accent Shell</li>
-    <li>Cloud Line</li>
-  </ul>
+</div>
 
-  <h2>Фьюжн-символы</h2>
-  <ul>
-    <li>Stellar Ring</li>
-    <li>Star Burst</li>
-    <li>Zig Flux</li>
-    <li>Twist Spark</li>
-    <li>Focus Halo</li>
-    <li>Twin Arrow Mark</li>
-    <li>Wave Flash</li>
-  </ul>
-
-  <h2>Плавные рамки</h2>
-  <ul>
-    <li>Spark Digit</li>
-    <li>Corner Glide</li>
-    <li>Mark Finish</li>
-    <li>Zig Route</li>
-    <li>Glow Strip</li>
-    <li>Top Drive</li>
-    <li>Soft Mesh</li>
-    <li>Boxed Corner</li>
-    <li>Disrupt Line</li>
-  </ul>
-
-  <h2>Кавайные (Kawaii) лица</h2>
-  <ul>
-    <li>Smiley Cute</li>
-    <li>Heart Eyes</li>
-    <li>Shine Spark Face</li>
-    <li>Bunny Joy</li>
-    <li>Happy Smile</li>
-    <li>Blush Star Eyes</li>
-    <li>Mini Cat Face</li>
-    <li>Cheer Joy</li>
-    <li>Soft Sweet Smile</li>
-    <li>Giggly Cat Face</li>
-    <li>Shy-Cute Expression</li>
-  </ul>
-
-  <h2>Роскошные и орнаментальные рамки</h2>
-  <ul>
-    <li>Twist Emblem</li>
-    <li>Lunar Glow</li>
-    <li>Smooth Path</li>
-    <li>Noble Line</li>
-    <li>Star Shine</li>
-    <li>Gloss Beam</li>
-    <li>Night Star</li>
-    <li>Celestial Spiral</li>
-  </ul>
-
-  <h2>Жирные и сильные границы</h2>
-  <ul>
-    <li>Gym Line Frame</li>
-    <li>Block Shield</li>
-    <li>Bar Outline</li>
-    <li>Shimmer Edge</li>
-    <li>Crafted Heavy</li>
-    <li>Bold Quote Box</li>
-    <li>Stream Border</li>
-    <li>Verified Edge</li>
-  </ul>
-
-  <h2>Причудливые и магические рамки</h2>
-  <ul>
-    <li>Flash Spark</li>
-    <li>Petal Twist</li>
-    <li>Star Drift</li>
-    <li>Starfield Loop</li>
-    <li>Spark Burst</li>
-    <li>Elegant Star Line</li>
-    <li>Star Touch Accent</li>
-    <li>Stellar Portal</li>
-  </ul>
-
-  <h2>Артистичные и креативные шрифты</h2>
-  <ul>
-    <li>Cosmic Shine</li>
-    <li>Deep Shadow Frame</li>
-    <li>Elegant Flow Script</li>
-    <li>Midnight Gleam</li>
-    <li>Strike Script</li>
-    <li>Petal Loop</li>
-    <li>Blossom Curl</li>
-    <li>Chic Edge</li>
-  </ul>
-
-  <h2>Эмодзи-тематика</h2>
-  <ul>
-    <li>Sparkle Script</li>
-    <li>Cute Critters</li>
-    <li>Sweet Snacks</li>
-    <li>Magic Stars</li>
-    <li>Floral Bloom</li>
-    <li>Cosmic Pop</li>
-    <li>Bubblegum Style</li>
-    <li>Forest Friends</li>
-    <li>Ocean Breeze</li>
-  </ul>
-
-  <h2>Случайные и смешанные стили</h2>
-  <ul>
-    <li>Funky Fusion</li>
-    <li>Mystery Mix</li>
-    <li>Edge Glitch</li>
-    <li>Soft Haze</li>
-    <li>Chaos Streak</li>
-    <li>Scramble Text</li>
-    <li>Twist Surprise</li>
-    <li>Hybrid Mode</li>
-    <li>Mixed Blend</li>
-  </ul>
-
-  <h2>Часто задаваемые вопросы</h2>
-  <p><strong>Что это за инструмент?</strong><br>Это бесплатный онлайн-генератор шрифтов, который позволяет вводить текст и мгновенно преобразовывать его в красивые Unicode-стили.</p>
-  <p><strong>Где можно использовать эти шрифты?</strong><br>Вы можете вставлять их в Instagram, Facebook, Twitter, TikTok, Discord, а также в мессенджеры вроде WhatsApp и Telegram.</p>
-  <p><strong>Будут ли экранные читалки (screen readers) читать эти шрифты?</strong><br>Не всегда. Стильный Unicode-текст может быть недоступен для некоторых скринридеров, поэтому при необходимости используйте обычный текст для лучшей доступности.</p>
-  <p><strong>Почему иногда текст отображается в виде квадратиков или знаков вопроса?</strong><br>Некоторые устройства или приложения не поддерживают все Unicode-символы. В таком случае попробуйте другой стиль шрифта из списка.</p>
-</article>
 
 <footer class="site-footer">
   <div class="footer-container">
