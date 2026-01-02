@@ -48,10 +48,12 @@
 <link rel="alternate" href="https://fontgen.in/tr.html" hreflang="tr">
 <link rel="alternate" href="https://fontgen.in/vi.html" hreflang="vi">
 <link rel="alternate" href="https://fontgen.in/ja.html" hreflang="ja">
+<link rel="alternate" href="https://fontgen.in/pl.html" hreflang="pl">
+
 </head>
 <body>
 
-    <nav class="navbar">
+ <nav class="navbar">
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
       <!-- Hamburger SVG -->
       <span class="icon-hamburger">
@@ -70,56 +72,37 @@
       </span>
     </button>
     <a href="https://fontgen.in/" class="logo">
-      <img src="https://fontgen.in/img/logo_header.png" alt="ロゴ">
+      <img src="https://fontgen.in/img/logo_header.png" alt="Logo">
     </a>
     <div class="nav-menu" id="navMenu">
       <ul>
         <li>
-          <a href="https://fontgen.in/">ホーム</a>
+          <a href="https://fontgen.in/">Home</a>
         </li>
-      <li>
+          <li>
+          <a href="https://fontgen.in/font-changer.html">Font Changer</a>
+        </li>
+        <li>
           <a href="https://fontgen.in/blog.html">Blog</a>
         </li>
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            について
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://fontgen.in/about-us.html">私たちについて</a>
-            <a href="https://fontgen.in/contact-us.html">お問い合わせ</a>
-            <a href="https://fontgen.in/privacy-policy.html">プライバシー</a>
-            <a href="https://fontgen.in/faq.html">よくある質問</a>
-          </div>
+       
+    
+       <li>
+          <a href="https://fontgen.in/about-us.html">About</a>
+        </li>
+ 
+       
+         <li>
+          <a href="https://fontgen.in/privacy-policy.html">Privacy</a>
         </li>
 
-        <li class="dropdown">
-          <button type="button" class="dropdown-toggle">
-            言語
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="2">
-              <polyline points="6 8 10 12 14 8"/>
-            </svg>
-          </button>
-          <div class="dropdown-content">
-                <a href="https://fontgen.in/" data-lang="en">英語</a>
-                <a href="https://fontgen.in/es.html" data-lang="es">スペイン語</a>
-                <a href="https://fontgen.in/ar.html" data-lang="ar">アラビア語</a>
-                <a href="https://fontgen.in/fr.html" data-lang="fr">フランス語</a>
-                <a href="https://fontgen.in/de.html" data-lang="de">ドイツ語</a>
-                <a href="https://fontgen.in/pt.html" data-lang="pt">ポルトガル語</a>
-                <a href="https://fontgen.in/id.html" data-lang="id">インドネシア語</a>
-                <a href="https://fontgen.in/hi.html" data-lang="hi">ヒンディー語</a>
-                <a href="https://fontgen.in/it.html" data-lang="it">イタリア語</a>
-                <a href="https://fontgen.in/ja.html" data-lang="ja">日本語</a>
-                <a href="https://fontgen.in/ru.html" data-lang="ru">ロシア語</a>
-                <a href="https://fontgen.in/th.html" data-lang="th">タイ語</a>
-                <a href="https://fontgen.in/tr.html" data-lang="tr">トルコ語</a>
-                <a href="https://fontgen.in/vi.html" data-lang="vi">ベトナム語</a>
-          </div>
+          
+         <li>
+          <a href="https://fontgen.in/contact-us.html">Contact</a>
         </li>
+
       </ul>
+
     </div>
 </nav>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -136,22 +119,30 @@
     </div>
 
     <div class="tab-wrapper">
-      <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
-      <nav class="tab-nav" id="tabNav">
-        <a href="https://fontgen.in/" class="tab-link">すべてのフォント</a>
-        <a href="https://fontgen.in/tools/cool.html" class="tab-link">クール</a>
-        <a href="https://fontgen.in/tools/fancy.html" class="tab-link">ファンシー</a>
-        <a href="https://fontgen.in/tools/cursive.html" class="tab-link">筆記体</a>
-        <a href="https://fontgen.in/tools/small.html" class="tab-link">小</a>
-        <a href="https://fontgen.in/tools/bold.html" class="tab-link">太字</a>
-        <a href="https://fontgen.in/tools/glitch.html" class="tab-link">グリッチ</a>
-        <a href="https://fontgen.in/tools/symbols.html" class="tab-link">記号テキスト</a>
-        <a href="https://fontgen.in/tools/text-art.html" class="tab-link">テキストアート</a>
-        <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">取り消し線</a>
-        <a href="https://fontgen.in/tools/invisible.html" class="tab-link">不可視</a>
-      </nav>
-      <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
-    </div>
+    <span class="scroll-btn left-btn" id="scrollLeftBtn">&lt;</span>
+    <nav class="tab-nav" id="tabNav">
+      <a href="https://fontgen.in/tools/cool.html" class="tab-link">Cool</a>
+      <a href="https://fontgen.in/tools/pretty-fonts.html" class="tab-link">Cute</a>
+      <a href="https://fontgen.in/tools/fancy.html" class="tab-link">Fancy</a>
+      <a href="https://fontgen.in/tools/cursive.html" class="tab-link">Cursive</a>
+      <a href="https://fontgen.in/tools/small.html" class="tab-link">Small</a>
+      <a href="https://fontgen.in/tools/bold.html" class="tab-link">Bold</a>
+      <a href="https://fontgen.in/tools/invisible.html" class="tab-link">Hidden</a>
+      <a href="https://fontgen.in/tools/glitch.html" class="tab-link">Glitch</a>
+      <a href="https://fontgen.in/tools/stylish-text-generator.html" class="tab-link">Stylish</a>
+      <a href="https://fontgen.in/tools/strikethrough.html" class="tab-link">Strikethrough</a>
+      <a href="https://fontgen.in/tools/upside-down.html" class="tab-link">Upside Down</a>
+      <a href="https://fontgen.in/tools/weird-text.html" class="tab-link">Weird</a>
+      <a href="https://fontgen.in/tools/underline-text.html" class="tab-link">Underline</a>
+      <a href="https://fontgen.in/tools/italic.html" class="tab-link">italic</a>
+      <a href="https://fontgen.in/tools/vaporwave-text.html" class="tab-link">Vaporwave</a>
+      <a href="https://fontgen.in/tools/japanese-text.html" class="tab-link">Japanese</a>
+      <a href="https://fontgen.in/tools/special.html" class="tab-link">Special</a>
+      <a href="https://fontgen.in/tools/demonic.html" class="tab-link">Demonic</a>
+      <a href="https://fontgen.in/tools/symbols.html" class="tab-link">Symbol text</a>
+    </nav>
+    <span class="scroll-btn right-btn" id="scrollRightBtn">&gt;</span>
+  </div>
   </div>
 
   <!-- Curly Wrap -->
@@ -723,305 +714,66 @@
   <div id="copyNotification"></div>
 </div>
 
-<article>
-    <h2>フォントジェネレーターについて</h2>
-<p>シンプルなテキストからスタイリッシュなフォントを簡単に作成できる無料のオンラインツールです。テキストを入力してコピーするだけで、Instagramのプロフィール、Facebook、ニックネーム、Twitter、WhatsAppグループなど、すべてのソーシャルプラットフォームで使用できます。</p>
-<p>フォントはUnicodeを使用しているため、ほとんどのデバイスで動作します。これらのスタイルはプロフィールやコメントをより個性的で魅力的にします。他の人や友達の中で目立つ最良の方法です。単なる遊びではなく、ファンシーな記号を使って気持ちを表現する素晴らしい手段でもあります。</p>
-<p>幅広いファンシーテキストオプションがあります：クールな名前、ニックネーム、英語のミックスワード、ギリシャ文字、ファンシーな数字、アルファベットの組み合わせ、絵文字の追加など。</p>
-      <img src="https://fontgen.in/img/Font-Generator.png" alt="">
+<div class="contents">
 
-<h2>ソーシャルメディア用にコピー＆ペースト</h2>
-<p>私たちは #1 のオンラインフォントチェンジャーです。ファンシー、クール、太字、筆記体など、合計190種類のフォントスタイルを作成しました。Instagramのプロフィールやコメントをより魅力的にしたい場合、インフルエンサーはトレンディでスタイリッシュなプロフィール名を作るためにさまざまなカテゴリをよく使用します。ファンシーテキストはゲームのハンドル名、ポスターデザインなどにも使えます。ASCIIの特殊文字、記号、英字、スペーシングのトリックも提案しています。スタイリッシュなフォントで自分を表現しましょう。</p>
-<p>当ツールは使いやすさに優れ、高度にカスタマイズ可能でレスポンシブ、テキスト変換の楽しい機能が満載です。</p>
+<h2>フォントジェネレーターについて</h2>
+<img src="https://fontgen.in/img/Font-Generator.png" alt="">
 
-<h2>ジェネレーターの使い方</h2>
-<ol>
-  <li>テキストを入力ボックスに入力します。</li>
-  <li>ツールが自動的にスタイリッシュなフォントに変換します。</li>
-  <li>ボタンをクリックしてスタイルをコピーします。</li>
-  <li>Instagramのプロフィール、Facebookの名前、その他任意の場所に貼り付けます。</li>
-</ol>
-<p>ツールでフォントを生成するのはとても簡単です。100%無料で、無制限のフォントスタイルを提供します。</p>
+<p>Fontgen.inへようこそ。ここは、おしゃれなテキストを生成するツールです。生成された一覧からフォントスタイルを簡単にコピー＆ペーストできます。このツールは100％無料で、121種類以上のおしゃれなシンボルを含んでいます。コメント、自己紹介（プロフィール）、よりプロフェッショナルなテキスト作成に利用されています。</p>
 
-<h2>さらに無料の人気スタイリッシュ名前</h2>
-<p>このファンシーテキストジェネレーターを使えば、Instagramや他のソーシャルネットワーク用のクールな名前エフェクトを簡単に作成できます。友人や家族にテキストメッセージでファンシーな名前を送ってコミュニケーションをとりましょう。友人グループの中で“クールな人”として目立てます。男性・女性向けのユーザー名を無料でコピーできます。</p>
-<p>判断しやすいように、人気のファンシーフォントスタイルを以下に一覧表示しています：</p>
+<p>ご存じのとおり、フォントジェネレーター（テキストジェネレーターとも呼ばれます）は、Unicode文字を使用してさまざまなフォントスタイルを作成・分類します。私たちは、英語テキストをクールなフォントに変換するため、すべての文字やアルファベットに対応したシンボルを提供しています。🅑🅤🅑🅑🅛🅔 テキスト、太字、斜体、𝔣𝔞𝔫𝔠𝔶、取り消し線、小文字、バブル文字など、121種類以上のスタイリッシュなフォントが含まれています。</p>
 
-<h2>エレガント＆ファンシーフォント</h2>
+<h2>簡単コピー＆ペースト</h2>
+
+<p>当サイトでは、おしゃれなフォントを簡単に使えるようにこのツールを設計しました。そのため、私たちは最高のツールの一つと評価されています。フォントジェネレーターは、魅力的なSNSプロフィールを作成するためのスタイリッシュなフォントやテキストシンボルを生成します。</p>
+
+<p>128種類以上のASCII文字とUnicodeシンボルに対応しています。ニックネーム、デザイン、美しいメッセージ用のフォントをコピー＆ペーストできます。すべての装飾文字やシンボルは、あらゆるプラットフォームで使用可能です。</p>
+
+<h2>このジェネレーターの使い方</h2>
+
 <ul>
-  <li>グレーススクリプト</li>
-  <li>ベルベットカージュ</li>
-  <li>クラウデッドカーブ</li>
-  <li>ロイヤルゴシック</li>
-  <li>シャドウフラクトゥール</li>
-  <li>ツインラインストライク</li>
-  <li>レトロクラシック</li>
-  <li>シンボルフレア</li>
-  <li>トライバルカーブ</li>
-  <li>アンティークタッチ</li>
+  <li>テキストを入力する</li>
+  <li>好きなフォントを選ぶ</li>
+  <li>コピーする</li>
+  <li>SNSプロフィールに貼り付ける</li>
 </ul>
 
-<h2>クリーン＆シンプルフォント</h2>
-<ul>
-  <li>ヘビーボールド</li>
-  <li>スムースイタリック</li>
-  <li>ボールド・イタリックブレンド</li>
-  <li>クリーンサンズ</li>
-  <li>ストロングサンズ</li>
-  <li>ストリームラインドイタリック</li>
-  <li>ウルトラサンズボールド</li>
-  <li>プチキャップス</li>
-  <li>コードモノ</li>
-  <li>ワイドストレッチ</li>
-  <li>ソフトブラケット</li>
-</ul>
+<h2>おしゃれなテキストの使い道</h2>
 
-<h2>ファン＆クールフォント</h2>
-<ul>
-  <li>バブルポップ</li>
-  <li>ダークオーブ</li>
-  <li>ソリッドブロック</li>
-  <li>絵文字ミックス</li>
-  <li>キュートカーブ</li>
-  <li>スクエアエッジ</li>
-  <li>ウェーブドリフト</li>
-  <li>リバースフリップ</li>
-  <li>アップサイドスクリプト</li>
-  <li>ミラーツイスト</li>
-  <li>バックフリップテキスト</li>
-  <li>ミニタイプ</li>
-  <li>エンシェントスクリプト</li>
-  <li>イースタンフロー</li>
-  <li>サブスクリプトライト</li>
-  <li>ヴィンテージイタリック</li>
-</ul>
+<p>クールなテキストの使い方は無限大です。多くの人が、Instagram、Facebook、TikTok、YouTube、Pinterest、Snapchatの投稿用の名前作成に使用しています。</p>
 
-<h2>モダン＆フューチャリスティックフォント</h2>
-<ul>
-  <li>フェザーソフト</li>
-  <li>ドリームドリフト</li>
-  <li>ファンタジーフロー</li>
-  <li>アジアンフュージョン</li>
-  <li>プライムスタイル</li>
-  <li>ネオモダン</li>
-  <li>シャドウキャスト</li>
-  <li>アイコニックマーク</li>
-  <li>ストライプドエッジ</li>
-  <li>アダプティブフォーム</li>
-  <li>ヴァリードモーション</li>
-  <li>スキッグルライン</li>
-</ul>
+<p>Free Fire、PUBG、Robloxなどのゲーム用にスタイリッシュな名前を求める人も多くいます。クリエイティブな人々は、自分だけのユニークなスタイルを使います。コピー＆ペーストするだけで簡単です。</p>
 
-<h2>署名風フォント</h2>
-<ul>
-  <li>プレイフルストローク</li>
-  <li>ポリッシュドライン</li>
-  <li>ミニマルタッチ</li>
-  <li>ジェントルスクリプト</li>
-  <li>トレンディスウェイ</li>
-  <li>ペイントストローク</li>
-  <li>オーネイトカーブ</li>
-  <li>リバースシグネチャー</li>
-  <li>ユニークグリフ</li>
-  <li>タイムレスインク</li>
-  <li>スタティックマーク</li>
-</ul>
+<p>私たちのおすすめは、シンボルとフォントを組み合わせて、あなたの個性を最もスタイリッシュに表現することです。今後のアップデートで100種類以上の新カテゴリーも追加予定です。</p>
 
-<h2>下線＆強調エフェクト</h2>
-<ul>
-  <li>デュアルアンダーライン</li>
-  <li>クラシックライン</li>
-  <li>ストライクスラッシュ</li>
-  <li>フォワードストライク</li>
-  <li>トップバーライン</li>
-  <li>ウェーブスラッシュ</li>
-  <li>ボックスアンダーライン</li>
-  <li>ワイドマクロン</li>
-</ul>
+<h2>さらに多くの無料フォント</h2>
 
-<h2>装飾シンボルラッパー</h2>
-<ul>
-  <li>カーリーサラウンド</li>
-  <li>スパークリングリング</li>
-  <li>ムーンブラケット</li>
-  <li>アローワップ</li>
-  <li>ドットエッジ</li>
-  <li>アングルドシェル</li>
-  <li>アークフレーム</li>
-</ul>
+<p>当サイトのファンシーテキストジェネレーターは、テキストを入力するだけで多くのフォントスタイルを瞬時に生成します。プレビュ―一覧からボタンで簡単にコピーできます。</p>
 
-<h2>ロイヤル＆クラウンアクセント</h2>
-<ul>
-  <li>クラウンポイント</li>
-  <li>ウェーブクレスト</li>
-  <li>アローピーク</li>
-  <li>ソフトティックマーク</li>
-  <li>リーガルキャップ</li>
-  <li>バランスドクラウン</li>
-  <li>Z字型トップ</li>
-  <li>カーブドピーク</li>
-  <li>スポッテッドクラウン</li>
-</ul>
+<p>Aesthetic、Bold、Fraktur、Old English などのスタイルを当サイトで見つけ、さらに多くのバリエーションやシンボルを希望される場合は、お知らせください。今後追加いたします。</p>
 
-<h2>交差アクセント</h2>
-<ul>
-  <li>ラウンドアクセント</li>
-  <li>クロスタッチ</li>
-  <li>カーブリンク</li>
-  <li>アンダースウープ</li>
-  <li>アローサポート</li>
-  <li>ウェーブクラウン</li>
-  <li>ウェイビーベース</li>
-</ul>
+<div class="cards">
+  <p>
+    <a href="https://fontgen.in/" hreflang="en">Fonts</a> ·
+    <a href="https://fontgen.in/es.html" hreflang="es">generador de letras</a> ·
+    <a href="https://fontgen.in/ar.html" hreflang="ar">مولد الخطوط</a> ·
+    <a href="https://fontgen.in/fr.html" hreflang="fr">polices gratuites</a> ·
+    <a href="https://fontgen.in/de.html" hreflang="de">schriftarten</a> ·
+    <a href="https://fontgen.in/pt.html" hreflang="pt">fontes</a> ·
+    <a href="https://fontgen.in/id.html" hreflang="id">Font Keren</a> ·
+    <a href="https://fontgen.in/hi.html" hreflang="hi">हिंदी फॉन्ट स्टाइल</a> ·
+    <a href="https://fontgen.in/it.html" hreflang="it">caratteri speciali</a> ·
+    <a href="https://fontgen.in/ja.html" hreflang="ja">フォント変換</a> ·
+    <a href="https://fontgen.in/ru.html" hreflang="ru">шрифты</a> ·
+    <a href="https://fontgen.in/th.html" hreflang="th">อักษรพิเศษ</a> ·
+    <a href="https://fontgen.in/tr.html" hreflang="tr">yazı stilleri</a> ·
+    <a href="https://fontgen.in/vi.html" hreflang="vi">chữ kiểu</a> ·
+    <a href="https://fontgen.in/pl.html" hreflang="pl">generator czcionek</a>
+  </p>
+</div>
 
-<h2>ループ＆スワールシンボル</h2>
-<ul>
-  <li>ループトレイル</li>
-  <li>アロウザップ</li>
-  <li>カービーフリック</li>
-  <li>フローエンド</li>
-  <li>アルファスウッシュ</li>
-  <li>ツインスラッシュ</li>
-  <li>スタ―エッジ</li>
-</ul>
+</div>
 
-<h2>フレーム付きテキストスタイル</h2>
-<ul>
-  <li>ボールドボックス</li>
-  <li>ソフトボックス</li>
-  <li>ブラケットフレーム</li>
-  <li>ラウンドシェル</li>
-  <li>コーナーカットフレーム</li>
-  <li>スワールボーダー</li>
-  <li>トリプルエッジボックス</li>
-  <li>アンギュラーフレーム</li>
-  <li>ティックコーナー</li>
-  <li>ビームアウトライン</li>
-  <li>アローフレーム</li>
-  <li>アクセントシェル</li>
-  <li>クラウドライン</li>
-</ul>
-
-<h2>シンボルフュージョンスタイル</h2>
-<ul>
-  <li>ステラ―リング</li>
-  <li>スターバースト</li>
-  <li>ジグフラックス</li>
-  <li>ツイストスパーク</li>
-  <li>フォーカスヘイロー</li>
-  <li>ツインアローマーク</li>
-  <li>ウェーブフラッシュ</li>
-</ul>
-
-<h2>スムースフローフレーム</h2>
-<ul>
-  <li>スパークデジット</li>
-  <li>コーナーグライド</li>
-  <li>マークフィニッシュ</li>
-  <li>ジグルート</li>
-  <li>グロウストリップ</li>
-  <li>トップドライブ</li>
-  <li>ソフトメッシュ</li>
-  <li>ボックスドコーナー</li>
-  <li>ディスラプトライン</li>
-</ul>
-
-<h2>カワイイ顔テキスト</h2>
-<ul>
-  <li>スマイリーキュート</li>
-  <li>ハートアイズ</li>
-  <li>シャインスパークフェイス</li>
-  <li>バニージョイ</li>
-  <li>ハッピースマイル</li>
-  <li>ブラッシュスタ―アイズ</li>
-  <li>ミニキャットフェイス</li>
-  <li>チアジョイ</li>
-  <li>ソフトスイートスマイル</li>
-  <li>ギグリーキャットフェイス</li>
-  <li>シャイキュート表情</li>
-</ul>
-
-<h2>ラグジュアリー＆装飾フレーム</h2>
-<ul>
-  <li>ツイストエンブレム</li>
-  <li>ルナ―グロウ</li>
-  <li>スムースパス</li>
-  <li>ノーブルライン</li>
-  <li>スタ―シャイン</li>
-  <li>グロスビーム</li>
-  <li>ナイトスタ―</li>
-  <li>セレスティアルスパイラル</li>
-</ul>
-
-<h2>ボールド＆ストロングボーダー</h2>
-<ul>
-  <li>ジムラインフレーム</li>
-  <li>ブロックシールド</li>
-  <li>バーアウトライン</li>
-  <li>シマーエッジ</li>
-  <li>クラフテッドヘビー</li>
-  <li>ボールドクォートボックス</li>
-  <li>ストリームボーダー</li>
-  <li>ベリファイドエッジ</li>
-</ul>
-
-<h2>気まぐれ＆マジカルフレーム</h2>
-<ul>
-  <li>フラッシュスパーク</li>
-  <li>ペタルツイスト</li>
-  <li>スタードリフト</li>
-  <li>スターフィールドループ</li>
-  <li>スパークバースト</li>
-  <li>エレガントスタ―ライン</li>
-  <li>スタータッチアクセント</li>
-  <li>ステラ―ポータル</li>
-</ul>
-
-<h2>アーティスティック＆クリエイティブフォント</h2>
-<ul>
-  <li>コズミックシャイン</li>
-  <li>ディープシャドウフレーム</li>
-  <li>エレガントフロースクリプト</li>
-  <li>ミッドナイトグリーム</li>
-  <li>ストライクスクリプト</li>
-  <li>ペタルループ</li>
-  <li>ブロッサムカール</li>
-  <li>シックエッジ</li>
-</ul>
-
-<h2>絵文字テーマフォント</h2>
-<ul>
-  <li>スパークルスクリプト</li>
-  <li>キュートクリッターズ</li>
-  <li>スイートスナックス</li>
-  <li>マジックスターズ</li>
-  <li>フローラルブルーム</li>
-  <li>コズミックポップ</li>
-  <li>バブルガムスタイル</li>
-  <li>フォレストフレンズ</li>
-  <li>オーシャンブリーズ</li>
-</ul>
-
-<h2>ランダム＆ミックスフォント</h2>
-<ul>
-  <li>ファンキーフュージョン</li>
-  <li>ミステリーミックス</li>
-  <li>エッジグリッチ</li>
-  <li>ソフトヘイズ</li>
-  <li>カオスストリーク</li>
-  <li>スクランブルテキスト</li>
-  <li>ツイストサプライズ</li>
-  <li>ハイブリッドモード</li>
-  <li>ミックスブレンド</li>
-</ul>
-
-<h2>よくある質問</h2>
-<p><strong>このツールは何ですか？</strong><br>テキストを入力して即座にファンシーなUnicodeスタイルに変換できる無料のオンラインフォントジェネレーターです。</p>
-<p><strong>これらのフォントはどこで使えますか？</strong><br>Instagram、Facebook、Twitter、TikTok、Discord、WhatsApp、Telegramなどのメッセージングアプリに貼り付けて使用できます。</p>
-<p><strong>スクリーンリーダーはこれらのフォントを読みますか？</strong><br>必ずしも読み上げられるとは限りません。ファンシーなUnicodeテキストはアクセシビリティの面で制限があるため、必要な場合は明瞭さのためにプレーンテキストを使用してください。</p>
-<p><strong>テキストがボックスや疑問符で表示されるのはなぜですか？</strong><br>一部のデバイスやアプリはすべてのUnicode文字をサポートしていません。その場合は、リスト内の別のフォントスタイルを試してください。</p>
-
-</article>
 
   
 <footer class="site-footer">
