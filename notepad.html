@@ -190,28 +190,27 @@ svg.ic.sm{width:12px;height:12px;}
 .shl{background:rgba(240,180,41,.25);border-radius:2px;}
 .shl.cur{background:rgba(240,180,41,.68);}
 
-/* MARKDOWN PREVIEW - styled to match notepad theme */
-#mdp{display:none;flex:1;padding:20px 20px 80px;font-size:15px;line-height:1.85;max-width:860px;width:100%;margin:0 auto;overflow-y:auto;font-family:var(--fb);color:var(--tx);}
+/* PREVIEW — cloned rich HTML from editor, read-only, same look */
+#mdp{display:none;flex:1;padding:20px 20px 80px;font-family:var(--fb);font-size:15px;line-height:1.85;color:var(--tx);max-width:860px;width:100%;margin:0 auto;min-height:100%;word-break:break-word;overflow-y:auto;-webkit-overflow-scrolling:touch;user-select:text;cursor:default;}
 #mdp.on{display:block;}
-#mdp h1{font-family:var(--fd);font-size:25px;margin:0 0 14px;border-bottom:1px solid var(--bd);padding-bottom:6px;color:var(--tx);}
-#mdp h2{font-family:var(--fd);font-size:20px;margin:18px 0 8px;color:var(--tx);}
-#mdp h3{font-size:16px;font-weight:600;margin:14px 0 6px;color:var(--tx);}
-#mdp p{margin:4px 0;color:var(--tx);}
+#mdp h1{font-family:var(--fd);font-size:26px;margin:8px 0 2px;line-height:1.25;color:var(--tx);}
+#mdp h2{font-family:var(--fd);font-size:21px;margin:6px 0 2px;line-height:1.3;color:var(--tx);}
+#mdp h3{font-size:17px;font-weight:600;margin:4px 0 2px;color:var(--tx);}
+#mdp p{margin:0;color:var(--tx);}
+#mdp blockquote{border-left:3px solid var(--ac);padding-left:14px;margin:4px 0;color:var(--tx2);font-style:italic;}
+#mdp pre{background:var(--bg3);border:1px solid var(--bd);border-radius:8px;padding:14px;font-family:var(--fm);font-size:12px;overflow-x:auto;margin:4px 0;color:var(--bl);line-height:1.6;white-space:pre;}
 #mdp code{background:var(--bg3);font-family:var(--fm);font-size:12px;padding:1px 5px;border-radius:3px;color:var(--pu);border:1px solid var(--bd);}
-#mdp pre{background:var(--bg3);border:1px solid var(--bd);border-radius:8px;padding:14px;overflow-x:auto;margin:10px 0;}
 #mdp pre code{background:none;border:none;padding:0;color:var(--bl);}
-#mdp blockquote{border-left:3px solid var(--ac);padding-left:14px;color:var(--tx2);font-style:italic;margin:10px 0;}
-#mdp a{color:var(--bl);}
-#mdp img{max-width:100%;border-radius:8px;margin:6px 0;display:block;}
-#mdp ul,#mdp ol{padding-left:20px;margin:6px 0;color:var(--tx);}
-#mdp li{margin:2px 0;color:var(--tx);}
-#mdp table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;}
-#mdp td,#mdp th{border:1px solid var(--bd2);padding:6px 10px;color:var(--tx);}
+#mdp table{width:100%;border-collapse:collapse;margin:4px 0;font-size:13px;}
+#mdp td,#mdp th{border:1px solid var(--bd2);padding:6px 10px;text-align:left;color:var(--tx);}
 #mdp th{background:var(--bg3);font-weight:600;}
+#mdp ul,#mdp ol{padding-left:20px;margin:2px 0;color:var(--tx);}
+#mdp li{margin:2px 0;color:var(--tx);}
+#mdp img{max-width:100%;border-radius:8px;margin:6px 0;display:block;}
+#mdp a{color:var(--bl);text-decoration:underline;}
 #mdp hr{border:none;border-top:1px solid var(--bd2);margin:12px 0;}
-#mdp strong{color:var(--tx);font-weight:700;}
-#mdp em{color:var(--tx2);}
-#mdp del{color:var(--tx3);}
+#mdp *{pointer-events:none;}
+#mdp a,#mdp input{pointer-events:auto;}
 
 /* block handle */
 #bh{display:none;position:absolute;left:0;top:0;width:52px;height:28px;z-index:20;align-items:center;justify-content:flex-end;gap:2px;}
@@ -318,7 +317,7 @@ svg.ic.sm{width:12px;height:12px;}
   #sb.mob{transform:translateX(0);}
   #sb.col{width:82vw!important;transform:translateX(-100%);}
   #ed{padding:16px 14px 100px;}
-  #mdp{padding:16px 14px 100px;}
+  #mdp{padding:16px 14px 100px;max-width:100%;}
   #nh{padding:8px 12px;}
   #ntit{font-size:17px;}
   #chips{display:none;}
@@ -1131,35 +1130,32 @@ function navSR(d){if(!srM.length)return;srI=(srI+d+srM.length)%srM.length;hlSR()
 function replN(){const r=G('sr-r').value;if(!srM.length)return;const m=srM[srI];if(m){m.replaceWith(document.createTextNode(r));dirty();doSR();}}
 function replA(){const q=G('sr-f').value,r=G('sr-r').value;if(!q)return;clearSRHL();const ed=G('ed');const walk=n=>{if(n.nodeType===3){const t=n.textContent,re=new RegExp(escRe(q),'gi');if(re.test(t))n.textContent=t.replace(re,r);}else if(n.nodeType===1&&!['SCRIPT','STYLE'].includes(n.tagName))[...n.childNodes].forEach(walk);};walk(ed);dirty();toast('All replaced');}
 
-/* ══ MARKDOWN PREVIEW — styled with theme vars ══ */
-function toggleMD(){mdMode=!mdMode;G('ed').style.display=mdMode?'none':'';G('mdp').classList.toggle('on',mdMode);if(mdMode)renderMD();G('mn-pv')?.classList.toggle('on',mdMode);toast(mdMode?'Preview on':'Edit mode');}
-function renderMD(){G('mdp').innerHTML=md2h(G('ed').innerText||'');}
-function md2h(src){
-  const lines=src.split('\n');let out=[],inPre=false,pre=[];
-  for(const ln of lines){
-    if(ln.startsWith('```')){if(inPre){out.push('<pre><code>'+pre.join('\n').replace(/</g,'&lt;')+'</code></pre>');pre=[];inPre=false;}else inPre=true;continue;}
-    if(inPre){pre.push(ln);continue;}
-    const e=ln.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    if(/^### /.test(ln))out.push('<h3>'+e.slice(4)+'</h3>');
-    else if(/^## /.test(ln))out.push('<h2>'+e.slice(3)+'</h2>');
-    else if(/^# /.test(ln))out.push('<h1>'+e.slice(2)+'</h1>');
-    else if(/^---+$/.test(ln))out.push('<hr>');
-    else if(/^> /.test(ln))out.push('<blockquote>'+e.slice(2)+'</blockquote>');
-    else if(/^[*-] /.test(ln))out.push('<li>'+e.slice(2)+'</li>');
-    else if(/^\d+\. /.test(ln))out.push('<li>'+e.replace(/^\d+\. /,'')+'</li>');
-    else if(!ln)out.push('<br>');
-    else out.push('<p>'+e+'</p>');
-  }
-  let h=out.join('\n');
-  h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
-  h=h.replace(/\*\*\*([^*]+)\*\*\*/g,'<strong><em>$1</em></strong>');
-  h=h.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
-  h=h.replace(/\*([^*]+)\*/g,'<em>$1</em>');
-  h=h.replace(/~~([^~]+)~~/g,'<del>$1</del>');
-  h=h.replace(/!\[([^\]]*)\]\(([^)]+)\)/g,'<img alt="$1" src="$2" style="max-width:100%;border-radius:8px">');
-  h=h.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank">$1</a>');
-  h=h.replace(/(<li>[\s\S]*?<\/li>\n?)+/g,m=>'<ul>'+m+'</ul>');
-  return h;
+/* ══ PREVIEW — mirrors exact styled editor content, read-only ══ */
+function toggleMD(){
+  mdMode=!mdMode;
+  G('ed').style.display=mdMode?'none':'';
+  G('mdp').classList.toggle('on',mdMode);
+  if(mdMode)renderMD();
+  G('mn-pv')?.classList.toggle('on',mdMode);
+  toast(mdMode?'Preview on':'Edit mode');
+}
+function renderMD(){
+  /* Clone the editor HTML so all inline styles, fonts, colours are preserved */
+  const clone=G('ed').cloneNode(true);
+  /* Strip editor-only artefacts */
+  clone.querySelectorAll('.shl,.cur,.empty').forEach(el=>{
+    el.classList.remove('shl','cur','empty');
+  });
+  clone.querySelectorAll('[contenteditable]').forEach(el=>el.removeAttribute('contenteditable'));
+  clone.querySelectorAll('[data-b]').forEach(el=>el.removeAttribute('data-b'));
+  /* Remove placeholder ::after text by clearing empty-marker class */
+  clone.querySelectorAll('br').forEach(br=>{
+    /* keep brs that are real line breaks, remove lone placeholder brs in empty paras */
+    if(br.parentElement && br.parentElement.tagName==='P' && br.parentElement.childNodes.length===1){
+      /* leave it — needed for spacing */
+    }
+  });
+  G('mdp').innerHTML=clone.innerHTML;
 }
 
 /* ══ HISTORY / COMMENTS ══ */
