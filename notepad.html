@@ -617,6 +617,7 @@ svg.ic.sm{width:12px;height:12px;}
   <button class="mnb on" id="mn-ed" onclick="closeSB();fedF()"><svg><use href="#ic-ed"/></svg>Edit</button>
   <button class="mnb" onclick="newNote()"><svg><use href="#ic-pl"/></svg>New</button>
   <button class="mnb" id="mn-pv" onclick="toggleMD()"><svg><use href="#ic-ey"/></svg>Preview</button>
+  <button class="mnb" onclick="OM('t-exp')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export</button>
   <button class="mnb" onclick="OM('t-mob')"><svg><use href="#ic-mo"/></svg>More</button>
 </div></div>
 
@@ -644,6 +645,32 @@ svg.ic.sm{width:12px;height:12px;}
       <button class="btn bs" style="justify-content:center;padding:10px 4px;flex-direction:column;gap:3px;height:auto;font-size:10px" onclick="OM('t-tbl');CM('t-mob')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#ic-tb"/></svg>Table</button>
       <button class="btn bs" style="justify-content:center;padding:10px 4px;flex-direction:column;gap:3px;height:auto;font-size:10px" onclick="insCode();CM('t-mob')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#ic-cd"/></svg>Code</button>
     </div>
+  </div>
+</div></div>
+
+<!-- MOBILE EXPORT SHEET -->
+<div class="ov" id="t-exp"><div class="modal" style="max-width:380px;padding:0;border-radius:16px;overflow:hidden">
+  <div style="padding:14px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between">
+    <span style="font-weight:700;font-size:15px;font-family:var(--fd);color:var(--ac)">Export Note</span>
+    <button class="ib" onclick="CM('t-exp')"><svg class="ic sm"><use href="#ic-x"/></svg></button>
+  </div>
+  <div style="padding:12px;display:flex;flex-direction:column;gap:8px">
+    <button class="btn bs" style="justify-content:flex-start;padding:14px 16px;gap:14px;font-size:13px;width:100%;border-radius:10px" onclick="expTXT();CM('t-exp')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ac)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <div style="text-align:left"><div style="font-weight:600;color:var(--tx);font-size:13px">Export as TXT</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Plain text file (.txt)</div></div>
+    </button>
+    <button class="btn bs" style="justify-content:flex-start;padding:14px 16px;gap:14px;font-size:13px;width:100%;border-radius:10px" onclick="expMD();CM('t-exp')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ac)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <div style="text-align:left"><div style="font-weight:600;color:var(--tx);font-size:13px">Export as Markdown</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Markdown file (.md)</div></div>
+    </button>
+    <button class="btn bs" style="justify-content:flex-start;padding:14px 16px;gap:14px;font-size:13px;width:100%;border-radius:10px" onclick="expHTML();CM('t-exp')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ac)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <div style="text-align:left"><div style="font-weight:600;color:var(--tx);font-size:13px">Export as HTML</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Web page file (.html)</div></div>
+    </button>
+    <button class="btn bs" style="justify-content:flex-start;padding:14px 16px;gap:14px;font-size:13px;width:100%;border-radius:10px" onclick="printNote();CM('t-exp')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ac)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      <div style="text-align:left"><div style="font-weight:600;color:var(--tx);font-size:13px">Print</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Print or save as PDF</div></div>
+    </button>
   </div>
 </div></div>
 
