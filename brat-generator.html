@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Brat Generator - Free Create Stylish Text, Meme, Image, Album Cover, Font</title>
+  <meta name="description" content="Create brat-style text instantly with this free generator inspired by Charli XCX. Type your words, choose different color backgrounds, and share on Instagram.">
+  <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://fontgen.in/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fontgen.in/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fontgen.in/img/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brat Generator - Free Create Stylish Text, Meme, Image, Album Cover, Font">
+  <meta property="og:description" content="Create brat-style text instantly with this free generator inspired by Charli XCX. Type your words, choose different color backgrounds, and share on Instagram.">
+  <meta property="og:image" content="https://fontgen.in/img/favicon.png">
+  <meta property="og:url" content="https://fontgen.in/brat-generator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brat Generator - Free Create Stylish Text, Meme, Image, Album Cover, Font">
+  <meta name="twitter:description" content="Create brat-style text instantly with this free generator inspired by Charli XCX. Type your words, choose different color backgrounds, and share on Instagram.">
+  <meta name="twitter:url" content="https://fontgen.in/brat-generator.html">
+  <meta name="twitter:image" content="https://fontgen.in/img/favicon.png">
+  <link rel="canonical" href="https://fontgen.in/brat-generator.html">
+  <link rel="stylesheet" href="/style.css"> 
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1820825216397031"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0W5M4KP1HL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0W5M4KP1HL');
+</script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Brat Generator — uses site palette from style.css ── */
+    :root {
+      --brat-bg:     #eef0f3;   /* matches site #f4f5f7 tone */
+      --brat-card:   #ffffff;
+      --brat-border: #e5e7eb;   /* matches site border colour */
+      --brat-text:   #111827;   /* matches site heading colour */
+      --brat-accent: #8ace00;   /* brat signature green */
+      --site-blue:   #007bff;   /* site primary action colour */
+    }
+
+    /* ── Layout ── */
+    .generator-container {
+      max-width: 1200px;
+      margin: 10px auto;
+      padding: 0 10px;
+    }
+
+    .brat-app {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 12px;
+      background: var(--brat-bg);
+      border-radius: 16px;
+      padding: 12px;
+      border: 1px solid var(--brat-border);
+      margin-bottom: 20px;
+      align-items: stretch;
+    }
+
+    .brat-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .brat-canvas-pane {
+      background: var(--brat-card);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      min-height: 0;
+      flex: 1;
+      border: 1px solid var(--brat-border);
+    }
+
+    .brat-canvas-wrap {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 1/1;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    #mainCanvas { width: 100%; height: 100%; display: block; }
+
+    /* ── Controls column ── */
+    .brat-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      height: 100%;
+    }
+
+    .ctrl-group {
+      background: var(--brat-card);
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--brat-border);
+    }
+
+    .ctrl-label {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 7.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b7280;          /* matches site muted tone */
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* ── Color dots ── */
+    .color-dots { display: flex; flex-wrap: wrap; gap: 5px; }
+    .dot {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.15s, border-color 0.15s;
+      flex-shrink: 0;
+    }
+    .dot.active  { border-color: var(--brat-text); transform: scale(1.18); }
+    .dot:hover:not(.active) { transform: scale(1.08); }
+
+    /* ── Preset pills ── */
+    .presets-list {
+      display: flex; flex-direction: column; gap: 5px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #d1d5db transparent;
+    }
+    .tpill {
+      background: #f3f4f6;       /* site light bg */
+      border: 1.5px solid var(--brat-border);
+      padding: 6px 9px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 8px; font-weight: 700;
+      transition: 0.18s;
+      text-align: left; width: 100%;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      flex-shrink: 0;
+      color: #374151;            /* site body text */
+    }
+    .tpill.active  { background: var(--site-blue); color: #fff; border-color: var(--site-blue); }
+    .tpill:hover:not(.active) { background: #e5e7eb; color: #1f2937; }
+
+    /* ── Style / mode pills ── */
+    .pill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+    .pill {
+      background: #f3f4f6;
+      border: 1.5px solid var(--brat-border);
+      padding: 7px 6px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px; font-weight: 700;
+      transition: 0.18s; text-align: center;
+      color: #374151;
+    }
+    .pill.active  { background: var(--site-blue); color: #fff; border-color: var(--site-blue); }
+    .pill:hover:not(.active) { background: #e5e7eb; color: #1f2937; }
+
+    /* ── Text align buttons ── */
+    .align-grid { display: flex; gap: 5px; }
+    .align-btn {
+      flex: 1;
+      background: #f3f4f6;
+      border: 1.5px solid var(--brat-border);
+      padding: 6px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.18s;
+      display: flex; align-items: center; justify-content: center;
+      color: #374151;
+    }
+    .align-btn svg { stroke: currentColor; }
+    .align-btn.active { background: var(--site-blue); color: #fff; border-color: var(--site-blue); }
+    .align-btn:hover:not(.active) { background: #e5e7eb; color: #1f2937; }
+
+    /* ── Textarea ── */
+    .brat-left .ctrl-group textarea {
+      width: 100%; height: 56px;
+      padding: 7px 9px;
+      border-radius: 8px;
+      border: 1.5px solid var(--brat-border);
+      font-family: 'Unbounded', sans-serif;
+      font-size: 11px; resize: none;
+      background: #f9fafb;       /* site input bg */
+      color: #111827;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .brat-left .ctrl-group textarea:focus {
+      border-color: var(--site-blue);
+      box-shadow: 0 0 0 3px rgba(0,123,255,0.12);
+      background: #fff;
+    }
+
+    /* ── Download button — matches site .copy-btn style ── */
+    .save-btn {
+      background: var(--site-blue);
+      color: #fff;
+      border: none;
+      padding: 11px;
+      border-radius: 10px;
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      cursor: pointer;
+      width: 100%;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      transition: background 0.18s, transform 0.1s, box-shadow 0.18s;
+      box-shadow: 0 2px 6px rgba(0,123,255,0.28);
+    }
+    .save-btn:hover  { background: #0062cc; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,123,255,0.36); }
+    .save-btn:active { transform: scale(0.98); box-shadow: none; }
+
+    /* ── Content / FAQ area ── */
+    .content-area {
+      background: #fff;
+      padding: 36px 40px;
+      border-radius: 14px;         /* matches site .contents */
+      border: 1px solid #e8ecf1;   /* matches site .contents */
+      margin-bottom: 40px;
+      color: #374151;
+    }
+    .content-area h2 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 16px; margin-top: 28px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--site-blue);
+    }
+    .content-area h2:first-child { margin-top: 0; }
+    .content-area h3 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: #1e293b; margin: 20px 0 8px;
+    }
+    .content-area p  { margin-bottom: 16px; line-height: 1.78; font-size: 0.96rem; }
+    .content-area ul { margin-left: 20px; margin-bottom: 20px; }
+    .content-area li { margin-bottom: 8px; font-size: 0.95rem; line-height: 1.7; }
+
+    .faq-item { margin-bottom: 24px; border-bottom: 1px solid #f0f0f0; padding-bottom: 18px; }
+    .faq-q {
+      font-weight: 700; font-family: 'Unbounded', sans-serif;
+      font-size: 13px; color: #111827;
+      display: block; margin-bottom: 6px;
+    }
+
+    /* ── Canvas overlay download button ── */
+    .canvas-dl-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      white-space: nowrap;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: background 0.18s, transform 0.15s;
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .brat-canvas-wrap:hover .canvas-dl-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .canvas-dl-btn:hover {
+      background: rgba(0,0,0,0.82);
+      transform: translateX(-50%) translateY(-1px);
+    }
+    .canvas-dl-btn:active {
+      transform: translateX(-50%) scale(0.97);
+    }
+
+    #exportCanvas { display: none; }
+
+    /* ── Blur Intensity & Mirror Style controls ── */
+    .sub-ctrl {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--brat-border);
+    }
+    .sub-ctrl-row {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .sub-ctrl-label {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 8px; font-weight: 700;
+      color: #9ca3af; text-transform: uppercase;
+      width: 60px; flex-shrink: 0;
+    }
+    .sub-ctrl-val {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 9px; font-weight: 700;
+      width: 28px; text-align: right;
+    }
+    .mirror-pills { display: flex; gap: 5px; margin-top: 6px; }
+    .mirror-pill {
+      flex: 1;
+      background: #f3f4f6;
+      border: 1.5px solid var(--brat-border);
+      padding: 6px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 8px; font-weight: 700;
+      transition: 0.18s; text-align: center;
+      color: #374151;
+    }
+    .mirror-pill.active { background: var(--site-blue); color: #fff; border-color: var(--site-blue); }
+    .mirror-pill:hover:not(.active) { background: #e5e7eb; color: #1f2937; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .brat-app { grid-template-columns: 1fr; padding: 10px; gap: 10px; }
+      .brat-left { order: 1; }
+      .brat-canvas-pane { padding: 10px; border-radius: 10px; }
+      .brat-canvas-wrap { max-width: 100%; }
+      .brat-controls { order: 2; }
+      .content-area { padding: 22px; }
+    }
+
+    @media (max-width: 600px) {
+      .generator-container { padding: 0 8px; }
+      .brat-app { border-radius: 12px; }
+      .ctrl-group { padding: 7px 9px; border-radius: 9px; }
+      .dot { width: 20px; height: 20px; }
+      .save-btn { padding: 10px; font-size: 9px; }
+      .tpill { font-size: 8px; padding: 5px 8px; }
+      .pill { font-size: 8px; padding: 6px; }
+      .brat-left .ctrl-group textarea { height: 50px; }
+      .color-dots { gap: 4px; }
+      .pill-grid { gap: 4px; }
+      .content-area { padding: 18px; border-radius: 10px; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <!-- Hamburger toggle -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span class="icon-hamburger">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+      </svg>
+    </span>
+    <span class="icon-close">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </span>
+  </button>
+
+  <!-- Logo -->
+  <a href="https://fontgen.in/" class="logo" title="Font Generator Home">
+    <img src="https://fontgen.in/img/logo_header.png" alt="Logo">
+  </a>
+
+  <!-- Nav links -->
+  <div class="nav-menu" id="navMenu">
+    <ul>
+
+      <!-- Plain links -->
+      <li><a href="./instagram-fonts.html"><span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+</span> Instagram Fonts</a></li>
+      <li><a href="https://fontgen.in/font-changer.html"><span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 5L6 19"></path>
+    <path d="M11 5L16 19"></path>
+    <path d="M7 15H15"></path>
+    <path d="M18.5 13l2.5 2.5L15 21l-2.5-2.5L18.5 13z"></path>
+  </svg>
+</span>Font Changer</a></li>
+    
+
+      <!-- MEGA: Tools -->
+      <li class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+        <span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77z"></path>
+  </svg>
+</span>  Tools
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="dropdown-content">
+          <div class="mega-inner">
+            <!-- Col 1 -->
+            <div class="mega-col">
+              <div class="mega-col-title">Font Styles</div>
+              <a href="https://fontgen.in/tools/cursive.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h12"/></svg></span>
+                Cursive Generator
+              </a>
+              <a href="https://fontgen.in/tools/bold.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M6 4h8a4 4 0 010 8H6z"/><path d="M6 12h9a4 4 0 010 8H6z"/></svg></span>
+                Bold Text
+              </a>
+              <a href="https://fontgen.in/tools/italic.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><line x1="19" y1="4" x2="10" y2="4"/><line x1="14" y1="20" x2="5" y2="20"/><line x1="15" y1="4" x2="9" y2="20"/></svg></span>
+                Italic Generator
+              </a>
+              <a href="https://fontgen.in/tools/fancy.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg></span>
+                Fancy Letters
+              </a>
+            </div>
+            <!-- Col 2 -->
+            <div class="mega-col">
+              <div class="mega-col-title">Special Effects</div>
+              <a href="https://fontgen.in/tools/aesthetic.html">
+<span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21c-2-1-3-3-3-5s1-4 3-5c2-1 4-1 5 1s1 4-1 6-4 3-4 3z"></path>
+    <path d="M13 16c-2 0-4-1-5-3s-1-4 1-5 4-1 5 1"></path>
+    <path d="M19 3v4"></path>
+    <path d="M17 5h4"></path>
+  </svg>
+</span>                Aesthetic Font
+              </a>
+              <a href="https://fontgen.in/tools/glitch.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                Glitch Text
+              </a>
+              <a href="https://fontgen.in/tools/vaporwave-text.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/></svg></span>
+                Vaporwave Font
+              </a>
+              <a href="https://fontgen.in/tools/cool.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
+                Cool Fonts
+              </a>
+            </div>
+            <!-- Col 3 -->
+            <div class="mega-col">
+              <div class="mega-col-title">More Tools</div>
+              <a href="https://fontgen.in/tools/strikethrough.html">
+<span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 4H9a3 3 0 0 0-2.83 4"></path>
+    <path d="M14 12a4 4 0 0 1 0 8H6"></path>
+    <line x1="4" y1="12" x2="20" y2="12"></line>
+  </svg>
+</span>                Strikethrough
+              </a>
+              <a href="https://fontgen.in/tools/upside-down.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span>
+                Upside Down
+              </a>
+              <a href="https://fontgen.in/tools/small.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/></svg></span>
+                Tiny Text
+              </a>
+              <a href="https://fontgen.in/tools/symbols.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                Cool Symbols
+              </a>
+            </div>
+            <!-- Col 4: Featured -->
+             <div class="mega-col">
+              <div class="mega-col-title">Utility Tools</div>
+              <a href="https://fontgen.in/image-color-picker.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 5-5 11-5 11S7 12 7 7a5 5 0 015-5z"/><circle cx="12" cy="7" r="2"/></svg></span>
+                Color Picker
+              </a>
+              <a href="https://fontgen.in/character-counter.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></span>
+                Character Counter
+              </a>
+              <a href="https://fontgen.in/notepad.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+                Online Notepad
+              </a>
+              <a href="https://fontgen.in/brat-generator.html">
+  <span class="mega-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M16 3h5v5"/>
+      <path d="M4 20l17-17"/>
+      <path d="M21 16v5h-5"/>
+      <path d="M15 15l6 6"/>
+      <path d="M4 4l5 5"/>
+    </svg>
+  </span>
+  Brat Generator
+</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- MEGA: Company -->
+      <li class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+        <span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="10" width="20" height="12" rx="2"></rect>
+    <path d="M7 10V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6"></path>
+    <path d="M10 14h4"></path>
+    <path d="M10 18h4"></path>
+  </svg>
+</span>  Company
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="dropdown-content">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <div class="mega-col-title">Learn</div>
+              <a href="https://fontgen.in/blog.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span>
+                Blog
+              </a>
+              <a href="https://fontgen.in/different-fonts/">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg></span>
+                All Font Styles
+              </a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-title">Company</div>
+              <a href="https://fontgen.in/about-us.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
+                About Us
+              </a>
+              <a href="https://fontgen.in/contact-us.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                Contact
+              </a>
+              <a href="https://fontgen.in/privacy-policy.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                Privacy Policy
+              </a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-title">Support</div>
+              <a href="https://fontgen.in/feedback.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
+                Feedback
+              </a>
+              <a href="https://fontgen.in/changelog.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></span>
+                Changelog
+              </a>
+            </div>
+            <div class="mega-col featured">
+              <div class="mega-col-title">📖 Latest Post</div>
+              <div class="featured-card">
+                <strong>Is Font Generator Free?</strong>
+                <p>Yes — 190 styles, no account needed, no limits. Read more.</p>
+                <a href="https://fontgen.in/blog.html">Read Blog →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="https://fontgen.in/blog.html"><span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+    <path d="M18 14h-8"></path>
+    <path d="M15 18h-5"></path>
+    <path d="M10 6h8v4h-8V6z"></path>
+  </svg>
+</span> Blog</a></li>
+
+    </ul>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<canvas id="exportCanvas"></canvas>
+
+<div class="generator-container">
+  <h1 style="text-align:center;margin:14px 0 10px;font-family:'Unbounded',sans-serif;font-size:clamp(1rem,3.5vw,1.6rem);">Brat Album Cover Generator</h1>
+
+  <div class="brat-app">
+    <!-- Left: Canvas + Custom Text + Download -->
+    <div class="brat-left">
+      <div class="brat-canvas-pane">
+        <div class="brat-canvas-wrap" id="canvasWrap">
+          <canvas id="mainCanvas"></canvas>
+          <button class="canvas-dl-btn" id="saveBtn">⬇ Download PNG</button>
+        </div>
+      </div>
+
+      <!-- Custom Text -->
+      <div class="ctrl-group">
+        <div class="ctrl-label">Custom Text</div>
+        <textarea id="textInput" maxlength="200" placeholder="type anything...">brat</textarea>
+      </div>
+    </div>
+
+    <!-- Right Controls -->
+    <div class="brat-controls">
+
+      <!-- Background Colors (more options) -->
+      <div class="ctrl-group">
+        <div class="ctrl-label">Background Color</div>
+        <div class="color-dots">
+          <div class="dot active" style="background:#8ace00" data-bg="#8ace00" data-fg="#111111" title="Brat Green"></div>
+          <div class="dot" style="background:#111111" data-bg="#111111" data-fg="#ffffff" title="Black"></div>
+          <div class="dot" style="background:#ffffff;border:2px solid #ddd" data-bg="#ffffff" data-fg="#111111" title="White"></div>
+          <div class="dot" style="background:#ff3c5f" data-bg="#ff3c5f" data-fg="#ffffff" title="Hot Pink"></div>
+          <div class="dot" style="background:#2244dd" data-bg="#2244dd" data-fg="#ffffff" title="Electric Blue"></div>
+          <div class="dot" style="background:#ff6b00" data-bg="#ff6b00" data-fg="#111111" title="Acid Orange"></div>
+          <div class="dot" style="background:#c0f000" data-bg="#c0f000" data-fg="#111111" title="Neon Lime"></div>
+          <div class="dot" style="background:#8800cc" data-bg="#8800cc" data-fg="#ffffff" title="Purple"></div>
+          <div class="dot" style="background:#00b4d8" data-bg="#00b4d8" data-fg="#111111" title="Cyan"></div>
+          <div class="dot" style="background:#e8d5b7" data-bg="#e8d5b7" data-fg="#333333" title="Tan"></div>
+        </div>
+      </div>
+
+      <!-- Visual Style -->
+      <div class="ctrl-group">
+        <div class="ctrl-label">Visual Style</div>
+        <div class="pill-grid">
+          <button class="pill active" data-mode="blur">blur</button>
+          <button class="pill" data-mode="scribble">scribble</button>
+          <button class="pill" data-mode="mirror">mirror</button>
+          <button class="pill" data-mode="clean">clean</button>
+        </div>
+
+        <!-- Blur intensity — shown only when blur is active -->
+        <div class="sub-ctrl" id="blurControls">
+          <div class="ctrl-label" style="margin-bottom:5px;">Blur Intensity</div>
+          <div class="sub-ctrl-row">
+            <span class="sub-ctrl-label">Soft</span>
+            <input type="range" id="blurStrength" min="1" max="20" value="8" style="flex:1;accent-color:#8ace00;cursor:pointer;">
+            <span class="sub-ctrl-val" id="blurStrengthVal">8</span>
+          </div>
+        </div>
+
+        <!-- Mirror style — shown only when mirror is active -->
+        <div class="sub-ctrl" id="mirrorControls" style="display:none;">
+          <div class="ctrl-label" style="margin-bottom:5px;">Mirror Direction</div>
+          <div class="mirror-pills">
+            <button class="mirror-pill active" data-mirror="horizontal">↔ Horiz</button>
+            <button class="mirror-pill" data-mirror="vertical">↕ Vert</button>
+            <button class="mirror-pill" data-mirror="both">✦ Both</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Align -->
+      <div class="ctrl-group">
+        <div class="ctrl-label">Text Align</div>
+        <div class="align-grid">
+          <button class="align-btn active" data-align="center" title="Center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <button class="align-btn" data-align="left" title="Left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <button class="align-btn" data-align="justify" title="Justify">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- String Art Controls -->
+      <div class="ctrl-group" id="stringArtControls" style="display:none;">
+        <div class="ctrl-label">String Art Controls</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;color:#999;width:80px;flex-shrink:0;text-transform:uppercase;">Lines</span>
+            <input type="range" id="sLines" min="10" max="200" value="109" style="flex:1;accent-color:#8ace00;cursor:pointer;">
+            <span id="sLinesVal" style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;width:28px;text-align:right;">109</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;color:#999;width:80px;flex-shrink:0;text-transform:uppercase;">Opacity</span>
+            <input type="range" id="sAlpha" min="5" max="100" value="90" style="flex:1;accent-color:#8ace00;cursor:pointer;">
+            <span id="sAlphaVal" style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;width:28px;text-align:right;">90</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;color:#999;width:80px;flex-shrink:0;text-transform:uppercase;">Thickness</span>
+            <input type="range" id="sThick" min="1" max="10" value="3" style="flex:1;accent-color:#8ace00;cursor:pointer;">
+            <span id="sThickVal" style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;width:28px;text-align:right;">3</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;color:#999;width:80px;flex-shrink:0;text-transform:uppercase;">Spread</span>
+            <input type="range" id="sSpread" min="20" max="100" value="52" style="flex:1;accent-color:#8ace00;cursor:pointer;">
+            <span id="sSpreadVal" style="font-family:'Unbounded',sans-serif;font-size:9px;font-weight:700;width:28px;text-align:right;">52</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Presets: brat songs — vertical, fills remaining space -->
+      <div class="ctrl-group" id="songPresets" style="flex:1;display:flex;flex-direction:column;">
+        <div class="ctrl-label">Song Presets (brat)</div>
+        <div class="presets-list" style="flex-direction:column;overflow-y:auto;overflow-x:hidden;flex:1;">
+          <button class="tpill active" data-text="brat">brat</button>
+          <button class="tpill" data-text="it's the same but there's three more songs">it's the same but there's three more songs</button>
+          <button class="tpill" data-text="360">360</button>
+          <button class="tpill" data-text="club classics">club classics</button>
+          <button class="tpill" data-text="sympathy is a knife">sympathy is a knife</button>
+          <button class="tpill" data-text="i might say something stupid">i might say something stupid</button>
+          <button class="tpill" data-text="talk talk">talk talk</button>
+          <button class="tpill" data-text="von dutch">von dutch</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-area">
+    <h2>Make Your Own Brat Album Cover</h2>
+    <p>Welcome to the ultimate <strong>Brat Generator</strong>. Inspired by Charli XCX's iconic "Brat" album aesthetic, this tool helps you create custom artwork featuring the signature lime green background and lo-fi bold typography that defined a summer of club culture.</p>
+
+    <h3>Step-by-Step Guide</h3>
+    <ul>
+      <li><strong>Enter Text:</strong> Type your message in the text area. All text is automatically converted to lowercase to match the "Brat" style.</li>
+      <li><strong>Style Effects:</strong> Choose <em>Blur</em> for the classic hazy look, <em>Scribble</em> for a scratchy underground vibe, <em>Mirror</em> for a flipped effect, or <em>Clean</em> for sharp contrast.</li>
+      <li><strong>Download:</strong> Click the download button to export a 1080×1080 PNG, perfect for profile pictures or social posts.</li>
+    </ul>
+
+    <h3>Why is the "Brat" Look so Popular?</h3>
+    <p>The "Brat" aesthetic is a masterclass in intentional lo-fi design. By using bold text on a high-visibility lime green background (#8ace00), the design rejects traditional polish in favor of raw, immediate energy. It's accessible, instantly recognizable, and perfectly suited for the meme era.</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <span class="faq-q">What is the hex code for Brat Green?</span>
+      <p>The specific lime green used is <strong>#8ace00</strong>. Our generator uses this as the default background color.</p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">What font does Charli XCX use on Brat?</span>
+      <p>The album art uses <strong>Arial Narrow Bold</strong>. Our generator replicates this using a bold sans-serif with compressed letter spacing to ensure it looks right on all devices.</p>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">Is this tool free?</span>
+      <p>Yes! This generator is completely free for personal use, allowing fans to join the "Brat Summer" movement with their own custom text.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">&copy; 2025 FontGen.in. All rights reserved.</div>
+    <div class="footer-right">
+      <a href="https://fontgen.in/privacy-policy.html">Privacy Policy</a>
+      <a href="https://fontgen.in/about-us.html">About Us</a>
+      <a href="https://fontgen.in/contact-us.html">Contact</a>
+      <a href="https://fontgen.in/changelog.html">Latest Updates</a>
+      <a href="https://fontgen.in/feedback.html">Feedback</a>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTopBtn" onclick="scrollToTop()">⬆</button>
+
+<script src="https://fontgen.in/script.js"></script>
+
+<script>
+  // ── STATE ──
+  let bgColor = '#8ace00', fgColor = '#111111', mode = 'blur', userText = 'brat';
+  let textAlignMode = 'center';
+  let mainCanvas, exportCanvas, mc, ec, wrap, textarea;
+  // String Art state — defaults: Lines 109, Opacity 90, Thickness 3, Spread 52
+  let stringArtLines = 109, stringArtAlpha = 90, stringArtThick = 3, stringArtSpread = 52;
+  // Blur & Mirror state
+  let blurStrength = 8;         // 1–20 (maps to blur radius)
+  let mirrorStyle = 'horizontal'; // 'horizontal' | 'vertical' | 'both'
+
+  // ── CORE DRAW ──
+  function draw(ctx, s, rawText, m, bg, fg) {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, s, s);
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, s, s);
+
+    const t = rawText.toLowerCase().trim() || 'brat';
+    ctx.save();
+
+    const maxW = s * 0.85;
+    const fs = calculateFontSize(ctx, s, t, maxW);
+    ctx.font = `900 ${fs}px Arial, sans-serif`;
+    ctx.fillStyle = fg;
+    ctx.textBaseline = 'middle';
+
+    const lines = getLines(ctx, t, maxW);
+    const lh = fs * 1.08;
+    const totalH = lines.length * lh;
+    const startY = s / 2 - totalH / 2 + lh / 2;
+
+    // Compute x anchor and canvas textAlign based on textAlignMode
+    const padX = s * 0.075;
+    let drawX, canvasAlign;
+    if (textAlignMode === 'left') {
+      drawX = padX; canvasAlign = 'left';
+    } else if (textAlignMode === 'justify') {
+      drawX = s / 2; canvasAlign = 'center'; // justify handled per-line below
+    } else {
+      drawX = s / 2; canvasAlign = 'center';
+    }
+    ctx.textAlign = canvasAlign;
+
+    // Helper: draw one line respecting alignment
+    function drawLine(ln, x, y, isLast) {
+      if (textAlignMode === 'justify' && !isLast && ln.trim().indexOf(' ') !== -1) {
+        // Justify: distribute words across maxW
+        const words = ln.trim().split(/\s+/);
+        if (words.length < 2) { ctx.fillText(ln, s / 2, y); return; }
+        ctx.textAlign = 'left';
+        const totalWordW = words.reduce((acc, w) => acc + ctx.measureText(w).width, 0);
+        const gap = (maxW - totalWordW) / (words.length - 1);
+        let wx = padX;
+        words.forEach(w => { ctx.fillText(w, wx, y); wx += ctx.measureText(w).width + gap; });
+        ctx.textAlign = canvasAlign;
+      } else {
+        ctx.fillText(ln, x, y);
+      }
+    }
+
+    if (m === 'blur') {
+      // Proper blur: many radial offsets with low alpha for smooth halo
+      // blurRadius scales with blurStrength (1–20)
+      const blurRadius = s * 0.008 * (blurStrength / 8);
+      const blurSteps = 24;
+      ctx.globalAlpha = 0.07;
+      for (let i = 0; i < blurSteps; i++) {
+        const ang = (i / blurSteps) * Math.PI * 2;
+        const passes = Math.max(3, Math.round(blurStrength / 4));
+        for (let r = 1; r <= passes; r++) {
+          const off = blurRadius * r;
+          lines.forEach((ln, idx) => {
+            ctx.fillText(ln, drawX + Math.cos(ang) * off, startY + idx * lh + Math.sin(ang) * off);
+          });
+        }
+      }
+      ctx.globalAlpha = 1;
+      lines.forEach((ln, idx) => drawLine(ln, drawX, startY + idx * lh, idx === lines.length - 1));
+
+    } else if (m === 'scribble') {
+      // Draw text FIRST so lines overlay it (matching reference image)
+      lines.forEach((ln, idx) => drawLine(ln, drawX, startY + idx * lh, idx === lines.length - 1));
+
+      // ── STRING ART SCRIBBLE ENGINE ──
+      // Lines: 109 | Opacity: 90 | Thickness: 3 | Spread: 52
+      // Long sweeping near-horizontal lines fanning from a central band,
+      // with slight quadratic curves for organic hand-drawn feel.
+      const _nLines  = stringArtLines;
+      const _alpha   = stringArtAlpha / 100;
+      const _thick   = stringArtThick * (s / 700);
+      const _spread  = stringArtSpread / 100;
+
+      const bandTop    = s * (0.5 - _spread * 0.32);
+      const bandBottom = s * (0.5 + _spread * 0.32);
+
+      ctx.strokeStyle = fg;
+      ctx.lineCap = 'round';
+      ctx.lineWidth = _thick;
+
+      // Seeded RNG — stable pattern, no flicker on re-render
+      let _seed = 99991;
+      function _rng() {
+        _seed = (_seed * 1664525 + 1013904223) & 0xffffffff;
+        return (_seed >>> 0) / 0xffffffff;
+      }
+
+      for (let i = 0; i < _nLines; i++) {
+        const maxAngleDeg = 50 * _spread;
+        const angleDeg = ((_rng() + _rng()) / 2 - 0.5) * 2 * maxAngleDeg;
+        const angleRad = angleDeg * Math.PI / 180;
+
+        const pivotX = s * (0.2 + _rng() * 0.6);
+        const pivotY = bandTop + _rng() * (bandBottom - bandTop);
+        const halfLen = s * (0.48 + _rng() * 0.18) * (0.6 + _spread * 0.4);
+
+        const x1 = pivotX - Math.cos(angleRad) * halfLen;
+        const y1 = pivotY - Math.sin(angleRad) * halfLen;
+        const x2 = pivotX + Math.cos(angleRad) * halfLen;
+        const y2 = pivotY + Math.sin(angleRad) * halfLen;
+
+        const cpx = (x1 + x2) / 2 + (_rng() - 0.5) * s * 0.02;
+        const cpy = (y1 + y2) / 2 + (_rng() - 0.5) * s * 0.04;
+
+        ctx.globalAlpha = _alpha * (0.55 + _rng() * 0.45);
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+        ctx.stroke();
+      }
+
+      ctx.globalAlpha = 1;
+
+    } else if (m === 'mirror') {
+      // ── PURE MIRROR: canvas split into halves/quadrants, each is a reflection ──
+      // No "original" shown separately — the two halves form one symmetrical image
+      const half = s / 2;
+
+      // Shared font-size helper scoped to a zone dimension
+      function mirrorFontSize(zoneW, zoneH) {
+        const mW = zoneW * 0.80;
+        let mfs = Math.min(zoneH * 0.50, mW);
+        ctx.font = `900 ${mfs}px Arial, sans-serif`;
+        while (mfs > 8) {
+          const ls = getLines(ctx, t, mW);
+          const totH = ls.length * mfs * 1.08;
+          const widest = Math.max(...ls.map(l => ctx.measureText(l).width));
+          if (totH < zoneH * 0.82 && widest < mW) break;
+          mfs -= 2;
+          ctx.font = `900 ${mfs}px Arial, sans-serif`;
+        }
+        return { mfs, mW };
+      }
+
+      if (mirrorStyle === 'horizontal') {
+        // Left half and right half are X-mirrors of each other
+        // Text is drawn touching the center seam, facing outward
+        const { mfs, mW } = mirrorFontSize(half, s);
+        const mLines = getLines(ctx, t, mW);
+        const mlh = mfs * 1.08;
+        const mSY = s / 2 - (mLines.length * mlh) / 2 + mlh / 2;
+
+        // Left half: text right-aligned to seam (center)
+        ctx.save();
+        ctx.beginPath(); ctx.rect(0, 0, half, s); ctx.clip();
+        ctx.textAlign = 'right';
+        mLines.forEach((ln, idx) => ctx.fillText(ln, half - s * 0.02, mSY + idx * mlh));
+        ctx.restore();
+
+        // Right half: exact X-mirror of left half
+        ctx.save();
+        ctx.beginPath(); ctx.rect(half, 0, half, s); ctx.clip();
+        ctx.translate(s, 0); ctx.scale(-1, 1);
+        ctx.textAlign = 'right';
+        mLines.forEach((ln, idx) => ctx.fillText(ln, half - s * 0.02, mSY + idx * mlh));
+        ctx.restore();
+
+        // Thin seam line at center
+        ctx.save();
+        ctx.strokeStyle = fg; ctx.globalAlpha = 0.12; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(half, 0); ctx.lineTo(half, s); ctx.stroke();
+        ctx.restore();
+
+      } else if (mirrorStyle === 'vertical') {
+        // Top and bottom halves are Y-mirrors of each other
+        const { mfs, mW } = mirrorFontSize(s, half);
+        const mLines = getLines(ctx, t, mW);
+        const mlh = mfs * 1.08;
+        // Text bottom-aligned to seam (center)
+        const mSY = half - (mLines.length * mlh) + mlh / 2 - s * 0.02;
+
+        // Top half: text bottom-aligned to seam
+        ctx.save();
+        ctx.beginPath(); ctx.rect(0, 0, s, half); ctx.clip();
+        ctx.textAlign = 'center';
+        mLines.forEach((ln, idx) => ctx.fillText(ln, s / 2, mSY + idx * mlh));
+        ctx.restore();
+
+        // Bottom half: exact Y-mirror of top
+        ctx.save();
+        ctx.beginPath(); ctx.rect(0, half, s, half); ctx.clip();
+        ctx.translate(0, s); ctx.scale(1, -1);
+        ctx.textAlign = 'center';
+        mLines.forEach((ln, idx) => ctx.fillText(ln, s / 2, mSY + idx * mlh));
+        ctx.restore();
+
+        // Thin seam line at center
+        ctx.save();
+        ctx.strokeStyle = fg; ctx.globalAlpha = 0.12; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(0, half); ctx.lineTo(s, half); ctx.stroke();
+        ctx.restore();
+
+      } else if (mirrorStyle === 'both') {
+        // Four quadrants — all are reflections of top-left
+        const { mfs, mW } = mirrorFontSize(half, half);
+        const mLines = getLines(ctx, t, mW);
+        const mlh = mfs * 1.08;
+        // Text anchored bottom-right of quadrant (touching both seams)
+        const mSY = half - (mLines.length * mlh) + mlh / 2 - half * 0.03;
+
+        const quadrants = [
+          { rx:0,    ry:0,    tx:0, ty:0, sx: 1, sy: 1, ax:'right'  }, // top-left
+          { rx:half, ry:0,    tx:s, ty:0, sx:-1, sy: 1, ax:'right'  }, // top-right (flip X)
+          { rx:0,    ry:half, tx:0, ty:s, sx: 1, sy:-1, ax:'right'  }, // bottom-left (flip Y)
+          { rx:half, ry:half, tx:s, ty:s, sx:-1, sy:-1, ax:'right'  }, // bottom-right (flip XY)
+        ];
+        quadrants.forEach(({ rx, ry, tx, ty, sx, sy }) => {
+          ctx.save();
+          ctx.beginPath(); ctx.rect(rx, ry, half, half); ctx.clip();
+          ctx.translate(tx, ty); ctx.scale(sx, sy);
+          ctx.textAlign = 'right';
+          mLines.forEach((ln, idx) => ctx.fillText(ln, half - half * 0.03, mSY + idx * mlh));
+          ctx.restore();
+        });
+
+        // Cross seam lines
+        ctx.save();
+        ctx.strokeStyle = fg; ctx.globalAlpha = 0.12; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(half, 0); ctx.lineTo(half, s); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(0, half); ctx.lineTo(s, half); ctx.stroke();
+        ctx.restore();
+      }
+
+    } else {
+      // clean
+      lines.forEach((ln, idx) => drawLine(ln, drawX, startY + idx * lh, idx === lines.length - 1));
+    }
+
+    ctx.restore();
+  }
+
+  // ── FONT SIZE ──
+  function calculateFontSize(ctx, s, text, maxW) {
+    let size = Math.min(s * 0.28, 280);
+    ctx.font = `900 ${size}px Arial`;
+    while (size > 12) {
+      const lines = getLines(ctx, text, maxW);
+      const totalH = lines.length * size * 1.1;
+      const widest = Math.max(...lines.map(l => ctx.measureText(l).width));
+      if (totalH < s * 0.82 && widest < maxW) break;
+      size -= 2;
+      ctx.font = `900 ${size}px Arial`;
+    }
+    return size;
+  }
+
+  // ── LINE WRAP ──
+  function getLines(ctx, text, maxW) {
+    const words = text.split(/\s+/);
+    const lines = [];
+    let cur = words[0] || '';
+    for (let i = 1; i < words.length; i++) {
+      const test = cur + ' ' + words[i];
+      if (ctx.measureText(test).width < maxW) {
+        cur = test;
+      } else {
+        lines.push(cur);
+        cur = words[i];
+      }
+    }
+    if (cur) lines.push(cur);
+    return lines.length ? lines : [''];
+  }
+
+  // ── RENDER ──
+  function render() {
+    if (mc) draw(mc, mainCanvas.width, userText, mode, bgColor, fgColor);
+  }
+
+  function resize() {
+    if (!wrap || !mainCanvas) return;
+    const size = wrap.clientWidth;
+    mainCanvas.width = mainCanvas.height = size;
+    render();
+  }
+
+  // ── INIT ──
+  window.onload = function () {
+    mainCanvas = document.getElementById('mainCanvas');
+    exportCanvas = document.getElementById('exportCanvas');
+    mc = mainCanvas.getContext('2d');
+    ec = exportCanvas.getContext('2d');
+    wrap = document.getElementById('canvasWrap');
+    textarea = document.getElementById('textInput');
+
+    // Text input
+    textarea.oninput = (e) => {
+      userText = e.target.value;
+      document.querySelectorAll('.tpill').forEach(x => x.classList.remove('active'));
+      render();
+    };
+
+    // Color dots
+    document.querySelectorAll('.dot').forEach(d => {
+      d.onclick = () => {
+        document.querySelectorAll('.dot').forEach(x => x.classList.remove('active'));
+        d.classList.add('active');
+        bgColor = d.dataset.bg;
+        fgColor = d.dataset.fg;
+        render();
+      };
+    });
+
+    // Text align buttons
+    document.querySelectorAll('.align-btn').forEach(b => {
+      b.onclick = () => {
+        document.querySelectorAll('.align-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        textAlignMode = b.dataset.align;
+        render();
+      };
+    });
+
+    // Style pills (mode)
+    document.querySelectorAll('.pill:not(.tpill)').forEach(p => {
+      p.onclick = () => {
+        document.querySelectorAll('.pill:not(.tpill)').forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+        mode = p.dataset.mode;
+        const isScribble = mode === 'scribble';
+        const isBlur     = mode === 'blur';
+        const isMirror   = mode === 'mirror';
+        document.getElementById('stringArtControls').style.display = isScribble ? 'block' : 'none';
+        document.getElementById('songPresets').style.display = isScribble ? 'none' : 'flex';
+        document.getElementById('blurControls').style.display  = isBlur   ? 'block' : 'none';
+        document.getElementById('mirrorControls').style.display = isMirror ? 'block' : 'none';
+        render();
+      };
+    });
+
+    // Blur intensity slider
+    const blurEl = document.getElementById('blurStrength');
+    const blurValEl = document.getElementById('blurStrengthVal');
+    if (blurEl) {
+      blurEl.oninput = () => {
+        blurStrength = +blurEl.value;
+        blurValEl.textContent = blurEl.value;
+        render();
+      };
+    }
+
+    // Mirror style pills
+    document.querySelectorAll('.mirror-pill').forEach(p => {
+      p.onclick = () => {
+        document.querySelectorAll('.mirror-pill').forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+        mirrorStyle = p.dataset.mirror;
+        render();
+      };
+    });
+
+    // String Art sliders
+    [['sLines','sLinesVal', v => stringArtLines = +v],
+     ['sAlpha','sAlphaVal', v => stringArtAlpha = +v],
+     ['sThick','sThickVal', v => stringArtThick = +v],
+     ['sSpread','sSpreadVal',v => stringArtSpread = +v]
+    ].forEach(([id, valId, setter]) => {
+      const el = document.getElementById(id);
+      const vEl = document.getElementById(valId);
+      if (el) el.oninput = () => { setter(el.value); vEl.textContent = el.value; render(); };
+    });
+
+    // Preset song pills
+    document.querySelectorAll('.tpill').forEach(p => {
+      p.onclick = () => {
+        document.querySelectorAll('.tpill').forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+        userText = p.dataset.text;
+        textarea.value = userText;
+        render();
+      };
+    });
+
+    // Download
+    document.getElementById('saveBtn').onclick = () => {
+      exportCanvas.width = exportCanvas.height = 1080;
+      draw(ec, 1080, userText, mode, bgColor, fgColor);
+      const link = document.createElement('a');
+      link.download = 'brat-generator.png';
+      link.href = exportCanvas.toDataURL('image/png');
+      link.click();
+    };
+
+    window.addEventListener('resize', resize);
+    resize();
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pick Colors from Image – Free HEX, RGB & Color HTML Codes</title>
+<meta name="description" content="Pick any color from image instantly. Upload or paste URL, hover to preview, click to copy HEX, RGB, HSL codes. Create palettes and export colors easily for your projects."> 
+ <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://fontgen.in/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fontgen.in/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fontgen.in/img/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pick Colors from Image – Free HEX, RGB & Color HTML Codes">
+  <meta property="og:description" content="Pick any color from image instantly. Upload or paste URL, hover to preview, click to copy HEX, RGB, HSL codes. Create palettes and export colors easily for your projects.">
+  <meta property="og:image" content="https://fontgen.in/img/favicon.png">
+  <meta property="og:url" content="https://fontgen.in/image-color-picker.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pick Colors from Image – Free HEX, RGB & Color HTML Codes">
+  <meta name="twitter:description" content="Pick any color from image instantly. Upload or paste URL, hover to preview, click to copy HEX, RGB, HSL codes. Create palettes and export colors easily for your projects.">
+  <meta name="twitter:url" content="https://fontgen.in/image-color-picker.html">
+  <meta name="twitter:image" content="https://fontgen.in/img/favicon.png">
+  <link rel="canonical" href="https://fontgen.in/image-color-picker.html">
+  <link rel="stylesheet" href="./style.css"> 
+
+<meta name="keywords" content="color picker from image, free color picker, extract color from image, color detector tool, color picker online, image color picker hex rgb, color palette generator, pick color from photo, color finder tool, hex rgb converter, color analysis tool, find color code from image">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1820825216397031"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0W5M4KP1HL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0W5M4KP1HL');
+</script>
+
+<style>
+.pg{
+  max-width:1080px;
+  margin:24px auto;
+  padding:24px 24px 48px;
+  background:#fff;
+  border:1px solid #e8ecf1;
+  border-radius:12px;
+  color:#2c3e50;
+  overflow:hidden;
+}
+.hero{text-align:center;margin-bottom:20px;padding:0}
+.hero h1{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:700;color:#1a202c;letter-spacing:-.01em;margin-bottom:6px}
+.hero p{font-size:.95rem;color:#64748b;font-weight:400}
+.wc{background:#fff;border-radius:12px;border:1px solid #e8ecf1}
+
+/* UPLOAD */
+.up-card{overflow:hidden;margin-bottom:18px;display:none}
+.up-card.visible{display:block}
+.up-card.img-loaded .dropzone{display:none}
+.dropzone{margin:16px;border:2.5px dashed #cbd5e1;border-radius:14px;padding:48px 24px 40px;display:flex;flex-direction:column;align-items:center;gap:14px;cursor:pointer;text-align:center;background:#fafafa;transition:border-color .18s,background .18s}
+.dropzone:hover,.dropzone.drag{border-color:#2563eb;background:#f0f7ff}
+.dropzone input{display:none}
+.dz-orb{width:72px;height:72px;border-radius:50%;background:#fff;border:2px solid #e4e4e7;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s,border-color .18s}
+.dropzone:hover .dz-orb{transform:translateY(-4px);box-shadow:0 8px 20px rgba(37,99,235,.15);border-color:#93c5fd}
+.dz-orb svg{width:28px;height:28px;stroke:#2563eb;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.dz-h{font-size:1rem;font-weight:600;color:#18181b}
+.dz-s{font-size:.8rem;color:#71717a}
+.dz-ubtn{display:inline-flex;align-items:center;gap:7px;background:#2563eb;color:#fff;border:none;border-radius:9px;font-size:.82rem;font-weight:600;font-family:'Segoe UI',sans-serif;padding:0 22px;height:40px;cursor:pointer;box-shadow:0 2px 10px rgba(37,99,235,.3);transition:background .15s,transform .1s}
+.dz-ubtn:hover{background:#1d4ed8;transform:translateY(-1px)}
+.dz-ubtn svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dz-tags{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.dz-tags span{font-size:.62rem;font-weight:600;color:#71717a;background:#fff;border:1px solid #e4e4e7;padding:2px 9px;border-radius:20px}
+
+/* URL ROW */
+.url-row{display:flex;align-items:center;gap:8px;padding:14px 16px}
+.url-ic{width:36px;height:36px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.url-ic svg{width:15px;height:15px;stroke:#2563eb;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.url-in{flex:1;min-width:0;font-size:.83rem;color:#18181b;background:#fff;border:1.5px solid #e4e4e7;border-radius:9px;padding:8px 13px;outline:none;font-family:'Segoe UI',sans-serif;transition:border-color .14s}
+.url-in:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.url-in::placeholder{color:#a1a1aa}
+.url-btn{background:#18181b;color:#fff;border:none;border-radius:9px;font-size:.83rem;font-weight:600;font-family:'Segoe UI',sans-serif;padding:0 20px;height:40px;cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:6px;transition:background .14s,transform .1s}
+.url-btn:hover{background:#3f3f46;transform:translateY(-1px)}
+.url-btn svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* HISTORY */
+.hist-row{padding:12px 16px 16px;border-top:1.5px solid #f4f4f5}
+.hist-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.hist-lbl{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#a1a1aa}
+.hist-list{display:flex;gap:8px;flex-wrap:wrap}
+.hist-item{position:relative;width:72px;height:52px;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;flex-shrink:0;transition:border-color .14s,transform .13s,box-shadow .13s;background:#f4f4f5}
+.hist-item:hover{border-color:#2563eb;transform:translateY(-2px);box-shadow:0 4px 14px rgba(37,99,235,.2)}
+.hist-item img{width:100%;height:100%;object-fit:cover;display:block}
+.hist-item .hist-name{position:absolute;bottom:0;left:0;right:0;font-size:8px;font-weight:600;color:#fff;background:rgba(0,0,0,.5);padding:2px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.hist-item .hist-del{position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.5);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;color:#fff;font-size:9px;line-height:1;padding:0;transition:background .12s}
+.hist-item:hover .hist-del{display:flex}
+.hist-item .hist-del:hover{background:rgba(225,29,72,.8)}
+
+/* FBAR */
+.fbar{display:none;background:#fff;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 18px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;transition:box-shadow .15s,transform .12s}
+.fbar:hover{box-shadow:0 2px 8px rgba(0,0,0,.1),0 8px 28px rgba(37,99,235,.12);transform:translateY(-1px)}
+.fbar:active{transform:scale(.99)}
+.fbar.on{display:block}
+.fbar-top{display:flex;align-items:center}
+.fbar-thumb{width:72px;height:72px;flex-shrink:0;background:#f4f4f5;overflow:hidden}
+.fbar-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.fbar-info{flex:1;min-width:0;padding:0 14px}
+.fbar-name{font-size:.8rem;font-weight:600;color:#18181b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;margin-bottom:3px}
+.fbar-meta{display:flex;align-items:center;gap:6px}
+.fbar-status{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0;box-shadow:0 0 0 2.5px rgba(34,197,94,.2)}
+.fbar-label{font-size:.68rem;color:#a1a1aa}
+.fbar-btn{flex-shrink:0;margin-right:14px;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:none;cursor:pointer;padding:0;font-family:'Segoe UI',sans-serif}
+.fbar-btn-icon{width:36px;height:36px;border-radius:10px;background:#f4f4f5;border:1.5px solid #e4e4e7;display:flex;align-items:center;justify-content:center;transition:background .14s,border-color .14s,transform .12s}
+.fbar-btn-icon svg{width:16px;height:16px;stroke:#52525b;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fbar-btn-text{font-size:.62rem;font-weight:600;color:#71717a;letter-spacing:.02em}
+.fbar:hover .fbar-btn-icon{background:#eff6ff;border-color:#93c5fd}
+.fbar:hover .fbar-btn-icon svg{stroke:#2563eb}
+.fbar:hover .fbar-btn-text{color:#2563eb}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:1fr minmax(0,340px);gap:16px;align-items:start}
+.lcol{display:flex;flex-direction:column;gap:12px}
+
+/* CANVAS */
+.cvbox{display:none;position:relative;border-radius:12px;overflow:hidden;background:#f4f4f5;cursor:crosshair;border:1px solid #e8ecf1;aspect-ratio:16/9;width:100%}
+.cvbox.on{display:block}
+.cvbox.lkd{border-color:#2563eb}
+#mc{display:block;width:100%;height:100%;border-radius:14px;position:absolute;top:0;left:0}
+.lpill{position:absolute;bottom:12px;left:12px;font-size:11px;font-weight:600;color:#2563eb;background:rgba(239,246,255,.95);border:1px solid #bfdbfe;padding:4px 13px;border-radius:20px;pointer-events:none;opacity:0;transition:opacity .2s;display:flex;align-items:center;gap:5px;backdrop-filter:blur(4px)}
+.lpill::before{content:'';width:6px;height:6px;border-radius:50%;background:#2563eb;flex-shrink:0}
+.lpill.on{opacity:1}
+@keyframes sp{to{transform:rotate(360deg)}}
+.ldr{position:absolute;inset:0;background:rgba(244,244,245,.85);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;flex-direction:column;gap:10px;z-index:10;border-radius:12px}
+.ldr.on{display:flex}
+.lring{width:30px;height:30px;border:3px solid #e4e4e7;border-top-color:#2563eb;border-radius:50%;animation:sp .7s linear infinite}
+.ltxt{font-size:11px;color:#71717a;letter-spacing:.04em}
+
+/* PALETTE */
+.pal-card{display:none}.pal-card.on{display:block}
+.card-pad{padding:16px 18px}
+.clbl{
+  font-size:.7rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:#94a3b8;
+  display:block;margin-bottom:12px;
+  padding-bottom:10px;border-bottom:1px solid #e8ecf1;
+}
+.swrow{display:flex;gap:6px;flex-wrap:wrap}.sw{
+  width:auto;min-width:70px;height:44px;border-radius:8px;cursor:pointer;
+  border:1px solid rgba(0,0,0,.08);flex-shrink:0;
+  transition:transform .13s,box-shadow .13s;
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2px;padding:4px 8px;
+}
+.sw:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.sw-hex{
+  font-size:.6rem;font-family:'Courier New',monospace;font-weight:700;
+  letter-spacing:.04em;line-height:1;
+}
+.sw-dot{
+  width:8px;height:8px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.5);
+}
+
+/* EXPORT */
+.expgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pal-divider{border:none;border-top:1px solid #e8ecf1;margin:14px 0}
+.ebtn{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 14px;
+  background:#fff;border:1px solid #e8ecf1;border-radius:8px;
+  cursor:pointer;font-family:'Segoe UI',sans-serif;
+  transition:background .13s,border-color .13s;text-align:left;
+  width:100%;
+}
+.ebtn:hover{background:#f0f7ff;border-color:#bfdbfe}
+.ebtn:active{background:#e0efff}
+.eico{
+  width:32px;height:32px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.eico svg{width:15px;height:15px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ev-css .eico{background:#f3f0ff}.ev-css .eico svg{stroke:#7c3aed}
+.ev-code .eico{background:#fefce8}.ev-code .eico svg{stroke:#d97706}
+.ev-svg .eico{background:#f0fdf4}.ev-svg .eico svg{stroke:#16a34a}
+.ev-png .eico{background:#fff1f2}.ev-png .eico svg{stroke:#e11d48}
+.emeta{display:flex;flex-direction:column;gap:1px;min-width:0}
+.etitle{font-size:.78rem;font-weight:600;color:#1e293b;line-height:1.2}
+.edesc{font-size:.63rem;color:#94a3b8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* RIGHT COL */
+.rcol{display:none;flex-direction:column;gap:14px}
+.rcol.on{display:flex}
+
+/* COLOR DISPLAY */
+.cdisp{overflow:hidden}
+.cslab{height:130px;background:#6366f1;position:relative;transition:background .08s}
+.cslab-foot{position:absolute;bottom:0;left:0;right:0;padding:12px 15px;display:flex;align-items:center;gap:8px}
+.chex{font-size:13px;font-weight:700;letter-spacing:.08em;color:#fff;background:rgba(0,0,0,.28);backdrop-filter:blur(8px);padding:4px 13px;border-radius:20px;border:1px solid rgba(255,255,255,.2)}
+.cchip{font-size:9px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:20px}
+.cpick-btn{margin-left:auto;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;flex-shrink:0;transition:background .15s,transform .12s;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.cpick-btn:hover{background:rgba(255,255,255,.32);transform:scale(1.1)}
+.cpick-btn:active{transform:scale(.95)}
+.fmts{padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+.frow{display:flex;align-items:center;background:#fafafa;border:1px solid #e8ecf1;border-radius:9px;padding:7px 10px;transition:background .12s,border-color .12s}
+.frow:hover{background:#f0f7ff;border-color:#bfdbfe}
+.flbl{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#a1a1aa;width:40px;flex-shrink:0}
+.fval{flex:1;font-size:.78rem;font-family:'Courier New',monospace;font-weight:600;color:#18181b;word-break:break-all;white-space:normal;line-height:1.3;padding-right:6px}
+.fcpy{width:26px;height:26px;background:#2563eb;border:none;border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;box-shadow:0 1px 4px rgba(37,99,235,.3);transition:background .13s,transform .1s;align-self:center}
+.fcpy svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fcpy:hover{background:#1d4ed8;transform:scale(1.1)}
+.fcpy:active{transform:scale(.93)}
+.fcpy.ok{background:#16a34a}
+
+
+
+/* CUSTOM COLOR PICKER */
+.cpop-backdrop{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.5)}
+.cpop{position:fixed;z-index:10001;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border:1px solid #e4e4e7;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.2);width:300px;overflow:hidden;user-select:none;-webkit-user-select:none}
+.cpop-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #f0f0f0}
+.cpop-title{font-size:.72rem;font-weight:700;color:#52525b;letter-spacing:.08em;text-transform:uppercase}
+.cpop-close{background:none;border:none;cursor:pointer;color:#a1a1aa;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:5px;transition:background .12s}
+.cpop-close:hover{background:#f4f4f5;color:#18181b}
+.cpop-sb{position:relative;height:180px;cursor:crosshair;touch-action:none}
+#cpopSBCanvas{display:block;width:100%;height:100%}
+.cpop-sb-cursor{position:absolute;width:14px;height:14px;border-radius:50%;border:2.5px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.3);transform:translate(-50%,-50%);pointer-events:none}
+.cpop-sliders{padding:14px 14px 10px;display:flex;flex-direction:column;gap:12px}
+.cpop-slider-row{display:flex;align-items:center;gap:10px}
+.cpop-slider-label{font-size:.6rem;font-weight:700;color:#a1a1aa;width:10px;flex-shrink:0;text-transform:uppercase;text-align:center}
+.cpop-slider-wrap{position:relative;height:14px;border-radius:7px;overflow:visible;cursor:pointer;flex:1;touch-action:none}
+.cpop-slider-canvas{display:block;width:100%;height:100%;border-radius:7px}
+.cpop-slider-thumb{position:absolute;top:50%;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid rgba(0,0,0,.15);box-shadow:0 1px 5px rgba(0,0,0,.3);transform:translate(-50%,-50%);pointer-events:none;z-index:2}
+.cpop-alpha-checker{position:absolute;inset:0;background:repeating-conic-gradient(#ccc 0% 25%,#fff 0% 50%) 0 0/10px 10px;border-radius:7px}
+.cpop-bottom{display:flex;align-items:stretch;border-top:1px solid #f0f0f0}
+.cpop-preview{width:48px;flex-shrink:0;border-right:1px solid #f0f0f0;min-height:58px}
+.cpop-inputs{display:flex;flex:1}
+.cpop-input-group{display:flex;flex-direction:column;flex:1;border-right:1px solid #f0f0f0}
+.cpop-input-group:last-child{border-right:none}
+.cpop-input-group label{font-size:.5rem;font-weight:700;color:#a1a1aa;text-align:center;padding:6px 0 2px;letter-spacing:.08em;text-transform:uppercase}
+.cpop-hex-in,.cpop-num-in{width:100%;border:none;outline:none;background:transparent;color:#18181b;font-size:.72rem;font-weight:600;font-family:'Courier New',monospace;text-align:center;padding:2px 2px 6px;}
+.cpop-num-in::-webkit-outer-spin-button,.cpop-num-in::-webkit-inner-spin-button{-webkit-appearance:none}
+.cpop-hex-in:focus,.cpop-num-in:focus{background:#f8faff}
+.cpop-input-group:first-child{flex:1.8}
+.cpop-apply{display:block;width:100%;padding:12px;background:#18181b;color:#fff;border:none;font-size:.8rem;font-weight:600;font-family:'Segoe UI',sans-serif;cursor:pointer;letter-spacing:.02em;transition:background .12s}
+.cpop-apply:hover{background:#2563eb}
+@media(max-width:700px){.cpop{width:calc(100vw - 32px);max-width:320px}.cpop-sb{height:160px}}
+
+/* MAGNIFIER */
+#mag{position:fixed;pointer-events:none;display:none;z-index:9999;border-radius:50%;border:4px solid #6366f1;box-shadow:0 0 0 1.5px rgba(255,255,255,.7),0 0 0 3px rgba(0,0,0,.1),0 10px 32px rgba(0,0,0,.5);transition:border-color .05s}
+#mag-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;position:relative}
+#magc{position:absolute;top:0;left:0;display:block}
+.mln{position:absolute;background:rgba(255,255,255,.4);z-index:2;pointer-events:none}
+#mlh{top:50%;left:12%;right:12%;height:1px;transform:translateY(-50%)}
+#mlv{left:50%;top:12%;bottom:12%;width:1px;transform:translateX(-50%)}
+#mdot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;border:2px solid rgba(255,255,255,.9);box-shadow:0 0 0 1px rgba(0,0,0,.3);z-index:3;transition:background .05s}
+#mhex{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-family:'Courier New',monospace;font-size:9.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);padding:2px 8px;border-radius:6px;white-space:nowrap;z-index:4;border:1px solid rgba(255,255,255,.15)}
+
+/* TOAST */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(48px);background:#18181b;color:#fff;font-size:13px;font-weight:500;letter-spacing:.01em;padding:10px 22px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.25);z-index:99999;pointer-events:none;white-space:nowrap;transition:transform .24s cubic-bezier(.34,1.56,.64,1)}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:899px){.navbar .menu-toggle{display:block}}
+@media(max-width:860px){.grid{grid-template-columns:1fr minmax(0,280px)}}
+@media(max-width:750px){.pg{margin:12px;padding:16px 14px 40px}}
+
+/* ── MOBILE ── */
+@media(max-width:700px){
+
+  /* PAGE */
+  .pg{padding:10px 10px 80px}
+  .hero{margin-bottom:12px;padding:0}
+  .hero h1{font-size:1.15rem;margin-bottom:2px}
+  .hero p{font-size:.75rem}
+
+  /* GRID → single column, JS handles reorder */
+  .grid{display:block}
+  .lcol{display:flex;flex-direction:column;gap:10px}
+  .rcol{display:none}
+
+  /* FBAR — change image bar */
+  .fbar-thumb{width:52px;height:52px}
+  .fbar-name{font-size:.72rem}
+  .fbar-label{font-size:.58rem}
+  .fbar-btn-icon{width:28px;height:28px}
+  .fbar-btn-icon svg{width:13px;height:13px}
+  .fbar-btn-text{font-size:.52rem}
+
+  /* CANVAS */
+  .cvbox{border-radius:10px;border-width:1.5px;touch-action:none}
+  #mc{border-radius:8px}
+
+  /* COLOR SLAB */
+  .cslab{height:80px}
+  .cslab-foot{padding:8px 10px;gap:6px}
+  .chex{font-size:11px;padding:3px 8px;letter-spacing:.04em}
+  .cchip{display:none}
+  .cpick-btn{width:26px;height:26px;margin-left:auto}
+  .cpick-btn svg{width:12px;height:12px}
+
+  /* COLOR FORMAT ROWS — fix overflow */
+  .fmts{padding:6px 8px;gap:3px}
+  .frow{padding:5px 8px;border-radius:6px;gap:0}
+  .flbl{font-size:.52rem;width:34px;letter-spacing:.06em}
+  .fval{font-size:.68rem;padding-right:4px;line-height:1.2}
+  .fcpy{width:20px;height:20px;border-radius:4px;flex-shrink:0}
+  .fcpy svg{width:8px;height:8px}
+  .sbtn{height:38px;font-size:.75rem}
+
+  /* UPLOAD */
+  .up-card{margin-bottom:10px}
+  .dropzone{padding:24px 12px 20px;margin:10px 10px 0;gap:10px}
+  .dz-orb{width:48px;height:48px}
+  .dz-orb svg{width:20px;height:20px}
+  .dz-h{font-size:.85rem}
+  .dz-s{font-size:.72rem}
+  .dz-ubtn{height:36px;font-size:.75rem;padding:0 16px}
+  .dz-tags span{font-size:.58rem;padding:2px 7px}
+  .url-row{padding:8px 10px;gap:6px}
+  .url-ic{display:none}
+  .url-in{font-size:.75rem;padding:6px 8px}
+  .url-btn{padding:0 12px;height:34px;font-size:.75rem}
+  .url-btn svg{display:none}
+
+  /* HISTORY */
+  .hist-row{padding:8px 10px 10px}
+  .hist-lbl{font-size:.58rem}
+  .hist-item{width:56px;height:40px;border-radius:6px}
+  .hist-name{font-size:7px}
+
+  /* PALETTE */
+  .card-pad{padding:12px}
+  .clbl{font-size:.58rem;margin-bottom:10px}
+  .sw{min-width:60px;height:38px;border-radius:6px}
+  .sw-hex{font-size:.55rem}
+  .swrow{gap:6px}
+
+  /* EXPORT — 2 columns, compact */
+  .expgrid{grid-template-columns:1fr 1fr;gap:6px}
+  .ebtn{padding:8px 10px;gap:6px;border-radius:8px}
+  .eico{width:26px;height:26px;border-radius:6px;flex-shrink:0}
+  .eico svg{width:12px;height:12px}
+  .etitle{font-size:.7rem}
+  .edesc{display:none}
+
+  /* SAVED COLORS */
+  .svd-head{margin-bottom:8px}
+  .fav-list{gap:5px}
+  .fav-card{border-radius:8px;min-height:44px}
+  .fav-swatch{width:7px}
+  .fav-info{padding:0 8px;gap:2px}
+  .fav-hex{font-size:.68rem}
+  .fav-name{font-size:.58rem}
+  .fav-del{width:18px;height:18px;margin-right:8px}
+  .fav-del svg{width:10px;height:10px}
+  .nosvd{font-size:.68rem}
+
+  /* COLOR PICKER POPUP */
+  .cpop{width:calc(100vw - 20px);max-width:300px}
+  .cpop-sb{height:130px}
+  .cpop-sliders{padding:8px 10px 6px;gap:7px}
+  .cpop-apply{padding:9px}
+}
+
+@media(max-width:380px){
+  .dz-tags{display:none}
+  .hero h1{font-size:1rem}
+  .expgrid{grid-template-columns:1fr}
+  .fval{font-size:.62rem}
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <!-- Hamburger toggle -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span class="icon-hamburger">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+      </svg>
+    </span>
+    <span class="icon-close">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </span>
+  </button>
+
+  <!-- Logo -->
+  <a href="https://fontgen.in/" class="logo" title="Font Generator Home">
+    <img src="https://fontgen.in/img/logo_header.png" alt="Logo">
+  </a>
+
+  <!-- Nav links -->
+  <div class="nav-menu" id="navMenu">
+    <ul>
+
+      <!-- Plain links -->
+      <li><a href="./instagram-fonts.html"><span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+</span> Instagram Fonts</a></li>
+      <li><a href="https://fontgen.in/font-changer.html"><span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 5L6 19"></path>
+    <path d="M11 5L16 19"></path>
+    <path d="M7 15H15"></path>
+    <path d="M18.5 13l2.5 2.5L15 21l-2.5-2.5L18.5 13z"></path>
+  </svg>
+</span>Font Changer</a></li>
+    
+
+      <!-- MEGA: Tools -->
+      <li class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+        <span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77z"></path>
+  </svg>
+</span>  Tools
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="dropdown-content">
+          <div class="mega-inner">
+            <!-- Col 1 -->
+            <div class="mega-col">
+              <div class="mega-col-title">Font Styles</div>
+              <a href="https://fontgen.in/tools/cursive.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h12"/></svg></span>
+                Cursive Generator
+              </a>
+              <a href="https://fontgen.in/tools/bold.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M6 4h8a4 4 0 010 8H6z"/><path d="M6 12h9a4 4 0 010 8H6z"/></svg></span>
+                Bold Text
+              </a>
+              <a href="https://fontgen.in/tools/italic.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><line x1="19" y1="4" x2="10" y2="4"/><line x1="14" y1="20" x2="5" y2="20"/><line x1="15" y1="4" x2="9" y2="20"/></svg></span>
+                Italic Generator
+              </a>
+              <a href="https://fontgen.in/tools/fancy.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg></span>
+                Fancy Letters
+              </a>
+            </div>
+            <!-- Col 2 -->
+            <div class="mega-col">
+              <div class="mega-col-title">Special Effects</div>
+              <a href="https://fontgen.in/tools/aesthetic.html">
+<span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21c-2-1-3-3-3-5s1-4 3-5c2-1 4-1 5 1s1 4-1 6-4 3-4 3z"></path>
+    <path d="M13 16c-2 0-4-1-5-3s-1-4 1-5 4-1 5 1"></path>
+    <path d="M19 3v4"></path>
+    <path d="M17 5h4"></path>
+  </svg>
+</span>                Aesthetic Font
+              </a>
+              <a href="https://fontgen.in/tools/glitch.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                Glitch Text
+              </a>
+              <a href="https://fontgen.in/tools/vaporwave-text.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/></svg></span>
+                Vaporwave Font
+              </a>
+              <a href="https://fontgen.in/tools/cool.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
+                Cool Fonts
+              </a>
+            </div>
+            <!-- Col 3 -->
+            <div class="mega-col">
+              <div class="mega-col-title">More Tools</div>
+              <a href="https://fontgen.in/tools/strikethrough.html">
+<span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 4H9a3 3 0 0 0-2.83 4"></path>
+    <path d="M14 12a4 4 0 0 1 0 8H6"></path>
+    <line x1="4" y1="12" x2="20" y2="12"></line>
+  </svg>
+</span>                Strikethrough
+              </a>
+              <a href="https://fontgen.in/tools/upside-down.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span>
+                Upside Down
+              </a>
+              <a href="https://fontgen.in/tools/small.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/></svg></span>
+                Tiny Text
+              </a>
+              <a href="https://fontgen.in/tools/symbols.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                Cool Symbols
+              </a>
+            </div>
+            <!-- Col 4: Featured -->
+             <div class="mega-col">
+              <div class="mega-col-title">Utility Tools</div>
+              <a href="https://fontgen.in/image-color-picker.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 5-5 11-5 11S7 12 7 7a5 5 0 015-5z"/><circle cx="12" cy="7" r="2"/></svg></span>
+                Color Picker
+              </a>
+              <a href="https://fontgen.in/character-counter.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></span>
+                Character Counter
+              </a>
+              <a href="https://fontgen.in/notepad.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+                Online Notepad
+              </a>
+              <a href="https://fontgen.in/brat-generator.html">
+  <span class="mega-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M16 3h5v5"/>
+      <path d="M4 20l17-17"/>
+      <path d="M21 16v5h-5"/>
+      <path d="M15 15l6 6"/>
+      <path d="M4 4l5 5"/>
+    </svg>
+  </span>
+  Brat Generator
+</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- MEGA: Company -->
+      <li class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+        <span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="10" width="20" height="12" rx="2"></rect>
+    <path d="M7 10V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6"></path>
+    <path d="M10 14h4"></path>
+    <path d="M10 18h4"></path>
+  </svg>
+</span>  Company
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+        <div class="dropdown-content">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <div class="mega-col-title">Learn</div>
+              <a href="https://fontgen.in/blog.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span>
+                Blog
+              </a>
+              <a href="https://fontgen.in/different-fonts/">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg></span>
+                All Font Styles
+              </a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-title">Company</div>
+              <a href="https://fontgen.in/about-us.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
+                About Us
+              </a>
+              <a href="https://fontgen.in/contact-us.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                Contact
+              </a>
+              <a href="https://fontgen.in/privacy-policy.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                Privacy Policy
+              </a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-title">Support</div>
+              <a href="https://fontgen.in/feedback.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
+                Feedback
+              </a>
+              <a href="https://fontgen.in/changelog.html">
+                <span class="mega-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></span>
+                Changelog
+              </a>
+            </div>
+            <div class="mega-col featured">
+              <div class="mega-col-title">📖 Latest Post</div>
+              <div class="featured-card">
+                <strong>Is Font Generator Free?</strong>
+                <p>Yes — 190 styles, no account needed, no limits. Read more.</p>
+                <a href="https://fontgen.in/blog.html">Read Blog →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="https://fontgen.in/blog.html"><span class="mega-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+    <path d="M18 14h-8"></path>
+    <path d="M15 18h-5"></path>
+    <path d="M10 6h8v4h-8V6z"></path>
+  </svg>
+</span> Blog</a></li>
+
+    </ul>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="pg">
+  <div class="hero">
+    <h1>🎨 Color Picker from Image</h1>
+    <p>Upload an image · hover to preview · click to lock any color</p>
+  </div>
+
+  <!-- UPLOAD CARD -->
+  <div class="wc up-card" id="upCard">
+    <div class="dropzone" id="dz">
+      <input type="file" id="fi" accept="image/*">
+      <div class="dz-orb"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+      <p class="dz-h">Drop your image here</p>
+      <p class="dz-s">Drag &amp; drop or click the button below</p>
+      <button class="dz-ubtn" type="button"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Choose image</button>
+      <div class="dz-tags"><span>JPG</span><span>PNG</span><span>WEBP</span><span>GIF</span></div>
+    </div>
+    <div class="url-row">
+      <div class="url-ic"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+      <input class="url-in" id="urlin" type="url" placeholder="Paste image URL and press Enter…">
+      <button class="url-btn" onclick="loadUrl()"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Load</button>
+    </div>
+    <div class="hist-row" id="histRow" style="display:none">
+      <div class="hist-head">
+        <span class="hist-lbl">Recent Images</span>
+        <button class="clrbtn" onclick="clrHist()">Clear</button>
+      </div>
+      <div class="hist-list" id="histList"></div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid">
+    <!-- LEFT -->
+    <div class="lcol" id="lcol">
+      <div class="fbar" id="fbar" onclick="chgImg()" title="Click to change image">
+        <div class="fbar-top">
+          <div class="fbar-thumb"><img id="fbar-img" src="" alt=""></div>
+          <div class="fbar-info">
+            <span class="fbar-name" id="fname">image.jpg</span>
+            <div class="fbar-meta"><span class="fbar-status"></span><span class="fbar-label">Click anywhere here to change image</span></div>
+          </div>
+          <div class="fbar-btn">
+            <div class="fbar-btn-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+            <span class="fbar-btn-text">Change</span>
+          </div>
+        </div>
+      </div>
+      <div class="cvbox" id="cvbox" style="touch-action:none">
+        <canvas id="mc"></canvas>
+        <span class="lpill" id="lpill">Color locked</span>
+        <div class="ldr" id="ldr"><div class="lring"></div><span class="ltxt">Loading…</span></div>
+      </div>
+      <div class="wc pal-card" id="palCard">
+        <div class="card-pad">
+          <span class="clbl">Image Palette</span>
+          <div class="swrow" id="swrow"></div>
+          <div class="pal-divider"></div>
+          <span class="clbl">Export Palette</span>
+          <div class="expgrid">
+            <button class="ebtn ev-css" onclick="doExp('css')"><div class="eico"><svg viewBox="0 0 24 24"><path d="M4 6l4 6-4 6"/><path d="M12 18h8"/></svg></div><div class="emeta"><span class="etitle">CSS Variables</span><span class="edesc">--color-1: #hex</span></div></button>
+            <button class="ebtn ev-code" onclick="doExp('code')"><div class="eico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="emeta"><span class="etitle">CSS Code</span><span class="edesc">background: #hex</span></div></button>
+            <button class="ebtn ev-svg" onclick="doExp('svg')"><div class="eico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><div class="emeta"><span class="etitle">SVG File</span><span class="edesc">Vector swatches</span></div></button>
+            <button class="ebtn ev-png" onclick="doExp('png')"><div class="eico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><div class="emeta"><span class="etitle">PNG Image</span><span class="edesc">Palette strip</span></div></button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- RIGHT -->
+    <div class="rcol" id="rcol">
+      <div class="wc cdisp" id="cdisp">
+        <div class="cslab" id="cslab">
+          <div class="cslab-foot">
+            <span class="chex" id="chex">#6366f1</span>
+            <span class="cchip" id="cchip"></span>
+            <button class="cpick-btn" onclick="openWheel()" title="Open color picker"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+          </div>
+        </div>
+        <div class="fmts">
+          <div class="frow"><span class="flbl">HEX</span><span class="fval" id="vHex">#6366f1</span><button class="fcpy" onclick="cpy('vHex',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">RGB</span><span class="fval" id="vRgb">99, 102, 241</span><button class="fcpy" onclick="cpy('vRgb',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">HSL</span><span class="fval" id="vHsl">239, 84, 67</span><button class="fcpy" onclick="cpy('vHsl',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">HWB</span><span class="fval" id="vHwb">239, 39, 5</span><button class="fcpy" onclick="cpy('vHwb',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">CMYK</span><span class="fval" id="vCmyk">59, 58, 0, 5</span><button class="fcpy" onclick="cpy('vCmyk',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">XYZ</span><span class="fval" id="vXyz">14, 12, 86</span><button class="fcpy" onclick="cpy('vXyz',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">LAB</span><span class="fval" id="vLab">41, 27, −59</span><button class="fcpy" onclick="cpy('vLab',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+          <div class="frow"><span class="flbl">LUV</span><span class="fval" id="vLuv">41, −4, −82</span><button class="fcpy" onclick="cpy('vLuv',this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOM COLOR PICKER -->
+<div id="colorPickerPopup" style="display:none">
+  <div class="cpop-backdrop" onclick="closeWheel()"></div>
+  <div class="cpop">
+    <div class="cpop-head"><span class="cpop-title">Color Picker</span><button class="cpop-close" onclick="closeWheel()"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="cpop-sb" id="cpopSB"><canvas id="cpopSBCanvas"></canvas><div class="cpop-sb-cursor" id="cpopSBCursor"></div></div>
+    <div class="cpop-sliders">
+      <div class="cpop-slider-row"><span class="cpop-slider-label">H</span><div class="cpop-slider-wrap"><canvas id="cpopHueCanvas" class="cpop-slider-canvas"></canvas><div class="cpop-slider-thumb" id="cpopHueThumb"></div></div></div>
+      <div class="cpop-slider-row"><span class="cpop-slider-label">A</span><div class="cpop-slider-wrap"><div class="cpop-alpha-checker"></div><canvas id="cpopAlphaCanvas" class="cpop-slider-canvas"></canvas><div class="cpop-slider-thumb" id="cpopAlphaThumb"></div></div></div>
+    </div>
+    <div class="cpop-bottom">
+      <div class="cpop-preview" id="cpopPreview"></div>
+      <div class="cpop-inputs">
+        <div class="cpop-input-group"><label>Hex</label><input class="cpop-hex-in" id="cpopHexIn" type="text" maxlength="7" spellcheck="false"></div>
+        <div class="cpop-input-group"><label>R</label><input class="cpop-num-in" id="cpopRIn" type="number" min="0" max="255"></div>
+        <div class="cpop-input-group"><label>G</label><input class="cpop-num-in" id="cpopGIn" type="number" min="0" max="255"></div>
+        <div class="cpop-input-group"><label>B</label><input class="cpop-num-in" id="cpopBIn" type="number" min="0" max="255"></div>
+      </div>
+    </div>
+    <button class="cpop-apply" onclick="applyWheel()">Apply</button>
+  </div>
+</div>
+
+<!-- MAGNIFIER -->
+<div id="mag">
+  <div id="mag-inner"><canvas id="magc"></canvas></div>
+  <div class="mln" id="mlh"></div><div class="mln" id="mlv"></div>
+  <div id="mdot"></div><div id="mhex">#000000</div>
+</div>
+<div id="toast"></div>
+
+
+<div class="contents">
+  <h2>What is a Free Color Picker from Image?</h2>
+<p>A free color picker from image is a simple tool that lets you find any color from a photo in seconds. Instead of guessing shades, you can just upload an image and click on the exact spot to get the real color value. It’s useful for designers, but also for anyone who just wants to know what color they’re looking at.</p>
+
+<h2>Upload an Image or Paste a Link</h2>
+<p>You can start by uploading an image from your device, dragging and dropping it, or even pasting an image URL. This makes it easy to work with both local files and images you find online. If you’re testing different images, the recent history option also helps you quickly go back to them.</p>
+
+<h2>Pick Colors by Hovering and Clicking</h2>
+<p>After your image loads, just move your cursor over it to see colors in real time. When you find something you like, click to lock that color. There’s also a zoom feature that helps you pick colors from very small details without any trouble.</p>
+
+<h2>View Color Codes in Different Formats</h2>
+<p>Once you select a color, the tool shows its values in formats like HEX, RGB, HSL, and more. You don’t need to convert anything yourself. You can simply copy the format you need and use it in your design or code.</p>
+
+<h2>Fine-Tune Colors with Built-in Picker</h2>
+<p>If the picked color isn’t exactly what you want, you can adjust it using the built-in color picker. You can change things like hue, brightness, or transparency until it looks right. It gives you a bit more control without making things complicated.</p>
+
+<h2>Generate a Color Palette from Image</h2>
+<p>The tool can also create a color palette based on your image. It pulls out the main colors and shows them together, which is helpful when you’re trying to build a consistent design or match colors easily.</p>
+
+<h2>Export and Use Colors Anywhere</h2>
+<p>After selecting your colors, you can export them in different formats like CSS code, SVG, or even as an image. This makes it easy to use your colors directly in projects without extra steps.</p>
+
+<h2>Simple Tool for Everyday Use</h2>
+<p>Whether you’re working on design, coding, or just exploring colors, this tool keeps things simple. You can quickly pick, copy, and use colors without overthinking the process.</p>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      &copy; 2025 FontGen.in . All rights reserved.
+    </div>
+    <div class="footer-right">
+     <a href="https://fontgen.in/privacy-policy.html">Privacy Policy</a> 
+      <a href="https://fontgen.in/about-us.html">About Us</a> 
+      <a href="https://fontgen.in/contact-us.html">Contact</a> 
+      <a href="https://fontgen.in/changelog.html">Latest Updates</a> 
+      <a href="https://fontgen.in/feedback.html">Feedback</a>
+  
+    </div>
+  </div>
+</footer>
+
+<script>
+    
+const dz=document.getElementById('dz'),fi=document.getElementById('fi'),upCard=document.getElementById('upCard');
+const fbar=document.getElementById('fbar'),fname=document.getElementById('fname');
+const cvbox=document.getElementById('cvbox'),mc=document.getElementById('mc');
+const CTX=mc.getContext('2d',{willReadFrequently:true});
+const mag=document.getElementById('mag'),magc=document.getElementById('magc');
+const MCTX=magc.getContext('2d',{willReadFrequently:true});
+
+const palCard=document.getElementById('palCard');const swrow=document.getElementById('swrow'),lpill=document.getElementById('lpill');
+const ldr=document.getElementById('ldr'),cslab=document.getElementById('cslab');
+const ZOOM=5;
+const mSz=()=>window.innerWidth<=520?90:128;
+
+let col={r:99,g:102,b:241},lockCol={r:99,g:102,b:241},hCol={r:99,g:102,b:241};
+let locked=false,palette=[];
+
+// Safe localStorage parse
+function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return[]}}
+let hist=lsGet('cph');
+
+/* ── HISTORY ── */
+function saveHist(name,dataUrl){
+  hist=hist.filter(h=>h.name!==name);
+  hist.unshift({name,dataUrl});
+  if(hist.length>12)hist=hist.slice(0,12);
+  try{localStorage.setItem('cph',JSON.stringify(hist))}catch(e){hist=hist.slice(0,6);try{localStorage.setItem('cph',JSON.stringify(hist))}catch(e){}}
+  renderHist();
+}
+function clrHist(){hist=[];try{localStorage.removeItem('cph')}catch(e){}renderHist()}
+function delHist(i){hist.splice(i,1);try{localStorage.setItem('cph',JSON.stringify(hist))}catch(e){}renderHist()}
+function renderHist(){
+  const row=document.getElementById('histRow'),list=document.getElementById('histList');
+  if(!row||!list)return;
+  if(!hist.length){row.style.display='none';return}
+  row.style.display='block';list.innerHTML='';
+  hist.forEach((h,i)=>{
+    const item=document.createElement('div');item.className='hist-item';item.title=h.name;
+    const img=document.createElement('img');img.src=h.dataUrl;img.alt=h.name;
+    const nm=document.createElement('div');nm.className='hist-name';nm.textContent=h.name;
+    const del=document.createElement('button');del.className='hist-del';del.innerHTML='✕';del.title='Remove';
+    del.onclick=e=>{e.stopPropagation();delHist(i)};
+    item.appendChild(img);item.appendChild(nm);item.appendChild(del);
+    item.onclick=()=>{const im=new Image();im.onload=()=>paint(im,h.name);im.src=h.dataUrl};
+    list.appendChild(item);
+  });
+}
+
+/* ── DEFAULT ── */
+(()=>{
+  fbar.classList.add('on');cvbox.classList.add('on');
+  palCard.classList.add('on');
+  if(window.innerWidth>700)document.querySelector('.rcol')?.classList.add('on');
+  ldr.classList.add('on');fname.textContent='Loading…';
+  const img=new Image();img.crossOrigin='anonymous';
+  img.onload=()=>{ldr.classList.remove('on');paint(img,'Font-Generator.png')};
+  img.onerror=()=>{ldr.classList.remove('on')};
+  img.src='https://fontgen.in/img/Font-Generator.png';
+})();
+
+/* ── UPLOAD ── */
+dz.addEventListener('click',()=>fi.click());
+fi.addEventListener('change',e=>readF(e.target.files[0]));
+document.querySelectorAll('.dz-ubtn').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();fi.click()}));
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag')});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');readF(e.dataTransfer.files[0])});
+
+function readF(f){
+  if(!f||!f.type.startsWith('image/')){showToast('Please use an image file');return}
+  const r=new FileReader();
+  r.onload=ev=>{const i=new Image();i.onload=()=>paint(i,f.name);i.src=ev.target.result};
+  r.readAsDataURL(f);
+}
+
+function loadUrl(){
+  const url=document.getElementById('urlin').value.trim();
+  if(!url){showToast('Paste an image URL first');return}
+  cvbox.classList.add('on');ldr.classList.add('on');
+  const img=new Image();img.crossOrigin='anonymous';
+  img.onload=()=>{ldr.classList.remove('on');paint(img,url.split('/').pop()||'image')};
+  img.onerror=()=>{
+    const p=new Image();p.crossOrigin='anonymous';
+    p.onload=()=>{ldr.classList.remove('on');paint(p,'image')};
+    p.onerror=()=>{ldr.classList.remove('on');cvbox.classList.remove('on');showToast('Could not load image')};
+    p.src='https://images.weserv.nl/?url='+encodeURIComponent(url);
+  };
+  img.src=url;
+}
+document.getElementById('urlin').addEventListener('keydown',e=>{if(e.key==='Enter')loadUrl()});
+
+document.addEventListener('paste',e=>{
+  for(const item of e.clipboardData?.items||[]){
+    if(item.type.startsWith('image/')){
+      const url=URL.createObjectURL(item.getAsFile());
+      const img=new Image();img.onload=()=>{paint(img,'pasted.png');URL.revokeObjectURL(url)};img.src=url;
+      showToast('Image pasted!');return;
+    }
+  }
+});
+
+/* ── PAINT ── */
+function paint(img,name){
+  const W=800,H=450;
+  mc.width=W;mc.height=H;
+  CTX.fillStyle='#f4f4f5';CTX.fillRect(0,0,W,H);
+  const ratio=Math.min(W/img.width,H/img.height);
+  const dw=Math.round(img.width*ratio),dh=Math.round(img.height*ratio);
+  const dx=Math.round((W-dw)/2),dy=Math.round((H-dh)/2);
+  CTX.drawImage(img,dx,dy,dw,dh);
+  upCard.classList.remove('visible');upCard.classList.add('img-loaded');
+  const thumb=document.getElementById('fbar-img');
+  const thumbData=mc.toDataURL('image/jpeg',.6);
+  thumb.src=thumbData;
+  if(name!=='Font-Generator.png')saveHist(name,thumbData);
+  fbar.classList.add('on');fname.textContent=name;
+  cvbox.classList.add('on');palCard.classList.add('on');
+  if(window.innerWidth>700)document.querySelector('.rcol')?.classList.add('on');
+  locked=false;cvbox.classList.remove('lkd');lpill.classList.remove('on');
+  buildPal();
+  const d=CTX.getImageData(Math.floor(W/2),Math.floor(H/2),1,1).data;
+  col={r:d[0],g:d[1],b:d[2]};lockCol={...col};hCol={...col};
+  render();
+}
+
+function chgImg(){
+  upCard.classList.add('visible');upCard.classList.remove('img-loaded');
+  fbar.classList.remove('on');cvbox.classList.remove('on');
+  palCard.classList.remove('on');
+  document.querySelector('.rcol')?.classList.remove('on');
+  locked=false;cvbox.classList.remove('lkd');lpill.classList.remove('on');
+}
+
+/* ── CANVAS ── */
+mc.addEventListener('mousemove',e=>{
+  const p=cpos(e);
+  const d=CTX.getImageData(p.x,p.y,1,1).data;
+  hCol={r:d[0],g:d[1],b:d[2]};
+  showMag(e,p.x,p.y);
+});
+mc.addEventListener('mouseleave',()=>{mag.style.display='none'});
+mc.addEventListener('click',e=>{
+  const p=cpos(e);const d=CTX.getImageData(p.x,p.y,1,1).data;
+  col={r:d[0],g:d[1],b:d[2]};lockCol={...col};locked=true;
+  render();cvbox.classList.add('lkd');lpill.classList.add('on');
+});
+
+/* touch: drag to preview color, lift finger to lock */
+mc.addEventListener('touchstart',e=>{
+  e.preventDefault();
+  const t=e.touches[0];
+  const p=cpos(t);
+  const d=CTX.getImageData(p.x,p.y,1,1).data;
+  hCol={r:d[0],g:d[1],b:d[2]};
+  showMag(t,p.x,p.y);
+},{passive:false});
+
+mc.addEventListener('touchmove',e=>{
+  e.preventDefault();
+  const t=e.touches[0];
+  const p=cpos(t);
+  const d=CTX.getImageData(p.x,p.y,1,1).data;
+  hCol={r:d[0],g:d[1],b:d[2]};
+  showMag(t,p.x,p.y);
+},{passive:false});
+
+mc.addEventListener('touchend',e=>{
+  e.preventDefault();
+  const t=e.changedTouches[0];
+  const p=cpos(t);
+  const d=CTX.getImageData(p.x,p.y,1,1).data;
+  col={r:d[0],g:d[1],b:d[2]};lockCol={...col};locked=true;
+  render();
+  mag.style.display='none';
+  cvbox.classList.add('lkd');lpill.classList.add('on');
+},{passive:false});
+function cpos(e){
+  const r=mc.getBoundingClientRect();
+  return{x:Math.max(0,Math.min(mc.width-1,Math.round((e.clientX-r.left)*mc.width/r.width))),y:Math.max(0,Math.min(mc.height-1,Math.round((e.clientY-r.top)*mc.height/r.height)))};
+}
+
+/* ── MAGNIFIER ── */
+function showMag(e,cx,cy){
+  const SZ=mSz(),R=SZ/2;
+  const hex=toHex(hCol.r,hCol.g,hCol.b);
+  let fx=e.clientX-R,fy=e.clientY-R-SZ-16;
+  if(fy<8)fy=e.clientY+16;
+  fx=Math.max(8,Math.min(window.innerWidth-SZ-8,fx));
+  mag.style.cssText=`left:${fx}px;top:${fy}px;width:${SZ}px;height:${SZ}px;display:block;border-color:${hex};`;
+  magc.width=SZ;magc.height=SZ;
+  MCTX.save();
+  MCTX.drawImage(mc,cx-R/ZOOM,cy-R/ZOOM,SZ/ZOOM,SZ/ZOOM,0,0,SZ,SZ);
+  const cell=SZ/ZOOM;
+  MCTX.strokeStyle='rgba(255,255,255,.12)';MCTX.lineWidth=.5;
+  for(let i=cell;i<SZ;i+=cell){MCTX.beginPath();MCTX.moveTo(i,0);MCTX.lineTo(i,SZ);MCTX.stroke();MCTX.beginPath();MCTX.moveTo(0,i);MCTX.lineTo(SZ,i);MCTX.stroke()}
+  const hc=cell/2;
+  MCTX.strokeStyle=hex;MCTX.lineWidth=1.5;
+  MCTX.strokeRect(SZ/2-hc+.75,SZ/2-hc+.75,cell-1.5,cell-1.5);
+  MCTX.restore();
+  document.getElementById('mhex').textContent=hex;
+  document.getElementById('mdot').style.background=hex;
+}
+
+/* ── RENDER ── */
+function render(){
+  const{r,g,b}=col,hex=toHex(r,g,b);
+  const lum=0.2126*(r/255)+0.7152*(g/255)+0.0722*(b/255);
+  const dark=lum>.55;
+
+  cslab.style.background=hex;
+
+  // hex pill
+  const chexEl=document.getElementById('chex');
+  chexEl.textContent=hex;
+  chexEl.style.cssText=dark
+    ?'font-size:13px;font-weight:700;letter-spacing:.08em;color:#18181b;background:rgba(0,0,0,.1);backdrop-filter:blur(8px);padding:4px 13px;border-radius:20px;border:1px solid rgba(0,0,0,.15)'
+    :'font-size:13px;font-weight:700;letter-spacing:.08em;color:#fff;background:rgba(0,0,0,.28);backdrop-filter:blur(8px);padding:4px 13px;border-radius:20px;border:1px solid rgba(255,255,255,.2)';
+
+  // color picker button
+  const btn=document.querySelector('.cpick-btn');
+  if(btn){
+    btn.style.cssText=dark
+      ?'margin-left:auto;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s;color:#18181b;background:rgba(0,0,0,.1);border:1.5px solid rgba(0,0,0,.2);box-shadow:0 2px 8px rgba(0,0,0,.1)'
+      :'margin-left:auto;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s;color:#fff;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.35);box-shadow:0 2px 8px rgba(0,0,0,.2)';
+  }
+  const chip=document.getElementById('cchip');
+  chip.textContent=lum>.5?'Dark text':'Light text';
+  chip.style.cssText=lum>.5?'background:rgba(0,0,0,.22);color:rgba(255,255,255,.9);font-size:9px;font-weight:700;padding:4px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.15)':'background:rgba(255,255,255,.22);color:rgba(0,0,0,.72);font-size:9px;font-weight:700;padding:4px 10px;border-radius:20px;border:1px solid rgba(0,0,0,.08)';
+  set('vHex',hex);
+  set('vRgb',`${r}, ${g}, ${b}`);
+  const hsl=gHsl(r,g,b);set('vHsl',`${hsl.h}, ${hsl.s}, ${hsl.l}`);
+  const hwb=gHwb(r,g,b);set('vHwb',`${hwb.h}, ${hwb.w}, ${hwb.b}`);
+  const cmyk=gCmyk(r,g,b);set('vCmyk',`${cmyk.c}, ${cmyk.m}, ${cmyk.y}, ${cmyk.k}`);
+  const xyz=gXyz(r,g,b);set('vXyz',`${xyz.x}, ${xyz.y}, ${xyz.z}`);
+  const lab=gLab(xyz);set('vLab',`${lab.l}, ${lab.a}, ${lab.b}`);
+  const luv=gLuv(xyz);set('vLuv',`${luv.l}, ${luv.u}, ${luv.v}`);
+}
+function set(id,val){document.getElementById(id).textContent=val}
+
+/* ── PALETTE ── */
+function buildPal(){
+  const w=mc.width,h=mc.height,data=CTX.getImageData(0,0,w,h).data;
+  const step=14,bkt={};
+  for(let y=0;y<h;y+=step)for(let x=0;x<w;x+=step){
+    const i=(y*w+x)*4;if(data[i+3]<128)continue;
+    const r=Math.round(data[i]/28)*28,g=Math.round(data[i+1]/28)*28,b=Math.round(data[i+2]/28)*28;
+    const k=`${r},${g},${b}`;bkt[k]=(bkt[k]||0)+1;
+  }
+  palette=[];swrow.innerHTML='';
+  Object.entries(bkt).sort((a,b)=>b[1]-a[1]).slice(0,12).forEach(([k])=>{
+    const[r,g,b]=k.split(',').map(Number),hex=toHex(r,g,b);
+    palette.push(hex);
+    // determine text color based on luminance
+    const lum=0.2126*(r/255)+0.7152*(g/255)+0.0722*(b/255);
+    const dark=lum>.55;
+    const txtColor=dark?'#18181b':'#fff';
+    const borderColor=dark?'rgba(0,0,0,.12)':'rgba(255,255,255,.2)';
+
+    const sw=document.createElement('div');
+    sw.className='sw';
+    sw.style.background=hex;
+    sw.style.border=`1px solid ${borderColor}`;
+    sw.title=hex;
+
+    // hex label inside swatch
+    const hexLabel=document.createElement('span');
+    hexLabel.className='sw-hex';
+    hexLabel.textContent=hex;
+    hexLabel.style.color=txtColor;
+    sw.appendChild(hexLabel);
+
+    sw.onclick=()=>{
+      col={r,g,b};lockCol={...col};locked=true;
+      render();cvbox.classList.add('lkd');lpill.classList.add('on');
+      cpText(hex);showToast('Copied '+hex);
+    };
+    swrow.appendChild(sw);
+  });
+}
+
+/* ── MOBILE REORDER ── */
+(()=>{
+  if(window.innerWidth>700)return;
+  const lcol=document.getElementById('lcol');
+  const cdisp=document.getElementById('cdisp');
+  
+  const hint=document.getElementById('hint');
+  lcol.insertBefore(cdisp, palCard);
+  document.getElementById('rcol').style.display='none';
+})();
+
+
+/* ── COPY ── */
+function cpy(id,btn){
+  const t=document.getElementById(id).textContent;cpText(t);
+  const o=btn.innerHTML;btn.classList.add('ok');
+  btn.innerHTML='<svg viewBox="0 0 24 24" width="11" height="11" stroke="white" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  setTimeout(()=>{btn.classList.remove('ok');btn.innerHTML=o},1400);
+  showToast('Copied!');
+}
+function cpText(t){
+  // Try modern clipboard API first
+  if(navigator.clipboard&&window.isSecureContext){
+    navigator.clipboard.writeText(t).catch(()=>cpTextFallback(t));
+  } else {
+    cpTextFallback(t);
+  }
+}
+function cpTextFallback(t){
+  const ta=document.createElement('textarea');
+  ta.value=t;
+  ta.style.cssText='position:fixed;top:0;left:0;width:2px;height:2px;padding:0;border:none;outline:none;box-shadow:none;background:transparent;opacity:0;';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.setSelectionRange(0,ta.value.length);
+  try{document.execCommand('copy')}catch(e){}
+  document.body.removeChild(ta);
+}
+
+/* ── EXPORT ── */
+var CREDIT_URL='https://fontgen.in';
+var CREDIT_TXT='/**\n * Generated by fontgen.in — Color Picker from Image\n * https://fontgen.in\n */\n\n';
+function doExp(type){
+  if(!palette.length){showToast('Load an image first');return}
+  if(type==='css'){dl(CREDIT_TXT+':root {\n'+palette.map((h,i)=>`  --color-${i+1}: ${h};`).join('\n')+'\n}','fontgen.in-palette.css','text/css');showToast('CSS Variables downloaded!')}
+  else if(type==='code'){dl(CREDIT_TXT+palette.map((h,i)=>`.color-${i+1} {\n  background: ${h};\n  color: ${ctxt(h)};\n}`).join('\n\n'),'fontgen.in-palette-classes.css','text/css');showToast('CSS Code downloaded!')}
+  else if(type==='svg'){
+    const s=60,g=8,c=6,rows=Math.ceil(palette.length/c),W=c*(s+g)-g+16,H=rows*(s+g)-g+16+28;
+    const rects=palette.map((h,i)=>{const cx=i%c,ry=Math.floor(i/c),x=8+cx*(s+g),y=8+ry*(s+g);return`<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="6" fill="${h}"><title>${h}</title></rect>`}).join('\n  ');
+    const footY=H-28;
+    const credit=`<rect x="0" y="${footY}" width="${W}" height="28" fill="#f8fafc"/><line x1="0" y1="${footY}" x2="${W}" y2="${footY}" stroke="#e2e8f0" stroke-width="1"/><text x="8" y="${footY+11}" font-family="sans-serif" font-size="8" font-weight="bold" fill="#64748b">Generated by fontgen.in</text><text x="8" y="${footY+22}" font-family="sans-serif" font-size="8" fill="#94a3b8">Color Picker from Image</text><text x="${W-8}" y="${footY+17}" text-anchor="end" font-family="sans-serif" font-size="8" font-weight="bold" fill="#2563eb">${CREDIT_URL}</text>`;
+    dl(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">\n  <rect width="${W}" height="${H}" fill="#fff" rx="4"/>\n  ${rects}\n  ${credit}\n</svg>`,'fontgen.in-palette.svg','image/svg+xml');
+    showToast('SVG downloaded!');
+  } else if(type==='png'){
+    const sw=80,g=6,p=12,c=Math.min(palette.length,6),rows=Math.ceil(palette.length/c);
+    const footH=32;
+    const CW=c*(sw+g)-g+p*2,CH=rows*(sw+g)-g+p*2+footH;
+    const cn=document.createElement('canvas');cn.width=CW*2;cn.height=CH*2;
+    const x=cn.getContext('2d');x.scale(2,2);
+    // white background
+    x.fillStyle='#fff';x.fillRect(0,0,CW,CH);
+    // swatches
+    palette.forEach((h,i)=>{
+      const cx=i%c,ry=Math.floor(i/c),px=p+cx*(sw+g),py=p+ry*(sw+g),R=8;
+      x.fillStyle=h;x.beginPath();x.moveTo(px+R,py);x.lineTo(px+sw-R,py);x.quadraticCurveTo(px+sw,py,px+sw,py+R);x.lineTo(px+sw,py+sw-R);x.quadraticCurveTo(px+sw,py+sw,px+sw-R,py+sw);x.lineTo(px+R,py+sw);x.quadraticCurveTo(px,py+sw,px,py+sw-R);x.lineTo(px,py+R);x.quadraticCurveTo(px,py,px+R,py);x.closePath();x.fill();
+      x.fillStyle=ctxt(h);x.font='bold 7px monospace';x.textAlign='center';
+      x.fillText(h.toUpperCase(),px+sw/2,py+sw-6);
+    });
+    // footer bar
+    const footY=CH-footH;
+    x.fillStyle='#f8fafc';x.fillRect(0,footY,CW,footH);
+    x.fillStyle='#e2e8f0';x.fillRect(0,footY,CW,1);
+    // credit text left, url right
+    x.fillStyle='#64748b';
+    x.font='bold 9px sans-serif';x.textAlign='left';
+    x.fillText('Generated by fontgen.in',p,footY+12);
+    x.font='9px sans-serif';
+    x.fillText('Color Picker from Image',p,footY+24);
+    x.fillStyle='#2563eb';
+    x.font='bold 9px sans-serif';x.textAlign='right';
+    x.fillText(CREDIT_URL,CW-p,footY+18);
+    cn.toBlob(b=>{const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='fontgen.in-palette.png';a.click();URL.revokeObjectURL(u)});
+    showToast('PNG downloaded!');
+  }
+}
+
+function dl(txt,name,mime){const b=new Blob([txt],{type:mime}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
+function ctxt(h){const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);return(0.2126*r/255+0.7152*g/255+0.0722*b/255)>.45?'#18181b':'#fff'}
+
+/* ── TOAST ── */
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._tm);t._tm=setTimeout(()=>t.classList.remove('show'),2200)}
+
+/* ── COLOR MATH ── */
+function toHex(r,g,b){return'#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('')}
+function gHsl(r,g,b){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h,s,l=(mx+mn)/2;if(mx===mn){h=s=0}else{const d=mx-mn;s=l>.5?d/(2-mx-mn):d/(mx+mn);switch(mx){case r:h=((g-b)/d+(g<b?6:0))/6;break;case g:h=((b-r)/d+2)/6;break;case b:h=((r-g)/d+4)/6;break}}return{h:Math.round(h*360),s:Math.round(s*100),l:Math.round(l*100)}}
+function gHwb(r,g,b){const h=gHsl(r,g,b).h;return{h,w:Math.round(Math.min(r,g,b)/255*100),b:Math.round((1-Math.max(r,g,b)/255)*100)}}
+function gCmyk(r,g,b){r/=255;g/=255;b/=255;const k=1-Math.max(r,g,b);if(k===1)return{c:0,m:0,y:0,k:100};return{c:Math.round((1-r-k)/(1-k)*100),m:Math.round((1-g-k)/(1-k)*100),y:Math.round((1-b-k)/(1-k)*100),k:Math.round(k*100)}}
+function gXyz(r,g,b){r/=255;g/=255;b/=255;r=r>.04045?Math.pow((r+.055)/1.055,2.4):r/12.92;g=g>.04045?Math.pow((g+.055)/1.055,2.4):g/12.92;b=b>.04045?Math.pow((b+.055)/1.055,2.4):b/12.92;return{x:Math.round((r*.4124+g*.3576+b*.1805)*100),y:Math.round((r*.2126+g*.7152+b*.0722)*100),z:Math.round((r*.0193+g*.1192+b*.9505)*100)}}
+function gLab(xyz){let{x,y,z}=xyz;x/=95.047;y/=100;z/=108.883;const f=v=>v>.008856?Math.cbrt(v):7.787*v+16/116;const fx=f(x),fy=f(y),fz=f(z);return{l:Math.round(116*fy-16),a:Math.round(500*(fx-fy)),b:Math.round(200*(fy-fz))}}
+function gLuv(xyz){let{x,y,z}=xyz;const Y=y/100;const denom=x+15*Y*100+3*z;if(!denom)return{l:0,u:0,v:0};const u1=4*x/denom,v1=9*y/denom;const L=Y>.008856?116*Math.cbrt(Y)-16:903.3*Y;return{l:Math.round(L),u:Math.round(13*L*(u1-.2009)),v:Math.round(13*L*(v1-.4610))}}
+
+/* ── CUSTOM COLOR PICKER ── */
+let cpHue=0,cpSat=1,cpBri=1;
+let pickerBound=false;
+
+function rgbToHsb(r,g,b){
+  r/=255;g/=255;b/=255;
+  const mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn;
+  let h=0;
+  if(d){
+    if(mx===r)h=((g-b)/d+6)%6;
+    else if(mx===g)h=(b-r)/d+2;
+    else h=(r-g)/d+4;
+    h/=6;
+  }
+  return{h,s:mx?d/mx:0,b:mx};
+}
+function hsbToRgb(h,s,b){
+  const i=Math.floor(h*6),f=h*6-i;
+  const p=b*(1-s),q=b*(1-f*s),t=b*(1-(1-f)*s);
+  let r,g,bv;
+  switch(i%6){
+    case 0:r=b;g=t;bv=p;break;case 1:r=q;g=b;bv=p;break;
+    case 2:r=p;g=b;bv=t;break;case 3:r=p;g=q;bv=b;break;
+    case 4:r=t;g=p;bv=b;break;case 5:r=b;g=p;bv=q;break;
+  }
+  return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(bv*255)};
+}
+
+function getClientPos(e){
+  // handles both mouse and touch
+  if(e.touches&&e.touches.length)return{x:e.touches[0].clientX,y:e.touches[0].clientY};
+  if(e.changedTouches&&e.changedTouches.length)return{x:e.changedTouches[0].clientX,y:e.changedTouches[0].clientY};
+  return{x:e.clientX,y:e.clientY};
+}
+
+function drawSBCanvas(){
+  const cv=document.getElementById('cpopSBCanvas');
+  const w=cv.clientWidth,h=cv.clientHeight;
+  if(!w||!h)return;
+  cv.width=w;cv.height=h;
+  const ctx=cv.getContext('2d');
+  const hRgb=hsbToRgb(cpHue,1,1);
+  ctx.fillStyle=`rgb(${hRgb.r},${hRgb.g},${hRgb.b})`;
+  ctx.fillRect(0,0,w,h);
+  const wg=ctx.createLinearGradient(0,0,w,0);
+  wg.addColorStop(0,'rgba(255,255,255,1)');wg.addColorStop(1,'rgba(255,255,255,0)');
+  ctx.fillStyle=wg;ctx.fillRect(0,0,w,h);
+  const bg=ctx.createLinearGradient(0,0,0,h);
+  bg.addColorStop(0,'rgba(0,0,0,0)');bg.addColorStop(1,'rgba(0,0,0,1)');
+  ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
+}
+function drawHueCanvas(){
+  const cv=document.getElementById('cpopHueCanvas');
+  const w=cv.clientWidth,h=cv.clientHeight||14;
+  if(!w)return;
+  cv.width=w;cv.height=h;
+  const ctx=cv.getContext('2d');
+  const g=ctx.createLinearGradient(0,0,w,0);
+  for(let i=0;i<=360;i+=30)g.addColorStop(i/360,`hsl(${i},100%,50%)`);
+  ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+}
+function drawAlphaCanvas(){
+  const cv=document.getElementById('cpopAlphaCanvas');
+  const w=cv.clientWidth,h=cv.clientHeight||14;
+  if(!w)return;
+  cv.width=w;cv.height=h;
+  const ctx=cv.getContext('2d');
+  const{r,g,b}=hsbToRgb(cpHue,cpSat,cpBri);
+  const ag=ctx.createLinearGradient(0,0,w,0);
+  ag.addColorStop(0,`rgba(${r},${g},${b},0)`);
+  ag.addColorStop(1,`rgba(${r},${g},${b},1)`);
+  ctx.fillStyle=ag;ctx.fillRect(0,0,w,h);
+}
+function updateSBCursor(){
+  const cv=document.getElementById('cpopSBCanvas');
+  const cur=document.getElementById('cpopSBCursor');
+  cur.style.left=(cpSat*cv.clientWidth)+'px';
+  cur.style.top=((1-cpBri)*cv.clientHeight)+'px';
+}
+function updateHueThumb(){
+  const cv=document.getElementById('cpopHueCanvas');
+  document.getElementById('cpopHueThumb').style.left=(cpHue*cv.clientWidth)+'px';
+}
+function updateAlphaThumb(){
+  const cv=document.getElementById('cpopAlphaCanvas');
+  const{r,g,b}=hsbToRgb(cpHue,cpSat,cpBri);
+  // alpha not applied to output, just visual
+  document.getElementById('cpopAlphaThumb').style.left=(cv.clientWidth)+'px';
+}
+function syncPickerInputs(){
+  const{r,g,b}=hsbToRgb(cpHue,cpSat,cpBri);
+  const hex=toHex(r,g,b);
+  document.getElementById('cpopHexIn').value=hex;
+  document.getElementById('cpopRIn').value=r;
+  document.getElementById('cpopGIn').value=g;
+  document.getElementById('cpopBIn').value=b;
+  document.getElementById('cpopPreview').style.background=hex;
+}
+
+function openWheel(){
+  const hsb=rgbToHsb(col.r,col.g,col.b);
+  cpHue=hsb.h;cpSat=hsb.s;cpBri=hsb.b;
+  document.getElementById('colorPickerPopup').style.display='block';
+  // wait for layout then draw
+  setTimeout(()=>{
+    drawSBCanvas();drawHueCanvas();drawAlphaCanvas();
+    updateSBCursor();updateHueThumb();
+    document.getElementById('cpopAlphaThumb').style.left=(document.getElementById('cpopAlphaCanvas').clientWidth)+'px';
+    syncPickerInputs();
+    if(!pickerBound){bindPickerEvents();pickerBound=true;}
+  },30);
+}
+function closeWheel(){document.getElementById('colorPickerPopup').style.display='none'}
+function applyWheel(){
+  const{r,g,b}=hsbToRgb(cpHue,cpSat,cpBri);
+  col={r,g,b};lockCol={...col};render();closeWheel();
+}
+
+function bindPickerEvents(){
+  // ── SB BOX ──
+  const sb=document.getElementById('cpopSB');
+  function onSBMove(e){
+    e.preventDefault();
+    const{x,y}=getClientPos(e);
+    const r=sb.getBoundingClientRect();
+    cpSat=Math.max(0,Math.min(1,(x-r.left)/r.width));
+    cpBri=Math.max(0,Math.min(1,1-(y-r.top)/r.height));
+    drawSBCanvas();updateSBCursor();drawAlphaCanvas();syncPickerInputs();
+  }
+  function onSBUp(){
+    document.removeEventListener('mousemove',onSBMove);
+    document.removeEventListener('mouseup',onSBUp);
+    document.removeEventListener('touchmove',onSBMove);
+    document.removeEventListener('touchend',onSBUp);
+  }
+  sb.addEventListener('mousedown',e=>{onSBMove(e);document.addEventListener('mousemove',onSBMove);document.addEventListener('mouseup',onSBUp)});
+  sb.addEventListener('touchstart',e=>{onSBMove(e);document.addEventListener('touchmove',onSBMove,{passive:false});document.addEventListener('touchend',onSBUp)},{passive:false});
+
+  // ── HUE SLIDER ──
+  const hw=document.getElementById('cpopHueCanvas').parentElement;
+  function onHueMove(e){
+    e.preventDefault();
+    const{x}=getClientPos(e);
+    const r=hw.getBoundingClientRect();
+    cpHue=Math.max(0,Math.min(1,(x-r.left)/r.width));
+    drawSBCanvas();updateHueThumb();drawAlphaCanvas();syncPickerInputs();
+  }
+  function onHueUp(){
+    document.removeEventListener('mousemove',onHueMove);
+    document.removeEventListener('mouseup',onHueUp);
+    document.removeEventListener('touchmove',onHueMove);
+    document.removeEventListener('touchend',onHueUp);
+  }
+  hw.addEventListener('mousedown',e=>{onHueMove(e);document.addEventListener('mousemove',onHueMove);document.addEventListener('mouseup',onHueUp)});
+  hw.addEventListener('touchstart',e=>{onHueMove(e);document.addEventListener('touchmove',onHueMove,{passive:false});document.addEventListener('touchend',onHueUp)},{passive:false});
+
+  // ── ALPHA SLIDER ──
+  const aw=document.getElementById('cpopAlphaCanvas').parentElement;
+  function onAlphaMove(e){
+    e.preventDefault();
+    const{x}=getClientPos(e);
+    const r=aw.getBoundingClientRect();
+    const alpha=Math.max(0,Math.min(1,(x-r.left)/r.width));
+    document.getElementById('cpopAlphaThumb').style.left=(alpha*aw.clientWidth)+'px';
+  }
+  function onAlphaUp(){
+    document.removeEventListener('mousemove',onAlphaMove);
+    document.removeEventListener('mouseup',onAlphaUp);
+    document.removeEventListener('touchmove',onAlphaMove);
+    document.removeEventListener('touchend',onAlphaUp);
+  }
+  aw.addEventListener('mousedown',e=>{onAlphaMove(e);document.addEventListener('mousemove',onAlphaMove);document.addEventListener('mouseup',onAlphaUp)});
+  aw.addEventListener('touchstart',e=>{onAlphaMove(e);document.addEventListener('touchmove',onAlphaMove,{passive:false});document.addEventListener('touchend',onAlphaUp)},{passive:false});
+
+  // ── HEX INPUT ──
+  document.getElementById('cpopHexIn').addEventListener('input',()=>{
+    const v=document.getElementById('cpopHexIn').value.trim();
+    if(/^#?[0-9a-f]{6}$/i.test(v)){
+      const h=v.startsWith('#')?v:'#'+v;
+      const hsb=rgbToHsb(parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16));
+      cpHue=hsb.h;cpSat=hsb.s;cpBri=hsb.b;
+      drawSBCanvas();updateSBCursor();updateHueThumb();drawAlphaCanvas();syncPickerInputs();
+    }
+  });
+
+  // ── RGB INPUTS ──
+  ['R','G','B'].forEach(ch=>{
+    document.getElementById('cpop'+ch+'In').addEventListener('input',()=>{
+      const r=Math.min(255,Math.max(0,parseInt(document.getElementById('cpopRIn').value)||0));
+      const g=Math.min(255,Math.max(0,parseInt(document.getElementById('cpopGIn').value)||0));
+      const b=Math.min(255,Math.max(0,parseInt(document.getElementById('cpopBIn').value)||0));
+      const hsb=rgbToHsb(r,g,b);
+      cpHue=hsb.h;cpSat=hsb.s;cpBri=hsb.b;
+      drawSBCanvas();updateSBCursor();updateHueThumb();drawAlphaCanvas();
+      document.getElementById('cpopHexIn').value=toHex(r,g,b);
+      document.getElementById('cpopPreview').style.background=toHex(r,g,b);
+    });
+  });
+}
+</script>
+
+
+<button id="backToTopBtn" onclick="scrollToTop()">⬆</button>
+<script src="./script.js"></script>
+</body>
+</html>
