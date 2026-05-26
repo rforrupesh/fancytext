@@ -5273,7 +5273,7 @@ function handleInputChange() {
     deleteCookie("fontInput");
     const placeholderText = input.getAttribute("placeholder");
 
-    if (placeholderText && placeholderText !== "Type something...") {
+    if (placeholderText && placeholderText !== "Type text for cool fonts") {
       // It's a custom placeholder, so style it
       updateOutputs(placeholderText);
     } else {
